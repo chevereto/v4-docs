@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'V5 Docs',
+    title: 'V4 Docs',
     description: 'Self-hosted media sharing',
     head: [
         ['link', {
@@ -43,7 +43,7 @@ module.exports = {
     themeConfig: {
         logo: '/logo.svg',
         repo: 'chevereto/chevereto',
-        docsRepo: 'chevereto/v5-docs',
+        docsRepo: 'chevereto/v4-docs',
         docsBranch: 'main',
         smoothScroll: true,
         editLinks: true,

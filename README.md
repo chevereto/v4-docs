@@ -17,7 +17,7 @@ footer: Your own media hosting and sharing solution
 
 # Chevereto V4
 
-This is the documentation for [Chevereto V4](https://releases.chevereto.com/).
+This is the documentation for [Chevereto V4](https://releases.chevereto.com/4.X).
 
 ## Work in progress
 

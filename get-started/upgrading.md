@@ -1,6 +1,6 @@
-# 🚀 Migrating
+# 🚀 Upgrading
 
-This section outlines the upgrade process required to install V4.
+This section outlines the upgrade process required to install V4 from previous major release.
 
 ## Requirements
 

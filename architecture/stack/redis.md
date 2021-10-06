@@ -3,7 +3,7 @@
 Chevereto V4 rely in Redis for data caching strategies for everything considered persistent.
 
 ::: tip Where available
-Redis is not a mandatory requirement, but kindly note that your Chevereto V4 performance experience will be negatively affected if you don't use Redis.
+Redis is not a mandatory requirement. Note that your Chevereto V4 performance experience will be negatively affected if you don't use Redis.
 :::
 
 ## Resources

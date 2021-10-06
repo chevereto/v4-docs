@@ -2,7 +2,7 @@
 
 ## What is Chevereto?
 
-Chevereto is a self-hosted multipurpose multi-user, full-featured media sharing solution. It can be used to create a myriad of applications or to empower existing systems, all around the concept of users sharing media content.
+Chevereto is a self-hosted multi-user, full-featured media hosting solution. It can be used to create a myriad of applications or to empower existing systems, all around the concept of users hosting media content.
 
 ## Use
 

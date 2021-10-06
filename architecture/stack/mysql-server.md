@@ -3,7 +3,7 @@
 Chevereto V4 rely in a [RDBMS](https://en.wikipedia.org/wiki/Relational_database) provided by a MySQL server.
 
 ::: tip MySQL / MariaDB
-Kindly note that Chevereto support both database servers but we refer to it as "MySQL" everywhere.
+Chevereto support both database servers but we refer to it as "MySQL" everywhere.
 :::
 
 ## Resources

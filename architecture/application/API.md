@@ -2,7 +2,7 @@
 
 `🚧 Work in progress`
 
-The Chevereto V4 API is how the application communicates with its _users_.
+The Chevereto V4 API describes the interface used to communicates instructions with the application _users_.
 
 ## Self-exposed API
 
@@ -24,10 +24,4 @@ Review [Chevere Spec](https://chevere.org/components/Spec.html) to understand ho
 
 ## CLI API
 
-Chevereto V4 includes a built-in console for CLI API access.
-
-* Requires [PHP](https://chevere.org/architecture/development/system.html#php) installed in your system `PATH`.
-
-```sh
-/chevereto/bin --help 
-```
+`🚧 Work in progress`

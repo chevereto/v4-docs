@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.svg
 heroText: Chevereto V4
-tagline: Self-hosted media sharing
+tagline: Self-hosted media hosting
 actionText: Get Started →
 actionLink: /get-started/
 features:
@@ -12,10 +12,10 @@ features:
   details: A self-exposed REST API made for any user interface.
 - title: 🔌 Pluggable
   details: Add exactly what you need to make it more yours.
-footer: Your own media hosting and sharing solution
+footer: Your own media hosting solution
 ---
 
-# Chevereto V4
+# Chevereto V4 Documentation
 
 This is the documentation for [Chevereto V4](https://releases.chevereto.com/4.X).
 

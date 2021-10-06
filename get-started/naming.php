@@ -5,7 +5,7 @@ return [
     'status.md' => '✨ Status',
     'version.md' => '🎉 Version',
     'installation.md' => '📦 Installation',
-    'migrating.md' => '🚀 Migrating',
+    'upgrading.md' => '🚀 Upgrading',
     'updating.md' => '⚡ Updating',
     'contributing.md' => '❤ Contributing',
 ];

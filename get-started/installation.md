@@ -2,9 +2,8 @@
 
 ## Using Docker
 
-Docker provisioning is all-included. No need to worry about PHP, Web Server or any other system layer dependency.
+Docker provisioning is all-included. No need to worry about PHP, Web Server or any other system layer dependency. Requires [Docker](https://docs.docker.com/get-docker/).
 
-* Install [Docker](https://docs.docker.com/get-docker/)
 * Create a project folder and store [httpd-php.yml](https://raw.githubusercontent.com/chevereto/docker/4.0/docker-compose/httpd-php.yml) there
 * Run the following command from your project folder
   * Replace `YOUR_V4_LICENSE_KEY` with your [license key](https://chevereto.com/panel/license)
@@ -29,9 +28,8 @@ You will require to install MySQL and bind the project path to the HTTP Web Serv
 
 ### Using Composer
 
-Composer will provide the installation of Chevereto and its dependencies.
+Composer will provide the installation of Chevereto and its dependencies. Requires `curl`, `unzip` and [Composer](https://getcomposer.org/).
 
-* Install [Composer](https://getcomposer.org/)
 * Create a project folder
 * Run the following command from your project folder
   * Replace `YOUR_V4_LICENSE_KEY` with your [license key](https://chevereto.com/panel/license)
@@ -40,18 +38,11 @@ Composer will provide the installation of Chevereto and its dependencies.
 ```sh
 LICENSE=YOUR_V4_LICENSE_KEY &&
 VERSION=VERSION_TAG &&
-composer create-project chevereto/v4 . \
-    --repository='{
-        "type": "package",
-        "package": {
-            "name": "chevereto/v4",
-            "version": "'${VERSION}'",
-            "dist": {
-                "url": "https://chevereto.com/api/download/'${VERSION}'-lite/?license='${LICENSE}'",
-                "type": "zip"
-            }
-        }
-    }'
+curl -f -SOJL \
+    -H "License: $LICENSE" \
+    "https://chevereto.com/api/download/${VERSION}-lite" \
+&& unzip chevereto*.zip \
+&& composer update
 ```
 
 ### Using the Installer

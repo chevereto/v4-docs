@@ -47,7 +47,7 @@ composer create-project chevereto/v4 . \
             "name": "chevereto/v4",
             "version": "'${VERSION}'",
             "dist": {
-                "url": "https://chevereto.com/api/download/'${VERSION}'-dev/?license='${LICENSE}'",
+                "url": "https://chevereto.com/api/download/'${VERSION}'-lite/?license='${LICENSE}'",
                 "type": "zip"
             }
         }

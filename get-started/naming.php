@@ -6,6 +6,6 @@ return [
     'version.md' => '🎉 Version',
     'installation.md' => '📦 Installation',
     'upgrading.md' => '🚀 Upgrading',
-    'updating.md' => '⚡ Updating',
-    'contributing.md' => '❤ Contributing',
+    'updating.md' => '🆙 Updating',
+    'contributing.md' => '💖 Contributing',
 ];

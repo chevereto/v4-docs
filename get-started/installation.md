@@ -24,7 +24,7 @@ Check [COMPOSE.md](https://github.com/chevereto/docker/blob/4.0/docs/COMPOSE.md)
 
 ## Other methods
 
-You will require to install MySQL and bind the project path to the HTTP Web Server. You will also require to provide the system [environment variables](https://v3-docs.chevereto.com/setup/system/environment.html).
+You will require to install MySQL and bind the project path to the HTTP Web Server.
 
 ### Using Composer
 
@@ -47,6 +47,22 @@ curl -f -SOJL \
 
 ### Using the Installer
 
-The [Installer](https://github.com/chevereto/installer) is a single-file tooling that interacts with the Chevereto API to automate the software installation process. This method should be used only if unable to run Composer.
+The [Installer](https://github.com/chevereto/installer) is a single-file tooling that interacts with the Chevereto API to automate the software installation process.
 
 `🚧 Work in progress`
+
+### Dotenv configuration
+
+If you can't provide the [environment variables](https://v3-docs.chevereto.com/setup/system/environment.html) at server layer you can use a `.env` file at the root of your project.
+
+* Copy `.env.example` to `.env`
+* Modify the values according to your system
+
+For the most basic `.env` file contents you will require to configure just the following:
+
+```plain
+CHEVERETO_DB_HOST=database
+CHEVERETO_DB_NAME=chevereto
+CHEVERETO_DB_PASS=user_database_password
+CHEVERETO_DB_USER=chevereto
+```

@@ -33,14 +33,12 @@ Composer will provide the installation of Chevereto and its dependencies. Requir
 * Create a project folder
 * Run the following command from your project folder
   * Replace `YOUR_V4_LICENSE_KEY` with your [license key](https://chevereto.com/panel/license)
-  * Replace `VERSION_TAG` with the target version to install (i.e. `4.0`)
 
 ```sh
 LICENSE=YOUR_V4_LICENSE_KEY &&
-VERSION=VERSION_TAG &&
 curl -f -SOJL \
     -H "License: $LICENSE" \
-    "https://chevereto.com/api/download/${VERSION}-lite" \
+    "https://chevereto.com/api/download/4-lite" \
 && unzip chevereto*.zip \
 && composer update
 ```

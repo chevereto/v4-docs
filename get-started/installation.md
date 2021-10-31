@@ -47,7 +47,13 @@ curl -f -SOJL \
 
 The [Installer](https://github.com/chevereto/installer) is a single-file tooling that interacts with the Chevereto API to automate the software installation process.
 
-`🚧 Work in progress`
+* Upload the [installer.php](https://chevereto.com/download/file/v4-installer) file to your target folder.
+
+```sh
+curl -SLo installer.php "https://chevereto.com/download/file/v4-installer"
+```
+
+* Navigate to the installer URL which is at `https://your_website/installer.php` and follow the steps.
 
 ### Dotenv configuration
 

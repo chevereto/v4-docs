@@ -1,5 +1,5 @@
 # 🎉 Version
 
-`4.0.0.beta.1`
+`4.0.0.beta.2`
 
-Check [releases](https://releases.chevereto.com) for more info.
+Check [releases](https://releases.chevereto.com/4.X/) for more info.

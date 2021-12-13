@@ -79,6 +79,8 @@ Using Composer the installation carried in CLI context. It requires:
 * Run the following command from your project folder
   * Replace `YOUR_V4_LICENSE_KEY` with your [license key](https://chevereto.com/panel/license)
 
+<code-group>
+<code-block title="Debian">
 ```sh
 LICENSE=YOUR_V4_LICENSE_KEY &&
 curl -f -SOJL \
@@ -88,6 +90,8 @@ curl -f -SOJL \
 && composer install \
 && chown www-data: . -R
 ```
+</code-block>
+</code-group>
 
 ### Dotenv configuration
 

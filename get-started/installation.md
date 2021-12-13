@@ -73,7 +73,7 @@ Using Composer the installation carried in CLI context. It requires:
 * CLI with `curl`, `unzip`
 * [Composer](https://getcomposer.org/)
 
-👉 This method is recommended for VPS and machines with CLI access.
+👉 This method is recommended for **VPS** and machines with **CLI access**.
 
 * Create a project folder in your server (usually the `public_html` folder)
 * Run the following command from your project folder
@@ -85,7 +85,8 @@ curl -f -SOJL \
     -H "License: $LICENSE" \
     "https://chevereto.com/api/download/4-lite" \
 && unzip chevereto*.zip \
-&& composer install
+&& composer install \
+&& chown www-data: . -R
 ```
 
 ### Dotenv configuration

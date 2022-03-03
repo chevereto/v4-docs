@@ -1,3 +1,3 @@
-# 🐞 Debug
+# 🆕 Whats new?
 
 `🚧 Work in progress`

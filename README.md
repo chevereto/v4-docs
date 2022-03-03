@@ -4,15 +4,15 @@ heroImage: /logo.svg
 heroText: Chevereto V4
 tagline: Self-hosted media hosting
 actionText: Get Started →
-actionLink: /get-started/
+actionLink: /introduction/get-started/welcome
 features:
-- title:  🤗 Community driven
+- title:  🦄 Outstanding
   details: Users from all over the world help to shape this software.
 - title: ✨ Headless
   details: A self-exposed REST API made for any user interface.
 - title: 🔌 Pluggable
   details: Add exactly what you need to make it more yours.
-footer: Your own media hosting solution
+footer: Self-hosted media hosting solution
 ---
 
 # Chevereto V4 Documentation

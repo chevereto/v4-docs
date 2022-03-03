@@ -1,3 +1,3 @@
-# 🐞 Debug
+# Contributing
 
 `🚧 Work in progress`

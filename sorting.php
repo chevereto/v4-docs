@@ -2,8 +2,9 @@
 
 return [
     'README.md',
-    'get-updates.md',
-    'get-started/',
-    'architecture/',
-    'reference/',
+    'introduction/',
+    'application/',
+    'admin/',
+    'user/',
+    'developer/',
 ];

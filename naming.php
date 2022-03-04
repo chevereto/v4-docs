@@ -6,4 +6,5 @@ return [
     'admin/' => '👑 Admin',
     'user/' => '👩‍💻 User',
     'developer/' => '🛸 Dev',
+    'features/' => '🥑 Feat',
 ];

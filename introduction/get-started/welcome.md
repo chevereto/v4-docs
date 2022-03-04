@@ -1,4 +1,4 @@
-# 🎉 Welcome to Chevereto!
+# 👋🏾 Welcome to Chevereto!
 
 ::: tip <i>A word from the author</i>
 This is the fourth major release for Chevereto. For this one I wanted to re-build Chevereto from the ground up to provide refreshing new features, improvements and above all: Endless customizations.

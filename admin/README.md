@@ -1,4 +1,4 @@
-# Introduction
+# 👑 Admin Dashboard
 
 System is controlled at the **Dashboard panel**, which is located at `/dashboard` where you can administer your website.
 

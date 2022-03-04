@@ -3,6 +3,6 @@
 return [
     'installing/' => 'Installing & Updating',
     'configuration/' => 'Configuration',
-    'overview/' => 'Overview',
+    'reference/' => 'Reference',
     'stack/' => 'Stack',
 ];

@@ -4,4 +4,5 @@ return [
     'api/',
     'how-to/',
     'plugins/',
+    'customization/',
 ];

@@ -1,1 +1,0 @@
-# 🖼 API Version 1

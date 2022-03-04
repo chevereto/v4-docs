@@ -8,4 +8,5 @@ return [
     'admin/',
     'user/',
     'developer/',
+    'api/',
 ];

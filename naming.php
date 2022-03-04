@@ -3,8 +3,8 @@
 return [
     'introduction/' => '🎉 Intro',
     'application/' => '🦄 App',
-    'admin/' => '👑 Admin',
+    'admin/' => '🤴 Admin',
     'user/' => '👩‍💻 User',
     'developer/' => '🛸 Dev',
-    'features/' => '🥑 Feat',
+    'api/' => '🌎 API',
 ];

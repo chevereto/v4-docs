@@ -2,6 +2,20 @@
 
 Chevereto requires an HTTP web server, like [Apache HTTP Server](https://httpd.apache.org/), [Nginx](https://nginx.org/) or any server compatible with PHP.
 
+## What it does?
+
+The web server exposes the Chevereto application using the HTTP(s) protocol.
+
+## Troubleshoot
+
+Having issues? Check the following common pitfalls:
+
+* Apache `mod_rewrite` disabled or `Allow Override All` missing in virtual hosts
+* Missing writing permissions in Chevereto paths
+* Bad or invalid setup (timezone, multi-views, timeout, etc.)
+* Wrong NGINX server block / PHP-FPM issues
+* `mod_security` or any other artifact blocking requests from/to
+
 ## Apache HTTP server
 
 Module [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) must be enabled. Virtual host settings must allow URL rewriting:

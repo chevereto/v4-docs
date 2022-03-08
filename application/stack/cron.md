@@ -1,12 +1,26 @@
 # ⏲️ CRON
 
-A [cron](https://en.wikipedia.org/wiki/Cron) is required to process the application background jobs. A cron is system in which a command is executed in a regular basis, this way Chevereto can perform operations in the background.
+Chevereto requires to setup [cron](https://en.wikipedia.org/wiki/Cron) to run background jobs.
 
 👉 This cron setup reference applies *mostly* for **Debian-based** servers. We **recommend** checking your server documentation on how to setup and run cron accordingly.
 
 ::: tip 👏 Contributing
 Consider to contribute to this documentation by improving this document with more cron setup alternatives.
 :::
+
+## What it does?
+
+A cron is system in which a command is executed in a regular basis, this way Chevereto can perform operations in the background.
+
+## Troubleshoot
+
+Having issues? Check the following common pitfalls:
+
+* Wrong user running the command (requires user with access to the project folder)
+* Invalid php binary (provide full path when possible)
+* Outdated Chevereto database (required to store last run)
+* PHP binary context/settings should be same as when wiring to HTTP web server
+* Invalid format for cron schedule
 
 ## Command
 

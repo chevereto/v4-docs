@@ -6,6 +6,7 @@
 
 Chevereto V4 is [PHP](https://php.net/) software, it has been designed using:
 
+* [Chevere](https://chevere.org/)
 * [PHP packages](https://deb.sury.org/) from Ondřej Surý.
 * [PHP extensions](https://www.php.net/manual/en/extensions.membership.php) provided by [PECL](https://pecl.php.net/).
 
@@ -22,6 +23,17 @@ Chevereto V4 is [PHP](https://php.net/) software, it has been designed using:
 ## What it does?
 
 PHP is the programming language used to write Chevereto application instructions, it is used for everything as it provides high flexibility to alter instructions on-the-fly at a minimum system performance footprint.
+
+## Troubleshoot
+
+Having issues? Check the following common pitfalls:
+
+* Outdated PHP version
+* Misconfiguration in PHP libraries
+* Bad php.ini directives
+* Low execution time
+* Bad sessions setup
+* Open basedir restrictions
 
 ## PHP Configuration
 

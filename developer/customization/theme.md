@@ -1,6 +1,6 @@
 # 🎨 Theme
 
-`🚧 Work in progress`
+`😪 Outdated docs - please check later.`
 
 ## Theme overrides
 

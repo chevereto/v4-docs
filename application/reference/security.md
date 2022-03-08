@@ -1,4 +1,4 @@
-# 🛡 Security
+# 👮‍♀️ Security
 
 `😪 Outdated docs - please check later.`
 

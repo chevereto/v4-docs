@@ -1,6 +1,6 @@
 # 💬 Language
 
-`🚧 Work in progress`
+`😪 Outdated docs - please check later.`
 
 Chevereto uses `gettext` for its translations and the system comes with a lot of languages built-in which you can find in the `app/content/languages` folder.
 

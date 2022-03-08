@@ -2,5 +2,5 @@
 
 return [
     'debug.md' => '🐞 Debug',
-    'troubleshoot.md' => '⛑ Troubleshoot',
+    'troubleshoot.md' => '⛑️ Troubleshoot',
 ];

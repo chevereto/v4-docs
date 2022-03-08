@@ -18,11 +18,21 @@ Chevereto support both database servers but we refer to it as "MySQL" everywhere
 
 The MySQL server is used to interact with the database storing relational data, for which Chevereto links users to media, content to reactions, folders, etc. That relational data is what is used to define what your application "is".
 
-## Permissions
+## Troubleshoot
+
+Having issues? Check the following common pitfalls:
+
+* Wrong credentials (user/password)
+* Invalid or missing privileges (read/write in the database)
+* Outdated MySQL version
+* Bad configured MySQL socket
+* Usage of MyISAM storage engine (`ALTER` table to InnoDB storage)
+
+## Database Permissions
 
 Database user must have `ALL PRIVILEGES` over the target database.
 
-## Storage engine
+## Database Storage engine
 
 InnoDB table storage engine.
 
@@ -48,3 +58,11 @@ Here some references for the most popular panels.
 * [Plesk Database](https://docs.plesk.com/en-US/obsidian/customer-guide/website-databases/creating-databases.65157/)
 * [CyberPanel Database](https://cyberpanel.net/docs/view-and-manage-databases-table-from-cloud-platform/)
 * [CloudPanel Database](https://www.cloudpanel.io/docs/cloudpanel-ce/frontend-area/databases)
+
+## Updating
+
+When manually updating the database keep the following considerations:
+
+* Disconnect all peers
+* Turn off the MySQL server, work in its console (phpMyAdmin, Adminer, CLI)
+* Run the MySQL statements one-by-one (a semi-colon `;` denotes when a MySQL statement ends)

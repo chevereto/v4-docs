@@ -1,6 +1,6 @@
 # 🛤 Routes
 
-`🚧 Work in progress`
+`😪 Outdated docs - please check later.`
 
 Routes refers to virtual paths like `/dashboard` which doesn't exists in the system as a real folder and Chevereto map that request to PHP. By default Chevereto comes with a lot of routes and all of them are in the `/app/routes` folder.
 

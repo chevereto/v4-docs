@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'security.md' => '🛡 Security',
+    'errors.md' => '😖 Errors',
+    'security.md' => '👮‍♀️ Security',
 ];

@@ -8,9 +8,9 @@ Debug enables to dump information about errors that may be affecting the softwar
 
 <p><img alt="XR Debug" width="17%" class="float-left margin-right-1em" src="../../src/products/xr/logo.svg"></p>
 
-👏 Chevereto V4 includes **built-in support** for [XR Debug](https://xr-docs.chevere.org), which is an Open Source remote debugger for PHP made by us.
+👏 Chevereto V4 includes **built-in support** for [XR Debug](https://xr-docs.chevere.org), an Open Source remote debugger for PHP also made by us.
 
-You can [enable XR Debug](../../admin/dashboard/system.md#enable-xr) server to live get debug messages direcly, enabling you to save/export those for handling it over to our Tech Support rockstars.
+You can [enable XR Debug](../../admin/dashboard/system.md#enable-xr) server to get live debug messages, enabling you to save/export those for handling it over when [requesting help](troubleshoot.md#getting-help).
 
 ## Configuring debug
 
@@ -20,7 +20,7 @@ Debug can be [configured](../../application/configuration/configuring.md) using 
 
 Depending on the work context debug needs to be configured accordingly.
 
-::: warning Error level >= 2
+::: warning Note on debug levels
 Error level >= 2 is not recommended for production environments. Is not safe to print the errors to the screen, handle it with care.
 :::
 

@@ -1,20 +1,18 @@
 # 📦 Installation
 
-💡 Our Docker and VPS provisioning comes all-included. No need to worry about any system layer dependency and we also provide active support for these.
+💡 Our Docker and VPS provisioning comes all-included. No need to worry about any system layer dependency and we also provide **active support** for those.
 
-::: tip Runs anywhere
-Chevereto runs on any compatible system but **we do not** include support for third-party provisioning systems as part of our software support. Paid extra support will be required to address these issues.
+::: tip Runs anywhere (*)
+Chevereto runs on any compatible system but keep in mind: **Our software support doesn't include third-party provisioning systems**. Paid extra support will be required to address these issues.
 :::
 
 ## Using VPS
 
 * Requires Ubuntu 20.04 LTS VPS
 
-👉 Recommended for production systems.
+💡 Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning.
 
-::: tip
-Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning.
-:::
+👉 Recommended for production systems.
 
 * Login to your VPS and run the following command
 

@@ -1,14 +1,16 @@
 # 📦 Installation
 
-::: tip
-Our Docker and VPS provisioning are all-included. No need to worry about PHP, Web Server or any other system layer dependency.
+💡 Our Docker and VPS provisioning comes all-included. No need to worry about any system layer dependency and we also provide active support for these.
+
+::: tip Runs anywhere
+Chevereto runs on any compatible system but **we do not** include support for third-party provisioning systems as part of our software support. Paid extra support will be required to address these issues.
 :::
 
 ## Using VPS
 
 * Requires Ubuntu 20.04 LTS VPS
 
-👉 Recommended for **production systems**.
+👉 Recommended for production systems.
 
 ::: tip
 Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning.
@@ -27,39 +29,31 @@ bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/bash.sh)
 
 * Requires [Docker](https://docs.docker.com/get-docker/)
 
-👉 This method is the standard for **development** and required for **bug tracking**
+### Production
 
-::: tip
-Check [chevereto/docker](https://github.com/chevereto/docker) for a complete overview of our Docker provisioning.
-:::
+👉 Recommended for production systems.
 
-* Create a project folder and store [httpd-php.yml](https://raw.githubusercontent.com/chevereto/docker/4.0/httpd-php.yml) there
-* Run the following command from your project folder
-  * Replace `YOUR_V4_LICENSE_KEY` with your [license key](https://chevereto.com/panel/license)
+Use [chevereto/container-builder](https://github.com/chevereto/container-builder) to create your own private Chevereto container image(s) which will be available in the container registry of your choice.
 
-```sh
-LICENSE=YOUR_V4_LICENSE_KEY \
-docker-compose \
-    -p chevereto-v4 \
-    -f httpd-php.yml \
-    up --abort-on-container-exit
-```
+### Development
 
-Chevereto will be available at [localhost:8840](http://localhost:8840)
+👉 Our development standard.
+
+Use [chevereto/docker](https://github.com/chevereto/docker) for our development standard provisioning. This is preferred when requiring to debug or test the software.
 
 ## Other methods
 
 These methods consists in to provide the application files in a file system compatible with the following requirements:
 
-* [PHP 8.0](https://www.php.net/releases/8.0)
-* Web Server ([Apache HTTP Web Server](https://httpd.apache.org/), [NGiNX](https://nginx.org/))
-* Database ([MySQL](https://www.mysql.com/), [MariaDB](https://mariadb.org/))
+* [PHP](../stack/php.md)
+* [Web Server](../stack/web-server.md) (Apache HTTP Web Server, NGiNX)
+* [Database Server](../stack/mysql-server.md) (MySQL, MariaDB)
 
 ### Using Release package
 
 The release package is a `zip` file containing the software files. Once extracted, the software is ready to be used.
 
-👉 This method is recommended for **cPanel**, **Plesk** and other web panel users.
+👉 This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
 
 * Upload the [latest release](https://chevereto.com/panel/downloads) package to your server (usually in the `public_html` folder)
 * Unzip the software using your server built-in `unzip` utility
@@ -73,7 +67,7 @@ Using Composer the installation carried in CLI context. It requires:
 * CLI with `curl`, `unzip`
 * [Composer](https://getcomposer.org/)
 
-👉 This method is recommended for **VPS** and machines with **CLI access**.
+👉 This method is recommended for VPS and machines with CLI access.
 
 * Create a project folder in your server (usually the `public_html` folder)
 * Run the following command from your project folder
@@ -87,26 +81,10 @@ curl -f -SOJL \
     -H "License: $LICENSE" \
     "https://chevereto.com/api/download/4-lite" \
 && unzip chevereto*.zip \
-&& composer install \
+&& composer install --ignore-platform-reqs \
 && chown www-data: . -R
 ```
 </code-block>
 </code-group>
 
-### Dotenv configuration
-
-✨ To configure the database connection and all the other system environment variables Chevereto uses a `.env` file at the root of your project.
-
-* Copy `.env.example` to `.env`
-* Modify the values according to your system needs
-
-The minimum `.env` file contents you will require to configure are the following:
-
-```plain
-CHEVERETO_DB_HOST=database
-CHEVERETO_DB_NAME=chevereto
-CHEVERETO_DB_PASS=user_database_password
-CHEVERETO_DB_PORT=3306
-CHEVERETO_DB_USER=chevereto
-CHEVERETO_DB_TABLE_PREFIX=chv_
-```
+Once done, open your target website.

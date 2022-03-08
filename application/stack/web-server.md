@@ -1,6 +1,6 @@
 # 🪶 Web Server
 
-* Requires an HTTP web server, like [Apache HTTP Server](https://httpd.apache.org/), [Nginx](https://nginx.org/) or any server compatible with PHP.
+Chevereto requires an HTTP web server, like [Apache HTTP Server](https://httpd.apache.org/), [Nginx](https://nginx.org/) or any server compatible with PHP.
 
 ## Apache HTTP server
 
@@ -71,7 +71,7 @@ In system without access to Apache Virtual Host it is recommended to use a `.hta
 
 ## NGINX
 
-`nginx.conf` for `server {}` block:
+This is the **recommended** `nginx.conf` for `server {}` block. This already includes blocking for direct access for `.php` files.
 
 ```nginx
     # Disable access to sensitive application files

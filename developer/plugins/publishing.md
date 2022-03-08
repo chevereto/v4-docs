@@ -1,5 +1,7 @@
 # 🛰 Plugin Publishing
 
+`🚧 Work in progress`
+
 Publishing your plugins will make your addons available to other Chevereto V4 users.
 
 ## Preparation

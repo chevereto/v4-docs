@@ -1,5 +1,7 @@
 # 🛡 Security
 
+`😪 Outdated docs - please check later.`
+
 ## Encoded IDs
 
 Chevereto public IDs are encoded in order to avoid enumeration and get hard to guess URLs. All the users, images and albums ids are encoded for public use.

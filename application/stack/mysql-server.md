@@ -26,6 +26,25 @@ Database user must have `ALL PRIVILEGES` over the target database.
 
 InnoDB table storage engine.
 
-::: danger Upgrading from old versions
-Old versions using MyISAM table storage engine will require to convert the old tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
-:::
+👉 Old versions using MyISAM table storage engine will require to convert the old tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
+
+## Creating the database
+
+### Using the MySQL console
+
+Run the following command to create the `chevereto` database and its user binding.
+
+```sh
+sudo mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
+    CREATE USER 'chevereto' IDENTIFIED BY 'user_database_password'; \
+    GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
+```
+
+### Using web panels
+
+Here some references for the most popular panels.
+
+* [cPanel Database](https://docs.cpanel.net/cpanel/databases/mysql-databases/)
+* [Plesk Database](https://docs.plesk.com/en-US/obsidian/customer-guide/website-databases/creating-databases.65157/)
+* [CyberPanel Database](https://cyberpanel.net/docs/view-and-manage-databases-table-from-cloud-platform/)
+* [CloudPanel Database](https://www.cloudpanel.io/docs/cloudpanel-ce/frontend-area/databases)

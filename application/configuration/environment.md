@@ -89,9 +89,7 @@ Environment variables for the context where Chevereto system is being provided. 
 
 Environment variables for the file uploading limits. Note that the following environment variables will work for container provisioning.
 
-::: warning
 👉 For **non-container** based provisioning you need to also change these settings at [php.ini configuration](../stack/php.md#php-configuration).
-:::
 
 | Variable                      | Example |
 | ----------------------------- | ------- |

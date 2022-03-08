@@ -16,14 +16,13 @@ Chevereto runs on any compatible system but **we do not** include support for th
 Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning.
 :::
 
-* Login to your VPS
-* Run the following command
+* Login to your VPS and run the following command
 
 ```sh
 bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/bash.sh)
 ```
 
-* Click on the URL at the end of the process
+* Click on the URL at the end of the process to proceed with [Initial Setup](#initial-setup).
 
 ## Using Docker
 
@@ -58,7 +57,7 @@ The release package is a `zip` file containing the software files. Once extracte
 * Upload the [latest release](https://chevereto.com/panel/downloads) package to your server (usually in the `public_html` folder)
 * Unzip the software using your server built-in `unzip` utility
 * Remove the `.zip` file
-* Open your target website URL and follow the instructions
+* Open your target website URL and follow the [Initial Setup](#initial-setup) instructions
 
 ### Using Composer package manager
 
@@ -87,4 +86,29 @@ curl -f -SOJL \
 </code-block>
 </code-group>
 
-Once done, open your target website.
+Once done, open your target website to proceed with [Initial Setup](#initial-setup).
+
+## Initial Setup
+
+This will create the chevereto database tables and the Chevereto admin user. This is needed for the first time the system gets installed and it can be made using HTTP (web) or CLI.
+
+### HTTP setup
+
+* Go to `/install` and submit the installation form.
+
+### CLI setup
+
+* Run the following command:
+
+```sh
+sudo -u www-data php /var/www/html/app/bin/legacy -C install \
+    -u dev \
+    -e dev@chevereto.loc \
+    -x password
+```
+
+| Option | Description    |
+| ------ | -------------- |
+| u      | Admin username |
+| e      | Admin email    |
+| x      | Admin password |

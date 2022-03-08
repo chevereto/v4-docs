@@ -1,4 +1,4 @@
-# ⚙️ Configuring Chevereto
+# ⚙️ Configuring
 
 Chevereto V4 uses [environment variables](environment.md) for configuring system level settings.
 

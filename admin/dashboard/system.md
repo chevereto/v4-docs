@@ -104,8 +104,31 @@ error_reporting(E_ALL ^ E_NOTICE);
 
 ## Debug level
 
-Shows the debug level. This value is taken from the [settings file](../setup/settings-file.md).
+Shows the debug level. This value is taken from `CHEVERETO_DEBUG_LEVEL`.
 
-| Type    | Example              |
-| ------- | -------------------- |
-| Integer | Print and log errors |
+## Enable XR
+
+Toggles sending debug messages to XR Debug.
+
+When enabled, the website will stream dump information to the configured XR Debug server.
+
+| Value    | Effect           |
+| -------- | ---------------- |
+| Enabled  | Enable XR Debug  |
+| Disabled | Disable XR Debug |
+
+### XR Debug Host
+
+Determines the XR Debug host to send dump messages.
+
+| Type   | Example   |
+| ------ | --------- |
+| String | localhost |
+
+### XR Debug Port
+
+Determines the XR Debug host port to send dump messages.
+
+| Type   | Example |
+| ------ | ------- |
+| String | 27420   |

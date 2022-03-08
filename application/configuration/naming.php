@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'configuring.md' => '⚙️ Configuring Chevereto',
+    'configuring.md' => '⚙️ Configuring',
     'environment.md' => '🗿 Environment',
     'env.php.md' => '📌 app/env.php',
 ];

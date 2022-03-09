@@ -5,4 +5,5 @@ return [
     'welcome.md',
     'links.md',
     'contributing.md',
+    'copyright.md',
 ];

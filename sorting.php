@@ -5,8 +5,7 @@ return [
     'introduction/',
     'application/',
     'features/',
-    'admin/',
-    'user/',
     'developer/',
     'api/',
+    'manuals/',
 ];

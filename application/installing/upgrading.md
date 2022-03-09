@@ -10,6 +10,6 @@ This section outlines the upgrade process required to install V4 from previous m
 
 ## Steps
 
-The upgrade process is more precisely an importing process on top of a clean installation. It works by importing your existing Chevereto V3 installation.
+The upgrade process is more an importing process on top of a clean installation. It works by importing your existing Chevereto V3 installation.
 
 `🚧 Work in progress`

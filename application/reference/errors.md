@@ -2,7 +2,7 @@
 
 Chevereto errors can be caused by several causes, including software errors and server incompatibilities. Understanding in which layer the error is affecting the system functionality will drive towards an easy outcome.
 
-👉 In a multi-layered system like Chevereto is crucial to understand when an error is actually caused by Chevereto and not *something else*. Our support only covers software issues, not third-partyy server provisionings.
+👉 In a multi-layered system like Chevereto is crucial to understand when an error is caused by Chevereto and not *something else*. Our support covers software issues, not third-party server provisioning.
 
 ## Error example
 
@@ -10,15 +10,17 @@ Chevereto errors can be caused by several causes, including software errors and 
 
 ## Error Id
 
-Chevereto logs all error events under a unique **errorId** associated with the error stack trace and debug information.
+✅ Chevereto logs all error events under a unique **errorId** associated with the error stack trace and debug information.
 
 ```plain
 <some code>: ** errorId #dacb7f96fb9fd28d **
 ```
 
-Errors in Chevereto **are hidden by default**, the only public part is the error identifier. Errors won't be displayed for security reasons and the error identifier is a randomly generated unique identifier per error event. In no situation the error id will provide any relevant information about the actual issue.
+Errors in Chevereto **are hidden by default**, the public part is the error identifier. Errors won't be displayed for security reasons and the error identifier is a randomly generated unique identifier per error event.
 
-💡 The error id exists so you can lookup for that error in your configured system error log device.
+✅ In no situation the error id will provide any relevant information about the error happening.
+
+💡 The error id exists for lookup for that error in the system error log device.
 
 ## Stack Trace
 
@@ -50,11 +52,11 @@ This is a generic error response emitted by the web server layer and this it ind
 
 💡 These errors must be debugged in the Web server layer, which will vary depending on the web server software. Always refer to your web server provisioning documentation.
 
-👉 Once the actual cause for the HTTP 500 error is known, you can either solve the situation with our own means or [request help](../../developer/how-to/troubleshoot.md#getting-help) from us.
+👉 Once the cause for the HTTP 500 error is known, you can either solve the situation with our own means or [request help](../../developer/how-to/troubleshoot.md#getting-help) from us.
 
 ### Something went wrong
 
-This message indicates an error caught by Chevereto, but hidden as per system settings. To actually know what is going on you have to either look for the [logged error](../../developer/how-to/debug.md#accessing-logs) against the provided error id or use [XR Debug](../../developer/how-to/debug.md#xr-debug) to catch the error as it happens.
+This message indicates an error caught by Chevereto, but hidden as per system settings. To know what is going on you have to either look for the [logged error](../../developer/how-to/debug.md#accessing-logs) against the provided error id or use [XR Debug](../../developer/how-to/debug.md#xr-debug) to catch the error as it happens.
 
 `🚧 Work in progress - show demo`
 

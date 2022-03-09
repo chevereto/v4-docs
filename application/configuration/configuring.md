@@ -2,17 +2,15 @@
 
 Chevereto V4 uses [environment variables](environment.md) for configuring system level settings.
 
-::: tip ENV vs env.php
-Enviroment variables configured at `ENV` system level will **override** the configuration at `app/env.php`.
-:::
+💡 Environment variables configured at `ENV` system level will **override** the configuration at `app/env.php`.
 
 ## Using `app/env.php`
 
-For the most general use-case, set the system settings at the [app/env.php](env.php.md) file.
+For the most common use-case, set the system settings at the [app/env.php](env.php.md) file.
 
 ## Using `ENV`
 
-This applies only where system enviroment variables can be configured. In this case,  variables are handled in a plain file like in the example below:
+This applies where system environment variables can be configured. In this case, variables are handled in a plain text format like in the example below:
 
 ```plain
 CHEVERETO_DB_HOST=localhost

@@ -52,7 +52,7 @@ sudo mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
 
 ### Using web panels
 
-Here some references for the most popular panels.
+Links for the most popular panels:
 
 * [cPanel Database](https://docs.cpanel.net/cpanel/databases/mysql-databases/)
 * [Plesk Database](https://docs.plesk.com/en-US/obsidian/customer-guide/website-databases/creating-databases.65157/)

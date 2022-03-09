@@ -9,5 +9,5 @@
 ## General Resources
 
 * [Website](https://chevereto.com/) - Everything goes at `chevereto.com`.
-* [Community](https://chevereto.com/community/) - Join the discussion with other users of the software.
+* [Community](https://chevereto.com/community/) - Join the discussion with other users.
 * [Releases](https://releases.chevereto.com/) - All Chevereto software release notes.

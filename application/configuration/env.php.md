@@ -1,6 +1,8 @@
 # 📌 app/env.php
 
-The file at `app/env.php` contains the application system level settings. Note that this applies only for `ENV` variables not set as `app/env.php` has lower priority.
+The file at `app/env.php` contains the application system level settings.
+
+💡 This applies for `ENV` variables not set as `app/env.php` has **lower priority** than [ENV](environment.md).
 
 ## Creating the file
 

@@ -2,11 +2,11 @@
 
 Chevereto API v1 allows to upload pictures as guest to your Chevereto powered website.
 
-API v1 doesn't have rate limiting but is affected by the configured flood upload limit in your admin dashboard. You should only use this API for your very own applications or scripts, is not intended for public usage.
+API v1 do not rate limit. You should use this API for your own applications or systems, this API is **not intended for public usage**.
 
 ## Key
 
-API v1 works with a single API key that you can set at Dashboard > Settings > API.
+API v1 works with a single API key that you can set at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
 
 ## Call
 
@@ -33,17 +33,17 @@ http://mysite.com/api/1/<action>/
 GET http://mysite.com/api/1/upload/?key=12345&source=http://somewebsite/someimage.jpg&format=json
 ```
 
-Note: Always use POST when uploading local files. Url encoding may alter the base64 source due to encoded characters or just by URL request length limit due to GET request.
+Note: Use POST when uploading local files. Url encoding may alter the base64 source due to encoded characters or URL request length limit due to GET request.
 
 ## API response
 
 API v1 responses will vary depending on the **format** parameter:
 
-- json Display all the image uploaded information in JSON format. [default]
-- txt Returns the image direct URL in text/plain format.
-- redirect Redirects to the image viewer URL.
+- `json` Display all the image uploaded information in JSON format. [default]
+- `txt` Returns the image direct URL in text/plain format.
+- `redirect` Redirects to the image viewer URL.
 
-When using JSON the response will have headers status codes to allow you to easily notice if the request was OK or not. It will also output the `status_txt` and `status_code` properties.
+When using JSON the response output will contain the `status_txt` and `status_code` properties.
 
 ### Example response (JSON)
 
@@ -120,40 +120,3 @@ When using JSON the response will have headers status codes to allow you to easi
 ```plain
 http://127.0.0.1/images/2014/06/04/example.png
 ```
-
-## Upload to user workaround
-
-API V1 one doesn't have a way to upload images associated with a given user but you can override the default API. Copy the default `app/routes/route.api.php` file to `app/routes/overrides/route.api.php` folder.
-
-Change this:
-
-```php
-CHV\Image::uploadToWebsite($source);
-```
-
-To this (replace juanito with the target username or user_id):
-
-```php
-// This will upload images to 'juanito' account 
-CHV\Image::uploadToWebsite($source, 'juanito');
-```
-
-By doing this, the `/api` route (sourced from `app/routes/overrides/route.api.php`) will now upload images in the name of that user.
-
-### Using different API keys
-
-If you want to use a different API key in this new customized API simply change this:
-
-```plain
-!G\timing_safe_compare(CHV\getSetting('api_v1_key'), $_REQUEST['key'])
-```
-
-To this:
-
-```plain
-!G\timing_safe_compare('NowThisIsAnotherAPIKEY!', $_REQUEST['key'])
-```
-
-### Multiple APIs
-
-You can have multiple APIs long as you perform some editing at `app/loader.php`. Since this file handles some pre-routing, you need to add your custom routes to all the conditionals mentioning `api`.

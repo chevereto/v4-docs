@@ -2,11 +2,9 @@
 
 Chevereto requires to setup [cron](https://en.wikipedia.org/wiki/Cron) to run background jobs.
 
-👉 This cron setup reference applies *mostly* for **Debian-based** servers. We **recommend** checking your server documentation on how to setup and run cron accordingly.
+👉 This cron setup reference applies *mostly* for **Debian-based** systems. We **recommend** checking your server documentation on how to setup and run cron accordingly.
 
-::: tip 👏 Contributing
-Consider to contribute to this documentation by improving this document with more cron setup alternatives.
-:::
+👏 Consider to contribute to this documentation by improving this document with more cron setup alternatives.
 
 ## What it does?
 

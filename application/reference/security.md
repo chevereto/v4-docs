@@ -2,9 +2,9 @@
 
 ## Security Checklist
 
-For best security practices must **constanly double-checking** the following:
+Must **constantly double-checking** the following:
 
-* [PHP Fileystem](../stack/php.md#php-filesystem)
+* [PHP Filesystem](../stack/php.md#php-filesystem)
 * [Real connecting IP](../stack/web-server.md#real-connecting-ip)
 * [Restrict access to PHP files](../stack/web-server.md#restrict-direct-access-to-php-files)
 * [CRON setup](../stack/cron.md)
@@ -14,7 +14,7 @@ For best security practices must **constanly double-checking** the following:
 
 ✅ Public IDs are **always encoded** to avoid any attempt of content enumeration attack.
 
-While the actual data is stored in database rows indexed with integer ids, Chevereto handles these on public as encoded identifiers. Similar to how YouTube encode their video IDs. This is made to avoid enumeration of content based on incremental identifiers (retrieve N content by just doing `+1` on the identifier).
+While the data is stored in database rows indexed with integer ids, Chevereto handles these on public as encoded identifiers. Similar to how YouTube encode their video IDs. This is made to avoid enumeration of content based on incremental identifiers (retrieve N content by doing `+1` on the identifier).
 
 ### Encoding and decoding IDs
 
@@ -24,15 +24,13 @@ On installation Chevereto creates a random generated `crypt_salt` which is used 
 
 ### Making encoded IDs larger
 
-✅ The lenght of encoded IDs can be customized.
+✅ The length of encoded IDs can be customized.
 
 Larger encoded IDs will be always better for preserving the privacy of the uploaded content. Two alternatives to achieve larger encoded IDs:
 
 #### Altering `id_padding` setting
 
-::: warning Affects previous links
-This method will affect previously generated links. Use it only if is safe to edit the IDs.
-:::
+💡 This method will affect previous generated links. Use it only if is safe to edit the IDs.
 
 Go to the database, find the `chv_settings` table and edit the `setting_name` identified as `id_padding`. (zero by default).
 
@@ -40,7 +38,7 @@ Entering an integer value like `5000` will instruct the system to generate IDs u
 
 #### Altering `chv_images` table
 
-💡 This method won't affect any previously generated links.
+💡 This method won't affect any previous generated links.
 
 Go to the database, find the `chv_images` table and change the `AUTOINCREMENT` to the ID padding you want to use.
 
@@ -50,7 +48,7 @@ Go to the database, find the `chv_images` table and change the `AUTOINCREMENT` t
 
 Cross-site request forgery ([CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)) is a type of exploit that is used to fool website's origin requests by transmitting instructions from a remote website without the user's consent, for example trigger a delete content request without the user consent or willing.
 
-The CSRF protection is based in the usage of a request token, which is set by session when the website loads and is asked when subsequential request are made.
+The CSRF protection is based in the usage of a request token, which is set by session when the website loads and is asked when sub-sequential request are made.
 
 ## Cryptography
 
@@ -62,7 +60,7 @@ Chevereto uses [BCrypt](https://en.wikipedia.org/wiki/Bcrypt) cryptography to st
 
 ✅ Built-in reCAPTCHA support.
 
-Chevereto includes support for [reCAPTCHA](../../admin/dashboard/external-services.md#recaptcha) which helps to prevent bots from signing up and try to brute-force an user password.
+Chevereto includes support for [reCAPTCHA](../../admin/dashboard/external-services.md#recaptcha) which helps to prevent bots from signing up and try to brute-force a user password.
 
 ## Daily Invalid Requests
 
@@ -70,10 +68,10 @@ Chevereto includes support for [reCAPTCHA](../../admin/dashboard/external-servic
 
 An invalid request is when a user enters a bad password or the CSRF token doesn't match. Each time an invalid request is triggered the system stores the IP and the given action that triggers that invalid request.
 
-There is a hard-coded setting in the system that controls the limit of allowed invalid requests per day and when an user reaches this limit the system won't allow requests from that in IP in a period of 24 hours.
+There is a hard-coded setting in the system that controls the limit of allowed invalid requests per day and when a user reaches this limit the system won't allow requests from that in IP in a period of 24 hours.
 
 ## Flood Protection
 
 ✅ Control how much content/time can be added by users.
 
-Avoid resource hungry users by configuting [Flood Protection](../../admin/dashboard/flood-protection.md). This enables to control how much they can upload based on configurable time settings.
+Avoid resource hungry users by configuring [Flood Protection](../../admin/dashboard/flood-protection.md). This enables to control how much they can upload based on configurable time settings.

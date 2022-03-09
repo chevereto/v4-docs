@@ -1,9 +1,9 @@
 # 📦 Installation
 
-💡 Our Docker and VPS provisioning comes all-included. No need to worry about any system layer dependency and we also provide **active support** for those.
+✅ Our Docker and VPS provisioning comes all-included. No need to worry about any system layer dependency and we provide **active support** for those.
 
 ::: tip Runs anywhere (*)
-Chevereto runs on any compatible system but keep in mind: **Our software support doesn't include third-party provisioning systems**. Paid extra support will be required to address these issues.
+Chevereto runs on any compatible system but keep in mind: 💡 **Our software support doesn't include third-party provisioning systems**. Paid extra support will be required to address these issues.
 :::
 
 ## Using VPS

@@ -6,11 +6,21 @@ Debug enables to dump information about errors that may be affecting the softwar
 
 ## XR Debug
 
-<p><img alt="XR Debug" width="17%" class="float-left margin-right-1em" src="../../src/products/xr/logo.svg"></p>
+<p><img alt="XR Debug" width="17%" class="float-left margin-1em" src="../../src/products/xr/logo.svg"></p>
 
 👏 Chevereto V4 includes **built-in support** for [XR Debug](https://xr-docs.chevere.org), an Open Source remote debugger for PHP also made by us.
 
 You can [enable XR Debug](../../admin/dashboard/system.md#enable-xr) server to get live debug messages, enabling you to save/export those for handling it over when [requesting help](troubleshoot.md#getting-help).
+
+### Built-in XR Debug server
+
+Run the following command to spawn the built-in XR Debug server:
+
+```php
+php /var/www/html/app/vendor/chevere/xr/server.php -p 27420
+```
+
+👉 The command instructions are also avilable in your [Admin Dashboard](https://v4-admin.chevereto.com/).
 
 ## Configuring debug
 
@@ -18,7 +28,7 @@ Debug can be [configured](../../application/configuration/configuring.md) using 
 
 ### Debug level
 
-Depending on the work context debug needs to be configured accordingly.
+💡 Depending on the work context debug needs to be configured accordingly.
 
 ::: warning Note on debug levels
 Error level >= 2 is not recommended for production environments. Is not safe to print the errors to the screen, handle it with care.
@@ -37,9 +47,9 @@ Use `CHEVERETO_DEBUG_LEVEL=N` to configure the debug level.
 
 Configure your own error log device to control where the logs will be sent. If you don't alter this it will fallback to the default system log device.
 
-💡 Containers will always log to `/dev/stderr` regardless this setting.
+✅ Containers will always log to `/dev/stderr` regardless this setting.
 
-Use `CHEVERETO_ERROR_LOG=log_device` to configure where logs will be sent.
+👉 Use `CHEVERETO_ERROR_LOG=log_device` to configure where logs will be sent.
 
 ## Accessing logs
 
@@ -67,13 +77,13 @@ This vary depending the server provider and how PHP runs in the server. In doubt
 
 ### I can't find the logs
 
-You can configure `CHEVERETO_DEBUG_LEVEL` >= 2 but note that such error reporting level **could compromise** your installation. Restrict any public access to your website and revert back to `CHEVERETO_DEBUG_LEVEL=1` as soon as possible.
+You can configure `CHEVERETO_DEBUG_LEVEL` >= 2 but note that this error reporting level **could compromise** your installation. Restrict any public access to your website and revert to `CHEVERETO_DEBUG_LEVEL=1` as soon as possible.
 
-If you can't find the logs or you are having a hard time with this you can request [extra support](https://chevereto.com/support) so we can safely debug your installation.
+If you can't find the logs or you are having a hard time with this you can request [Extra Support](https://chevereto.com/support) so we can safely debug your installation.
 
 ### Reading logs
 
-Logs can be easily accessed by direct file access or by running commands accordingly.
+Logs can be accessed by direct file access or by running commands:
 
 <code-group>
 <code-block title="Shell">

@@ -28,13 +28,13 @@ Module [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.htm
     </Directory>
 ```
 
-💡 Apache configuration `.htaccess` files are already included in the software.
+✅ Apache configuration `.htaccess` files are included in Chevereto files.
 
 ### Restrict direct access to PHP files
 
 Must edit the [Virtual Host](https://httpd.apache.org/docs/2.4/vhosts/) entry by adding the following directive for the upload directory. This will disable PHP interpreter on folders containing public uploaded content:
 
-> Change `/var/www/html/images` to reflect the actual upload directory.
+> Change `/var/www/html/images` to reflect the upload directory.
 
 ```apacheconf
 <Directory /var/www/html/images>
@@ -85,7 +85,9 @@ In system without access to Apache Virtual Host it is recommended to use a `.hta
 
 ## NGINX
 
-This is the **recommended** `nginx.conf` for `server {}` block. This already includes blocking for direct access for `.php` files.
+This is the **recommended** `nginx.conf` for `server {}` block.
+
+✅ This configuration includes blocking for direct access for `.php` files.
 
 ```nginx
     # Disable access to sensitive application files
@@ -126,7 +128,7 @@ This is the **recommended** `nginx.conf` for `server {}` block. This already inc
 
 ## Real connecting IP
 
-For setups under any kind of proxy (including [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs)) is required that the web server sets the appropriate value for the client connecting IP.
+For setups under proxy (including [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs)) is required that the web server sets the appropriate value for the client connecting IP.
 
 ::: danger
 If real connecting IP is not configured Chevereto won't be able to detect the real visitors IPs, failing to deliver IP based restrictions and flood control.

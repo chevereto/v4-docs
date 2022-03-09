@@ -10,6 +10,6 @@ Chevereto V4 is released under the **Chevereto License**, Version 4.0. See [Lice
 
 ## V4 Documentation
 
-Chevereto V4 documentation is licensed under the **Apache License**, Version 2.0. See [LICENSE](../../LICENSE) for the full license text.
+Chevereto V4 documentation is licensed under the **Apache License**, Version 2.0. See [LICENSE](https://github.com/chevereto/v4-docs/blob/main/LICENSE) for the full license text.
 
 💖 This documentation is Open Source. You can help to improve it, or modify for any purpose.

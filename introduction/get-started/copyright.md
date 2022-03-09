@@ -4,9 +4,9 @@ Copyright 2022 [Rodolfo Berrios A.](https://rodolfoberrios.com/)
 
 ## V4 Software
 
-Chevereto V4 software is released under the **Chevereto License**, Version 4.0. See [License](https://chevereto.com/license) for the full license text.
+Chevereto V4 is released under the **Chevereto License**, Version 4.0. See [License](https://chevereto.com/license) for the full license text.
 
-👉 You can use Chevereto according to the grants in the license document.
+👉 You can use Chevereto V4 software according to the grants in the license document.
 
 ## V4 Documentation
 

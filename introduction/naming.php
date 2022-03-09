@@ -2,5 +2,5 @@
 
 return [
     'get-started/' => 'Get Started',
-    'returning-users/' => 'Returning Users',
+    'returning/' => 'Returning Users',
 ];

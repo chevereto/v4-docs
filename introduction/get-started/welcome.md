@@ -3,7 +3,7 @@
 ::: tip <i>A word from the author</i>
 This is the 4th major release for Chevereto. For this one I wanted to re-build Chevereto from the ground up to provide refreshing new features, improvements and above all: Endless customizations.
 
-If you are new to Chevereto welcome aboard and enjoy the ride. If you know about Chevereto, [welcome back](../returning-users/welcome-back.md)!
+If you are new to Chevereto welcome aboard and enjoy the ride. If you know about Chevereto, [welcome back](../returning/welcome-back.md)!
 
 — [Rodolfo Berrios](https://rodolfoberrios.com)
 :::

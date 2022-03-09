@@ -1,6 +1,6 @@
 # 🆕 What's New?
 
-There are many new stuff in V4, specially its brand new look and feel. Check the video previews to get a glimpse of what Chevereto does now.
+Chevereto V4 is *macanudo*, especially its brand new look and feel. Check the video previews to get a glimpse of how awesome Chevereto V4 feels now.
 
 ## Features
 

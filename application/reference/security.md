@@ -1,26 +1,36 @@
 # 👮‍♀️ Security
 
-`😪 Outdated docs - please check later.`
+## Security Checklist
+
+For best security practices must **constanly double-checking** the following:
+
+* [PHP Fileystem](../stack/php.md#php-filesystem)
+* [Real connecting IP](../stack/web-server.md#real-connecting-ip)
+* [Restrict access to PHP files](../stack/web-server.md#restrict-direct-access-to-php-files)
+* [CRON setup](../stack/cron.md)
+* [Email setup](../../admin/dashboard/email.md
 
 ## Encoded IDs
 
-Chevereto public IDs are encoded in order to avoid enumeration and get hard to guess URLs. All the users, images and albums ids are encoded for public use.
+✅ Public IDs are **always encoded** to avoid any attempt of content enumeration attack.
 
-Public IDs are encoded to avoid any attempt of content enumeration attack.
+While the actual data is stored in database rows indexed with integer ids, Chevereto handles these on public as encoded identifiers. Similar to how YouTube encode their video IDs. This is made to avoid enumeration of content based on incremental identifiers (retrieve N content by just doing `+1` on the identifier).
 
 ### Encoding and decoding IDs
 
-On installation, Chevereto creates a randomly generated `crypt_salt` which is used by the `CHV\encodeID()` and `CHV\decodeID()` functions. This allows to convert the numeric ids stored in the database to alphanumeric ids. Public ids vary from each different installation.
+✅ Public IDs **are unique** and vary from each different installation.
+
+On installation Chevereto creates a random generated `crypt_salt` which is used by the system to encode/decode these identifiers. This allows to convert the numeric ids stored in the database to alphanumeric ids unique to your installation.
 
 ### Making encoded IDs larger
 
-Larger encoded IDs will be always better for preserving the privacy of the uploaded content.
+✅ The lenght of encoded IDs can be customized.
 
-You have to alternatives to achieve larger encoded IDs:
+Larger encoded IDs will be always better for preserving the privacy of the uploaded content. Two alternatives to achieve larger encoded IDs:
 
 #### Altering `id_padding` setting
 
-::: warning
+::: warning Affects previous links
 This method will affect previously generated links. Use it only if is safe to edit the IDs.
 :::
 
@@ -30,28 +40,40 @@ Entering an integer value like `5000` will instruct the system to generate IDs u
 
 #### Altering `chv_images` table
 
-::: tip
-This method won't affect any previously generated links.
-:::
+💡 This method won't affect any previously generated links.
 
 Go to the database, find the `chv_images` table and change the `AUTOINCREMENT` to the ID padding you want to use.
 
 ## CSRF protection
 
-Cross-site request forgery ([CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)) is an exploit that is used to fool the websites by transmitting instructions from a remote website without the user's consent, for example trigger a delete content request.
+✅ Built-in CSRF protection.
 
-The CSRF protection is based in the usage of a request token. The request token is set by session when the website loads and is asked when subsequential request are being made. If the token doesn't match the session it means that the request has not being initiated by the session and the system will return a 403 error.
+Cross-site request forgery ([CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)) is a type of exploit that is used to fool website's origin requests by transmitting instructions from a remote website without the user's consent, for example trigger a delete content request without the user consent or willing.
+
+The CSRF protection is based in the usage of a request token, which is set by session when the website loads and is asked when subsequential request are made.
 
 ## Cryptography
 
-Chevereto uses the [BCrypt](https://en.wikipedia.org/wiki/Bcrypt) cryptography method to store the passwords and cookie login entries. Social login and the "Keep me logged in" feature uses a strong combination of BCrypt and random generated strings.
+✅ BCrypt passwords.
+
+Chevereto uses [BCrypt](https://en.wikipedia.org/wiki/Bcrypt) cryptography to store passwords and cookie login entries.
 
 ## reCAPTCHA
 
-Chevereto includes support for [reCAPTCHA](https://www.google.com/recaptcha/intro/) which helps to prevent bots from signing up and try to brute-force an user password. In Dashboard > Settings > External services you can enable or disable reCAPTCHA and set how many invalid attempts triggers the reCAPTCHA.
+✅ Built-in reCAPTCHA support.
 
-## Invalid requests
+Chevereto includes support for [reCAPTCHA](../../admin/dashboard/external-services.md#recaptcha) which helps to prevent bots from signing up and try to brute-force an user password.
+
+## Daily Invalid Requests
+
+✅ Too many invalid request forbid access to the system.
 
 An invalid request is when a user enters a bad password or the CSRF token doesn't match. Each time an invalid request is triggered the system stores the IP and the given action that triggers that invalid request.
 
-There is a hard-coded setting in the system that controls the limit of allowed invalid requests per day and when an user reaches the `CHV_MAX_INVALID_REQUESTS_PER_DAY` the system won't allow requests from that in IP in a period of 24 hours. The hard-coded value of this setting is 25 invalid requests and you can modify it in the `/app/loader.php` file.
+There is a hard-coded setting in the system that controls the limit of allowed invalid requests per day and when an user reaches this limit the system won't allow requests from that in IP in a period of 24 hours.
+
+## Flood Protection
+
+✅ Control how much content/time can be added by users.
+
+Avoid resource hungry users by configuting [Flood Protection](../../admin/dashboard/flood-protection.md). This enables to control how much they can upload based on configurable time settings.

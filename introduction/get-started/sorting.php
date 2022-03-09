@@ -3,6 +3,6 @@
 return [
     'whats-new.md',
     'welcome.md',
-    'version.md',
+    'links.md',
     'contributing.md',
 ];

@@ -3,6 +3,6 @@
 return [
     'welcome.md' => '👋🏾 Welcome',
     'whats-new.md' => '🆕 Whats New',
-    'version.md' => '🍦 Version',
+    'links.md' => '🚩 Links',
     'contributing.md' => '💖 Contributing',
 ];

@@ -1,3 +1,3 @@
-# 🆕 Whats new?
+# 🆕 What's New?
 
 `🚧 Work in progress`

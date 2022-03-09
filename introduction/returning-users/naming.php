@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'whats-new.md' => "🆕 What's new?",
-    'welcome-back.md' => '🤗 Welcome back',
+    'whats-new.md' => "🆕 What's New?",
+    'welcome-back.md' => '🤗 Welcome Back',
 ];

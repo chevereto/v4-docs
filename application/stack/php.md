@@ -110,7 +110,7 @@ Additional recommended ImageMagick configuration at `/etc/ImageMagick-6/policy.x
 
 ## PHP Filesystem
 
-User running `php` must be in the owner group of your installation directory. This is required to allow Chevereto to modify the filesystem for uploading, one-click update and many other features.
+User running `php` must be in the owner group of your installation directory. This is required to allow Chevereto to modify the filesystem for uploading features.
 
 Chevereto user will require **read/write** access in the following paths:
 

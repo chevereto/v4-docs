@@ -3,6 +3,6 @@
 return [
     'installing/',
     'configuration/',
-    'reference/',
     'stack/',
+    'reference/',
 ];

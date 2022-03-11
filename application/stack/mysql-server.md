@@ -4,11 +4,9 @@
 | ------- | ------ | ------- |
 | 4.0     | 5.7, 8 | 10      |
 
-Chevereto V4 rely in a [RDBMS](https://en.wikipedia.org/wiki/Relational_database) provided by a MySQL server.
+💡 Chevereto support both MySQL/MariaDB database servers but we refer indistinctly as **MySQL**.
 
-::: tip MySQL / MariaDB
-Chevereto support both database servers but we refer to it as "MySQL" everywhere.
-:::
+Chevereto V4 rely in a [RDBMS](https://en.wikipedia.org/wiki/Relational_database) provided by a MySQL server.
 
 ## Resources
 
@@ -61,7 +59,7 @@ Links for the most popular panels:
 
 ## Updating
 
-When manually updating the database keep the following considerations:
+When manual updating the database keep the following considerations:
 
 * Disconnect all peers
 * Turn off the MySQL server, work in its console (phpMyAdmin, Adminer, CLI)

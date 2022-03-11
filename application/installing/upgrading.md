@@ -19,8 +19,6 @@ Once done, you can delete this test installation.
 
 ## Upgrade to V4
 
-Upgrade to V4 is performed by providing the software files on top of the existing Chevereto V3 installation. This process is exactly the same as updating, but V4 uses `app/env.php` for system settings. Update settings keys accordingly.
+Upgrade to V4 is performed by providing the software files on top of the existing Chevereto V3 installation. The process is exactly the same as [updating](updating.md).
 
-## Congratulations
-
-🥳 That's all, wasn't that hard isn't?
+👉 Update [settings keys](../configuration/configuring.md) accordingly.

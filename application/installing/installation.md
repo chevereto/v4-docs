@@ -48,12 +48,12 @@ These methods consists in to provide the application files in a file system comp
 
 ### Using Release package
 
-The release package is a `zip` file containing the software files. Once extracted, the software is ready to be used.
+The release package is a `zip` file containing the software files. Once extracted, the software is ready to be installed.
 
 👉 This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
 
-* Upload the [latest release](https://chevereto.com/panel/downloads) package to your server (usually in the `public_html` folder)
-* Unzip the software using your server built-in `unzip` utility
+* Upload the [latest release](https://chevereto.com/panel/downloads) package to a non-public path in your server
+* Unzip the software using your server built-in `unzip` utility in the target website directory (usually the `public_html` folder)
 * Remove the `.zip` file
 * Open your target website URL and follow the [Initial Setup](#initial-setup) instructions
 
@@ -67,8 +67,9 @@ Using Composer the installation carried in CLI context. It requires:
 👉 This method is recommended for VPS and machines with CLI access.
 
 * Create a project folder in your server (usually the `public_html` folder)
-* Run the following command from your project folder
-  * Replace `YOUR_V4_LICENSE_KEY` with your [license key](https://chevereto.com/panel/license)
+* Run the command below
+
+💡 Replace `YOUR_V4_LICENSE_KEY` with your [license key](https://chevereto.com/panel/license)
 
 <code-group>
 <code-block title="Debian">
@@ -78,13 +79,14 @@ curl -f -SOJL \
     -H "License: $LICENSE" \
     "https://chevereto.com/api/download/4-lite" \
 && unzip chevereto*.zip \
+&& rm -rf chevereto*.zip \
 && composer install --ignore-platform-reqs \
 && chown www-data: . -R
 ```
 </code-block>
 </code-group>
 
-Once done, open your target website to proceed with [Initial Setup](#initial-setup).
+* Once done, open your target website to proceed with [Initial Setup](#initial-setup).
 
 ## Initial Setup
 

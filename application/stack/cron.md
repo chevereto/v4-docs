@@ -24,9 +24,9 @@ Having issues? Check the following common pitfalls:
 
 The command should be run by the web-server user which is `www-data` (may vary). To run the command in Chevereto it requires to call PHP binary at the Chevereto CLI.
 
-💡 Use `which php` to locate the PHP binary as its location may vary in different systems and configurations.
+💡 Use `which php` to locate the PHP binary as its location.
 
-Command below uses `sudo -u www-data` to run the command as `www-data` user permissions. PHP binary is at `php` and the Chevereto CLI is at `/var/www/html/cli.php`. The command argument passed to Chevereto is `-C cron`.
+Command below uses `sudo -u www-data` to run the command as `www-data` user permissions. PHP binary is at `php` and the Chevereto CLI is at `/var/www/html/app/bin/legacy`. The command argument passed to Chevereto is `-C cron`.
 
 ```sh
 sudo -u www-data php /var/www/html/app/bin/legacy -C cron

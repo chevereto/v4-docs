@@ -60,7 +60,7 @@ This message indicates an error caught by Chevereto, but hidden as per system se
 
 `🚧 Work in progress - show demo`
 
-### Database related
+### Dumped update query
 
 👉 If at `/install` you see a plain text message starting with `#Dumped update query` it means that you **MUST** manual run the printed queries in your MySQL console.
 

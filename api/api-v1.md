@@ -1,18 +1,18 @@
 # 🖼 API Version 1
 
-Chevereto API v1 allows to upload pictures as guest to your Chevereto powered website.
+💡 Chevereto API V1 was introduced in Chevereto V2 and it allows to upload pictures as guest to a Chevereto website.
 
-API v1 do not rate limit. You should use this API for your own applications or systems, this API is **not intended for public usage**.
+👉 You should use this API for your own applications or systems, this API is **not intended for public usage** and it doesn't  rate limit.
 
 ## Key
 
-API v1 works with a single API key that you can set at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
+API V1 works with a single API key that you can set at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
 
 ## Call
 
 ### Request method
 
-API v1 calls can be done using the POST or GET request methods but since GET request are limited by the maximum allowed length of an URL you should prefer the POST request method.
+API V1 calls can be done using the POST or GET request methods but since GET request are limited by the maximum allowed length of an URL you should prefer the POST request method.
 
 ### Request URL
 
@@ -22,7 +22,7 @@ http://mysite.com/api/1/<action>/
 
 ### Parameters
 
-- key The API v1 key, it can be set in your admin dashboard settings.
+- key The API V1 key, it can be set in your admin dashboard settings.
 - action What you want to do [values: upload].
 - source Either a image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. You can also use FILES["source"] in your request.
 - format Sets the return format [values: json (default), redirect, txt].
@@ -37,7 +37,7 @@ Note: Use POST when uploading local files. Url encoding may alter the base64 sou
 
 ## API response
 
-API v1 responses will vary depending on the **format** parameter:
+API V1 responses will vary depending on the **format** parameter:
 
 - `json` Display all the image uploaded information in JSON format. [default]
 - `txt` Returns the image direct URL in text/plain format.

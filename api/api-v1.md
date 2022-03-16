@@ -1,47 +1,55 @@
-# 🖼 API Version 1
+# 🖼 API Version 1.1
 
-💡 Chevereto API V1 was introduced in Chevereto V2 and it allows to upload pictures as guest to a Chevereto website.
+💡 Chevereto API V1 was introduced in Chevereto V2 and it allows to upload pictures as guest (or as logged user) to a Chevereto website.
 
-👉 You should use this API for your own applications or systems, this API is **not intended for public usage** and it doesn't  rate limit.
+✅ Chevereto V4 updates API V1 to 1.1 introducing support for **user API keys** as more upload parameters including title, width, and more.
 
 ## Key
 
-API V1 works with a single API key that you can set at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
+API V1 works with an user key under `/settings/api`. Admin user can set the public (guest) API key at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
 
 ## Call
 
 ### Request method
 
-API V1 calls can be done using the POST or GET request methods but since GET request are limited by the maximum allowed length of an URL you should prefer the POST request method.
+API V1 calls can be done using the POST or GET request methods. The POST request method is **recommended**.
 
 ### Request URL
 
 ```plain
-http://mysite.com/api/1/<action>/
+http://mysite.com/api/1/upload/
 ```
 
 ### Parameters
 
-- key The API V1 key, it can be set in your admin dashboard settings.
-- action What you want to do [values: upload].
-- source Either a image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. You can also use FILES["source"] in your request.
-- format Sets the return format [values: json (default), redirect, txt].
+| Name          | Description                                                                                                                            |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `key`         | The API key for the user                                                                                                               |
+| `source`      | A image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. You can also use FILES["source"] in your request |
+| `title`       | Image title                                                                                                                            |
+| `description` | Image description                                                                                                                      |
+| `album_id`    | Image album id, must be owned by the user (encoded string)                                                                             |
+| `category_id` | Category id (integer)                                                                                                                  |
+| `width`       | Target resize width (automatic height)                                                                                                 |
+| `expiration`  | Expiration time to auto-delete the image                                                                                               |
+| `nsfw`        | Not safe for work flag (integer `0`, `1`)                                                                                              |
+| `format`      | Return format, values `json`, `redirect`, `txt`                                                                                        |
 
 ### Example call
 
 ```plain
-GET http://mysite.com/api/1/upload/?key=12345&source=http://somewebsite/someimage.jpg&format=json
+POST http://mysite.com/api/1/upload/
 ```
-
-Note: Use POST when uploading local files. Url encoding may alter the base64 source due to encoded characters or URL request length limit due to GET request.
 
 ## API response
 
 API V1 responses will vary depending on the **format** parameter:
 
-- `json` Display all the image uploaded information in JSON format. [default]
-- `txt` Returns the image direct URL in text/plain format.
-- `redirect` Redirects to the image viewer URL.
+| Format     | Output                                     |
+| ---------- | ------------------------------------------ |
+| `json`     | Image upload info in JSON format (default) |
+| `txt`      | Image direct URL in text/plain format      |
+| `redirect` | Redirects to the image viewer URL          |
 
 When using JSON the response output will contain the `status_txt` and `status_code` properties.
 

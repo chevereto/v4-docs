@@ -22,18 +22,18 @@ http://mysite.com/api/1/upload/
 
 ### Parameters
 
-| Name          | Description                                                                                                                            |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `key`         | The API key for the user                                                                                                               |
-| `source`      | A image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. You can also use FILES["source"] in your request |
-| `title`       | Image title                                                                                                                            |
-| `description` | Image description                                                                                                                      |
-| `album_id`    | Image album id, must be owned by the user (encoded string)                                                                             |
-| `category_id` | Category id (integer)                                                                                                                  |
-| `width`       | Target resize width (automatic height)                                                                                                 |
-| `expiration`  | Expiration time to auto-delete the image                                                                                               |
-| `nsfw`        | Not safe for work flag (integer `0`, `1`)                                                                                              |
-| `format`      | Return format, values `json`, `redirect`, `txt`                                                                                        |
+| Name        | Description                                                                                                                            |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| key         | The API key for the user                                                                                                               |
+| source      | A image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. You can also use FILES["source"] in your request |
+| title       | Image title                                                                                                                            |
+| description | Image description                                                                                                                      |
+| album_id    | Image album id, must be owned by the user (encoded string)                                                                             |
+| category_id | Category id (integer)                                                                                                                  |
+| width       | Target resize width (automatic height)                                                                                                 |
+| expiration  | Expiration time to auto-delete the image                                                                                               |
+| nsfw        | Not safe for work flag (integer `0`, `1`)                                                                                              |
+| format      | Return format, values `json`, `redirect`, `txt`                                                                                        |
 
 ### Example call
 
@@ -45,11 +45,11 @@ POST http://mysite.com/api/1/upload/
 
 API V1 responses will vary depending on the **format** parameter:
 
-| Format     | Output                                     |
-| ---------- | ------------------------------------------ |
-| `json`     | Image upload info in JSON format (default) |
-| `txt`      | Image direct URL in text/plain format      |
-| `redirect` | Redirects to the image viewer URL          |
+| Format   | Output                                     |
+| -------- | ------------------------------------------ |
+| json     | Image upload info in JSON format (default) |
+| txt      | Image direct URL in text/plain format      |
+| redirect | Redirects to the image viewer URL          |
 
 When using JSON the response output will contain the `status_txt` and `status_code` properties.
 

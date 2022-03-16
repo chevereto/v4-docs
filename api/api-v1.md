@@ -6,21 +6,21 @@
 
 ## Key
 
-API V1 works with an user key under `/settings/api`. Admin user can set the public (guest) API key at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
+API V1 works with an user which is available at `/settings/api`. Admin user can set the public (guest) API key at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
 
-## Call
+## Request method
 
-### Request method
+API V1 calls can be done using the POST or GET request methods.
 
-API V1 calls can be done using the POST or GET request methods. The POST request method is **recommended**.
+👉 POST request method is **recommended**.
 
-### Request URL
+## Request URL
 
 ```plain
 http://mysite.com/api/1/upload/
 ```
 
-### Parameters
+## Parameters
 
 | Name        | Description                                                                                                                            |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,11 +31,41 @@ http://mysite.com/api/1/upload/
 | album_id    | Image album id, must be owned by the user (encoded string)                                                                             |
 | category_id | Category id (integer)                                                                                                                  |
 | width       | Target resize width (automatic height)                                                                                                 |
-| expiration  | Expiration time to auto-delete the image                                                                                               |
+| expiration  | [Expiration](#expiration-table) time to auto-delete the image                                                                          |
 | nsfw        | Not safe for work flag (integer `0`, `1`)                                                                                              |
 | format      | Return format, values `json`, `redirect`, `txt`                                                                                        |
 
-### Example call
+### Expiration table
+
+Following values can be used for `expiration` parameter.
+
+| Value | Expires after |
+| ----- | ------------- |
+| PT5M  | 5 minutes     |
+| PT15M | 15 minutes    |
+| PT30M | 30 minutes    |
+| PT1H  | 1 hour        |
+| PT3H  | 3 hours       |
+| PT6H  | 6 hours       |
+| PT12H | 12 hours      |
+| P1D   | 1 day         |
+| P2D   | 2 days        |
+| P3D   | 3 days        |
+| P4D   | 4 days        |
+| P5D   | 5 days        |
+| P6D   | 6 days        |
+| P1W   | 1 week        |
+| P2W   | 2 weeks       |
+| P3W   | 3 weeks       |
+| P1M   | 1 month       |
+| P2M   | 2 months      |
+| P3M   | 3 months      |
+| P4M   | 4 months      |
+| P5M   | 5 months      |
+| P6M   | 6 months      |
+| P1Y   | 1 year        |
+
+## Example call
 
 ```plain
 POST http://mysite.com/api/1/upload/
@@ -53,7 +83,7 @@ API V1 responses will vary depending on the **format** parameter:
 
 When using JSON the response output will contain the `status_txt` and `status_code` properties.
 
-### Example response (JSON)
+## Example response (JSON)
 
 ```json
 {
@@ -123,7 +153,7 @@ When using JSON the response output will contain the `status_txt` and `status_co
 }
 ```
 
-### Example response (txt)
+## Example response (txt)
 
 ```plain
 http://127.0.0.1/images/2014/06/04/example.png

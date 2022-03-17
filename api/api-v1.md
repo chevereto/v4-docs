@@ -22,18 +22,25 @@ http://mysite.com/api/1/upload/
 
 ## Parameters
 
-| Name        | Description                                                                                                                            |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| key         | The API key for the user                                                                                                               |
-| source      | A image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. You can also use FILES["source"] in your request |
-| title       | Image title                                                                                                                            |
-| description | Image description                                                                                                                      |
-| album_id    | Image album id, must be owned by the user (encoded string)                                                                             |
-| category_id | Category id (integer)                                                                                                                  |
-| width       | Target resize width (automatic height)                                                                                                 |
-| expiration  | [Expiration](#expiration-table) time to auto-delete the image                                                                          |
-| nsfw        | Not safe for work flag (integer `0`, `1`)                                                                                              |
-| format      | Return format, values `json`, `redirect`, `txt`                                                                                        |
+### Required Parameters
+
+| Name   | Description                                                                                                          |
+| ------ | -------------------------------------------------------------------------------------------------------------------- |
+| key    | The API key for the user                                                                                             |
+| source | A image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. Also supports FILES["source"]. |
+
+### Optional Parameters
+
+| Name        | Description                                                   |
+| ----------- | ------------------------------------------------------------- |
+| title       | Image title                                                   |
+| description | Image description                                             |
+| album_id    | Image album id, must be owned by the user (encoded string)    |
+| category_id | Category id (integer)                                         |
+| width       | Target resize width (automatic height)                        |
+| expiration  | [Expiration](#expiration-table) time to auto-delete the image |
+| nsfw        | Not safe for work flag (integer `0`, `1`)                     |
+| format      | Return format, values `json`, `redirect`, `txt`               |
 
 ### Expiration table
 
@@ -64,6 +71,12 @@ Following values can be used for `expiration` parameter.
 | P5M   | 5 months      |
 | P6M   | 6 months      |
 | P1Y   | 1 year        |
+
+### Compatibility with ImgBB API
+
+💡 ImgBB is a popular service based on Chevereto V3.
+
+✅ Any existing [ImgBB API client](https://github.com/search?q=imgbb) is compatible with Chevereto V4's API V1.1, simple as change the domain name.
 
 ## Example call
 

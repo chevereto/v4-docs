@@ -4,13 +4,13 @@ This section outlines the update process required for existing Chevereto V4 inst
 
 ## Using Docker
 
-### Container Builder
+### chevereto/v4-docker-production
 
-👉 Refer to [chevereto/container-builder](https://github.com/chevereto/container-builder) for updating instructions.
+👉 Refer to [chevereto/v4-docker-production](https://github.com/chevereto/v4-docker-production) for updating instructions.
 
-### chevereto/docker
+### chevereto/v4-docker
 
-👉 Refer to [chevereto/docker](https://github.com/chevereto/docker) for updating instructions.
+👉 Refer to [chevereto/v4-docker](https://github.com/chevereto/v4-docker) for updating instructions.
 
 ## Using Release package
 

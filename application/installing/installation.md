@@ -30,13 +30,13 @@ bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/bash.sh)
 
 👉 Recommended for production systems.
 
-Use [chevereto/container-builder](https://github.com/chevereto/container-builder) to create your own private Chevereto container image(s) which will be available in the container registry of your choice.
+Use [chevereto/v4-docker-production](https://github.com/chevereto/v4-docker-production) to create your own Chevereto container images from which you can spawn containers for it.
 
 ### Development
 
 👉 Our development standard.
 
-Use [chevereto/docker](https://github.com/chevereto/docker) for our development standard provisioning. This is preferred when requiring to debug or test the software.
+Use [chevereto/v4-docker](https://github.com/chevereto/v4-docker) for our development standard provisioning. This is preferred when requiring to try, debug or test the software.
 
 ## Other methods
 

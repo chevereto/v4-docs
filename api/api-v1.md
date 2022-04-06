@@ -6,7 +6,7 @@
 
 ## Key
 
-API V1 works with an user which is available at `/settings/api`. Admin user can set the public (guest) API key at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
+API V1.1 works with an user key, which is available at `/settings/api`. Admin user can set the public API key at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
 
 ## Request method
 
@@ -20,13 +20,20 @@ API V1 calls can be done using the POST or GET request methods.
 http://mysite.com/api/1/upload/
 ```
 
+## Authorization
+
+API V1.1 supports header authorization by passing the `X-API-Key` header with an API key.
+
+```plain
+X-API-Key: chv_asd_somekeyhere
+```
+
 ## Parameters
 
 ### Required Parameters
 
 | Name   | Description                                                                                                          |
 | ------ | -------------------------------------------------------------------------------------------------------------------- |
-| key    | The API key for the user                                                                                             |
 | source | A image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. Also supports FILES["source"]. |
 
 ### Optional Parameters
@@ -41,6 +48,12 @@ http://mysite.com/api/1/upload/
 | expiration  | [Expiration](#expiration-table) time to auto-delete the image |
 | nsfw        | Not safe for work flag (integer `0`, `1`)                     |
 | format      | Return format, values `json`, `redirect`, `txt`               |
+
+### Legacy Parameters
+
+| Name | Description                                       |
+| ---- | ------------------------------------------------- |
+| key  | The API key (see [Authorization](#authorization)) |
 
 ### Expiration table
 

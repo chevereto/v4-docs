@@ -59,6 +59,7 @@ You can toggle this limits to reflect your hardware and server load. Check this 
 
 The following PHP extensions are required for Chevereto.
 
+* BCMath
 * curl
 * ds
 * exif

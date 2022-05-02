@@ -10,7 +10,8 @@ Chevereto V4 rely in a [RDBMS](https://en.wikipedia.org/wiki/Relational_database
 
 ## Resources
 
-* [Website](https://www.mysql.com/)
+* [MySQL Website](https://www.mysql.com/)
+* [MariaDB Website](https://mariadb.org/)
 
 ## What it does?
 

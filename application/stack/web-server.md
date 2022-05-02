@@ -1,6 +1,15 @@
 # 🪶 Web Server
 
-Chevereto requires an HTTP web server, like [Apache HTTP Server](https://httpd.apache.org/), [Nginx](https://nginx.org/) or any server compatible with PHP.
+Chevereto requires an HTTP web server compatible with PHP. It provides official support for Apache HTTP Server and Nginx.
+
+:::tip Alternative web servers
+Any web server capable of forwarding FastCGI can be used to deploy Chevereto, but we don't provide the webserver configuration. You are encouraged to try translating `.htaccess` rules to your server realm, if you need help don't hesitate to ask us directly.
+:::
+
+## Resources
+
+* [Apache HTTP Server](https://httpd.apache.org/)
+* [Nginx](https://nginx.org/)
 
 ## What it does?
 
@@ -117,7 +126,7 @@ This is the **recommended** `nginx.conf` for `server {}` block.
         index index.php;
         try_files $uri $uri/ /index.php$is_args$query_string;
     }
-    
+
     # Single PHP-entrypoint (disables direct access to .php files)
     location ~* \.php$  {
         internal;

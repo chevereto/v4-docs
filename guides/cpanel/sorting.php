@@ -2,7 +2,7 @@
 
 return [
     'database.md',
-    'application-files.md',
+    'app-files.md',
     'php.md',
     'cron.md',
 ];

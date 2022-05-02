@@ -1,4 +1,4 @@
-# 📂 cPanel Application files
+# 📂 cPanel App files
 
 ## Installing Chevereto
 

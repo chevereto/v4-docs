@@ -3,6 +3,6 @@
 return [
     'cron.md' => '⏲️ CRON',
     'database.md' => '🐬 Database',
-    'application-files.md' => '📂 Filesystem',
+    'app-files.md' => '📂 App files',
     'php.md' => '🐘 PHP',
 ];

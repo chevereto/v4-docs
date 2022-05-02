@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # 👩‍💻 User Manual
 
 ## Description

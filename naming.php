@@ -3,7 +3,7 @@
 return [
     'introduction/' => '🎉 Intro',
     'application/' => '🦄 App',
-    'developer/' => '🛸 Dev',
-    'api/' => '🌎 API',
-    'manuals/' => '📚 Manuals',
+    'developer/' => '👩‍💻 Dev',
+    'guides/' => '🕹 Guides',
+    'manual/' => '📚 Manual',
 ];

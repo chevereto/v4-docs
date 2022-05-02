@@ -38,6 +38,14 @@ Use [chevereto/v4-docker-production](https://github.com/chevereto/v4-docker-prod
 
 Use [chevereto/v4-docker](https://github.com/chevereto/v4-docker) for our development standard provisioning. This is preferred when requiring to try, debug or test the software.
 
+## Using panels
+
+Web panels can ease the system provisioning for you as all the requirements are provided by the web panel software.
+
+👉 This is recommended for newcomers.
+
+* [cPanel](../../resources/guides/cpanel.md)
+
 ## Other methods
 
 These methods consists in to provide the application files in a file system compatible with the following requirements:

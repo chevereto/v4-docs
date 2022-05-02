@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # 👸 Admin Manual
 
 ## Description

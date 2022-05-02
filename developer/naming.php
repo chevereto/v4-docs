@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'how-to/' => 'How-to Guides',
+    'api/' => 'API',
+    'how-to/' => 'How-to',
     'plugins/' => 'Plugins',
     'customization/' => 'Customization',
 ];

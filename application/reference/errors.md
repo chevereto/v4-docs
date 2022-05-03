@@ -1,6 +1,6 @@
 # 😖 Errors
 
-Chevereto errors can be caused by several causes, including software errors and server incompatibilities. In a multi-layered system like Chevereto is crucial to understand when an error is caused by Chevereto and not *something else*.
+Chevereto application errors can happen by several causes, including server issues. In a multi-layered system like Chevereto is crucial to understand when an error is caused by Chevereto and not *something else*.
 
 ## Error example
 

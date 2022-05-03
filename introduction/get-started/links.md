@@ -2,8 +2,8 @@
 
 ## V4 Resources
 
-* [User manual](../../manuals/user.md) - V4 user manual
-* [Admin manual](../../manuals/admin.md) - V4 admin manual
+* [User manual](https://v4-user.chevereto.com/) - V4 user manual
+* [Admin manual](https://v4-user.chevereto.com/) - V4 admin manual
 * [Releases](https://releases.chevereto.com/4.X/) - V4 release notes
 
 ## General Resources

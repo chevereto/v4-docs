@@ -6,11 +6,11 @@ tagline: Self-hosted media hosting
 actionText: Get Started →
 actionLink: /introduction/get-started/welcome
 features:
-- title:  🦄 Outstanding
-  details: Self-host your media in your own infra.
-- title: ✨ Headless
-  details: A self-exposed REST API made for any user interface.
-- title: 🔌 Pluggable
-  details: Add plugins to make it more yours.
-footer: Self-hosted media hosting solution
+- title:  🦄 Self-hosted
+  details: Own and control your online media.
+- title: ✨ Turnkey
+  details: Configure it to meet your needs.
+- title: 😎 Full-featured
+  details: With incremental updates.
+footer: Created by Rodolfo Berrios
 ---

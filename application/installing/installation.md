@@ -1,10 +1,6 @@
 # 📦 Installation
 
-✅ Our Docker and VPS provisioning comes all-included. No need to worry about any system layer dependency and we provide **active support** for those.
-
-::: tip Runs anywhere (*)
 Chevereto runs on any compatible system but keep in mind: 💡 **Our software support doesn't include third-party provisioning systems**. Paid extra support will be required to address these issues.
-:::
 
 ## Using VPS
 
@@ -61,13 +57,14 @@ The release package is a `zip` file containing the software files. Once extracte
 👉 This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
 
 * Upload the [latest release](https://chevereto.com/panel/downloads) package to a non-public path in your server
+  * Use normal release package (non-lite)
 * Unzip the software using your server built-in `unzip` utility in the target website directory (usually the `public_html` folder)
 * Remove the `.zip` file
 * Open your target website URL and follow the [Initial Setup](#initial-setup) instructions
 
-### Using Composer package manager
+### Using Composer
 
-Using Composer the installation carried in CLI context. It requires:
+Using Composer the installation carried in CLI context where the software is downloaded and its dependencies are installed on the fly. It requires:
 
 * CLI with `curl`, `unzip`
 * [Composer](https://getcomposer.org/)
@@ -88,7 +85,11 @@ curl -f -SOJL \
     "https://chevereto.com/api/download/4-lite" \
 && unzip chevereto*.zip \
 && rm -rf chevereto*.zip \
-&& composer install --ignore-platform-reqs \
+&& composer install \
+    --working-dir=app \
+    --prefer-dist \
+    --classmap-authoritative \
+    --ignore-platform-reqs \
 && chown www-data: . -R
 ```
 </code-block>

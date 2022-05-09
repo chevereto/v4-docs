@@ -8,15 +8,7 @@ Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview 
 
 ## Using Docker
 
-Use [chevereto/v4-docker-production](https://github.com/chevereto/v4-docker-production) to create your own Chevereto container images from which you can spawn containers for it.
-
-Use [chevereto/v4-docker](https://github.com/chevereto/v4-docker) for our development standard provisioning. This is preferred when requiring to try, debug or test the software.
-
-## Using panels
-
-Web panels can ease the system provisioning for you as all the requirements are provided by the web panel software.
-
-* [Chevereto cPanel guide](../../resources/guides/cpanel.md)
+Refer to [🌎 Docker Production](../../guides/docker/production.md) and [🛸 Docker Bootstrap](../../guides/docker/bootstrap.md) for our container provisioning.
 
 ## Using release package
 
@@ -29,6 +21,12 @@ This method is recommended for **cPanel**, **Plesk** and all other **web panel**
 * Unzip the software using your server built-in `unzip` utility in the target website directory (usually the `public_html` folder)
 * Remove the `.zip` file
 * Open your target website URL and follow the [Setup](#setup) instructions
+
+## Using panels
+
+Web panels can ease the system provisioning for you as all the requirements are provided by the web panel software.
+
+* [📂 cPanel App files](../../guides/cpanel/app-files.md)
 
 ## Using Composer
 

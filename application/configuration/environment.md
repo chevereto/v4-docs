@@ -78,12 +78,15 @@ Environment variables for the hostname configuration.
 
 Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable sensitive functionality.
 
-| Variable                        | Example |
-| ------------------------------- | ------- |
-| CHEVERETO_DISABLE_PHP_PAGES     | `false` |
-| CHEVERETO_DISABLE_UPDATE_HTTP   | `false` |
-| CHEVERETO_DISABLE_UPDATE_CLI    | `false` |
-| CHEVERETO_ENABLE_HTACCESS_CHECK | `true`  |
+| Variable                         | Example |
+| -------------------------------- | ------- |
+| CHEVERETO_DISABLE_PHP_PAGES      | `false` |
+| CHEVERETO_DISABLE_UPDATE_HTTP    | `false` |
+| CHEVERETO_DISABLE_UPDATE_CLI     | `false` |
+| CHEVERETO_ENABLE_HTACCESS_CHECK  | `true`  |
+| CHEVERETO_USER_ALBUMS_LIST_LIMIT | `500`   |
+
+* For `CHEVERETO_USER_ALBUMS_LIST_LIMIT` it controls the number of albums on user's dropdown album menus.
 
 ## File upload variables
 

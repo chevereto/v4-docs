@@ -32,6 +32,8 @@ The database update is required to migrate the existing database schema. You can
 
 ### CLI database update
 
+Run the following command:
+
 <code-group>
 <code-block title="Debian">
 ```sh

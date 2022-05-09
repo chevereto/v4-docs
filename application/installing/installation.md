@@ -76,6 +76,8 @@ Setup refers to the process when the Chevereto database tables and its admin use
 
 ### CLI setup
 
+Run the following command:
+
 <code-group>
 <code-block title="Debian">
 ```sh

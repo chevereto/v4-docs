@@ -54,7 +54,7 @@ These methods consists in to provide the application files in a file system comp
 * [Web Server](../stack/web-server.md) (Apache HTTP Web Server, NGiNX)
 * [Database Server](../stack/mysql-server.md) (MySQL, MariaDB)
 
-### Using Release package
+## Using release package
 
 The release package is a `zip` file containing the software files. Once extracted, the software is ready to be installed.
 

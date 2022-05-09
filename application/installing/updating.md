@@ -12,16 +12,11 @@ This section outlines the update process required for existing Chevereto V4 inst
 
 👉 Refer to [chevereto/v4-docker](https://github.com/chevereto/v4-docker) for updating instructions.
 
-## Using Release package
+## Using release package
 
 The release package is a `zip` file containing the software files. Once extracted, the software is ready to be updated.
 
-👉 This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
-
-* Upload the [latest release](https://chevereto.com/panel/downloads) package to a non-public path in your server
-* Unzip the software using your server built-in `unzip` utility in the target website directory (usually the `public_html` folder)
-* Remove the `.zip` file
-* Open your target website URL at `/install`
+👉 This procedure is exactly the same as installing [Using release package](installation.md#using-release-package).
 
 ## Using Composer package manager
 

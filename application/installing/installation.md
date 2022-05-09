@@ -37,7 +37,7 @@ Using Composer the installation carried in CLI context where the software is dow
 * CLI with `curl`, `unzip`
 * [Composer](https://getcomposer.org/)
 
-✨ You may want to give it a try to [install.sh]()
+✨ You may want to give it a try to [install.sh](https://github.com/chevereto/vps/tree/4.0#install)
 
 * Create a project folder in your server (usually the `public_html` folder)
 * Modify and run the command below

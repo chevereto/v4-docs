@@ -4,33 +4,11 @@ Chevereto runs on any compatible system but keep in mind: 💡 **Our software su
 
 ## Using VPS
 
-* Requires Ubuntu 20.04 LTS VPS
-
-💡 Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning.
-
-👉 Recommended for production systems.
-
-* Login to your VPS and run the following command
-
-```sh
-bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/bash.sh)
-```
-
-* Click on the URL at the end of the process to proceed with [Initial Setup](#initial-setup).
+Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning.
 
 ## Using Docker
 
-* Requires [Docker](https://docs.docker.com/get-docker/)
-
-### Production
-
-👉 Recommended for production systems.
-
 Use [chevereto/v4-docker-production](https://github.com/chevereto/v4-docker-production) to create your own Chevereto container images from which you can spawn containers for it.
-
-### Development
-
-👉 Our development standard.
 
 Use [chevereto/v4-docker](https://github.com/chevereto/v4-docker) for our development standard provisioning. This is preferred when requiring to try, debug or test the software.
 
@@ -38,41 +16,31 @@ Use [chevereto/v4-docker](https://github.com/chevereto/v4-docker) for our develo
 
 Web panels can ease the system provisioning for you as all the requirements are provided by the web panel software.
 
-👉 This is recommended for newcomers.
-
-* [cPanel](../../resources/guides/cpanel.md)
-
-## Other methods
-
-These methods consists in to provide the application files in a file system compatible with the following requirements:
-
-* [PHP](../stack/php.md)
-* [Web Server](../stack/web-server.md) (Apache HTTP Web Server, NGiNX)
-* [Database Server](../stack/mysql-server.md) (MySQL, MariaDB)
+* [Chevereto cPanel guide](../../resources/guides/cpanel.md)
 
 ## Using release package
 
 The release package is a `zip` file containing the software files. Once extracted, the software is ready to be installed.
 
-👉 This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
+This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
 
 * Upload the [latest release](https://chevereto.com/panel/downloads) package to a non-public path in your server
   * Use normal release package (non-lite)
 * Unzip the software using your server built-in `unzip` utility in the target website directory (usually the `public_html` folder)
 * Remove the `.zip` file
-* Open your target website URL and follow the [Initial Setup](#initial-setup) instructions
+* Open your target website URL and follow the [Setup](#setup) instructions
 
-### Using Composer
+## Using Composer
 
 Using Composer the installation carried in CLI context where the software is downloaded and its dependencies are installed on the fly. It requires:
 
 * CLI with `curl`, `unzip`
 * [Composer](https://getcomposer.org/)
 
-👉 This method is recommended for VPS and machines with CLI access.
+✨ You may want to give it a try to [install.sh]()
 
 * Create a project folder in your server (usually the `public_html` folder)
-* Run the command below
+* Modify and run the command below
 
 💡 Replace `YOUR_V4_LICENSE_KEY` with your [license key](https://chevereto.com/panel/license)
 
@@ -95,26 +63,40 @@ curl -f -SOJL \
 </code-block>
 </code-group>
 
-* Once done, open your target website to proceed with [Initial Setup](#initial-setup).
+* Once done, open your target website to proceed with [Setup](#setup).
 
-## Initial Setup
+## Setup
 
-This will create the chevereto database tables and the Chevereto admin user. This is needed for the first time the system gets installed and it can be made using HTTP (web) or CLI.
+Setup refers to the process when the Chevereto database tables and its admin user is created. You can carry this process in HTTP or CLI context.
 
 ### HTTP setup
 
-* Go to `/install` and submit the installation form.
+* Login as Admin
+* Go to `/install`
 
 ### CLI setup
 
-* Run the following command:
-
+<code-group>
+<code-block title="Debian">
 ```sh
 sudo -u www-data php /var/www/html/app/bin/legacy -C install \
     -u dev \
     -e dev@chevereto.loc \
     -x password
 ```
+</code-block>
+
+<code-block title="Docker">
+```sh
+docker exec -it --user www-data \
+    container_name \
+    app/bin/legacy -C install \
+        -u admin \
+        -e admin@chevereto.loc \
+        -x password
+```
+</code-block>
+</code-group>
 
 | Option | Description    |
 | ------ | -------------- |

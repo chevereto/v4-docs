@@ -12,6 +12,23 @@ Adding on [What's New](whats-new.md), the user interface has evolved to a mature
 
 Coming from V3, users will experience a better user interface design, improved debug experience, more system reliability and speed. V4 also introduced theme palettes, support for more login providers and the user based API.
 
+### Chevereto V4 vs V3
+
+The following tables summarizes the significative differences between Chevereto V3 and Chevereto V4.
+
+| System   | V4       | V3  |
+| -------- | -------- | --- |
+| PHP      | 8        | 7.4 |
+| CLI user | non-root | any |
+
+| Path          | V4                                 | V3                |
+| ------------- | ---------------------------------- | ----------------- |
+| Settings      | /app/env.php                       | /app/settings.php |
+| composer.json | /app                               | /                 |
+| CLI           | /app/bin/legacy                    | /cli.php          |
+| Themes        | /content/legacy/themes             | /app/themes       |
+| Peafowl (js)  | /content/legacy/themes/Peafowl/lib | /lib              |
+
 ## From Chevereto-Free
 
 As [Chevereto-Free](https://github.com/rodber/chevereto-free) is a fork of [Chevereto V3.16](https://releases.chevereto.com/3.X/3.16/3.16.0), it adds on top of that branch.

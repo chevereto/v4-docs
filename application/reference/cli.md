@@ -36,7 +36,7 @@ docker exec -it --user www-data \
 
 ## Cron
 
-The `-C cron` command runs the background jobs required by Chevereto.
+The `cron` command runs the background jobs required by Chevereto.
 
 ```sh
 app/bin/console -C cron
@@ -46,7 +46,7 @@ app/bin/console -C cron
 
 ### Htaccess checksum
 
-The `-C htaccess-checksum` command.
+The `htaccess-checksum` command.
 
 ```sh
 app/bin/console -C htaccess-checksum
@@ -54,7 +54,7 @@ app/bin/console -C htaccess-checksum
 
 ### Htaccess enforce
 
-The `-C htaccess-enforce` command checks for any alteration on the `.htaccess` files and reverts them to the defaults included by Chevereto.
+The `htaccess-enforce` command checks for any alteration on the `.htaccess` files and reverts them to the defaults included by Chevereto.
 
 ```sh
 app/bin/console -C htaccess-enforce
@@ -62,7 +62,7 @@ app/bin/console -C htaccess-enforce
 
 ## Importer
 
-The `-C importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
+The `importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
 
 ```sh
 app/bin/console -C importer
@@ -70,7 +70,7 @@ app/bin/console -C importer
 
 ## Install
 
-The `-C install` command installs Chevereto. It requires to pass the admin user details.
+The `install` command installs Chevereto. It requires to pass the admin user details.
 
 To install Chevereto for user "rodolfo" with password "myPassword":
 
@@ -89,7 +89,7 @@ app/bin/console -C install \
 
 ## Database update
 
-The `-C database-update` command updates the Chevereto database schema.
+The `database-update` command updates the Chevereto database schema.
 
 ```sh
 app/bin/console -C database-update
@@ -97,7 +97,7 @@ app/bin/console -C database-update
 
 ## Langs
 
-The `-C langs` command generates the cache for language translations. The command outputs the list of languages processed.
+The `langs` command generates the cache for language translations. The command outputs the list of languages processed.
 
 ```sh
 app/bin/console -C langs
@@ -105,7 +105,7 @@ app/bin/console -C langs
 
 ## Password reset
 
-The `-C password-reset` command generates and assign a new password for the target username. The command outputs the new password.
+The `password-reset` command generates and assign a new password for the target username. The command outputs the new password.
 
 To reset the password for user "rodolfo":
 
@@ -117,7 +117,7 @@ app/bin/console -C password-reset -u rodolfo
 
 ### Setting get
 
-The `-C setting-get` command retrieves the target database setting key value.
+The `setting-get` command retrieves the target database setting key value.
 
 To get the value for "chevereto_version_installed":
 
@@ -127,7 +127,7 @@ app/bin/console -C setting-get -k chevereto_version_installed
 
 ### Setting update
 
-The `-C setting-update` command updates the target database setting key value. It outputs the value after update.
+The `setting-update` command updates the target database setting key value. It outputs the value after update.
 
 To update the value for "maintenance":
 

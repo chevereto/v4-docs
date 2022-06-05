@@ -72,34 +72,6 @@ Setup refers to the process when the Chevereto database tables and its admin use
 * Login as Admin
 * Go to `/install`
 
-### CLI setup
+### CLI install
 
-Run the following command:
-
-<code-group>
-<code-block title="Debian">
-```sh
-sudo -u www-data php /var/www/html/app/bin/legacy -C install \
-    -u dev \
-    -e dev@chevereto.loc \
-    -x password
-```
-</code-block>
-
-<code-block title="Docker">
-```sh
-docker exec -it --user www-data \
-    container_name \
-    app/bin/legacy -C install \
-        -u admin \
-        -e admin@chevereto.loc \
-        -x password
-```
-</code-block>
-</code-group>
-
-| Option | Description    |
-| ------ | -------------- |
-| u      | Admin username |
-| e      | Admin email    |
-| x      | Admin password |
+Refer to [CLI install](../reference/cli.md#install).

@@ -26,18 +26,14 @@ The command should be run by the web-server user which is `www-data` (may vary).
 
 💡 Use `which php` to locate the PHP binary as its location.
 
-Command below uses `sudo -u www-data` to run the command as `www-data` user permissions. PHP binary is at `php` and the Chevereto CLI is at `/var/www/html/app/bin/legacy`. The command argument passed to Chevereto is `-C cron`.
-
-```sh
-sudo -u www-data php /var/www/html/app/bin/legacy -C cron
-```
+Refer to [CLI Cron](../reference/cli.md#cron).
 
 ### Docker command
 
 ```sh
 docker exec -it \
     --user www-data \
-    chevereto-container php /var/www/html/app/bin/legacy -C cron
+    chevereto-container app/bin/legacy -C cron
 ```
 
 ## Cron.d file

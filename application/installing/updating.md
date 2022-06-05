@@ -32,20 +32,4 @@ The database update is required to migrate the existing database schema. You can
 
 ### CLI database update
 
-Run the following command:
-
-<code-group>
-<code-block title="Debian">
-```sh
-sudo -u www-data php /var/www/html/app/bin/legacy -C install
-```
-</code-block>
-
-<code-block title="Docker">
-```sh
-docker exec -it --user www-data \
-    container_name \
-    app/bin/legacy -C install
-```
-</code-block>
-</code-group>
+Refer to [CLI database update](../reference/cli.md#database-update).

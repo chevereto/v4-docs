@@ -1,12 +1,38 @@
-# CLI
+# 💻 CLI
 
 `app/bin/console`
+
+::: danger Don't run as root
+The Chevereto console **won't work** when using `root` user. It must be called from a normal user.
+:::
 
 Chevereto V4 includes a command line interface enabling to perform a variety of system tasks. This console command should be invoked in the following format:
 
 ```sh
 app/bin/console -C <command> <options>
 ```
+
+* `app/bin/console` path to the Chevereto console file
+* `<command>` task to run
+* `<options>` options for command
+
+Command invocation vary depending on the system context, here samples for Debian and Docker:
+
+<code-group>
+<code-block title="Debian">
+```sh
+sudo -u www-data /var/www/html/app/bin/legacy -C <command> <options>
+```
+</code-block>
+
+<code-block title="Docker">
+```sh
+docker exec -it --user www-data \
+    container_name \
+    app/bin/legacy -C <command> <options>
+```
+</code-block>
+</code-group>
 
 ## Cron
 
@@ -54,6 +80,12 @@ app/bin/console -C install \
     -e rodolfo@chevereto.loc \
     -x myPassword
 ```
+
+| Option | Description    |
+| ------ | -------------- |
+| u      | Admin username |
+| e      | Admin email    |
+| x      | Admin password |
 
 ## Database update
 

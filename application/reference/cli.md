@@ -21,7 +21,7 @@ Command invocation vary depending on the system context, here samples for Debian
 <code-group>
 <code-block title="Debian">
 ```sh
-sudo -u www-data /var/www/html/app/bin/legacy -C <command> <options>
+sudo -u www-data app/bin/legacy -C <command> <options>
 ```
 </code-block>
 

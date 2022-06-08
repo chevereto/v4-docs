@@ -15,7 +15,7 @@ You can [enable XR Debug](https://v4-admin.chevereto.com/dashboard/system#enable
 Run the following command to spawn the built-in XR Debug server:
 
 ```php
-php /var/www/html/app/vendor/chevere/xr/server.php -p 27420
+php app/vendor/chevere/xr/server.php -p 27420
 ```
 
 💡 The command instructions are also available in your [Admin Dashboard](https://v4-admin.chevereto.com/).

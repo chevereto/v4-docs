@@ -51,3 +51,9 @@ In the instruction above [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cro
 ## Cron troubleshoot
 
 👉 Refer to your system documentation and/or administrator for the best strategy when running Chevereto's cron requirements.
+
+Common pitfalls:
+
+* `php` binary **may not** be available in cron context, refer to your sysadmin for the full PHP path binary
+* Don't use `www-data` **unless Debian-like** system. Refer to your sysadmin for the appropriate user when using other OS
+* The location of the `app/bin/legacy` console may vary, use what reflects the file in your system

@@ -60,12 +60,12 @@ The `htaccess-enforce` command checks for any alteration on the `.htaccess` file
 app/bin/console -C htaccess-enforce
 ```
 
-## Importer
+## Bulk importer
 
-The `importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
+The `bulk-importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
 
 ```sh
-app/bin/console -C importer
+app/bin/console -C bulk-importer
 ```
 
 ## Install

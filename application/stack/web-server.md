@@ -78,15 +78,15 @@ This is the **recommended** `nginx.conf` for `server {}` block.
     }
 ```
 
-## Restrict PHP files
+## Restrict PHP
 
-Built-in [Apache HTTP server](#apache-http-server) config and provided [Nginx](#nginx) config for Chevereto restricts access to PHP files. In Chevereto, only `/index.php` is allowed to process PHP requests and any extra PHP file execution is forbidden.
+Built-in [Apache HTTP server](#apache-http-server) config and provided [Nginx](#nginx) config for **Chevereto restricts access to PHP files**. Only `/index.php` is allowed to process PHP requests and any extra PHP file execution is forbidden.
 
 This is a security measure to prevent execution of arbitrary files that an attacker or third-party may nest in the Chevereto application filesystem.
 
 ## Real connecting IP
 
-For setups under proxy (including [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs)) is required that the web server sets the appropriate value for the client connecting IP.
+For setups under proxy (as [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs) and others) is required that the web server sets the appropriate value for the client connecting IP.
 
 ::: danger
 If real connecting IP is not configured Chevereto won't be able to detect the real visitors IPs, failing to deliver IP based restrictions and flood control.

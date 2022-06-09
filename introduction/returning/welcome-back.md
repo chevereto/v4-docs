@@ -26,7 +26,7 @@ The following tables summarizes the significative differences between Chevereto 
 | Composer                                  | /app/composer.json                 | /composer.json    |
 | [CLI](../../application/reference/cli.md) | /app/bin/legacy                    | /cli.php          |
 | Themes                                    | /content/legacy/themes             | /app/themes       |
-| Peafowl (js)                              | /content/legacy/themes/Peafowl/lib | /lib              |
+| Peafowl                                   | /content/legacy/themes/Peafowl/lib | /lib              |
 
 ## From Chevereto-Free
 

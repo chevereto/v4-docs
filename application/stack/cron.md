@@ -12,13 +12,17 @@ A cron is system in which a command is executed in a regular basis, this way Che
 
 ## Troubleshoot
 
+::: tip
+Refer to your system documentation and/or administrator for the best strategy when running Chevereto's cron requirements.
+:::
+
 Having issues? Check the following common pitfalls:
 
-* Wrong user running the command (requires user with access to the project directory)
-* Invalid php binary (provide full path when possible)
-* Outdated Chevereto database (required to store last run)
-* PHP binary context/settings should be same as when wiring to HTTP web server
 * Invalid format for cron schedule
+* The PHP binary **may not** be available in cron context, use the full PHP path binary
+* The location of the `app/bin/legacy` console may vary, use what reflects the file in your system
+* Wrong user running the command (requires a **normal user** with access to the project directory)
+* User `www-data` applies only for **Debian-based** system. Refer to your sysadmin for the appropriate user when using other OS
 
 ## Command
 
@@ -47,13 +51,3 @@ EOM
 ```
 
 In the instruction above [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
-
-## Cron troubleshoot
-
-👉 Refer to your system documentation and/or administrator for the best strategy when running Chevereto's cron requirements.
-
-Common pitfalls:
-
-* `php` binary **may not** be available in cron context, refer to your sysadmin for the full PHP path binary
-* Don't use `www-data` **unless Debian-like** system. Refer to your sysadmin for the appropriate user when using other OS
-* The location of the `app/bin/legacy` console may vary, use what reflects the file in your system

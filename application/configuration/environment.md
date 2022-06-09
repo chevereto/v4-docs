@@ -39,7 +39,7 @@ Environment variables for the database details.
 
 Environment variables for [debug](../../developer/how-to/debug.md).
 
-💡 When using Docker it logs to `/dev/stderr` regardless this configuration.
+💡 When using Docker Chevereto logs to `/dev/stderr` regardless this configuration.
 
 | Variable              | Example                      |
 | --------------------- | ---------------------------- |

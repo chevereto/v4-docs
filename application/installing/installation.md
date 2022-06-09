@@ -2,6 +2,12 @@
 
 Chevereto runs on any compatible system but keep in mind: 💡 **Our software support doesn't include third-party provisioning systems**. Paid extra support will be required to address these issues.
 
+## Using Cloud
+
+::: tip Chevereto.cloud
+Sign up for our upcoming [Chevereto.cloud](https://chevereto.cloud) service. The fastest, safest and 100% hassle-free way to enjoy Chevereto V4.
+:::
+
 ## Using VPS
 
 Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning.

@@ -16,18 +16,17 @@ Coming from V3, users will experience a better user interface design, improved d
 
 The following tables summarizes the significative differences between Chevereto V3 and Chevereto V4.
 
-| System   | V4       | V3  |
-| -------- | -------- | --- |
-| PHP      | 8        | 7.4 |
-| CLI user | non-root | any |
+| System | V4  | V3  |
+| ------ | --- | --- |
+| PHP    | 8   | 7.4 |
 
-| Path          | V4                                 | V3                |
-| ------------- | ---------------------------------- | ----------------- |
-| Settings      | /app/env.php                       | /app/settings.php |
-| composer.json | /app                               | /                 |
-| CLI           | /app/bin/legacy                    | /cli.php          |
-| Themes        | /content/legacy/themes             | /app/themes       |
-| Peafowl (js)  | /content/legacy/themes/Peafowl/lib | /lib              |
+|                                           | V4 Path                            | V3 Path           |
+| ----------------------------------------- | ---------------------------------- | ----------------- |
+| Settings                                  | /app/env.php                       | /app/settings.php |
+| Composer                                  | /app/composer.json                 | /composer.json    |
+| [CLI](../../application/reference/cli.md) | /app/bin/legacy                    | /cli.php          |
+| Themes                                    | /content/legacy/themes             | /app/themes       |
+| Peafowl (js)                              | /content/legacy/themes/Peafowl/lib | /lib              |
 
 ## From Chevereto-Free
 

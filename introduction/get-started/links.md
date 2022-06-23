@@ -9,6 +9,7 @@
 ## General Resources
 
 * [Website](https://chevereto.com/) Everything goes at `chevereto.com`
+* [Newsletter](https://chv.to/newsletter) Updates on your inbox
 * [Blog](https://blog.chevereto.com/) Stay on loop
 * [Community](https://chevereto.com/community/) Join the discussion with other users
 * [Discord](https://chv.to/discord/) Join the chatter with other users
@@ -17,5 +18,5 @@
 
 ## Author's Resources
 
-* [Blog](https://rodolfoberrios.com) The author behind Chevereto
-* [GitHub](https://github.com/rodber) Star Rodolfo's Open Source work
+* [Rodolfo Berrios](https://rodolfoberrios.com) The author behind Chevereto
+* [rodber (GitHub)](https://github.com/rodber) Star Rodolfo's Open Source work

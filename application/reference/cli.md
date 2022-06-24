@@ -1,6 +1,6 @@
 # 💻 CLI
 
-`app/bin/console`
+`app/bin/legacy`
 
 ::: danger Don't run as root
 The Chevereto console **won't work** when using `root` user. It must be called from a normal user.
@@ -9,10 +9,10 @@ The Chevereto console **won't work** when using `root` user. It must be called f
 Chevereto V4 includes a command line interface enabling to perform a variety of system tasks. This console command should be invoked in the following format:
 
 ```sh
-app/bin/console -C <command> <options>
+app/bin/legacy -C <command> <options>
 ```
 
-* `app/bin/console` path to the Chevereto console file
+* `app/bin/legacy` path to the Chevereto console file
 * `<command>` task to run
 * `<options>` options for command
 
@@ -39,7 +39,7 @@ docker exec -it --user www-data \
 The `cron` command runs the background jobs required by Chevereto.
 
 ```sh
-app/bin/console -C cron
+app/bin/legacy -C cron
 ```
 
 ## Htaccess
@@ -49,7 +49,7 @@ app/bin/console -C cron
 The `htaccess-checksum` command.
 
 ```sh
-app/bin/console -C htaccess-checksum
+app/bin/legacy -C htaccess-checksum
 ```
 
 ### Htaccess enforce
@@ -57,7 +57,7 @@ app/bin/console -C htaccess-checksum
 The `htaccess-enforce` command checks for any alteration on the `.htaccess` files and reverts them to the defaults included by Chevereto.
 
 ```sh
-app/bin/console -C htaccess-enforce
+app/bin/legacy -C htaccess-enforce
 ```
 
 ## Bulk importer
@@ -65,7 +65,7 @@ app/bin/console -C htaccess-enforce
 The `bulk-importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
 
 ```sh
-app/bin/console -C bulk-importer
+app/bin/legacy -C bulk-importer
 ```
 
 ## Install
@@ -75,7 +75,7 @@ The `install` command installs Chevereto. It requires to pass the admin user det
 To install Chevereto for user "rodolfo" with password "myPassword":
 
 ```sh
-app/bin/console -C install \
+app/bin/legacy -C install \
     -u rodolfo \
     -e rodolfo@chevereto.loc \
     -x myPassword
@@ -92,7 +92,7 @@ app/bin/console -C install \
 The `database-update` command updates the Chevereto database schema.
 
 ```sh
-app/bin/console -C database-update
+app/bin/legacy -C database-update
 ```
 
 ## Langs
@@ -100,7 +100,7 @@ app/bin/console -C database-update
 The `langs` command generates the cache for language translations. The command outputs the list of languages processed.
 
 ```sh
-app/bin/console -C langs
+app/bin/legacy -C langs
 ```
 
 ## Password reset
@@ -110,7 +110,7 @@ The `password-reset` command generates and assign a new password for the target 
 To reset the password for user "rodolfo":
 
 ```sh
-app/bin/console -C password-reset -u rodolfo
+app/bin/legacy -C password-reset -u rodolfo
 ```
 
 ## Settings
@@ -122,7 +122,7 @@ The `setting-get` command retrieves the target database setting key value.
 To get the value for "chevereto_version_installed":
 
 ```sh
-app/bin/console -C setting-get -k chevereto_version_installed
+app/bin/legacy -C setting-get -k chevereto_version_installed
 ```
 
 ### Setting update
@@ -132,5 +132,5 @@ The `setting-update` command updates the target database setting key value. It o
 To update the value for "maintenance":
 
 ```sh
-app/bin/console -C setting-update -k maintenance -v true
+app/bin/legacy -C setting-update -k maintenance -v true
 ```

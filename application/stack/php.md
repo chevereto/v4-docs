@@ -61,19 +61,16 @@ The following PHP extensions are required for Chevereto.
 
 * BCMath
 * curl
-* ds
 * exif
 * fileinfo
 * gd
 * hash
 * imagick
 * json
-* mbstring
 * pdo
 * pdo-mysql
 * session
 * xml
-* zip
 
 ## PHP Features
 

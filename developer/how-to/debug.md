@@ -8,7 +8,7 @@ Debug enables to dump information about errors that may be affecting the softwar
 
 👏 Chevereto V4 includes **built-in support** for [XR Debug](https://xr-docs.chevere.org), an Open Source remote debugger also made by us.
 
-You can [enable XR Debug](https://v4-admin.chevereto.com/dashboard/system#enable-xr) server to get live debug messages, enabling you to save/export those for handling it over when [requesting help](troubleshoot.md#getting-help).
+You can [enable XR Debug](https://v4-admin.chevereto.com/settings/system.html#enable-xr) server to get live debug messages, enabling you to save/export those for handling it over when [requesting help](troubleshoot.md#getting-help).
 
 ### Built-in XR Debug server
 
@@ -103,4 +103,4 @@ docker logs -f container-name | sed 's/\\n/\n/g'
 
 💡 Enable this **only** in development environments.
 
-To enable printed error reporting you will need to go to [system settings](https://v4-admin.chevereto.com/dashboard/system). By enabling this, all runtime errors will be printed to the screen, handle it with care.
+To enable printed error reporting you will need to go to [system settings](https://v4-admin.chevereto.com/settings/system.html). By enabling this, all runtime errors will be printed to the screen, handle it with care.

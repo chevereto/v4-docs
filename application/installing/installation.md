@@ -10,7 +10,7 @@ Sign up for our upcoming [Chevereto.cloud](https://chevereto.cloud) service. The
 
 ## Using VPS
 
-Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning.
+Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning, which you can use with any provider.
 
 ## Using Docker
 

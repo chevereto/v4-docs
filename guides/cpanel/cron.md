@@ -9,14 +9,15 @@
 
 * Under **Common Settings** pick `Once Per Minute (* * * * *)`
 
-The **Command** varies on each installation, you need to create your own command based on the following general form:
+The command invocation vary depending on use context, you need to create *your own* command based on the following general form:
 
 ```sh
 php-binary cli-path -C cron >/dev/null 2>&1
 ```
 
 * **php-binary** Check the `PHP command examples` section under **Add New Cron Job** where you can learn about the PHP path for your system.
-* **cli-path** The Chevereto CLI path can be found on your Dashboard panel under **Installation details**.
+* **cli-path** Chevereto CLI path can be found on your Dashboard panel under **Installation details**.
+* **-C cron** C-option to pass the "cron" app-command
 
 ### Command examples
 

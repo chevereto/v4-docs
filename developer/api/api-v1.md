@@ -6,7 +6,7 @@
 
 ## Key
 
-API V1.1 works with an user key, which is available at `/settings/api`. Admin user can set the public API key at the [Dashboard panel](https://v4-admin.chevereto.com/dashboard/api.html).
+API V1.1 works with an user key, which is available for each user at `/settings/api`. Admin user can set the public API key for guest uploads at the [Dashboard panel](https://v4-admin.chevereto.com/settings/api.html).
 
 ## Request method
 

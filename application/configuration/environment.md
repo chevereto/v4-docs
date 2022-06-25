@@ -4,7 +4,7 @@
 
 Environment variables for storing assets that can be uploaded to any of the supported external storage APIs. Assets refers to user provided assets such as avatars and backgrounds, also website graphics like logos and homepage covers.
 
-💡 Check [External storage](../../admin/features/external-storage.md) for adding external storage servers for user content uploads.
+💡 Check [External storage](https://v4-admin.chevereto.com/features/external-storage.html) for adding external storage servers for user content uploads.
 
 | Variable                             | Example        |
 | ------------------------------------ | -------------- |

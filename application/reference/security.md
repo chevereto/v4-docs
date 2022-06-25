@@ -8,7 +8,7 @@ Must **constantly double-checking** the following:
 * [Real connecting IP](../stack/web-server.md#real-connecting-ip)
 * [Restrict access to PHP files](../stack/web-server.md#restrict-direct-access-to-php-files)
 * [CRON setup](../stack/cron.md)
-* [Email setup](https://v4-admin.chevereto.com/dashboard/email)
+* [Email setup](https://v4-admin.chevereto.com/settings/email.html)
 
 ## Encoded IDs
 
@@ -60,7 +60,7 @@ Chevereto uses [BCrypt](https://en.wikipedia.org/wiki/Bcrypt) cryptography to st
 
 ✅ Built-in reCAPTCHA support.
 
-Chevereto includes support for [reCAPTCHA](https://v4-admin.chevereto.com/dashboard/external-services#recaptcha) which helps to prevent bots from signing up and try to brute-force a user password.
+Chevereto includes support for [reCAPTCHA](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha) which helps to prevent bots from signing up and try to brute-force a user password.
 
 ## Daily Invalid Requests
 
@@ -74,4 +74,4 @@ There is a hard-coded setting in the system that controls the limit of allowed i
 
 ✅ Control how much content/time can be added by users.
 
-Avoid resource hungry users by configuring [Flood Protection](https://v4-admin.chevereto.com/dashboard/flood-protection). This enables to control how much they can upload based on configurable time settings.
+Avoid resource hungry users by configuring [Flood Protection](https://v4-admin.chevereto.com/settings/flood-protection.html). This enables to control how much they can upload based on configurable time settings.

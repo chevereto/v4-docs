@@ -48,7 +48,7 @@ Although the message doesn't leak function arguments neither variables, you shou
 
 If at `/install` you see a plain text message starting with `#Dumped update query` it means that you **MUST** manual run the printed queries in your MySQL console.
 
-If [dump update query](https://v4-admin.chevereto.com/dashboard/system#dump-update-query) setting is **enabled** or if the images table has **more than 1,000,000** records, Chevereto will dump the SQL statements required to carry the database update which must run direct in the MySQL console. Chevereto has this functionality to minimize breaking your large database as the process could take several minutes to complete.
+If [dump update query](https://v4-admin.chevereto.com/settings/system.html#dump-update-query) setting is **enabled** or if the images table has **more than 1,000,000** records, Chevereto will dump the SQL statements required to carry the database update which must run direct in the MySQL console. Chevereto has this functionality to minimize breaking your large database as the process could take several minutes to complete.
 
 ### HTTP 500 - Internal Server Error
 

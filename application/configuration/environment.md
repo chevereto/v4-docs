@@ -46,6 +46,30 @@ Environment variables for [debug](../../developer/how-to/debug.md).
 | CHEVERETO_DEBUG_LEVEL | `1`                          |
 | CHEVERETO_ERROR_LOG   | /var/log/chevereto-error.log |
 
+## Hostname variables
+
+Environment variables for the hostname configuration.
+
+| Variable                | Example       |
+| ----------------------- | ------------- |
+| CHEVERETO_HOSTNAME      | chevereto.loc |
+| CHEVERETO_HOSTNAME_PATH | /             |
+| CHEVERETO_HTTPS         | `true`        |
+
+## Encryption key
+
+Environment variables for the encryption functionality.
+
+| Variable                 | Type                     |
+| ------------------------ | ------------------------ |
+| CHEVERETO_ENCRYPTION_KEY | base64 encoded (size 32) |
+
+* For `CHEVERETO_ENCRYPTION_KEY` you can generate the key running this command:
+
+```sh
+openssl rand -base64 32
+```
+
 ## Session variables
 
 Environment variables for the session driver.
@@ -64,26 +88,21 @@ Environment variables for controlling image handling.
 | CHEVERETO_IMAGE_FORMATS_AVAILABLE | `'JPG','PNG','BMP','GIF','WEBP'` |
 | CHEVERETO_IMAGE_LIBRARY           | `imagick` `gd`                   |
 
-## Hostname variables
-
-Environment variables for the hostname configuration.
-
-| Variable                | Example       |
-| ----------------------- | ------------- |
-| CHEVERETO_HOSTNAME      | chevereto.loc |
-| CHEVERETO_HOSTNAME_PATH | /             |
-| CHEVERETO_HTTPS         | `true`        |
-
 ## System context variables
 
 Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable sensitive functionality.
 
+| Variable                        | Example |
+| ------------------------------- | ------- |
+| CHEVERETO_DISABLE_PHP_PAGES     | `false` |
+| CHEVERETO_DISABLE_UPDATE_HTTP   | `false` |
+| CHEVERETO_DISABLE_UPDATE_CLI    | `false` |
+| CHEVERETO_ENABLE_HTACCESS_CHECK | `true`  |
+
+## Limits
+
 | Variable                         | Example |
 | -------------------------------- | ------- |
-| CHEVERETO_DISABLE_PHP_PAGES      | `false` |
-| CHEVERETO_DISABLE_UPDATE_HTTP    | `false` |
-| CHEVERETO_DISABLE_UPDATE_CLI     | `false` |
-| CHEVERETO_ENABLE_HTACCESS_CHECK  | `true`  |
 | CHEVERETO_USER_ALBUMS_LIST_LIMIT | `500`   |
 
 * For `CHEVERETO_USER_ALBUMS_LIST_LIMIT` it controls the number of albums on user's dropdown album menus.

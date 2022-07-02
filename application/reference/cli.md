@@ -34,6 +34,26 @@ docker exec -it --user www-data \
 </code-block>
 </code-group>
 
+## Encryption
+
+Encryption commands requires to setup the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
+
+### Encrypt secrets
+
+The `encrypt-secrets` command [encrypts](encryption.md) application secrets in the database.
+
+```sh
+app/bin/legacy -C encrypt-secrets
+```
+
+### Encrypt update
+
+The `encrypt-update` command updates the application secrets when changing the encryption key.
+
+```sh
+app/bin/legacy -C encrypt-update -k old_key
+```
+
 ## Cron
 
 The `cron` command runs the background jobs required by Chevereto.
@@ -46,7 +66,7 @@ app/bin/legacy -C cron
 
 ### Htaccess checksum
 
-The `htaccess-checksum` command.
+The `htaccess-checksum` command generates safe `.htaccess` for Chevereto folders.
 
 ```sh
 app/bin/legacy -C htaccess-checksum

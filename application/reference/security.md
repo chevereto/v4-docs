@@ -10,21 +10,25 @@ Must **constantly double-checking** the following:
 * [CRON setup](../stack/cron.md)
 * [Email setup](https://v4-admin.chevereto.com/settings/email.html)
 
+## Encryption
+
+Application secrets, storage credentials and two-factor codes are [encrypted](encryption.md). Chevereto uses ChaCha20 algorithm to store these secrets in the database.
+
 ## Encoded IDs
 
-✅ Public IDs are **always encoded** to avoid any attempt of content enumeration attack.
+Public IDs are **always encoded** to avoid any attempt of content enumeration attack.
 
 While the data is stored in database rows indexed with integer ids, Chevereto handles these on public as encoded identifiers. Similar to how YouTube encode their video IDs. This is made to avoid enumeration of content based on incremental identifiers (retrieve N content by doing `+1` on the identifier).
 
 ### Encoding and decoding IDs
 
-✅ Public IDs **are unique** and vary from each different installation.
+Public IDs **are unique** and vary from each different installation.
 
 On installation Chevereto creates a random generated `crypt_salt` which is used by the system to encode/decode these identifiers. This allows to convert the numeric ids stored in the database to alphanumeric ids unique to your installation.
 
 ### Making encoded IDs larger
 
-✅ The length of encoded IDs can be customized.
+The length of encoded IDs can be customized.
 
 Larger encoded IDs will be always better for preserving the privacy of the uploaded content. Two alternatives to achieve larger encoded IDs:
 
@@ -42,9 +46,9 @@ Entering an integer value like `5000` will instruct the system to generate IDs u
 
 Go to the database, find the `chv_images` table and change the `AUTOINCREMENT` to the ID padding you want to use.
 
-## CSRF protection
+## CSRF
 
-✅ Built-in CSRF protection.
+CSRF protection.
 
 Cross-site request forgery ([CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)) is a type of exploit that is used to fool website's origin requests by transmitting instructions from a remote website without the user's consent, for example trigger a delete content request without the user consent or willing.
 
@@ -52,19 +56,19 @@ The CSRF protection is based in the usage of a request token, which is set by se
 
 ## Cryptography
 
-✅ BCrypt passwords.
+BCrypt passwords.
 
 Chevereto uses [BCrypt](https://en.wikipedia.org/wiki/Bcrypt) cryptography to store passwords and cookie login entries.
 
 ## reCAPTCHA
 
-✅ Built-in reCAPTCHA support.
+Built-in reCAPTCHA support.
 
 Chevereto includes support for [reCAPTCHA](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha) which helps to prevent bots from signing up and try to brute-force a user password.
 
 ## Daily Invalid Requests
 
-✅ Too many invalid request forbid access to the system.
+Too many invalid request forbid access to the system.
 
 An invalid request is when a user enters a bad password or the CSRF token doesn't match. Each time an invalid request is triggered the system stores the IP and the given action that triggers that invalid request.
 
@@ -72,6 +76,6 @@ There is a hard-coded setting in the system that controls the limit of allowed i
 
 ## Flood Protection
 
-✅ Control how much content/time can be added by users.
+Control how much content/time can be added by users.
 
 Avoid resource hungry users by configuring [Flood Protection](https://v4-admin.chevereto.com/settings/flood-protection.html). This enables to control how much they can upload based on configurable time settings.

@@ -58,17 +58,11 @@ Environment variables for the hostname configuration.
 
 ## Encryption key
 
-Environment variables for the encryption functionality.
+Environment variables for the [encryption](../reference/encryption.md) functionality.
 
 | Variable                 | Type                     |
 | ------------------------ | ------------------------ |
 | CHEVERETO_ENCRYPTION_KEY | base64 encoded (size 32) |
-
-* For `CHEVERETO_ENCRYPTION_KEY` you can generate the key running this command:
-
-```sh
-openssl rand -base64 32
-```
 
 ## Session variables
 

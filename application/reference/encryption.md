@@ -1,23 +1,86 @@
 # 🔑 Encryption
 
-Chevereto uses [ChaCha20](https://datatracker.ietf.org/doc/html/rfc7539) algorithm to encrypt database fields containing sensitive data. Chevereto encrypts settings secrets, storage credentials and two-factor codes.
+Chevereto uses [ChaCha20](https://datatracker.ietf.org/doc/html/rfc7539) algorithm to cipher secrets and sensitive data. When enabled, Chevereto will store these values encrypted in the database.
+
+::: tip Requires manual update
+Encryption in Chevereto was added in `v4.0.0-beta.10`. If you installed Chevereto from a system prior to this release you will require to [manually enable encryption](#enabling-encryption) and then [encrypt secrets](#encrypting-secrets).
+:::
+
+## What is encrypted?
+
+### Settings secrets
+
+The following setting secrets are encrypted:
+
+| Setting                                                                                                             | Key                        |
+| ------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [SMTP server and port](https://v4-admin.chevereto.com/settings/email.html#smtp-server-and-port)                     | email_smtp_server          |
+| SMTP server and port                                                                                                | email_smtp_server_port     |
+| [SMTP username](https://v4-admin.chevereto.com/settings/email.html#smtp-username)                                   | email_smtp_server_username |
+| [SMTP password](https://v4-admin.chevereto.com/settings/email.html#smtp-password)                                   | email_smtp_server_password |
+| [reCAPTCHA secret key](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha-secret-key)         | recaptcha_private_key      |
+| [Disqus secret key](https://v4-admin.chevereto.com/settings/external-services.html#disqus-secret-key)               | disqus_secret_key          |
+| [Akismet API key](https://v4-admin.chevereto.com/settings/external-services.html#akismet-api-key)                   | akismet_api_key            |
+| [ModerateContent API Key](https://v4-admin.chevereto.com/settings/external-services.html#moderatecontent-api-key)   | moderatecontent_key        |
+| [Project Arachnid API Key](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_key               |
+| [XR Debug Host](https://v4-admin.chevereto.com/settings/system.html#xr-debug-host)                                  | xr_host                    |
+| [XR Debug Port](https://v4-admin.chevereto.com/settings/system.html#xr-debug-port)                                  | xr_port                    |
+| XR Debug Key                                                                                                        | xr_key                     |
+
+### Storage credentials
+
+| Storage      |
+| ------------ |
+| server       |
+| service      |
+| account_id   |
+| account_name |
+| key          |
+| secret       |
+| bucket       |
+
+### Two-factor codes
+
+`work-in-progress`
 
 ## Key
 
-💡 The encryption key is automatic provided (except when using Docker).
-
-To use encryption you will require to set the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
-
-The encryption key is base64 encoded random string of size 32. Generate a key running this command:
+The encryption key is base64 encoded random string of size 32. To generate a key use `openssl`:
 
 ```sh
 openssl rand -base64 32
 ```
 
-## Encrypting secrets
+This key should remain private, and it shouldn't be used in other installations. It is advised to backup the key in a safe location.
 
-The [encrypt-secrets](cli.md#encrypt-secrets) command will encrypt the application secrets to the database.
+## Enabling encryption
+
+To enable encryption provide the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
+
+🪶 This key is automatic provided when using [HTTP setup](../installing/installation.md#http-setup), stored in the [env.php](../configuration/env.php.md) file.
+
+### From previous versions
+
+Chevereto installations previous the introduction of encryption will require to enable encryption manually. This is a one time process that encrypts the plain text data stored in the database.
+
+To **manually** enable encryption:
+
+* Enable [maintenance](https://v4-admin.chevereto.com/settings/system.html#maintenance) mode.
+* [Configure](../configuration/configuring.md) the `CHEVERETO_ENCRYPTION_KEY` variable.
+* Run [encrypt-secrets](cli.md#encrypt-secrets) command.
+* Disable maintenance mode.
 
 ## Changing key
 
-Update the environment value for `CHEVERETO_ENCRYPTION_KEY` (the new key). Then run the [encrypt-update-key](cli.md#encypt-update) command.
+To change the encryption key (requires both old and new key):
+
+* Enable [maintenance](https://v4-admin.chevereto.com/settings/system.html#maintenance) mode.
+* [Configure](../configuration/configuring.md) the `CHEVERETO_ENCRYPTION_KEY` variable to the new encryption key.
+* Run [encrypt-update](cli.md#encrypt-update) command, you will require to pass the old key.
+* Disable maintenance mode.
+
+🤦‍♂️ If you don't have a backup of the old key:
+
+* Go to Dashboard > Settings and enter again all the passwords for the settings secrets.
+* Go to Dashboard > Settings > External Storage and enter again all the storage credentials.
+* Go to the database and truncate `chv_two-factor` table.

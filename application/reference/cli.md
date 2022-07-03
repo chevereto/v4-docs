@@ -36,7 +36,7 @@ docker exec -it --user www-data \
 
 ## Encryption
 
-Encryption commands requires to setup the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
+To use encryption it requires to setup the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
 
 ### Encrypt secrets
 
@@ -49,6 +49,8 @@ app/bin/legacy -C encrypt-secrets
 ### Encrypt update
 
 The `encrypt-update` command updates the application secrets when changing the encryption key.
+
+💡 Before running this command make sure to set `CHEVERETO_ENCRYPTION_KEY` to the new key.
 
 ```sh
 app/bin/legacy -C encrypt-update -k old_key

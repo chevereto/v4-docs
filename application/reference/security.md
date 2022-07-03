@@ -12,7 +12,7 @@ Must **constantly double-checking** the following:
 
 ## Encryption
 
-Application secrets, storage credentials and two-factor codes are [encrypted](encryption.md). Chevereto uses ChaCha20 algorithm to store these secrets in the database.
+Sensitive data is stored [encrypted](encryption.md) in the database.
 
 ## Encoded IDs
 

@@ -29,6 +29,8 @@ The following setting secrets are encrypted:
 
 ### Storage credentials
 
+The following storage rows are encrypted:
+
 | Storage      |
 | ------------ |
 | server       |
@@ -81,6 +83,6 @@ To change the encryption key (requires both old and new key):
 
 🤦‍♂️ If you don't have a backup of the old key:
 
-* Go to Dashboard > Settings and enter again all the passwords for the settings secrets.
-* Go to Dashboard > Settings > External Storage and enter again all the storage credentials.
-* Go to the database and truncate `chv_two-factor` table.
+* Go to Settings and enter again all the passwords for the [settings secrets](#settings-secrets).
+* Go to [External Storage](https://v4-admin.chevereto.com/settings/external-storage.html) and enter again all the storage credentials for each external storage.
+* Truncate `chv_two-factor` table, all users will require to setup two-factor again.

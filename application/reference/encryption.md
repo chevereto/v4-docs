@@ -29,7 +29,7 @@ The following setting secrets are encrypted:
 
 ### Storage credentials
 
-The following storage rows are encrypted:
+The following storage columns are encrypted:
 
 | Storage      |
 | ------------ |
@@ -53,7 +53,7 @@ The encryption key is base64 encoded random string of size 32. To generate a key
 openssl rand -base64 32
 ```
 
-This key should remain private, and it shouldn't be used in other installations. It is advised to backup the key in a safe location.
+This key should remain private, shouldn't be used in other installations. It is advised to backup the key in a safe location. When migrating servers don't forget the encryption key.
 
 ## Enabling encryption
 
@@ -63,7 +63,7 @@ To enable encryption provide the [CHEVERETO_ENCRYPTION_KEY](../configuration/env
 
 ### From previous versions
 
-Chevereto installations previous the introduction of encryption will require to enable encryption manually. This is a one time process that encrypts the plain text data stored in the database.
+Chevereto installations previous the introduction of encryption will require to manually cipher the existing data. This is a one time process that encrypts the plain text data stored in the database.
 
 To **manually** enable encryption:
 

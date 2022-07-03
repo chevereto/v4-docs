@@ -3,7 +3,7 @@
 Chevereto uses [ChaCha20](https://datatracker.ietf.org/doc/html/rfc7539) algorithm to cipher secrets and sensitive data. When enabled, Chevereto will store these values encrypted in the database.
 
 ::: tip Requires manual update
-Encryption in Chevereto was added in `v4.0.0-beta.10`. If you installed Chevereto from a system prior to this release you will require to [manually enable encryption](#enabling-encryption) and then [encrypt secrets](#encrypting-secrets).
+Encryption in Chevereto was added in `v4.0.0-beta.10`. If you installed Chevereto prior to this release you will require to [manually enable encryption](#enabling-encryption).
 :::
 
 ## What is encrypted?
@@ -31,15 +31,15 @@ The following setting secrets are encrypted:
 
 The following storage columns are encrypted:
 
-| Storage      |
-| ------------ |
-| server       |
-| service      |
-| account_id   |
-| account_name |
-| key          |
-| secret       |
-| bucket       |
+| Table `chv_storages` |
+| -------------------- |
+| server               |
+| service              |
+| account_id           |
+| account_name         |
+| key                  |
+| secret               |
+| bucket               |
 
 ### Two-factor codes
 
@@ -85,4 +85,4 @@ To change the encryption key (requires both old and new key):
 
 * Go to Settings and enter again all the passwords for the [settings secrets](#settings-secrets).
 * Go to [External Storage](https://v4-admin.chevereto.com/settings/external-storage.html) and enter again all the storage credentials for each external storage.
-* Truncate `chv_two-factor` table, all users will require to setup two-factor again.
+* Truncate `chv_two-factors` table, all users will require to setup two-factor again.

@@ -6,19 +6,21 @@ Debug enables to dump information about errors that may be affecting the softwar
 
 <p><img alt="XR Debug" width="17%" class="float-left margin-1em" src="../../src/products/xr/logo.svg"></p>
 
-👏 Chevereto V4 includes **built-in support** for [XR Debug](https://xr-docs.chevere.org), an Open Source remote debugger also made by us.
+👏 Chevereto V4 includes **built-in support** for [XR Debug](https://xr-docs.chevere.org), an Open Source remote debugger also made by us. This enables to easily debug Chevereto without requiring any extra dependency.
 
 You can [enable XR Debug](https://v4-admin.chevereto.com/settings/system.html#enable-xr) server to get live debug messages, enabling you to save/export those for handling it over when [requesting help](troubleshoot.md#getting-help).
+
+### XR Debug Server
+
+Check the [XR Debug Server](https://xr-docs.chevere.org/server/) documentation for instructions for running the debug server.
 
 ### Built-in XR Debug server
 
 Run the following command to spawn the built-in XR Debug server:
 
 ```php
-php app/vendor/chevere/xr/server.php -p 27420
+app/vendor/bin/xrserver -p 27420
 ```
-
-💡 The command instructions are also available in your [Admin Dashboard](https://v4-admin.chevereto.com/).
 
 ## Configuring debug
 

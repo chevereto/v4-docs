@@ -3,7 +3,7 @@
 Chevereto uses [ChaCha20](https://datatracker.ietf.org/doc/html/rfc7539) algorithm to cipher secrets and sensitive data. When enabled, Chevereto will store these values encrypted in the database.
 
 ::: tip Requires manual update
-Encryption in Chevereto was added in `v4.0.0-beta.10`. If you installed Chevereto from a system prior to this release you will require to [manually enable encryption](#enabling-encryption) and then [encrypt secrets](#encrypting-secrets).
+Encryption in Chevereto was added in `v4.0.0-beta.10`. If you installed Chevereto prior to this release you will require to [manually enable encryption](#enabling-encryption).
 :::
 
 ## What is encrypted?
@@ -31,15 +31,15 @@ The following setting secrets are encrypted in the database:
 
 The following storage columns are encrypted in the database:
 
-| Storage      |
-| ------------ |
-| server       |
-| service      |
-| account_id   |
-| account_name |
-| key          |
-| secret       |
-| bucket       |
+| Table `chv_storages` |
+| -------------------- |
+| server               |
+| service              |
+| account_id           |
+| account_name         |
+| key                  |
+| secret               |
+| bucket               |
 
 ### Two-factor secrets
 

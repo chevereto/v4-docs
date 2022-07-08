@@ -40,15 +40,21 @@ To use encryption it requires to setup the [CHEVERETO_ENCRYPTION_KEY](../configu
 
 ### Encrypt secrets
 
-The `encrypt-secrets` command [encrypts](encryption.md) application secrets in the database.
+The `encrypt-secrets` command [encrypts](encryption.md) the application secrets **not already encrypted** in the database.
 
 ```sh
 app/bin/legacy -C encrypt-secrets
 ```
 
-### Encrypt update
+If the database is **already encrypted** you will require to pass the key for decrypting the existing secrets, use the `-k` argument:
 
-The `encrypt-update` command updates the application secrets when changing the encryption key.
+```sh
+app/bin/legacy -C encrypt-secrets -k key_for_stored_data
+```
+
+### Decrypt secrets
+
+The `decrypt-secrets` command decrypts the application secret in the database.
 
 💡 Before running this command make sure to set `CHEVERETO_ENCRYPTION_KEY` to the new key.
 

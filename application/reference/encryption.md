@@ -10,7 +10,7 @@ Encryption in Chevereto was added in `v4.0.0-beta.10`. If you installed Cheveret
 
 ### Settings secrets
 
-The following setting secrets are encrypted:
+The following setting secrets are encrypted in the database:
 
 | Setting                                                                                                             | Key                        |
 | ------------------------------------------------------------------------------------------------------------------- | -------------------------- |
@@ -29,7 +29,7 @@ The following setting secrets are encrypted:
 
 ### Storage credentials
 
-The following storage columns are encrypted:
+The following storage columns are encrypted in the database:
 
 | Storage      |
 | ------------ |
@@ -41,9 +41,9 @@ The following storage columns are encrypted:
 | secret       |
 | bucket       |
 
-### Two-factor codes
+### Two-factor secrets
 
-`work-in-progress`
+Two-factor secret codes are encrypted in the database.
 
 ## Key
 
@@ -53,7 +53,11 @@ The encryption key is base64 encoded random string of size 32. To generate a key
 openssl rand -base64 32
 ```
 
-This key should remain private, shouldn't be used in other installations. It is advised to backup the key in a safe location. When migrating servers don't forget the encryption key.
+### Key security
+
+* The encryption key should remain **private**.
+* Don't re-use the same key in different installations.
+* Backup the key in a safe location.
 
 ## Enabling encryption
 
@@ -72,17 +76,11 @@ To **manually** enable encryption:
 * Run [encrypt-secrets](cli.md#encrypt-secrets) command.
 * Disable maintenance mode.
 
-## Changing key
+## Disabling encryption
 
-To change the encryption key (requires both old and new key):
+To disable encryption:
 
 * Enable [maintenance](https://v4-admin.chevereto.com/settings/system.html#maintenance) mode.
-* [Configure](../configuration/configuring.md) the `CHEVERETO_ENCRYPTION_KEY` variable to the new encryption key.
-* Run [encrypt-update](cli.md#encrypt-update) command, you will require to pass the old key.
+* Run [decrypt-secrets](cli.md#decrypt-secrets) command.
+* [Configure](../configuration/configuring.md) the `CHEVERETO_ENCRYPTION_KEY` variable to empty string.
 * Disable maintenance mode.
-
-🤦‍♂️ If you don't have a backup of the old key:
-
-* Go to Settings and enter again all the passwords for the [settings secrets](#settings-secrets).
-* Go to [External Storage](https://v4-admin.chevereto.com/settings/external-storage.html) and enter again all the storage credentials for each external storage.
-* Truncate `chv_two-factor` table, all users will require to setup two-factor again.

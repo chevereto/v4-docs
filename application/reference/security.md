@@ -12,11 +12,15 @@ Must **constantly double-checking** the following:
 
 ## Encryption
 
-Sensitive data is stored [encrypted](encryption.md) in the database.
+Sensitive data such as service credentials is stored [encrypted](encryption.md) in the database.
+
+## Two-factor authentication
+
+Users and specially administrators should always configure a two-factor device for an additional layer of security.
 
 ## Encoded IDs
 
-Public IDs are **always encoded** to avoid any attempt of content enumeration attack.
+Public IDs are **always encoded** to avoid content enumeration attacks.
 
 While the data is stored in database rows indexed with integer ids, Chevereto handles these on public as encoded identifiers. Similar to how YouTube encode their video IDs. This is made to avoid enumeration of content based on incremental identifiers (retrieve N content by doing `+1` on the identifier).
 
@@ -46,23 +50,17 @@ Entering an integer value like `5000` will instruct the system to generate IDs u
 
 Go to the database, find the `chv_images` table and change the `AUTOINCREMENT` to the ID padding you want to use.
 
-## CSRF
-
-CSRF protection.
+## Cross-site request forgery
 
 Cross-site request forgery ([CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)) is a type of exploit that is used to fool website's origin requests by transmitting instructions from a remote website without the user's consent, for example trigger a delete content request without the user consent or willing.
 
 The CSRF protection is based in the usage of a request token, which is set by session when the website loads and is asked when sub-sequential request are made.
 
-## Cryptography
+## Hashing
 
-BCrypt passwords.
-
-Chevereto uses [BCrypt](https://en.wikipedia.org/wiki/Bcrypt) cryptography to store passwords and cookie login entries.
+Chevereto uses [BCrypt](https://en.wikipedia.org/wiki/Bcrypt) cryptography to store passwords and cookie hashes.
 
 ## reCAPTCHA
-
-Built-in reCAPTCHA support.
 
 Chevereto includes support for [reCAPTCHA](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha) which helps to prevent bots from signing up and try to brute-force a user password.
 

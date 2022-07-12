@@ -6,11 +6,11 @@ We have prepared a short summary in what you can expect coming from older versio
 
 ## From Chevereto V3
 
-✅ [V3.X releases](https://releases.chevereto.com/3.X/)
+💡 [V3.X releases](https://releases.chevereto.com/3.X/)
 
 Adding on [What's New](whats-new.md), the user interface has evolved to a mature status, with new icons, gestures, keyboard shortcuts and many more. The experience is snappier as it supports PHP 8 and is built on top of [Chevere](https://chevere.org/).
 
-Coming from V3, users will experience a better user interface design, improved debug experience, more system reliability and speed. V4 also introduced theme palettes, support for more login providers and the user based API.
+Coming from V3, users will experience a better user interface design, improved debug experience, more system reliability and speed. V4 also introduced theme palettes, support for more login providers, user based API, two-factor authentication and database encryption.
 
 ### Chevereto V4 vs V3
 
@@ -38,7 +38,7 @@ Coming from Chevereto-Free, users will experience a solid software system with a
 
 ## From Chevereto V2
 
-✅ [V2.X releases](https://releases.chevereto.com/2.X/)
+💡 [V2.X releases](https://releases.chevereto.com/2.X/)
 
 Adding on [From Chevereto V3](#from-chevereto-v3), the system now supports multi-user and the user interface has been dramatically improved. The software got albums, profiles, search, explore and an admin dashboard.
 
@@ -46,7 +46,7 @@ Coming from V2, users will experience that Chevereto is more than a simple one-c
 
 ## From Chevereto V1
 
-✅ [V1.X releases](https://releases.chevereto.com/1.X/)
+💡 [V1.X releases](https://releases.chevereto.com/1.X/)
 
 Adding on [From Chevereto V2](#from-chevereto-v2), the software went from an mvp to a real project.
 

@@ -82,34 +82,43 @@ Environment variables for controlling image handling.
 | CHEVERETO_IMAGE_FORMATS_AVAILABLE | `'JPG','PNG','BMP','GIF','WEBP'` |
 | CHEVERETO_IMAGE_LIBRARY           | `imagick` `gd`                   |
 
-## System context variables
+## Toggles
 
-Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable sensitive functionality.
+Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable some Chevereto functionality.
 
-| Variable                        | Example |
+| Variable                        | Default |
 | ------------------------------- | ------- |
-| CHEVERETO_DISABLE_PHP_PAGES     | `false` |
-| CHEVERETO_DISABLE_UPDATE_HTTP   | `false` |
-| CHEVERETO_DISABLE_UPDATE_CLI    | `false` |
-| CHEVERETO_ENABLE_HTACCESS_CHECK | `true`  |
+| CHEVERETO_ENABLE_BULK_IMPORTER  | `1`     |
+| CHEVERETO_ENABLE_HTACCESS_CHECK | `0`     |
+| CHEVERETO_ENABLE_LOCAL_STORAGE  | `1`     |
+| CHEVERETO_ENABLE_PHP_PAGES      | `0`     |
+| CHEVERETO_ENABLE_UPDATE_CLI     | `1`     |
+| CHEVERETO_ENABLE_UPDATE_HTTP    | `1`     |
 
 ## Limits
 
-| Variable                         | Example |
-| -------------------------------- | ------- |
-| CHEVERETO_USER_ALBUMS_LIST_LIMIT | `500`   |
+Environment variables that limits the use for Chevereto
 
-* For `CHEVERETO_USER_ALBUMS_LIST_LIMIT` it controls the number of albums on user's dropdown album menus.
+💡 Zero `0` means no limit.
 
-## File upload variables
+| Variable                       | Example |
+| ------------------------------ | ------- |
+| CHEVERETO_MAX_ALBUMS           | `0`     |
+| CHEVERETO_MAX_IMAGES           | `0`     |
+| CHEVERETO_MAX_USER_ALBUMS_LIST | `300`   |
+| CHEVERETO_MAX_USERS            | `0`     |
 
-Environment variables for the file uploading limits. Note that the following environment variables will work for container provisioning.
+* For `CHEVERETO_MAX_USER_ALBUMS_LIST` it affects the number of albums on user's dropdown album menus.
 
-👉 For **non-container** based provisioning you need to also change these settings at [php.ini configuration](../stack/php.md#php-configuration).
+## File upload
 
-| Variable                      | Example |
-| ----------------------------- | ------- |
-| CHEVERETO_UPLOAD_MAX_FILESIZE | 64M     |
-| CHEVERETO_POST_MAX_SIZE       | 64M     |
-| CHEVERETO_MAX_EXECUTION_TIME  | 30      |
-| CHEVERETO_MEMORY_LIMIT        | 512M    |
+Environment variables for the file uploading limits. It applies only for our container provisioning.
+
+👉 For **non-container** based provisioning you need to change these settings at [php.ini configuration](../stack/php.md#php-configuration).
+
+| Variable                             | Example |
+| ------------------------------------ | ------- |
+| CHEVERETO_MAX_UPLOAD_SIZE            | 64M     |
+| CHEVERETO_MAX_POST_SIZE              | 64M     |
+| CHEVERETO_MAX_EXECUTION_TIME_SECONDS | 30      |
+| CHEVERETO_MAX_MEMORY_SIZE            | 512M    |

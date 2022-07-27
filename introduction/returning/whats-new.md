@@ -6,7 +6,7 @@ Chevereto V4
 
 2022-09-XX
 
-Chevereto V4.0 codename [**Macanudo**](https://www.collinsdictionary.com/dictionary/spanish-english/macanudo) is a complete re-write of the entire codebase. Its development took five years and it settles the ground base for the transition towards a headless API. V4.0 release is *macanuda*, especially on its new look and feel.
+Chevereto V4.0 codename [**Macanudo**](https://dle.rae.es/macanudo) is a complete re-write of the entire codebase. Its development took five years and it settles the ground base for the transition towards a headless API. V4.0 release is *macanuda*, especially on its new look and feel.
 
 💡 Check the video previews to get a glimpse of how awesome it feels.
 

@@ -24,7 +24,13 @@ app/vendor/bin/xrserver -p 27420
 
 ## Configuring debug
 
-Debug can be [configured](../../application/configuration/configuring.md) using [environment variables](../../application/configuration/environment.md#debug-variables).
+### Production
+
+Enable debug at [System > Debug Errors](https://v4-admin.chevereto.com/settings/system.html#debug-errors). Enabling this Chevereto will display the errors, but only to administrators.
+
+## Development
+
+Debug can be also [configured](../../application/configuration/configuring.md) using [environment variables](../../application/configuration/environment.md#debug-variables). Beware when configuring debug this fashion as it will apply **to all users** of the system.
 
 ### Debug level
 
@@ -101,8 +107,3 @@ docker logs -f container-name | sed 's/\\n/\n/g'
 </code-block>
 </code-group>
 
-## Error reporting
-
-💡 Enable this **only** in development environments.
-
-To enable printed error reporting you will need to go to [system settings](https://v4-admin.chevereto.com/settings/system.html). By enabling this, all runtime errors will be printed to the screen, handle it with care.

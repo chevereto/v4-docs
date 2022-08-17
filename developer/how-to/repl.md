@@ -1,4 +1,4 @@
-# 💻 REPL
+# 💫 REPL
 
 Chevereto includes support for [Tinkewell](https://tinkerwell.app/) enabling to execute any set of instructions under the environment of a [read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (REPL).
 

@@ -4,6 +4,22 @@ Chevereto includes support for [Tinkewell](https://tinkerwell.app/) enabling to 
 
 ![Tinkerwell Chevereto](../../src/third-party/tinkerwell/tinkerwell-chevereto.png)
 
+::: details Sample code
+```php
+use Chevereto\Legacy\Classes\DB;
+use Chevereto\Legacy\Classes\Login;
+
+$row = DB::get(table: 'users', values: 'all', limit: 1);
+$row = DB::formatRows($row);
+$row['name']; //?
+$row['website']; //?
+$row['bio']; //?
+
+$googleSecret = Login::getProviders('all')['google']['secret']; //?
+$enabledProviders = Login::getProviders('enabled');
+```
+:::
+
 With this REPL you can interact directly with the Chevereto application. It enables to query the database, call any function within the public API, debug and to facilitate [exploratory programming](https://en.wikipedia.org/wiki/Exploratory_programming).
 
 ## Using Tinkerwell

@@ -14,8 +14,8 @@ The following setting secrets are encrypted in the database:
 
 | Setting                                                                                                             | Key                        |
 | ------------------------------------------------------------------------------------------------------------------- | -------------------------- |
-| [SMTP server and port](https://v4-admin.chevereto.com/settings/email.html#smtp-server-and-port)                     | email_smtp_server          |
-| SMTP server and port                                                                                                | email_smtp_server_port     |
+| [SMTP server](https://v4-admin.chevereto.com/settings/email.html#smtp-server-and-port)                              | email_smtp_server          |
+| SMTP port                                                                                                           | email_smtp_server_port     |
 | [SMTP username](https://v4-admin.chevereto.com/settings/email.html#smtp-username)                                   | email_smtp_server_username |
 | [SMTP password](https://v4-admin.chevereto.com/settings/email.html#smtp-password)                                   | email_smtp_server_password |
 | [reCAPTCHA secret key](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha-secret-key)         | recaptcha_private_key      |

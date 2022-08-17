@@ -86,11 +86,14 @@ This is a security measure to prevent execution of arbitrary files that an attac
 
 ## Real connecting IP
 
-For setups under proxy (as [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs) and others) is required that the web server sets the appropriate value for the client connecting IP.
+For setups under a proxy is required that the web server sets the appropriate value for the client connecting IP.
 
 ::: danger
 If real connecting IP is not configured Chevereto won't be able to detect the real visitors IPs, failing to deliver IP based restrictions and flood control.
 :::
 
-* NGINX: `ngx_http_realip_module`
+Refer to the following resources when requiring to configure real connecting IP:
+
 * Apache HTTP Server: `mod_remoteip`
+* NGINX: `ngx_http_realip_module`
+* [Guides for CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs/) (make sure to setup the appropriate [IP ranges](https://www.cloudflare.com/ips/))

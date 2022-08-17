@@ -6,8 +6,8 @@ This section outlines the upgrade process required to install V4 from **Cheveret
 
 ## Requirements
 
-* Existing installation running Chevereto V3.20 `latest-release`
-* Backup for the existing previous installation (told you)
+* Existing installation running Chevereto V3.20 `latest-release`.
+* Backup for the existing previous installation (best practice).
 
 ## Test install
 
@@ -15,18 +15,19 @@ It is **recommended** to check that a new V4 installation can install and run in
 
 👏 Don't worry about license-domain restrictions as this is just a test install.
 
-* Create a new website
-* [Install](installation.md) Chevereto V4
+* Create a new website.
+* [Install](installation.md) Chevereto V4.
+* Make sure it works without issues.
 
-If everything goes well you can delete this test installation, or use it as your new V4 application by:
+If everything goes well you can delete this test installation. You can also use this test as your new V4 application by:
 
-* Wiring the database by [configuring](https://v4-docs.chevereto.com/application/configuration/configuring.html) the [database variables](https://v4-docs.chevereto.com/application/configuration/environment.html#database-variables)
-* Mounting the storage for [images](https://v4-admin.chevereto.com/settings/image-upload.html#image-path) and [assets](../configuration/environment.md#assets-variables)
+* Wiring the database by [configuring](https://v4-docs.chevereto.com/application/configuration/configuring.html) the [database variables](https://v4-docs.chevereto.com/application/configuration/environment.html#database-variables).
+* Mounting the storage for [images](https://v4-admin.chevereto.com/settings/image-upload.html#image-path) and [assets](../configuration/environment.md#assets-variables).
 
 ## Upgrade to V4
 
 Upgrade to V4 is performed by providing the software files on top of the existing Chevereto V3 installation. It is the same process for [updating](updating.md) within revisions.
 
-* Provide the Chevereto V4 application files on top of V3 installation
-* Go to `/install`, provide the database connection information
-* Follow the on-screen process
+* Provide the Chevereto V4 application files on top of V3 installation.
+* Switch to PHP 8.
+* Proceed with the [database update](updating.md##database-update).

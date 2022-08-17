@@ -10,7 +10,7 @@ Encryption in Chevereto was added in `v4.0.0-beta.10`. If you installed Cheveret
 
 ### Settings secrets
 
-The following setting secrets are encrypted in the database:
+The following settings are encrypted in the database:
 
 | Setting                                                                                                             | Key                        |
 | ------------------------------------------------------------------------------------------------------------------- | -------------------------- |
@@ -29,21 +29,21 @@ The following setting secrets are encrypted in the database:
 
 ### Storage credentials
 
-The following storage columns are encrypted in the database:
+The following storage columns for `chv_storages` are encrypted in the database:
 
-| Table `chv_storages` |
-| -------------------- |
-| server               |
-| service              |
-| account_id           |
-| account_name         |
-| key                  |
-| secret               |
-| bucket               |
+| Storages table |
+| -------------- |
+| server         |
+| service        |
+| account_id     |
+| account_name   |
+| key            |
+| secret         |
+| bucket         |
 
 ### Two-factor secrets
 
-Two-factor secret codes are encrypted in the database.
+Two-factor secret codes used to generate TOTP are encrypted in the database. Table `chv_two_factors`.
 
 ## Key
 
@@ -69,7 +69,7 @@ To enable encryption provide the [CHEVERETO_ENCRYPTION_KEY](../configuration/env
 
 Chevereto installations previous the introduction of encryption will require to manually cipher the existing data. This is a one time process that encrypts the plain text data stored in the database.
 
-To **manually** enable encryption:
+To manually enable encryption:
 
 * Enable [maintenance](https://v4-admin.chevereto.com/settings/system.html#maintenance) mode.
 * [Configure](../configuration/configuring.md) the `CHEVERETO_ENCRYPTION_KEY` variable.
@@ -77,6 +77,8 @@ To **manually** enable encryption:
 * Disable maintenance mode.
 
 ## Disabling encryption
+
+When disabling encryption all the cipher texts stored in the database will be reverted to its plain text value.
 
 To disable encryption:
 

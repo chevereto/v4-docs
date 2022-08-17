@@ -36,17 +36,17 @@ docker exec -it --user www-data \
 
 ## Encryption
 
-To use encryption it requires to setup the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
+To use encryption it requires to configure the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
 
 ### Encrypt secrets
 
-The `encrypt-secrets` command [encrypts](encryption.md) the application secrets **not already encrypted** in the database.
+The `encrypt-secrets` command [encrypts](encryption.md) the application plain text secrets (not already encrypted) in the database.
 
 ```sh
 app/bin/legacy -C encrypt-secrets
 ```
 
-If the database is **already encrypted** you will require to pass the key for decrypting the existing secrets, use the `-k` argument:
+If the application secrets are **already encrypted** (stored as cipher text) it will require to pass the key for decrypting the existing secrets. Use the `-k` argument to indicate the key for the already stored cipher texts:
 
 ```sh
 app/bin/legacy -C encrypt-secrets -k key_for_stored_data
@@ -54,13 +54,13 @@ app/bin/legacy -C encrypt-secrets -k key_for_stored_data
 
 ### Decrypt secrets
 
-The `decrypt-secrets` command decrypts the application secret in the database.
-
-💡 Before running this command make sure to set `CHEVERETO_ENCRYPTION_KEY` to the new key.
+The `decrypt-secrets` command decrypts the application secrets stored as cipher text in the database.
 
 ```sh
-app/bin/legacy -C encrypt-update -k old_key
+app/bin/legacy -C decrypt-secrets
 ```
+
+💡 After running the above command set `CHEVERETO_ENCRYPTION_KEY` to **empty string** to disable encryption.
 
 ## Cron
 

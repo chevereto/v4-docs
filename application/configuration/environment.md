@@ -89,6 +89,7 @@ Environment variables for the context where Chevereto system is being provided. 
 | Variable                        | Default |
 | ------------------------------- | ------- |
 | CHEVERETO_ENABLE_BULK_IMPORTER  | `1`     |
+| CHEVERETO_ENABLE_CHECK_UPDATES  | `1`     |
 | CHEVERETO_ENABLE_HTACCESS_CHECK | `0`     |
 | CHEVERETO_ENABLE_LOCAL_STORAGE  | `1`     |
 | CHEVERETO_ENABLE_PHP_PAGES      | `0`     |

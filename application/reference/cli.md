@@ -34,6 +34,49 @@ docker exec -it --user www-data \
 </code-block>
 </code-group>
 
+## Install
+
+The `install` command installs Chevereto. It requires to pass the admin user details.
+
+To install Chevereto for user "rodolfo" with password "myPassword":
+
+```sh
+app/bin/legacy -C install \
+    -u rodolfo \
+    -e rodolfo@chevereto.loc \
+    -x myPassword
+```
+
+| Option | Description    |
+| ------ | -------------- |
+| u      | Admin username |
+| e      | Admin email    |
+| x      | Admin password |
+
+## Update
+
+The `update` command updates the Chevereto database schema.
+
+```sh
+app/bin/legacy -C update
+```
+
+## Cron
+
+The `cron` command runs the background jobs required by Chevereto.
+
+```sh
+app/bin/legacy -C cron
+```
+
+## Bulk importer
+
+The `bulk-importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
+
+```sh
+app/bin/legacy -C bulk-importer
+```
+
 ## Encryption
 
 To use encryption it requires to configure the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
@@ -62,14 +105,6 @@ app/bin/legacy -C decrypt-secrets
 
 💡 After running the above command set `CHEVERETO_ENCRYPTION_KEY` to **empty string** to disable encryption.
 
-## Cron
-
-The `cron` command runs the background jobs required by Chevereto.
-
-```sh
-app/bin/legacy -C cron
-```
-
 ## Htaccess
 
 ### Htaccess checksum
@@ -87,42 +122,6 @@ The `htaccess-enforce` command checks for any alteration on the `.htaccess` file
 ```sh
 app/bin/legacy -C htaccess-enforce
 ```
-
-## Bulk importer
-
-The `bulk-importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
-
-```sh
-app/bin/legacy -C bulk-importer
-```
-
-## Install
-
-The `install` command installs Chevereto. It requires to pass the admin user details.
-
-To install Chevereto for user "rodolfo" with password "myPassword":
-
-```sh
-app/bin/legacy -C install \
-    -u rodolfo \
-    -e rodolfo@chevereto.loc \
-    -x myPassword
-```
-
-| Option | Description    |
-| ------ | -------------- |
-| u      | Admin username |
-| e      | Admin email    |
-| x      | Admin password |
-
-## Database update
-
-The `database-update` command updates the Chevereto database schema.
-
-```sh
-app/bin/legacy -C database-update
-```
-
 ## Langs
 
 The `langs` command generates the cache for language translations. The command outputs the list of languages processed.

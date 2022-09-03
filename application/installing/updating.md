@@ -28,8 +28,8 @@ The database update is required to migrate the existing database schema. You can
 ### HTTP database update
 
 * Login as Admin
-* Go to `/install`
+* Go to `/update`
 
 ### CLI database update
 
-Refer to [CLI database update](../reference/cli.md#database-update).
+Refer to [CLI update](../reference/cli.md#update).

@@ -75,7 +75,6 @@ Setup refers to the process when the Chevereto database tables and its admin use
 
 ### HTTP setup
 
-* Login as Admin
 * Go to `/install`
 
 ### CLI install

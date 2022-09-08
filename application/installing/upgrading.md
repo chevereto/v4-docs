@@ -17,13 +17,13 @@ No time? Afraid of breaking something? No problem! We offer paid installation se
 
 It is **recommended** to check that a new V4 installation can install and run in the target machine. This is for detecting any conflicting server requirements.
 
-Don't worry about license-domain restrictions as this is just a test install.
+💡 Don't worry about license-domain restrictions. This is just a test install.
 
 * Create a new website.
 * [Install](installation.md) Chevereto V4.
 * Make sure it works without issues.
 
-💡 If everything goes well you can delete this test installation and try it for real. If not, then go to [Bug Tracking](https://chv.to/bug-tracking) to share your findings.
+If everything goes well you can delete this test installation and try it for real. If not, then go to [Bug Tracking](https://chv.to/bug-tracking) to share your findings.
 
 ## Upgrade to V4
 

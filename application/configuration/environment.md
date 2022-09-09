@@ -35,16 +35,21 @@ Environment variables for the database details.
 | CHEVERETO_DB_TABLE_PREFIX | chv_                     |
 | CHEVERETO_DB_USER         | chevereto                |
 
+## Error logging variables
+
+Environment variables for handling [errors](../reference/errors.md).
+
+| Variable            | Example                      |
+| ------------------- | ---------------------------- |
+| CHEVERETO_ERROR_LOG | /var/log/chevereto-error.log |
+
 ## Debug variables
 
 Environment variables for [debug](../../developer/how-to/debug.md).
 
-💡 When using Docker Chevereto logs to `/dev/stderr` regardless this configuration.
-
-| Variable              | Example                      |
-| --------------------- | ---------------------------- |
-| CHEVERETO_DEBUG_LEVEL | `1`                          |
-| CHEVERETO_ERROR_LOG   | /var/log/chevereto-error.log |
+| Variable              | Example |
+| --------------------- | ------- |
+| CHEVERETO_DEBUG_LEVEL | `1`     |
 
 ## Hostname variables
 

@@ -59,7 +59,7 @@ return [
   'CHEVERETO_ENABLE_UPDATE_CLI' => '1',
   'CHEVERETO_ENABLE_UPDATE_HTTP' => '1',
   'CHEVERETO_ENCRYPTION_KEY' => '',
-  'CHEVERETO_ERROR_LOG' => 'syslog',
+  'CHEVERETO_ERROR_LOG' => 'php://stderr',
   'CHEVERETO_HOSTNAME_PATH' => '/',
   'CHEVERETO_HOSTNAME' => 'localhost',
   'CHEVERETO_HTTPS' => '1',

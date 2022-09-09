@@ -41,26 +41,22 @@ Error level >= 2 is not recommended for production environments. Is not safe to 
 
 Use `CHEVERETO_DEBUG_LEVEL=N` to configure the debug level.
 
-## Log device
+## Error log device
 
-Configure your own error log device to control where the logs will be sent. If you don't alter this it will fallback to the default system log device.
+Use [`CHEVERETO_ERROR_LOG`](../../application/configuration/environment.md#error-logging-variables) to customize where error log will be written.
 
-✅ Containers will always log to `/dev/stderr` regardless this setting.
+::: warning Permissions
+Double-check that the target log device is writable by the user running PHP.
+:::
 
-Use `CHEVERETO_ERROR_LOG=log_device` to configure where logs will be sent in non-container context.
+## Finding the logs
 
-## Accessing logs
-
-If you don't configure [log device](#log-device) Chevereto will follow the default [error_log](https://www.php.net/manual/errorfunc.configuration.php#ini.error-log) handling configured for your PHP installation.
-
-### Where are the default logs?
-
-This vary depending the server provider and how PHP runs in the server. In doubt, check/ask first to your system administrator.
+This vary depending the server provider and how PHP runs in the server. In doubt, always ask first to your system administrator.
 
 * XR Debug
   * Streams the debug messages to the XR Debug session
-* PHP
-  * Logs by default at `syslog`
+* Chevereto
+  * Logs by default at `php://stderr`
 * Apache
   * Logs by default at `/var/log/apache2/error.log`
   * Virtual host directive defines custom error log location
@@ -80,21 +76,3 @@ This vary depending the server provider and how PHP runs in the server. In doubt
 You can configure `CHEVERETO_DEBUG_LEVEL` >= 2 but note that this error reporting level **could compromise** your installation. Restrict any public access to your website and revert to `CHEVERETO_DEBUG_LEVEL=1` as soon as possible.
 
 If you can't find the logs or you are having a hard time with this you can request [Extra Support](https://chevereto.com/support) so we can safely debug your installation.
-
-## Reading logs
-
-Logs can be accessed by direct file access or by running commands:
-
-<code-group>
-<code-block title="Shell">
-```sh
-tail -f /var/log/apache2/error.log | sed 's/\\n/\n/g'
-```
-</code-block>
-
-<code-block title="Docker">
-```sh
-docker logs -f container-name | sed 's/\\n/\n/g'
-```
-</code-block>
-</code-group>

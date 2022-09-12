@@ -20,8 +20,6 @@ CHEVERETO_DB_HOST=localhost
 
 If PHP is provided using `mpm_prefork` you must refer to the documentation on [Apache HTTP Server environment variables](https://httpd.apache.org/docs/current/env.html).
 
-💡 You may check our real use cases at [chevereto/vultr-marketplace](https://github.com/chevereto/vultr-marketplace/blob/main/files/var/lib/cloud/scripts/per-instance/provision.sh).
-
 ### Other setups
 
 For these you will be running [PHP-FPM](https://www.php.net/manual/en/install.fpm.configuration.php) so you can add those settings at your `php-fpm.conf` file.

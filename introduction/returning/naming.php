@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'whats-new.md' => "🆕 What's New?",
     'welcome-back.md' => '🤗 Welcome Back',
+    '4.0.md' => "🆕 Macanudo (4.0)",
 ];

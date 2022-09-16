@@ -14,6 +14,7 @@ The following settings are encrypted in the database:
 
 | Setting                                                                                                             | Key                        |
 | ------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [API V1 key (public)](../../developer/api/api-v1.md#key)                                                            | api_v1_key                 |
 | [SMTP server](https://v4-admin.chevereto.com/settings/email.html#smtp-server-and-port)                              | email_smtp_server          |
 | SMTP port                                                                                                           | email_smtp_server_port     |
 | [SMTP username](https://v4-admin.chevereto.com/settings/email.html#smtp-username)                                   | email_smtp_server_username |
@@ -31,15 +32,13 @@ The following settings are encrypted in the database:
 
 The following storage columns for `chv_storages` are encrypted in the database:
 
-| Storages table |
-| -------------- |
-| server         |
-| service        |
-| account_id     |
-| account_name   |
-| key            |
-| secret         |
-| bucket         |
+* server
+* service
+* account_id
+* account_name
+* key
+* secret
+* bucket
 
 ### Two-factor secrets
 
@@ -54,6 +53,8 @@ openssl rand -base64 32
 ```
 
 ### Key security
+
+Handle the encryption key with the same discretion of a password.
 
 * The encryption key should remain **private**.
 * Don't re-use the same key in different installations.

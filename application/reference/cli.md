@@ -122,6 +122,7 @@ The `htaccess-enforce` command checks for any alteration on the `.htaccess` file
 ```sh
 app/bin/legacy -C htaccess-enforce
 ```
+
 ## Langs
 
 The `langs` command generates the cache for language translations. The command outputs the list of languages processed.

@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /logo.svg
-heroText: V4 Documentation
-tagline: Self-hosted media hosting
+heroText: Chevereto V4 Documentation
+tagline: Image hosting software
 actionText: Get Started →
 actionLink: /introduction/get-started/welcome
 features:

@@ -1,11 +1,5 @@
 # 📦 Installation
 
-## Using Cloud
-
-::: tip Chevereto.cloud
-Sign up for our upcoming [Chevereto.cloud](https://chevereto.cloud) service. The fastest, safest and 100% hassle-free way to enjoy Chevereto V4.
-:::
-
 ## Using VPS
 
 Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning, which you can freely use with any hosting provider.

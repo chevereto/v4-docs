@@ -1,5 +1,11 @@
 # 📦 Installation
 
+This section outlines the install process required for new Chevereto V4 instances.
+
+::: tip 😊 Installation service
+We do offer paid installation service at [Extra Support](https://chevereto.com/support). Get your Chevereto installed directly from the author.
+:::
+
 ## Using VPS
 
 Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning, which you can freely use with any hosting provider.

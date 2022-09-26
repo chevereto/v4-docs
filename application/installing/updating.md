@@ -1,6 +1,10 @@
 # 🆙 Updating
 
-This section outlines the update process required for existing Chevereto V4 instances. It consist in updating the [application files](#update-application-files) then the system [database](#database-update).
+This section outlines the update process required for existing Chevereto V4 instances. It consist on updating the [application files](#update-application-files) then perform the system [database update](#database-update).
+
+::: tip 😊 Update service
+We do offer paid update service at [Extra Support](https://chevereto.com/support). Get your Chevereto updated directly from the author.
+:::
 
 ## Update application files
 

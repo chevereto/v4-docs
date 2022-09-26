@@ -2,11 +2,11 @@
 
 This section outlines the upgrade process required to install V4 from **Chevereto V3.20** (previous major release).
 
-💡 Review [Chevereto V4 vs V3](../../introduction/returning/welcome-back.md#chevereto-v4-vs-v3) comparison tables for a better understanding of changes in V4.
-
-::: tip 😊 Installation service
-We do offer paid installation service at [Extra Support](https://chevereto.com/support). Get your Chevereto upgraded directly from the author.
+::: tip 😊 Upgrade service
+We do offer paid upgrade service at [Extra Support](https://chevereto.com/support). Get your Chevereto upgraded directly from the author.
 :::
+
+💡 Review [Chevereto V4 vs V3](../../introduction/returning/welcome-back.md#chevereto-v4-vs-v3) comparison tables for a better understanding of changes in V4.
 
 ## Requirements
 

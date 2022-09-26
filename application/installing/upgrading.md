@@ -6,7 +6,7 @@ This section outlines the upgrade process required to install V4 from **Cheveret
 We do offer paid upgrade service at [Extra Support](https://chevereto.com/support). Get your Chevereto upgraded directly from the author.
 :::
 
-💡 Review [Chevereto V4 vs V3](../../introduction/returning/welcome-back.md#chevereto-v4-vs-v3) comparison tables for a better understanding of changes in V4.
+💡 Review [Chevereto V4 vs V3](../../introduction/changelog/welcome-back.md#chevereto-v4-vs-v3) comparison tables for a better understanding of changes in V4.
 
 ## Requirements
 
@@ -33,3 +33,9 @@ Upgrade to Chevereto V4 is performed by providing the software files on top of t
 * Provide Chevereto V4 files on top of Chevereto V3 installation
 * Switch to PHP 8
 * Proceed with [database update](updating.md##database-update)
+
+### Application settings
+
+In
+
+* Update `app/settings.php` to `app/env.php`

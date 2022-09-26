@@ -28,6 +28,12 @@ The following tables summarizes the significative differences between Chevereto 
 | Themes                                    | /content/legacy/themes             | /app/themes       |
 | Peafowl                                   | /content/legacy/themes/Peafowl/lib | /lib              |
 
+### Settings setup
+
+Chevereto V4 deprecates `app/settings.php` in favor of [environment variables](../../application/configuration/environment.md) for [configuring](../../application/configuration/configuring.md) the application.
+
+Your existing application settings must be migrated to enable Chevereto V4 to connect to the database and configure the system.
+
 ## From Chevereto-Free
 
 As [Chevereto-Free](https://github.com/rodber/chevereto-free) is a fork of [Chevereto V3.16](https://releases.chevereto.com/3.X/3.16/3.16.0), it adds on top of that branch.

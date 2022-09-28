@@ -1,4 +1,4 @@
-# 🚩 Links
+# 🔗 Links
 
 ## Chevereto V4 Resources
 
@@ -12,7 +12,6 @@
 * [Newsletter](https://chv.to/newsletter) Updates on your inbox
 * [Blog](https://blog.chevereto.com/) Stay on loop
 * [Community](https://chevereto.com/community/) Join the discussion with other users
-* [Discord](https://chv.to/discord/) Join the chatter with other users
 * [GitHub](https://github.com/chevereto) Star our Open Source work
 * [Releases](https://releases.chevereto.com/) All Chevereto software release notes
 

@@ -36,6 +36,7 @@ Upgrade to Chevereto V4 is performed by providing the software files on top of t
 
 ### Application settings
 
-In
+Chevereto V4 uses a new [configuration](../configuration/configuring.md) standard. You must update your settings accordingly.
 
 * Update `app/settings.php` to `app/env.php`
+* (Alternative) Provide system environment variables

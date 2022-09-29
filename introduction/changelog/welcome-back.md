@@ -8,7 +8,7 @@ We have prepared a short summary in what you can expect coming from older versio
 
 💡 [V3.X releases](https://releases.chevereto.com/3.X/)
 
-Adding on [What's New](whats-new.md), the user interface has evolved to a mature status, with new icons, gestures, keyboard shortcuts and many more. The experience is snappier as it supports PHP 8 and is built on top of [Chevere](https://chevere.org/).
+The user interface has evolved to a mature status, with new icons, gestures, keyboard shortcuts and many more. The experience is snappier as it supports PHP 8 and is built on top of [Chevere](https://chevere.org/).
 
 Coming from V3, users will experience a better user interface design, improved debug experience, more system reliability and speed. V4 also introduced theme palettes, support for more login providers, user based API, two-factor authentication and database encryption.
 

@@ -1,8 +1,9 @@
 <?php
 
 return [
+    'README.md',
+    'php.md',
     'database.md',
     'app-files.md',
-    'php.md',
     'cron.md',
 ];

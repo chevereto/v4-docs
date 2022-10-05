@@ -1,8 +1,9 @@
 <?php
 
 return [
-    'cron.md' => '⏲️ CRON',
+    'README.md' => '🎛 Introduction',
+    'php.md' => '🐘 PHP',
     'database.md' => '🐬 Database',
     'app-files.md' => '📂 App files',
-    'php.md' => '🐘 PHP',
+    'cron.md' => '⏲️ CRON',
 ];

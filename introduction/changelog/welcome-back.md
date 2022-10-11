@@ -14,6 +14,10 @@ Coming from V3, users will experience a better user interface design, improved d
 
 ### Chevereto V4 vs V3
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item m-0" src="https://www.youtube.com/watch?v=ytw2Ep1Xm1A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 The following tables summarizes the significative differences between Chevereto V3 and Chevereto V4.
 
 | System | V4  | V3  |

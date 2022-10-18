@@ -35,7 +35,7 @@ Having issues? Check the following common pitfalls:
 * Bad sessions setup
 * Open basedir restrictions
 
-## PHP Configuration
+## Configuration
 
 The following `ini` values are recommended for Chevereto installations.
 
@@ -55,7 +55,7 @@ memory_limit = 512M;
 
 You can toggle this limits to reflect your hardware and server load. Check this article for more info: [PHP common pitfalls](http://www.php.net/manual/en/features.file-upload.common-pitfalls.php).
 
-## PHP Extensions
+## Extensions
 
 The following PHP extensions are required for Chevereto.
 
@@ -71,13 +71,13 @@ The following PHP extensions are required for Chevereto.
 * session
 * xml
 
-## PHP Features
+## Features
 
 Chevereto requires unrestricted access to **all PHP functions**. Note that the following functions **should not** be restricted:
 
 * [set_time_limit](https://www.php.net/set-time-limit)
 
-## PHP Image library
+## Image library
 
 The image library (GD, Imagick) should be provided with support for `PNG GIF JPG BMP WEBP`. By default, Chevereto prefers Imagick and fallback to GD.
 
@@ -105,14 +105,12 @@ Additional recommended ImageMagick configuration at `/etc/ImageMagick-6/policy.x
 </policymap>
 ```
 
-## PHP Filesystem
+## Filesystem
 
-User running `php` must be in the owner group of your installation directory. This is required to allow Chevereto to modify the filesystem for uploading features.
+User running `php` must be in the **owner group** of the installation directory and Chevereto requires recursive **read** access to that directory. In addition to this, following paths require recursive **read/write** access:
 
-Chevereto user will require **read/write** access in the following paths:
-
-* `/tmp`
-* `app/*`
-* `content/*`
-* `images/*`
-* `importing/*`
+* Session path
+* /tmp
+* content
+* images
+* importing

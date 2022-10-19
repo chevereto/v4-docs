@@ -1,6 +1,6 @@
-# 🎛 cPanel introduction
+# 🎛 Plesk introduction
 
-cPanel is a web panel software available in managed servers, which are machines where the system libraries are installed and provisioned by your provider.
+Plesk is a web panel software available in managed servers, which are machines where the system libraries are installed and provisioned by your provider.
 
 💡 In managed servers you don't need to install packages or compile libraries as these provides a user interface for configuring these servers.
 

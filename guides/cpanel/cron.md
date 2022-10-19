@@ -5,7 +5,7 @@
 * Go to **Cron Jobs** under **Advanced**
 * Scroll to **Add New Cron Job**
 
-![File Manager Delete File](../../src/manuals/cpanel/cronjob.png)
+![Cronjob](../../src/manuals/cpanel/cronjob.png)
 
 * Under **Common Settings** pick `Once Per Minute (* * * * *)`
 

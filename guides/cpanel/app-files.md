@@ -2,20 +2,15 @@
 
 ## Installing Chevereto
 
-* Go to **File Manager** under **Files**.
+* Go to **File Manager** under **Files**
 
 ![Files](../../src/manuals/cpanel/files.png)
 
-* Navigate to your home `/home/user/` home directory.
-
-`🚧 picture outdated:`
-
-![File Manager](../../src/manuals/cpanel/file-manager.png)
-
+* Navigate to your home `/home/user/` home directory
 * Click on **Upload** and on **Select File**
 * Upload the release zip file downloaded from [chevereto.com/panel/downloads](https://chevereto.com/panel/downloads) (normal package)
-* Once uploaded, go back to the file manager at `/home/user/` directory.
-* Right-click on the zip file file and select **Extract**.
+* Once uploaded, go back to the file manager at `/home/user/` directory
+* Right-click on the zip file file and select **Extract**
 
 ![File Manager Extract](../../src/manuals/cpanel/file-manager-extract.png)
 

@@ -4,4 +4,5 @@ return [
     'server/',
     'docker/',
     'cpanel/',
+    'plesk/',
 ];

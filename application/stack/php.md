@@ -110,7 +110,13 @@ Additional recommended ImageMagick configuration at `/etc/ImageMagick-6/policy.x
 User running `php` must be in the **owner group** of the installation directory and Chevereto requires recursive **read** access to that directory. In addition to this, following paths require recursive **read/write** access:
 
 * Session path
-* /tmp
-* content
-* images
-* importing
+* Temp folder
+* ./content
+* ./images
+* ./importing
+
+User generated content is stored at:
+
+* ./images
+* ./content/images/users
+* ./content/pages

@@ -1,6 +1,5 @@
 <?php
 
 return [
-    'production.md',
-    'bootstrap.md',
+    'README.md',
 ];

@@ -1,11 +1,22 @@
-# 🎛 cPanel introduction
+# 🎛 cPanel
 
-cPanel is a web panel software available in managed servers, which are machines where the system libraries are installed and provisioned by your provider.
-
-💡 In managed servers you don't need to install packages or compile libraries as these provides a user interface for configuring these servers.
-
-::: tip 🤔 Alternative panels?
-There are other web-panel software out there, but the concepts on this guide should be also applicable there.
+::: tip
+There's no *better* or *worse* deploy alternative. Chevereto can be deployed anywhere and if this guide doesn't suit your needs don't hesitate to check our other guides.
 :::
 
-This deploy alternative provides customization and it doesn't require a lot of tech knowledge. But it comes at a cost as the system infrastructure is not on your control.
+cPanel is a web panel software available in managed servers, which are machines where the system libraries are installed and provisioned by your provider. In managed servers there's no need to install packages or compile libraries as cPanel provides an user interface for configuring the server.
+
+This deploy alternative doesn't require tech knowledge. But it comes at a cost as the system infrastructure is not on your control. If you are new to self-hosted and need the convenience of an easy system with user interface this is a good starting point.
+
+## Requirements
+
+* cPanel based hosting service
+* Chevereto license
+
+## Purchase hosting
+
+::: tip Looking for partners
+We recommend using `<partner,>` provider for cPanel + Chevereto. *Contact us for become a partner provider*.
+:::
+
+cPanel is present in the entire shared/managed hosting market. It should't be hard to find a provider that meets the Chevereto [application requirements](php.md) and fits your budget.

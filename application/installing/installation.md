@@ -12,7 +12,7 @@ Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview 
 
 ## Using Docker
 
-Refer to [🌎 Docker Production](../../guides/docker/production.md) and [🛸 Docker Bootstrap](../../guides/docker/bootstrap.md) for our container provisioning.
+Refer to [🐋 Docker](../../guides/docker/README.md) for our container provisioning.
 
 ## Using release package
 

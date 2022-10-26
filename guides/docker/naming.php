@@ -1,6 +1,5 @@
 <?php
 
 return [
-    'bootstrap.md' => '🛸 Bootstrap',
-    'production.md' => '🌎 Production',
+    'README.md' => '🐋 Docker',
 ];

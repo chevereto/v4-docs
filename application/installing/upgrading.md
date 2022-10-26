@@ -27,11 +27,12 @@ If everything goes well you can delete this test installation and try it for rea
 
 ## Upgrade to V4
 
-Upgrade to Chevereto V4 is performed by providing the software files on top of the existing Chevereto V3 installation.
+Upgrade to Chevereto V4 is performed by overriding the previous software files with the new files provided by Chevereto V4.
 
 * Remove `app/vendor` from your Chevereto V3 installation
-* Provide Chevereto V4 files on top of Chevereto V3 installation
+* Override Chevereto V3 files with Chevereto V4 files
 * Switch to PHP 8
+* Create [app/env.php](../configuration/env.php.md) (see remark below)
 * Proceed with [database update](updating.md##database-update)
 
 ### Application settings

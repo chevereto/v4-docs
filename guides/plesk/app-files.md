@@ -16,7 +16,8 @@
 
 ![File Manager Extract](../../src/manuals/plesk/file-manager-extract.png)
 
-* A prompt appears to confirm the zip extraction, click on **OK**
+* A prompt appears to confirm the zip extraction
+* Select **Replace existing files** and click on **OK**
 * Once done, remove the zip file
 
 ![File Manager Remove File](../../src/manuals/plesk/file-manager-remove-file.png)

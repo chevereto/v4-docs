@@ -1,16 +1,16 @@
 # 🖼 API Version 1.1
 
-💡 Chevereto API V1 was introduced in Chevereto V2 and it allows to upload pictures as guest (or as logged user) to a Chevereto website.
+Chevereto API V1 was introduced in Chevereto V2 and it allows to upload pictures as guest to a Chevereto website.
 
-✅ Chevereto V4 updates API V1 to 1.1 introducing support for **user API keys** as more upload parameters including title, width, and more.
+Chevereto V4 updates API V1 to 1.1 introducing support for **user API keys** and more upload parameters including title, width, and more.
 
 ## Key
 
-API V1.1 works with an user key, which is available for each user at `/settings/api`. Admin user can set the public API key for guest uploads at the [Dashboard panel](https://v4-admin.chevereto.com/settings/api.html).
+API V1.1 works with an user key which is available for each user at `/settings/api`. Admin user can set the public API key for guest uploads at the [Dashboard panel](https://v4-admin.chevereto.com/settings/api.html).
 
 ## Request method
 
-API V1 calls can be done using the POST or GET request methods.
+API V1 calls can be made using POST or GET request methods.
 
 👉 POST request method is **recommended**.
 
@@ -87,9 +87,9 @@ Following values can be used for `expiration` parameter.
 
 ### Compatibility with ImgBB API
 
-💡 ImgBB is a popular service based on Chevereto V3.
+ImgBB is a popular service based on Chevereto V3.
 
-✅ Any existing [ImgBB API client](https://github.com/search?q=imgbb) is compatible with Chevereto V4's API V1.1, simple as change the domain name.
+Any existing [ImgBB API client](https://github.com/search?q=imgbb) is compatible with Chevereto V4's API V1.1, simple as change the domain name.
 
 ## Example call
 

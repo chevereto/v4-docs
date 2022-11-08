@@ -128,3 +128,11 @@ Environment variables for the file uploading limits. It applies only for our con
 | CHEVERETO_MAX_POST_SIZE              | 64M     |
 | CHEVERETO_MAX_EXECUTION_TIME_SECONDS | 30      |
 | CHEVERETO_MAX_MEMORY_SIZE            | 512M    |
+
+## Proxy
+
+Environment variables for tweaking server handling when the server is under a proxy.
+
+| Variable                   | Example   |
+| -------------------------- | --------- |
+| CHEVERETO_HEADER_CLIENT_IP | X-Real-IP |

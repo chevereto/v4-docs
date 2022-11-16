@@ -6,13 +6,16 @@ This is the **best way** to deploy Chevereto.
 
 Docker refers to container technology, in this context you don't need to worry about PHP versioning, missing extensions, virtual host configuration, database server, anything. This is the best way to deploy Chevereto as the software infrastructure is provided by us.
 
-This deploy alternative provides:
+## Advantages
 
-* Support for multiple instances
-* Portability
-* Easy maintenance
-* Automatic HTTPS setup
-* Customization
+This deploy alternative provides several advantages, to name a few:
+
+* 🤹 Multiple instances
+* 📱 Portability
+* 🌈 Easy maintenance
+* 🔐 Automatic HTTPS setup
+* 🎨 Customization
+* 👮‍♂️ More secure
 
 ## Repository
 
@@ -38,11 +41,9 @@ You can use any computer, even at your home or from any cloud provider. You may 
 
 ## Server terminal
 
-This refers to access your server via terminal software. Don't feel intimidated, is not that hard as your cloud provider may supply a web-based terminal software which is good enough for our purpose.
+This refers to access your server via terminal software. Don't feel intimidated, is not that hard as your cloud provider may supply a web-based terminal software.
 
-![Terminal web](../../src/manuals/docker/terminal-web.png)
-
-We recommend using SSH protocol with terminal software installed in your computer.
+💡 While this web-based terminal software may be good enough for the purpose of this guide, we strongly recommend using SSH with terminal software installed in your computer.
 
 ![Terminal iTerm2](../../src/manuals/docker/terminal-iterm2.png)
 

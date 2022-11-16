@@ -54,11 +54,11 @@ which make unzip curl git
 
 ## Installing Docker
 
-To install Docker follow the instructions [Docker Engine installation](https://docs.docker.com/engine/install/) for your server. For this guide we are using Ubuntu, we follow the specific instructions for it.
+To install Docker follow the instructions for [Docker Engine installation](https://docs.docker.com/engine/install/). For this guide we are using Ubuntu, we check to follow the specific instructions for it.
 
 ![Installation overview](../../src/manuals/docker/install-overview.png)
 
-Read and follow the instructions to get Docker engine installed in your server.
+From there read and follow the instructions to get Docker engine installed in your server.
 
 ## Cloning chevereto/docker
 
@@ -106,16 +106,18 @@ make image
 
 A [namespace](https://github.com/chevereto/docker/blob/4.0/docs/NAMESPACE.md) is a file containing instance scoped variables. Create a namespace for each one of the Chevereto instances you want to deploy.
 
-To create a namespace:
+To create the `example` namespace for `img.chevereto.dev` hostname:
 
 ```sh
-make namespace NAMESPACE=example and HOSTNAME=img.chevereto.dev
+make namespace NAMESPACE=example HOSTNAME=img.chevereto.dev
 ```
 
 ## Create Chevereto instance
+
+Run command `make up-d` by passing the target namespace.
 
 ```sh
 make up-d NAMESPACE=example
 ```
 
-👉 To create more instances repeat the steps from [Setup namespace](#setup-namespace) for each additional website you want to spawn.
+🎉 Congratulations, Chevereto is now up an running. To create more instances repeat the steps from [Setup namespace](#setup-namespace) for each additional website you want to spawn.

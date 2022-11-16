@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'server/',
     'docker/',
+    'server/',
     'cpanel/',
     'plesk/',
 ];

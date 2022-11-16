@@ -79,7 +79,7 @@ make install-docker
 
 For other systems follow the instructions for [Docker Engine installation](https://docs.docker.com/engine/install/). Make sure to check at **Server** for your specific Linux distribution.
 
-::: Docker Engine installation
+::: details Docker Engine installation
 ![Installation overview](../../src/manuals/docker/install-overview.png)
 :::
 

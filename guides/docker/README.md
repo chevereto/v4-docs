@@ -111,7 +111,7 @@ make image
 
 ## Setup namespace
 
-A [namespace](https://github.com/chevereto/docker/blob/4.0/docs/NAMESPACE.md) is a file containing instance scoped variables. Create a namespace for each one of the Chevereto instances you want to deploy.
+Create a [namespace](https://github.com/chevereto/docker/blob/4.0/docs/NAMESPACE.md) for each one of the Chevereto instances you want to deploy.
 
 To create the `example` namespace for `img.chevereto.dev` hostname:
 
@@ -121,10 +121,12 @@ make namespace NAMESPACE=example HOSTNAME=img.chevereto.dev
 
 ## Create Chevereto instance
 
-Run command `make up-d` by passing the target namespace.
+To create an instance run `make up-d` command by passing the NAMESPACE option.
 
 ```sh
 make up-d NAMESPACE=example
 ```
 
-🎉 Congratulations, Chevereto is now up an running. To create more instances repeat the steps from [Setup namespace](#setup-namespace) for each additional website you want to spawn.
+🎉 Congratulations, Chevereto is now up an running.
+
+To create more instances repeat the steps from [Setup namespace](#setup-namespace) for each additional website you want to spawn.

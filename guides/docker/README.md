@@ -71,7 +71,7 @@ While on `docker` folder you can work with our Docker base project.
 
 ## Installing Docker
 
-If you are also using **Ubuntu** you can easily install docker by running:
+If you are using **Ubuntu** you can install docker by running:
 
 ```sh
 make install-docker
@@ -79,7 +79,9 @@ make install-docker
 
 For other systems follow the instructions for [Docker Engine installation](https://docs.docker.com/engine/install/). Make sure to check at **Server** for your specific Linux distribution.
 
+::: Docker Engine installation
 ![Installation overview](../../src/manuals/docker/install-overview.png)
+:::
 
 ## Setup Cron
 

@@ -53,14 +53,6 @@ This refers to access your server via terminal software. Don't feel intimidated,
 which make unzip curl git
 ```
 
-## Installing Docker
-
-To install Docker follow the instructions for [Docker Engine installation](https://docs.docker.com/engine/install/). For this guide we are using Ubuntu, we check to follow the specific instructions for it.
-
-![Installation overview](../../src/manuals/docker/install-overview.png)
-
-From there read and follow the instructions to get Docker engine installed in your server.
-
 ## Cloning chevereto/docker
 
 Get a copy of our base Docker project by cloning the repository in the server using `git`. This will create a `docker` folder in the current working directory.
@@ -76,6 +68,18 @@ cd docker
 ```
 
 While on `docker` folder you can work with our Docker base project.
+
+## Installing Docker
+
+If you are also using **Ubuntu** you can easily install docker by running:
+
+```sh
+make install-docker
+```
+
+For other systems follow the instructions for [Docker Engine installation](https://docs.docker.com/engine/install/). Make sure to check at **Server** for your specific Linux distribution.
+
+![Installation overview](../../src/manuals/docker/install-overview.png)
 
 ## Setup Cron
 
@@ -93,7 +97,7 @@ This process creates the proxy service that handles incoming web traffic to the 
 make proxy EMAIL_HTTPS=mail@yourdomain.tld
 ```
 
-At `EMAIL_HTTPS` option pass an email required for HTTPS certificate notifications.
+At `EMAIL_HTTPS` option pass your email, required for HTTPS certificate notifications.
 
 ## Build system image
 

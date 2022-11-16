@@ -1,14 +1,14 @@
 # 🏝 VPS
 
 ::: tip
-There's no *better* or *worse* deploy alternative. Chevereto can be deployed anywhere and if this guide doesn't suit your needs don't hesitate to check our other guides.
+The *best* deploy alternative for Chevereto is [Docker](../docker/README.md). But Chevereto can be deployed anywhere and this guide may suit your needs.
 :::
 
 VPS stands for Virtual Private Server which for our purpose is described as the type of server where you get root access to install Linux on it.
 
-This deploy alternative provides superb customization and it runs on cheap machines. But it comes at a cost as it requires complete system administration. If you are used to the command line this will be dead easy for you.
+This deploy alternative provides superb customization. But it comes at a cost as it requires complete system administration.
 
-I've used VPS for about ten years. For experienced users which know are doing and don't need a user interface this is the recommended alternative to run Chevereto.
+For experienced legacy users this is a good alternative to run Chevereto.
 
 ## Repository
 

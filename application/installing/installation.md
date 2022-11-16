@@ -6,13 +6,11 @@ This section outlines the install process required for new Chevereto V4 instance
 We do offer paid installation service at [Extra Support](https://chevereto.com/support). Get your Chevereto installed directly from the author.
 :::
 
-## Using VPS
+## Check guides
 
-Check [chevereto/vps](https://github.com/chevereto/vps) for a complete overview of our VPS provisioning, which you can freely use with any hosting provider.
-
-## Using Docker
-
-Refer to [🐋 Docker](../../guides/docker/README.md) for our container provisioning.
+* Refer to [🐋 Docker](../../guides/docker/README.md) for installing our container-based provisioning.
+* Refer to [🏝 VPS](../../guides/server/vps.md) for private servers.
+* Refer to [🎛 cPanel](../../guides/cpanel/README.md) and [🎛 Plesk](../../guides/plesk/README.md) for web-based panel software.
 
 ## Using release package
 

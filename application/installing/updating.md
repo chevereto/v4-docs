@@ -12,8 +12,7 @@ Depending on how you installed Chevereto you will need to refer to the following
 
 ### Using Docker
 
-* [chevereto/v4-docker-production](https://github.com/chevereto/v4-docker-production)
-* [chevereto/v4-docker](https://github.com/chevereto/v4-docker)
+* Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md) at [chevereto/docker](https://github.com/chevereto/docker).
 
 ### Using release package
 

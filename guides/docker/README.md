@@ -27,27 +27,35 @@ Check the repository at [chevereto/docker](https://github.com/chevereto/docker) 
   * [Purchase](https://chevereto.com/pricing) new license
   * [Access](https://chevereto.com/panel/license) existing purchase
 * Server with
-  * Terminal access ([Linode](https://chv.to/linode), [Vultr](https://chv.to/vultr), etc.)
+  * Shell access
   * `make`, `unzip`, `curl` and `git`
 * Hostname pointing to server
 
 ## Getting a server
 
-For this guide we are referring to a server as a machine where you can [install Docker](https://docs.docker.com/engine/install/). In this server you will install Chevereto and expose it to the internet.
+For this guide we are referring to a server as a machine where you can [install Docker](https://docs.docker.com/engine/install/). In this server you will install Chevereto and expose it to the internet. You can use any computer, even at your home or from any cloud provider.
 
-For this guide we will use Ubuntu.
+For this guide we will use a Ubuntu server in the cloud.
 
-You can use any computer, even at your home or from any cloud provider. You may check a server from our partners ([Linode](https://chv.to/linode), [Vultr](https://chv.to/vultr)) including free credits.
+You may purchase a server from our partners ([Linode](https://chv.to/linode), [Vultr](https://chv.to/vultr)) including free credits.
 
-## Server terminal
+## Shell access
 
-This refers to access your server via terminal software. Don't feel intimidated, is not that hard as your cloud provider may supply a web-based terminal software.
+The shell is a command-line interface that interprets user commands on the server. To access to the server shell you need a terminal emulator software. Don't feel intimidated, is not that hard as it looks as cloud provider may supply a web-based terminal software.
 
-💡 While this web-based terminal software may be good enough for the purpose of this guide, we strongly recommend using SSH with terminal software installed in your computer.
+We recommend accessing your server shell with terminal software installed in your computer.
+
+Here are some free, commonly-used terminal emulators by operating system:
+
+| System  | Software                     |
+| ------- | ---------------------------- |
+| macOS   | Terminal, iTerm 2            |
+| Windows | Windows Terminal, Putty      |
+| Linux   | Gnome Terminal, Tilix, XTerm |
 
 ![Terminal iTerm2](../../src/manuals/docker/terminal-iterm2.png)
 
-💡 Check that your server provides `make`, `unzip`, `curl` and `git`. You will require to install these utilities if missing.
+Once you get shell access, make sure that your server has `make`, `unzip`, `curl` and `git` installed. You will require to install these utilities if missing.
 
 ```sh
 which make unzip curl git

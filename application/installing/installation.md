@@ -30,6 +30,8 @@ bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh
 
 This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
 
+💡 You can download the free edition from [chevereto/chevereto](https://github.com/chevereto/chevereto/releases).
+
 * Upload the [latest release](https://chevereto.com/panel/downloads) to a non-public path in your server
   * Use normal release package (non-lite)
 * Unzip the package in the target website directory (`public_html` folder)

@@ -23,7 +23,7 @@ Check the repository at [chevereto/docker](https://github.com/chevereto/docker) 
 
 ## Requirements
 
-* Chevereto license
+* Chevereto license (for paid edition)
   * [Purchase](https://chevereto.com/pricing) new license
   * [Access](https://chevereto.com/panel/license) existing purchase
 * Server with
@@ -113,6 +113,8 @@ At `EMAIL_HTTPS` option pass your email, required for HTTPS certificate notifica
 
 This process builds the container image for the Chevereto application.
 
+💡 You can omit this step when using free edition as the image is available at [GHCR](https://github.com/chevereto/chevereto/pkgs/container/chevereto).
+
 ```sh
 make image
 ```
@@ -130,6 +132,8 @@ make namespace NAMESPACE=example HOSTNAME=img.chevereto.dev
 ## Create Chevereto instance
 
 To create an instance run `make up-d` command by passing the NAMESPACE option.
+
+💡 When using free edition make sure to pass `EDITION=free`.
 
 ```sh
 make up-d NAMESPACE=example

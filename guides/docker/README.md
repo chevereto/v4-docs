@@ -109,11 +109,11 @@ make proxy EMAIL_HTTPS=mail@yourdomain.tld
 
 At `EMAIL_HTTPS` option pass your email, required for HTTPS certificate notifications.
 
-## Build system image
+## Build Chevereto image
 
 This process builds the container image for the Chevereto application.
 
-💡 You can omit this step when using free edition as the image is available at [GHCR](https://github.com/chevereto/chevereto/pkgs/container/chevereto).
+💡 Omit this step when using free edition as the image is available at [GHCR](https://github.com/chevereto/chevereto/pkgs/container/chevereto).
 
 ```sh
 make image
@@ -129,11 +129,11 @@ To create the `example` namespace for `img.chevereto.dev` hostname:
 make namespace NAMESPACE=example HOSTNAME=img.chevereto.dev
 ```
 
-## Create Chevereto instance
+## Spawn Chevereto instance
 
 To create an instance run `make up-d` command by passing the NAMESPACE option.
 
-💡 When using free edition make sure to pass `EDITION=free`.
+💡 When using free edition pass `EDITION=free`.
 
 ```sh
 make up-d NAMESPACE=example

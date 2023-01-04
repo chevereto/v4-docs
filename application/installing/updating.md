@@ -8,7 +8,7 @@ We do offer paid update service at [Extra Support](https://chevereto.com/support
 
 ## Update application files
 
-Depending on how you installed Chevereto you will need to refer to the following instructions:
+This depending on how you installed Chevereto.
 
 ### Using Docker
 

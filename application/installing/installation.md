@@ -8,17 +8,20 @@ We do offer paid installation service at [Extra Support](https://chevereto.com/s
 
 ## Check guides
 
-* Refer to [🐋 Docker](../../guides/docker/README.md) for installing our container-based provisioning.
-* Refer to [🏝 VPS](../../guides/server/vps.md) for private servers.
-* Refer to [🎛 cPanel](../../guides/cpanel/README.md) and [🎛 Plesk](../../guides/plesk/README.md) for web-based panel software.
+* [🐋 Docker](../../guides/docker/README.md) for installing our container-based provisioning.
+* [🏝 VPS](../../guides/server/vps.md) for private servers.
+* [🎛 cPanel](../../guides/cpanel/README.md) and [🎛 Plesk](../../guides/plesk/README.md) for web-based panel software.
 
 ## Using release package
 
 The release package is a `zip` file containing the software files. Once extracted, the software is ready for [Setup](#setup).
 
+* 👑 Paid edition package available at your [client panel](https://chevereto.com/panel/downloads).
+* 💡 Free edition package available at [chevereto/chevereto](https://github.com/chevereto/chevereto/releases).
+
 ### Manual (CLI)
 
-This method is recommended for servers with **shell access**.
+This method is recommended for servers with **shell access** (command line interface).
 
 * Run the following command
 
@@ -30,17 +33,10 @@ bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh
 
 This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
 
-💡 You can download the free edition from [chevereto/chevereto](https://github.com/chevereto/chevereto/releases).
-
-* Upload the [latest release](https://chevereto.com/panel/downloads) to a non-public path in your server
-  * Use normal release package (non-lite)
+* Upload the latest release (non-lite) to a non-public path in your server
 * Unzip the package in the target website directory (`public_html` folder)
 * Remove the `.zip` file
 * Open your target website URL and follow the [Setup](#setup) instructions
-
-Some web hosting panels can ease the filesystem provisioning. Use the web panel built-in file manager to provide and extract the Chevereto package.
-
-* [📂 cPanel App files](../../guides/cpanel/app-files.md)
 
 ## Setup
 

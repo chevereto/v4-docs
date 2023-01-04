@@ -1,6 +1,6 @@
 # 🆙 Updating
 
-This section outlines the update process required for existing Chevereto V4 instances. It consist on updating the [application files](#update-application-files) then perform the system [database update](#database-update).
+This section is for the update process required for **existing** Chevereto V4 instances. It consist on updating the [application files](#update-application-files) then perform the system [database update](#database-update).
 
 ::: tip 😊 Update service
 We do offer paid update service at [Extra Support](https://chevereto.com/support). Get your Chevereto updated directly from the author.
@@ -12,19 +12,15 @@ Depending on how you installed Chevereto you will need to refer to the following
 
 ### Using Docker
 
-* Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md) at [chevereto/docker](https://github.com/chevereto/docker).
+* Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md).
 
 ### Using release package
 
 Refer to [Installing using release package](installation.md#using-release-package).
 
-### Using Composer
-
-Refer to [Installing using Composer](installation.md#using-composer).
-
 ## Database Update
 
-The database update is required to migrate the existing database schema. You can carry this process in HTTP or CLI context.
+The database update is required to migrate the existing database schema. You can carry this process in HTTP or command-line context.
 
 💡 For large installations (over 1M of image rows) it is recommended to follow the [CLI database update](#cli-database-update).
 

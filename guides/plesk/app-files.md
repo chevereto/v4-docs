@@ -2,6 +2,8 @@
 
 ## Installing Chevereto
 
+To install Chevereto on Plesk you need to use the release package and Plesk's file manager to unzip this package in your target website.
+
 * Go to **File Manager** under **Your website**
 
 ![Files](../../src/manuals/plesk/files.png)
@@ -11,7 +13,7 @@
 ![File Manager](../../src/manuals/plesk/file-manager.png)
 
 * Click on the **Plus button** and select **Upload File**
-* Upload the release zip file downloaded from [chevereto.com/panel/downloads](https://chevereto.com/panel/downloads) (normal package)
+* Upload the release zip file that you downloaded following [using release package](../../application/installing/installation.md#using-release-package) instructions
 * **Click** on the uploaded zip file file and select **Extract**
 
 ![File Manager Extract](../../src/manuals/plesk/file-manager-extract.png)
@@ -21,6 +23,8 @@
 * Once done, remove the zip file
 
 ![File Manager Remove File](../../src/manuals/plesk/file-manager-remove-file.png)
+
+* If you are installing Chevereto for the first time you can continue with [Setup](../../application/installing/installation.md#setup).
 
 ## Updating Chevereto
 

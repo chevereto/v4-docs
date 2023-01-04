@@ -10,7 +10,10 @@ We do offer paid installation service at [Extra Support](https://chevereto.com/s
 
 * [🐋 Docker](../../guides/docker/README.md) for installing our container-based provisioning.
 * [🏝 VPS](../../guides/server/vps.md) for private servers.
-* [🎛 cPanel](../../guides/cpanel/README.md) and [🎛 Plesk](../../guides/plesk/README.md) for web-based panel software.
+* [🎛 cPanel](../../guides/cpanel/README.md) for cPanel servers.
+* [🎛 Plesk](../../guides/plesk/README.md) for Plesk servers.
+
+💡 Feel free to contribute with a guide for installing Chevereto on your system.
 
 ## Using release package
 

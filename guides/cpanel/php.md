@@ -57,3 +57,10 @@ If you have PHP versioning issues make sure that the root `.htaccess` file conta
 </code-group>
 
 Note that the configuration in your system may vary. Double-check with your service provider.
+
+## Troubleshooting
+
+As cPanel uses `.htaccess` to configure PHP version, it needs a special handling when you want to change the PHP version of your website.
+
+1. Upload Chevereto's `.htaccess`
+2. Go to Multi-PHP and select the new PHP version

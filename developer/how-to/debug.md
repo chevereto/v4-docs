@@ -8,22 +8,32 @@ Enable debug at [Settings > System > Debug Errors](https://v4-admin.chevereto.co
 
 ## Debug in development
 
-In development context debug can be [configured](../../application/configuration/configuring.md) using [environment variables](../../application/configuration/environment.md#debug-variables). **Beware** when configuring debug this fashion as it will apply **to all users** of the system.
+Debug can be [configured](../../application/configuration/configuring.md) using [environment variables](../../application/configuration/environment.md#debug-variables). If you are unable to debug then either use ENV or edit the source code to get debug on the screen as described in the next sections.
 
-## XR Debug
+### Using ENV
 
-<p><img alt="XR Debug" width="17%" class="float-left margin-1em" src="../../src/products/xr/logo.svg"></p>
+You can enable error display by setting an environment variable in your server. **Note:** This variable is read from `$_ENV` (server context) not `app/env.php` (Chevereto app).
 
-👏 Chevereto V4 includes **built-in support** for [XR Debug](https://xr-docs.chevere.org), an Open Source remote debugger also made by us. This enables to easily debug Chevereto without requiring any extra dependency.
+```sh
+CHEVERETO_ENVIRONMENT=dev
+```
 
-XR Debug for Chevereto is mostly for development purposes. However, you can also [enable XR Debug](https://v4-admin.chevereto.com/settings/system.html#enable-xr) server to get live debug messages, enabling you to save/export those for handling it over when [requesting help](troubleshoot.md#getting-help).
+### Editing source
 
-### XR Debug Server
+You can enable error display by editing the source code to force display of debug information.
 
-XR Debug is a web application. Check the [XR Debug Server](https://xr-docs.chevere.org/server/) documentation for the full instructions on running the debug server.
+* Open `app/legacy/load/register-handlers.php`
+* Change this:
 
 ```php
-app/vendor/bin/xrserver -p 27420
+$isDebug = isDebug();
+```
+
+* To this:
+
+```php
+//$isDebug = isDebug();
+$isDebug = true;
 ```
 
 ## Debug level

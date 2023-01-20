@@ -1,8 +1,6 @@
 # 💬 Language
 
-`😪 Outdated docs - please check later.`
-
-Chevereto uses `gettext` for its translations and the system comes with a lot of languages built-in which you can find in the `app/content/languages` folder.
+Chevereto uses gettext for its translations and the system comes with a lot of languages built-in which you can find in the `app/languages` folder.
 
 ## Add new languages
 
@@ -16,7 +14,7 @@ Translations contributed will get added to the software.
 
 ### Manually
 
-Put your `.po` files at `app/content/languages` folder. The language code must be expressed in ISO format.
+Put your `.po` files at `app/languages` folder. The language code must be expressed in ISO format.
 
 ::: warning
 Considering using a [.po editor software](https://www.google.com/search?q=po%20editor) to create the translation file.
@@ -30,7 +28,7 @@ The system works by overriding the target translation. For example, replacing `U
 
 ### 1. Get the translation string (`msgid` and `msgstr` values)
 
-- Go to the `app/content/languages` folder
+- Go to the `app/languages` folder
 - Open the file `en.po` (in this example we are overriding English language)
 - Find this text: `Upload and share your images.`
 - Copy the `msgid` and the `msgstr` lines, you should get something like this:
@@ -46,7 +44,7 @@ The property `msgstr` is empty because English is the base language. If you open
 
 ### 2. Override translation string
 
-- Go to the `app/content/languages/overrides` folder
+- Go to the `app/languages/overrides` folder
 - Create the file `en.po` with these contents:
 
 ```po
@@ -63,3 +61,11 @@ The result is that the system now will display `Upload, do it now!` instead of t
 ::: warning
 **Note:** You don't actually need a gettext editor for language overrides, but make sure to use double-quotes. If you need to put a double quote inside `msgstr` use `\"` (escaped double-quote).
 :::
+
+## Cache languages
+
+Chevereto V4 requires to cache translations, to do this you need to run the [langs command](../../application/reference/cli.md#langs).
+
+```sh
+app/bin/legacy -C langs
+```

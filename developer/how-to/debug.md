@@ -2,17 +2,33 @@
 
 Debug enables to dump information about errors that may be affecting the software functionality. If Chevereto isn't working properly it will require debugging to understand the situation.
 
-## Debug in production
+## Debug with Docker
 
-Enable debug at [Settings > System > Debug Errors](https://v4-admin.chevereto.com/settings/system.html#debug-errors). By enabling this Chevereto will debug errors to the screen, but only to administrators.
+👉 Replace `CONTAINER` with the container name.
 
-## Debug in development
+Chevereto error log:
 
-Debug can be [configured](../../application/configuration/configuring.md) using [environment variables](../../application/configuration/environment.md#debug-variables). If you are unable to debug then either use ENV or edit the source code to get debug on the screen as described in the next sections.
+```sh
+docker logs CONTAINER -f 1>/dev/null
+```
 
-### Using ENV
+Chevereto access log:
 
-You can enable error display by setting an environment variable in your server. **Note:** This variable is read from `$_ENV` (server context) not `app/env.php` (Chevereto app).
+```sh
+docker logs CONTAINER -f 1>/dev/null
+```
+
+## Debug (production)
+
+By enabling this Chevereto will debug errors to the screen (only to administrators).
+
+Enable at [Settings > System > Debug Errors](https://v4-admin.chevereto.com/settings/system.html#debug-errors).
+
+## Debug (development)
+
+Debug can be [configured](../../application/configuration/configuring.md) using [environment variables](../../application/configuration/environment.md#debug-variables).
+
+**Note:** This variable is read from `$_ENV` (server context) not from `app/env.php` (Chevereto app).
 
 ```sh
 CHEVERETO_ENVIRONMENT=dev
@@ -20,7 +36,7 @@ CHEVERETO_ENVIRONMENT=dev
 
 ### Editing source
 
-You can enable error display by editing the source code to force display of debug information.
+You can force error display by editing the source code.
 
 * Open `app/legacy/load/register-handlers.php`
 * Change this:
@@ -63,10 +79,12 @@ Double-check that the target log device is writable by the user running PHP.
 
 This vary depending the server provider and how PHP runs in the server. In doubt, always ask first to your system administrator.
 
-* XR Debug
-  * Streams the debug messages to the XR Debug session
 * Chevereto
   * Logs by default at `php://stderr`
+* Docker
+  * Logs to `/dev/stderr`
+* XR Debug
+  * Streams the debug messages to the XR Debug session
 * Apache
   * Logs by default at `/var/log/apache2/error.log`
   * Virtual host directive defines custom error log location
@@ -78,8 +96,6 @@ This vary depending the server provider and how PHP runs in the server. In doubt
 * cPanel
   * Logs by default at `../domain.com.error.log` (parent of `public_html` folder)
   * Vary a lot from providers and cPanel version
-* Docker
-  * Logs to `/dev/stderr`
 
 ### I can't find the logs
 

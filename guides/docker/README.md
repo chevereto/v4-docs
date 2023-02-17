@@ -10,12 +10,13 @@ Docker refers to container technology, in this context you don't need to worry a
 
 This deploy alternative provides several advantages, to name a few:
 
-* 🤹 Multiple instances
+* 🤹 Multiple website instances
 * 📱 Portability
 * 🌈 Easy maintenance
 * 🔐 Automatic HTTPS setup
 * 🎨 Customization
 * 👮‍♂️ More secure
+* 🌎 CloudFlare integration
 
 ## Repository
 
@@ -30,6 +31,7 @@ Check the repository at [chevereto/docker](https://github.com/chevereto/docker) 
   * Shell access
   * `make`, `unzip`, `curl` and `git`
 * Hostname pointing to server
+* See [CloudFlare](https://github.com/chevereto/docker/blob/4.0/docs/CLOUDFLARE.md) to setup automatic DNS integration
 
 ## Getting a server
 
@@ -131,12 +133,12 @@ make namespace NAMESPACE=example HOSTNAME=img.chevereto.dev
 
 ## Spawn Chevereto instance
 
-To create an instance run `make up-d` command by passing the NAMESPACE option.
+To create an instance run `make spawn` command by passing the NAMESPACE option.
 
 💡 When using free edition pass `EDITION=free`.
 
 ```sh
-make up-d NAMESPACE=example
+make spawn NAMESPACE=example
 ```
 
 🎉 Congratulations, Chevereto is now up an running.

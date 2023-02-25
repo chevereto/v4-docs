@@ -1,34 +1,35 @@
 # 🆙 Updating
 
-This section is for the update process required for **existing** Chevereto V4 instances. It consist on updating the [application files](#update-application-files) then perform the system [database update](#database-update).
+**Note:** This process is for instances already running Chevereto V4.
 
-::: tip 😊 Update service
-We do offer paid update service at [Extra Support](https://chevereto.com/support). Get your Chevereto updated directly from the author.
-:::
+To update Chevereto provide the updated software files and then proceed with database update.
 
-## Update application files
+## Update software files
 
-This depending on how you installed Chevereto.
+To update the software files depends on how you installed Chevereto:
 
-### Using Docker
+### Docker
 
-* Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md).
+When using Docker it will required to re-create the Chevereto image and then re-up the container. Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md) for instructions.
 
-### Using release package
+### Release package
 
-Refer to [Installing using release package](installation.md#using-release-package).
+When using the release package it will required to override the previous version of the software files. Refer to [Installing](installation.md#using-release-package) (using release package) for instructions.
 
 ## Database Update
 
-The database update is required to migrate the existing database schema. You can carry this process in HTTP or command-line context.
-
-💡 For large installations (over 1M of image rows) it is recommended to follow the [CLI database update](#cli-database-update).
+Once the software files gets updated it will required to update the Chevereto database schema. This process can be carried on HTTP or command-line context.
 
 ### HTTP database update
+
+To update Chevereto database via web:
 
 * Login as Admin
 * Go to `/update`
 
 ### CLI database update
 
-Refer to [CLI update](../reference/cli.md#update).
+To update Chevereto database from the command line:
+
+* SSH and `cd` to your Chevereto instance
+* Run [CLI update](../reference/cli.md#update) `app/bin/legacy -C update`

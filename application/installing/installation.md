@@ -1,32 +1,30 @@
 # 📦 Installation
 
-This section outlines the install process required for new Chevereto V4 instances.
+Installation refers to the process where the **software files** gets provided in the target machine.
 
-::: tip 😊 Installation service
-We do offer paid installation service at [Extra Support](https://chevereto.com/support). Get your Chevereto installed directly from the author.
-:::
+## Requirements
 
-## Check guides
+To run Chevereto it will require [PHP](../stack/php.md), [Web Server](../stack/web-server.md), [MySQL database](../stack/mysql-server.md) and [CRON](../stack/cron.md).
+
+## Installation guides
+
+For fresh installations continue with one of the following guides:
 
 * [🐋 Docker](../../guides/docker/README.md) for installing our container-based provisioning.
 * [🏝 VPS](../../guides/server/vps.md) for private servers.
 * [🎛 cPanel](../../guides/cpanel/README.md) for cPanel servers.
 * [🎛 Plesk](../../guides/plesk/README.md) for Plesk servers.
 
-💡 Feel free to contribute with a guide for installing Chevereto on your system.
-
 ## Using release package
 
-The release package is a `zip` file containing the software files. Once extracted, the software is ready for [Setup](#setup).
+The release package is a `zip` file containing the software files.
 
 * 👑 Paid edition package available at your [client panel](https://chevereto.com/panel/downloads).
 * 💡 Free edition package available at [chevereto/chevereto](https://github.com/chevereto/chevereto/releases).
 
 ### Manual (CLI)
 
-This method is recommended for servers with **shell access** (command line interface).
-
-* Run the following command
+Run the following [command](https://github.com/chevereto/vps#get) to download and extract Chevereto package:
 
 ```sh
 bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh)
@@ -34,14 +32,14 @@ bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh
 
 ### Manual (GUI)
 
-This method is recommended for **cPanel**, **Plesk** and all other **web panel** users.
-
-* Upload the latest release (non-lite) to a non-public path in your server
+* Upload the latest release to a non-public path in your server
 * Unzip the package in the target website directory (`public_html` folder)
 * Remove the `.zip` file
 * Open your target website URL and follow the [Setup](#setup) instructions
 
 ## Setup
+
+Once the software files are provided the software is ready for [Setup](#setup). This is required only once per instance.
 
 Setup refers to the process when the Chevereto database tables and its admin user is created. You can carry this process in [HTTP](#http-setup) or [CLI](#cli-install) context.
 

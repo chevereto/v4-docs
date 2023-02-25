@@ -33,6 +33,26 @@ Check the repository at [chevereto/docker](https://github.com/chevereto/docker) 
 * Hostname pointing to server
 * See [CloudFlare](https://github.com/chevereto/docker/blob/4.0/docs/CLOUDFLARE.md) to setup automatic DNS integration
 
+## Pure Docker
+
+Refer to [PURE-DOCKER](https://github.com/chevereto/docker/blob/4.0/docs/PURE-DOCKER.md) for a complete pure Docker command reference.
+
+```sh
+docker run -d \
+  --name chevereto \
+  -p 80:80 \
+  -e CHEVERETO_DB_HOST=database \
+  -e CHEVERETO_DB_USER=chevereto \
+  -e CHEVERETO_DB_PASS=user_database_password \
+  -e CHEVERETO_DB_PORT=3306 \
+  -e CHEVERETO_DB_NAME=chevereto \
+  -e CHEVERETO_ASSET_STORAGE_TYPE=local \
+  -e CHEVERETO_ASSET_STORAGE_URL=/images/_assets/ \
+  -e CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/images/_assets/ \
+  -v /var/www/html/images/ \
+  ghcr.io/chevereto/chevereto:latest
+```
+
 ## Getting a server
 
 For this guide we are referring to a server as a machine where you can [install Docker](https://docs.docker.com/engine/install/). In this server you will install Chevereto and expose it to the internet. You can use any computer, even at your home or from any cloud provider.

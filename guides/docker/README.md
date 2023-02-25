@@ -144,3 +144,7 @@ make spawn NAMESPACE=example
 🎉 Congratulations, Chevereto is now up an running.
 
 To create more instances repeat the steps from [Setup namespace](#setup-namespace) for each additional website you want to spawn.
+
+## Updates
+
+Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md) for instructions on how to update Chevereto when using Docker.

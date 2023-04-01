@@ -6,6 +6,12 @@ If you are new to Chevereto welcome aboard and enjoy the ride. If you know about
 — [Rodolfo Berrios](https://rodolfoberrios.com)
 :::
 
+## Get started in 5 minutes
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item m-0" src="https://www.youtube.com/embed/vbV_u1Aw1XA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## What is Chevereto?
 
 Chevereto is a self-hosted multi-user, full-featured media hosting solution. It can be used to create a myriad of applications or to empower existing systems, all around the concept of users hosting and interacting with media content.

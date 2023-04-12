@@ -1,6 +1,6 @@
 # 🚀 Upgrading
 
-This process is for upgrading to Chevereto V4 from **Chevereto V3.20** (previous major release).
+This process is for upgrading to Chevereto V4 from **Chevereto V3.20** (previous major release). Check [Upgrading Free](upgrading-free.md) if you need to upgrade from a free edition.
 
 💡 Review [Chevereto V4 vs V3](../../introduction/changelog/welcome-back.md#chevereto-v4-vs-v3) comparison tables for a better understanding of changes in V4.
 

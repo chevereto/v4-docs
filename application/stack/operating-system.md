@@ -12,4 +12,4 @@ Make sure to replace references in this documentation from **www-data** to the t
 
 ## Windows and others
 
-For non-unix like systems as Windows we **recommend** using our [Docker](../installing/installation.md#using-docker) provisioning.
+For non Unix-like systems as Windows we **recommend** using our [Docker](../../guides/docker/README.md) provisioning.

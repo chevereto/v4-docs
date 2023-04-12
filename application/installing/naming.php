@@ -2,7 +2,7 @@
 
 return [
     'installation.md' => '📦 Installation',
-    'upgrading.md' => '🚀 Upgrading',
-    'upgrading-from-free.md' => '😌 Upgrading from free',
     'updating.md' => '🆙 Updating',
+    'upgrading.md' => '🚀 Upgrading',
+    'from-free.md' => '😌 From free',
 ];

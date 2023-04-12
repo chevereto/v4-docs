@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'V4 Docs',
+    title: 'Chevereto V4 docs',
     description: 'Self-hosted media hosting',
     head: [
         ['link', {

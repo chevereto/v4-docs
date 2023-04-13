@@ -1,14 +1,12 @@
 # 🐋 Docker
 
 ::: tip
-This is the **best way** to deploy Chevereto.
+This is the **best way** to deploy Chevereto. You can use [PURE DOCKER](#pure-docker) or our all-included project tooling.
 :::
 
 Docker refers to container technology, in this context you don't need to worry about PHP versioning, missing extensions, virtual host configuration, database server, anything. This is the best way to deploy Chevereto as the software infrastructure is provided by us.
 
 ## Advantages
-
-This deploy alternative provides several advantages, to name a few:
 
 * 🤹 Multiple website instances
 * 📱 Portability
@@ -20,22 +18,22 @@ This deploy alternative provides several advantages, to name a few:
 
 ## Repository
 
-Check the repository at [chevereto/docker](https://github.com/chevereto/docker) for instructions.
+Check the repository at [chevereto/docker](https://github.com/chevereto/docker) for all instructions and source code.
 
 ## Requirements
 
 * Chevereto license (for paid edition)
   * [Purchase](https://chevereto.com/pricing) new license
   * [Access](https://chevereto.com/panel/license) existing purchase
-* Server with
-  * Shell access
-  * `make`, `unzip`, `curl` and `git`
+* Unix-like server with shell access
 * Hostname pointing to server
-* See [CloudFlare](https://github.com/chevereto/docker/blob/4.0/docs/CLOUDFLARE.md) to setup automatic DNS integration
+  * `mywebsite.com` pointing to `sever IP`
+
+See [CloudFlare](https://github.com/chevereto/docker/blob/4.0/docs/CLOUDFLARE.md) for instructions on how to setup automatic DNS integration
 
 ## Pure Docker
 
-Refer to [PURE-DOCKER](https://github.com/chevereto/docker/blob/4.0/docs/PURE-DOCKER.md) for a complete pure Docker command reference.
+If you want just the container image you can use the following command:
 
 ```sh
 docker run -d \
@@ -53,19 +51,19 @@ docker run -d \
   ghcr.io/chevereto/chevereto:latest
 ```
 
+> Refer to [PURE-DOCKER](https://github.com/chevereto/docker/blob/4.0/docs/PURE-DOCKER.md) for a complete pure Docker command reference. Also check our [default.yml](https://github.com/chevereto/docker/blob/4.0/default.yml) compose file.
+
 ## Getting a server
 
-For this guide we are referring to a server as a machine where you can [install Docker](https://docs.docker.com/engine/install/). In this server you will install Chevereto and expose it to the internet. You can use any computer, even at your home or from any cloud provider.
+For this guide you will require a machine where you can [install Docker](https://docs.docker.com/engine/install/) as in this machine (server) you will install Chevereto and expose it to the internet.
 
-For this guide we will use a Ubuntu server in the cloud.
+For this guide we will use an Ubuntu server.
 
-You may purchase a server from our partners ([Linode](https://chv.to/linode), [Vultr](https://chv.to/vultr)) including free credits.
+> You can purchase a server from our partners ([Linode](https://chv.to/linode), [Vultr](https://chv.to/vultr)) including free credits.
 
 ## Shell access
 
-The shell is a command-line interface that interprets user commands on the server. To access to the server shell you need a terminal emulator software. Don't feel intimidated, is not that hard as it looks as cloud provider may supply a web-based terminal software.
-
-We recommend accessing your server shell with terminal software installed in your computer.
+The shell is a command-line interface that interprets user commands on the server. To access to the server shell you need terminal emulator software.
 
 Here are some free, commonly-used terminal emulators by operating system:
 
@@ -75,17 +73,15 @@ Here are some free, commonly-used terminal emulators by operating system:
 | Windows | Windows Terminal, Putty      |
 | Linux   | Gnome Terminal, Tilix, XTerm |
 
-![Terminal iTerm2](../../src/manuals/docker/terminal-iterm2.png)
-
-Once you get shell access, make sure that your server has `make`, `unzip`, `curl` and `git` installed. You will require to install these utilities if missing.
+Once you get shell access check that your server has `make`, `unzip`, `curl` and `git` installed. You will require to install these utilities if missing.
 
 ```sh
-which make unzip curl git
+sudo apt install make unzip curl git
 ```
 
 ## Cloning chevereto/docker
 
-Get a copy of our base Docker project by cloning the repository in the server using `git`. This will create a `docker` folder in the current working directory.
+We will use `git` to get a copy of our base Docker project. By running the following command a `docker` folder will be created in the current working directory.
 
 ```sh
 git clone https://github.com/chevereto/docker.git
@@ -101,13 +97,13 @@ While on `docker` folder you can work with our Docker base project.
 
 ## Installing Docker
 
-If you are using **Ubuntu** you can install docker by running:
+If you are using **Ubuntu** you can install Docker by running:
 
 ```sh
 make install-docker
 ```
 
-For other systems follow the instructions for [Docker Engine installation](https://docs.docker.com/engine/install/). Make sure to check at **Server** for your specific Linux distribution.
+For other systems follow the instructions for [Docker Engine installation](https://docs.docker.com/engine/install/). Check at **Server** for your specific Linux distribution.
 
 ::: details Docker Engine installation
 ![Installation overview](../../src/manuals/docker/install-overview.png)
@@ -115,7 +111,7 @@ For other systems follow the instructions for [Docker Engine installation](https
 
 ## Setup Cron
 
-This process creates a Cron file at `/etc/cron.d/chevereto` that will run background jobs for all Chevereto instances in the server.
+This process creates a Cron that will run background jobs for Chevereto.
 
 ```sh
 make cron

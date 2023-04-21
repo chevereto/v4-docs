@@ -4,16 +4,15 @@
 This is the **best way** to deploy Chevereto. You can use [PURE DOCKER](#pure-docker) or our all-included project tooling.
 :::
 
-Docker refers to container technology, in this context you don't need to worry about PHP versioning, missing extensions, virtual host configuration, database server, anything. This is the best way to deploy Chevereto as the software infrastructure is provided by us.
+Docker refers to container technology. In this context you don't need to worry about the system infrastructure. This is the best way to deploy Chevereto as both the application and its infrastructure is provided by us.
 
 ## Advantages
 
-* 🤹 Multiple website instances
+* 🤹 Run multiple websites in the same machine
 * 📱 Portability
-* 🌈 Easy maintenance
-* 🔐 Automatic HTTPS setup
-* 🎨 Customization
+* 🚀 Easy to update
 * 👮‍♂️ More secure
+* 🔐 Automatic HTTPS setup
 * 🌎 CloudFlare integration
 
 ## Repository
@@ -33,7 +32,13 @@ See [CloudFlare](https://github.com/chevereto/docker/blob/4.0/docs/CLOUDFLARE.md
 
 ## Pure Docker
 
-If you want just the container image you can use the following command:
+Our base image is available at:
+
+```sh
+ghcr.io/chevereto/chevereto:latest
+```
+
+You can get this container running with the following command:
 
 ```sh
 docker run -d \
@@ -53,9 +58,11 @@ docker run -d \
 
 > Refer to [PURE-DOCKER](https://github.com/chevereto/docker/blob/4.0/docs/PURE-DOCKER.md) for a complete pure Docker command reference. Also check our [default.yml](https://github.com/chevereto/docker/blob/4.0/default.yml) compose file.
 
+👉 If you have a Pro license you will require to [build](#build) the system image.
+
 ## Getting a server
 
-For this guide you will require a machine where you can [install Docker](https://docs.docker.com/engine/install/) as in this machine (server) you will install Chevereto and expose it to the internet.
+For this guide you will require a machine where you can [install Docker](https://docs.docker.com/engine/install/) as in this machine (referred as server host) you will install Chevereto and expose it to the internet.
 
 For this guide we will use an Ubuntu server.
 
@@ -65,7 +72,7 @@ For this guide we will use an Ubuntu server.
 
 The shell is a command-line interface that interprets user commands on the server. To access to the server shell you need terminal emulator software.
 
-Here are some free, commonly-used terminal emulators by operating system:
+Here are some commonly-used terminal emulators by operating system:
 
 | System  | Software                     |
 | ------- | ---------------------------- |
@@ -73,7 +80,7 @@ Here are some free, commonly-used terminal emulators by operating system:
 | Windows | Windows Terminal, Putty      |
 | Linux   | Gnome Terminal, Tilix, XTerm |
 
-Once you get shell access check that your server has `make`, `unzip`, `curl` and `git` installed. You will require to install these utilities if missing.
+Once you get shell access check that your server has `make`, `unzip`, `curl` and `git` installed.
 
 ```sh
 sudo apt install make unzip curl git
@@ -111,21 +118,23 @@ For other systems follow the instructions for [Docker Engine installation](https
 
 ## Setup Cron
 
-This process creates a Cron that will run background jobs for Chevereto.
+This process creates a Cron that will run background jobs for your Chevereto websites.
 
 ```sh
 make cron
 ```
 
-## Create proxy
+## Create HTTPS proxy
 
-This process creates the proxy service that handles incoming web traffic to the server. It will also provide automatic secure certificate for HTTPS.
+We include an NGIX web server that will forward access to all your Chevereto websites and provide auto renewable HTTPS certificates.
+
+To setup our proxy server run the following command:
 
 ```sh
 make proxy EMAIL_HTTPS=mail@yourdomain.tld
 ```
 
-At `EMAIL_HTTPS` option pass your email, required for HTTPS certificate notifications.
+At `EMAIL_HTTPS` option pass your email. It is required for HTTPS certificate notifications.
 
 ## Build Chevereto image
 
@@ -137,9 +146,13 @@ This process builds the container image for the Chevereto application.
 make image
 ```
 
+The process will ask for your license key.
+
+> If no license is provided or you enter an invalid license the system will build the free image.
+
 ## Setup namespace
 
-Create a [namespace](https://github.com/chevereto/docker/blob/4.0/docs/NAMESPACE.md) for each one of the Chevereto instances you want to deploy.
+Create a [namespace](https://github.com/chevereto/docker/blob/4.0/docs/NAMESPACE.md) for each one of the Chevereto websites you want to deploy.
 
 To create the `example` namespace for `img.chevereto.dev` hostname:
 
@@ -147,9 +160,9 @@ To create the `example` namespace for `img.chevereto.dev` hostname:
 make namespace NAMESPACE=example HOSTNAME=img.chevereto.dev
 ```
 
-## Spawn Chevereto instance
+## Spawn Chevereto website
 
-To create an instance run `make spawn` command by passing the NAMESPACE option.
+To create a new website run `make spawn` command by passing the NAMESPACE option.
 
 💡 When using free edition pass `EDITION=free`.
 
@@ -157,9 +170,9 @@ To create an instance run `make spawn` command by passing the NAMESPACE option.
 make spawn NAMESPACE=example
 ```
 
-🎉 Congratulations, Chevereto is now up an running.
+🎉 Congratulations! Chevereto is now up an running.
 
-To create more instances repeat the steps from [Setup namespace](#setup-namespace) for each additional website you want to spawn.
+To create **more websites** repeat the steps from [Setup namespace](#setup-namespace) for each additional website you want to spawn.
 
 ## Updates
 

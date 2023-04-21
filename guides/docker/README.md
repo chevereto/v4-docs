@@ -8,6 +8,8 @@ Docker refers to container technology. In this context you don't need to worry a
 
 ## Advantages
 
+There are several advantages of our Docker system:
+
 * 🤹 Run multiple websites in the same machine
 * 📱 Portability
 * 🚀 Easy to update
@@ -17,22 +19,25 @@ Docker refers to container technology. In this context you don't need to worry a
 
 ## Repository
 
-Check the repository at [chevereto/docker](https://github.com/chevereto/docker) for all instructions and source code.
+Check the project repository at [chevereto/docker](https://github.com/chevereto/docker) for all instructions and source code.
 
 ## Requirements
 
-* Chevereto license (for paid edition)
-  * [Purchase](https://chevereto.com/pricing) new license
-  * [Access](https://chevereto.com/panel/license) existing purchase
+For this guide you will require the following:
+
 * Unix-like server with shell access
 * Hostname pointing to server
   * `mywebsite.com` pointing to `sever IP`
+* Chevereto license (when using our paid edition)
+  * [Purchase](https://chevereto.com/pricing) new license
+  * [Access](https://chevereto.com/panel/license) existing purchase
+* Optionally, CloudFlare API credentials to automatic handle sub-domains for you.
 
 See [CloudFlare](https://github.com/chevereto/docker/blob/4.0/docs/CLOUDFLARE.md) for instructions on how to setup automatic DNS integration
 
 ## Pure Docker
 
-Our base image is available at:
+If you want full control of the container provisioning you can get our base image at:
 
 ```sh
 ghcr.io/chevereto/chevereto:latest
@@ -58,7 +63,7 @@ docker run -d \
 
 > Refer to [PURE-DOCKER](https://github.com/chevereto/docker/blob/4.0/docs/PURE-DOCKER.md) for a complete pure Docker command reference. Also check our [default.yml](https://github.com/chevereto/docker/blob/4.0/default.yml) compose file.
 
-👉 If you have a Pro license you will require to [build](#build) the system image.
+👉 If you have a Pro license you will require to [build](#build-chevereto-image) the system image.
 
 ## Getting a server
 
@@ -70,9 +75,9 @@ For this guide we will use an Ubuntu server.
 
 ## Shell access
 
-The shell is a command-line interface that interprets user commands on the server. To access to the server shell you need terminal emulator software.
+The shell is a command-line interface that enables to remote control the server. To access to this interface you need terminal emulator software.
 
-Here are some commonly-used terminal emulators by operating system:
+Here are common-used terminal emulators by operating system:
 
 | System  | Software                     |
 | ------- | ---------------------------- |
@@ -116,9 +121,11 @@ For other systems follow the instructions for [Docker Engine installation](https
 ![Installation overview](../../src/manuals/docker/install-overview.png)
 :::
 
-## Setup Cron
+## Setup background jobs
 
-This process creates a Cron that will run background jobs for your Chevereto websites.
+Chevereto needs to execute periodic systems tasks on the background like deleting expired images, unverified users or to check for updates.
+
+Run the following command to setup background processing for all your websites.
 
 ```sh
 make cron
@@ -134,11 +141,11 @@ To setup our proxy server run the following command:
 make proxy EMAIL_HTTPS=mail@yourdomain.tld
 ```
 
-At `EMAIL_HTTPS` option pass your email. It is required for HTTPS certificate notifications.
+At `EMAIL_HTTPS` option pass your email. It is required for HTTPS certificate notifications
 
 ## Build Chevereto image
 
-This process builds the container image for the Chevereto application.
+This process builds the Chevereto container image.
 
 💡 Omit this step when using free edition as the image is available at [GHCR](https://github.com/chevereto/chevereto/pkgs/container/chevereto).
 
@@ -152,22 +159,28 @@ The process will ask for your license key.
 
 ## Setup namespace
 
-Create a [namespace](https://github.com/chevereto/docker/blob/4.0/docs/NAMESPACE.md) for each one of the Chevereto websites you want to deploy.
+A [namespace](https://github.com/chevereto/docker/blob/4.0/docs/NAMESPACE.md) is a file that defines the context of your project. It is where the system stores your project variables.
 
-To create the `example` namespace for `img.chevereto.dev` hostname:
+To create the `example` namespace for `mywebsite.com` hostname:
 
 ```sh
-make namespace NAMESPACE=example HOSTNAME=img.chevereto.dev
+make namespace NAMESPACE=example HOSTNAME=mywebsite.com
 ```
+
+> You can check the namespace files at `./namespace` folder.
 
 ## Spawn Chevereto website
 
 To create a new website run `make spawn` command by passing the NAMESPACE option.
 
+```sh
+make spawn NAMESPACE=example
+```
+
 💡 When using free edition pass `EDITION=free`.
 
 ```sh
-make spawn NAMESPACE=example
+make spawn NAMESPACE=example EDITION=free
 ```
 
 🎉 Congratulations! Chevereto is now up an running.

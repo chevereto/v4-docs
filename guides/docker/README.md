@@ -4,7 +4,7 @@
 This is the **best way** to deploy Chevereto. You can use [PURE DOCKER](#pure-docker) or our all-included project tooling.
 :::
 
-Docker refers to container technology. In this context you don't need to worry about the system infrastructure. This is the best way to deploy Chevereto as both the application and its infrastructure is provided by us.
+Docker refers to container technology and is the way in which we ship the server infra needed to run Chevereto. By using Docker you don't need to worry about the system libraries and it is the recommended way to deploy Chevereto.
 
 ## Advantages
 

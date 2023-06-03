@@ -15,7 +15,7 @@ docker logs CONTAINER -f 1>/dev/null
 Chevereto access log:
 
 ```sh
-docker logs CONTAINER -f 1>/dev/null
+docker logs CONTAINER -f 2>/dev/null
 ```
 
 ## Debug (production)

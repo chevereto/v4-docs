@@ -2,6 +2,16 @@
 
 Debug enables to dump information about errors that may be affecting the software functionality. If Chevereto isn't working properly it will require debugging to understand the situation.
 
+## Debug with xrDebug
+
+* Run xrDebug built-in server:
+
+```sh
+cd app && vendor/bin/xr
+```
+
+* Enable xrDebug from your [Chevereto settings](https://v4-admin.chevereto.com/settings/system.html#enable-xr).
+
 ## Debug with Docker
 
 👉 Replace `CONTAINER` with the container name.
@@ -83,8 +93,8 @@ This vary depending the server provider and how PHP runs in the server. In doubt
   * Logs by default at `php://stderr`
 * Docker
   * Logs to `/dev/stderr`
-* XR Debug
-  * Streams the debug messages to the XR Debug session
+* xrDebug
+  * Streams the debug messages to the xrDebug session
 * Apache
   * Logs by default at `/var/log/apache2/error.log`
   * Virtual host directive defines custom error log location

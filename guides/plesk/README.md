@@ -1,4 +1,4 @@
-# 🎛 Plesk
+# Plesk
 
 ::: tip
 The *best* deploy alternative for Chevereto is [Docker](../docker/README.md). But Chevereto can be deployed anywhere and this guide may suit your needs.

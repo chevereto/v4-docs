@@ -1,10 +1,10 @@
-# ⏲️ CRON
+# CRON
 
 Chevereto requires to setup [cron](https://en.wikipedia.org/wiki/Cron) to run background jobs.
 
-💡 This cron setup reference applies *mostly* for **Debian-based** systems. We **recommend** checking your server documentation on how to setup and run cron.
+This cron setup reference applies *mostly* for **Debian-based** systems. We **recommend** checking your server documentation on how to setup and run cron.
 
-👏 Consider to contribute to this documentation by improving this document with alternative cron setup alternatives.
+Consider to contribute to this documentation with alternative cron setup alternatives.
 
 ## What it does?
 
@@ -28,7 +28,7 @@ Having issues? Check the following common pitfalls:
 
 The command should be run by the web-server user which is `www-data` (may vary). To run the command in Chevereto it requires to call PHP binary at the Chevereto CLI.
 
-💡 Use `which php` to locate the PHP binary as its location.
+Use `which php` to locate the PHP binary as its location.
 
 Refer to [CLI Cron](../reference/cli.md#cron).
 

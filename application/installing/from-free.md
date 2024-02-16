@@ -1,4 +1,4 @@
-# 😌 From free
+# From free
 
 You can upgrade from any free edition to paid Chevereto V4.
 

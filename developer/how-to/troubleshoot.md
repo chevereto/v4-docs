@@ -1,4 +1,4 @@
-# ⛑️ Troubleshoot
+# Troubleshoot
 
 Having issues? Check the troubleshoot for well-known issues.
 

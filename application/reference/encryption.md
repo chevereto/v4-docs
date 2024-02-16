@@ -1,4 +1,4 @@
-# 🔑 Encryption
+# Encryption
 
 Chevereto uses [ChaCha20](https://datatracker.ietf.org/doc/html/rfc7539) algorithm to cipher secrets and sensitive data. When enabled, Chevereto will store these values encrypted in the database.
 
@@ -64,7 +64,7 @@ Handle the encryption key with the same discretion of a password.
 
 To enable encryption provide the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
 
-🪶 This key is automatic provided when using [HTTP setup](../installing/installation.md#http-setup), stored in the [env.php](../configuration/env.php.md) file.
+This key is automatic provided when using [HTTP setup](../installing/installation.md#http-setup), stored in the [env.php](../configuration/env.php.md) file.
 
 ### From previous versions
 

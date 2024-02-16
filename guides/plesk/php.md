@@ -1,4 +1,4 @@
-# 🐘 Plesk PHP
+# Plesk PHP
 
 ## PHP Setup
 

@@ -1,12 +1,12 @@
-# 👮‍♀️ Security
+# Security
 
 ## Security Checklist
 
 Must **constantly double-checking** the following:
 
-* [PHP Filesystem](../stack/php.md#php-filesystem)
+* [PHP Filesystem](../stack/php.md#filesystem)
 * [Real connecting IP](../stack/web-server.md#real-connecting-ip)
-* [Restrict access to PHP files](../stack/web-server.md#restrict-direct-access-to-php-files)
+* [Restrict access to PHP files](../stack/web-server.md#restrict-php)
 * [CRON setup](../stack/cron.md)
 * [Email setup](https://v4-admin.chevereto.com/settings/email.html)
 
@@ -46,7 +46,7 @@ Entering an integer value like `5000` will instruct the system to generate IDs u
 
 #### Altering `chv_images` table
 
-💡 This method won't affect any previous generated links.
+This method won't affect any previous generated links.
 
 Go to the database, find the `chv_images` table and change the `AUTOINCREMENT` to the ID padding you want to use.
 

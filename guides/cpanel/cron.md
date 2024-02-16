@@ -1,4 +1,4 @@
-# ⏲️ cPanel CRON
+# cPanel CRON
 
 ## Add new CRON job
 

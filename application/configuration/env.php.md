@@ -1,12 +1,12 @@
-# 📌 app/env.php
+# app/env.php
 
 The file at `app/env.php` contains the application system level settings.
 
-💡 This applies for `ENV` variables not set as `app/env.php` has **lower priority** than [ENV](environment.md).
+This applies for `ENV` variables not set as `app/env.php` has **lower priority** than [ENV](environment.md).
 
 ## Creating the file
 
-👉 The system requires to pass only the values that **overrides** the [defaults](#defaults).
+The system requires to pass only the values that **overrides** the [defaults](#defaults).
 
 This file will be created on installation after submitting the database details. You can also manually create it. It may look like this:
 

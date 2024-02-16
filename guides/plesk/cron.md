@@ -1,4 +1,4 @@
-# ⏲️ Plesk CRON
+# Plesk CRON
 
 ## Add new CRON job
 

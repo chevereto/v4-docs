@@ -1,10 +1,10 @@
 module.exports = {
-    title: 'Chevereto V4 docs',
-    description: 'Self-hosted media hosting',
+    title: 'Chevereto V4 Docs',
+    description: 'Image hosting software',
     head: [
         ['link', {
             rel: 'icon',
-            href: `/logo.svg`
+            href: '/logo.png'
         }],
         ['link', {
             rel: 'manifest',
@@ -24,7 +24,7 @@ module.exports = {
         }],
         ['link', {
             rel: 'apple-touch-icon',
-            href: '/logo.svg'
+            href: '/logo.png'
         }],
         ['link', {
             rel: 'mask-icon',
@@ -33,7 +33,7 @@ module.exports = {
         }],
         ['meta', {
             name: 'msapplication-TileImage',
-            content: '/logo.svg'
+            content: '/logo.png'
         }],
         ['meta', {
             name: 'msapplication-TileColor',

@@ -1,4 +1,4 @@
-# 📂 Plesk App files
+# Plesk App files
 
 ## Installing Chevereto
 
@@ -30,4 +30,4 @@ To install Chevereto on Plesk you need to use the release package and Plesk's fi
 
 To update Chevereto on Plesk simply follow the steps described above. That process only alters the application files, it won't touch the website contents.
 
-💡 If you made modifications to the software you may want to review these changes before.
+If you made modifications to the software you may want to review these changes before.

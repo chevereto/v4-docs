@@ -1,4 +1,4 @@
-# 🐬 cPanel Database
+# cPanel Database
 
 ## Creating a database
 

@@ -1,10 +1,10 @@
-# 🐬 MySQL Server
+# MySQL Server
 
 | Version | MySQL  | MariaDB |
 | ------- | ------ | ------- |
 | 4.0     | 5.7, 8 | 10      |
 
-💡 Chevereto support both MySQL/MariaDB database servers but we refer indistinctly as **MySQL**.
+Chevereto support both MySQL/MariaDB database servers but we refer indistinctly as **MySQL**.
 
 Chevereto V4 rely in a [RDBMS](https://en.wikipedia.org/wiki/Relational_database) provided by a MySQL server.
 
@@ -35,7 +35,7 @@ Database user must have `ALL PRIVILEGES` over the target database.
 
 InnoDB table storage engine.
 
-👉 Old versions using MyISAM table storage engine will require to convert the old tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
+Old versions using MyISAM table storage engine will require to convert the old tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
 
 ## Creating the database
 

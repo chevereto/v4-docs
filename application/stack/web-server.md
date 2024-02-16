@@ -1,4 +1,4 @@
-# 🪶 Web Server
+# Web Server
 
 Chevereto requires an HTTP web server compatible with PHP. It provides official support (when using our configuration) for Apache HTTP Server and Nginx.
 
@@ -96,4 +96,4 @@ Refer to the following resources when requiring to configure real connecting IP:
 
 * Apache HTTP Server: `mod_remoteip`
 * NGINX: `ngx_http_realip_module`
-* [Guides for CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs/) (make sure to setup the appropriate [IP ranges](https://www.cloudflare.com/ips/))
+* [Guides for CloudFlare](https://developers.cloudflare.com/support/troubleshooting/restoring-visitor-ips/restoring-original-visitor-ips/) (make sure to setup the appropriate [IP ranges](https://www.cloudflare.com/ips/))

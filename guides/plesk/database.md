@@ -1,4 +1,4 @@
-# 🐬 Plesk Database
+# Plesk Database
 
 ## Creating a database
 

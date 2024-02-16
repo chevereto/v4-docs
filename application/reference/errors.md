@@ -1,4 +1,4 @@
-# 😖 Errors
+# Errors
 
 Chevereto application errors can happen by several causes, including server issues. In a multi-layered system like this is crucial to understand when an error is caused by Chevereto and not *something else*.
 
@@ -28,7 +28,7 @@ The id is randomly generated and is unique per error event.
 
 > Please try again later. If the problem persist don't hesitate to contact the system administrator.
 
-💡 **Note:** You are the system administrator.
+**Note:** You are the system administrator.
 
 This [silent message](https://chevere.github.io/throwable-handler/demo/output/html-silent.html) indicates an error caught by Chevereto, but without disclosing the actual cause of error. Go to [Debug](../../developer/how-to/debug.md) to learn how to retrieve these from the [configured log device](../configuration/environment.md#error-logging-variables).
 
@@ -50,6 +50,6 @@ If at `/update` you see a message which reads `# Dumped update query (...)` it m
 
 A generic error response emitted by the [web server](../stack/web-server.md), indicates the existence of an error but it doesn't specify any concrete explication for it.
 
-As these may spawn in any layer, check the system [error log](../../developer/how-to/debug.md#accessing-logs) device to determine if it is triggered in the application layer. If is not there then check for the error log for your web server.
+As these may spawn in any layer, check the system [error log](../../developer/how-to/debug.md#finding-the-logs) device to determine if it is triggered in the application layer. If is not there then check for the error log for your web server.
 
 Refer to your web server provisioning documentation for retrieving its logs.

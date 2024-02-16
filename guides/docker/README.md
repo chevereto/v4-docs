@@ -1,21 +1,22 @@
-# 🐋 Docker
+# Chevereto Factory
+
+Roll your own multi-website Chevereto infrastructure with Chevereto Factory, a Docker-based system that allows you to deploy and maintain multiple Chevereto websites on demand.
 
 ::: tip
-This is the **best way** to deploy Chevereto. You can use [PURE DOCKER](#pure-docker) or our all-included project tooling.
+This is the **best way** to deploy Chevereto. Docker refers to container technology and is the way in which we ship the server infra needed to run Chevereto.
 :::
 
-Docker refers to container technology and is the way in which we ship the server infra needed to run Chevereto. By using Docker you don't need to worry about the system libraries and it is the recommended way to deploy Chevereto.
+By the end of this tutorial, you'll have your own Chevereto Factory up and running, capable of deploying and maintaining multiple Chevereto websites on demand, all with automatic sub-domain creation and renewable HTTPS certificates.
 
 ## Advantages
 
 There are several advantages of our Docker system:
 
-* 🤹 Run multiple websites in the same machine
-* 📱 Portability
-* 🚀 Easy to update
-* 👮‍♂️ More secure
-* 🔐 Automatic HTTPS setup
-* 🌎 CloudFlare integration
+* Run multiple websites with ease
+* Portability
+* Easy to update
+* Automatic HTTPS setup
+* CloudFlare integration
 
 ## Repository
 
@@ -23,61 +24,21 @@ Check the project repository at [chevereto/docker](https://github.com/chevereto/
 
 ## Requirements
 
-For this guide you will require the following:
+To follow this guide, make sure you have:
 
-* Unix-like server with shell access
-* Hostname pointing to server
-  * `mywebsite.com` pointing to `sever IP`
-* Chevereto license (when using our paid edition)
+* A Ubuntu server with shell access and public IP address.
+* A domain managed by CloudFlare (if using integration)
+* A Chevereto license (required for the paid edition)
   * [Purchase](https://chevereto.com/pricing) new license
   * [Access](https://chevereto.com/panel/license) existing purchase
-* Optionally, CloudFlare API credentials to automatic handle sub-domains for you.
-
-See [CloudFlare](https://github.com/chevereto/docker/blob/4.0/docs/CLOUDFLARE.md) for instructions on how to setup automatic DNS integration
-
-## Pure Docker
-
-If you want full control of the container provisioning you can get our base image at:
-
-```sh
-ghcr.io/chevereto/chevereto:latest
-```
-
-You can get this container running with the following command:
-
-```sh
-docker run -d \
-  --name chevereto \
-  -p 80:80 \
-  -e CHEVERETO_DB_HOST=database \
-  -e CHEVERETO_DB_USER=chevereto \
-  -e CHEVERETO_DB_PASS=user_database_password \
-  -e CHEVERETO_DB_PORT=3306 \
-  -e CHEVERETO_DB_NAME=chevereto \
-  -e CHEVERETO_ASSET_STORAGE_TYPE=local \
-  -e CHEVERETO_ASSET_STORAGE_URL=/images/_assets/ \
-  -e CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/images/_assets/ \
-  -v /var/www/html/images/ \
-  ghcr.io/chevereto/chevereto:latest
-```
-
-> Refer to [PURE-DOCKER](https://github.com/chevereto/docker/blob/4.0/docs/PURE-DOCKER.md) for a complete pure Docker command reference. Also check our [default.yml](https://github.com/chevereto/docker/blob/4.0/default.yml) compose file.
-
-👉 If you have a Pro license you will require to [build](#build-chevereto-image) the system image.
 
 ## Getting a server
 
-For this guide you will require a machine where you can [install Docker](https://docs.docker.com/engine/install/) as in this machine (referred as server host) you will install Chevereto and expose it to the internet.
+You'll need a server where you can install Chevereto Factory For this guide we recommend an Ubuntu server, but any Unix-like system will do.
 
-For this guide we will use an Ubuntu server.
+## Accessing server shell
 
-> You can purchase a server from our partners ([Linode](https://chv.to/linode), [Vultr](https://chv.to/vultr)) including free credits.
-
-## Shell access
-
-The shell is a command-line interface that enables to remote control the server. To access to this interface you need terminal emulator software.
-
-Here are common-used terminal emulators by operating system:
+To interact with your server use a terminal emulator. Here are some terminal emulator software by operating system:
 
 | System  | Software                     |
 | ------- | ---------------------------- |
@@ -85,108 +46,104 @@ Here are common-used terminal emulators by operating system:
 | Windows | Windows Terminal, Putty      |
 | Linux   | Gnome Terminal, Tilix, XTerm |
 
-Once you get shell access check that your server has `make`, `unzip`, `curl` and `git` installed.
+Access your server via [SSH](https://en.wikipedia.org/wiki/Secure_Shell) using the following command from your computer:
 
 ```sh
-sudo apt install make unzip curl git
+ssh root@<server ip>
 ```
 
-## Cloning chevereto/docker
+Make sure to check your server provider's documentation for specific instructions on accessing the shell.
 
-We will use `git` to get a copy of our base Docker project. By running the following command a `docker` folder will be created in the current working directory.
+## Installing chevereto/docker
+
+Start by installing Chevereto Docker repository and its dependencies by running the following command.
 
 ```sh
-git clone https://github.com/chevereto/docker.git
+bash <(curl -s https://chevereto.com/sh/ubuntu/22.04/docker.sh)
 ```
 
-Go to this newly created `docker` folder.
+## Setting up CloudFlare integration
+
+Skip this section if you don't need CloudFlare integration to manage domain DNS.
+
+Integrate Chevereto Factory with CloudFlare to automate sub-domain creation for your websites. If you aren't using CloudFlare go to [cloudflare.com](https://cloudflare.com) to get started, it is free. Add your domain to continue with this guide.
+
+To setup CloudFlare with Chevereto Factory:
+
+* Navigate to the DNS configuration for your domain on CloudFlare.
+* Create a new A record, take note as it will be your `CLOUDFLARE_A_NAME` environment value. Use the following properties:
+  * Type: A
+  * Name: chevereto-factory
+  * Content: {server ip}
+  * Proxy status: DNS only
+  * TTL: Auto
+* Navigate to SSL/TLS configuration and under **Overview** set mode to **Full (strict)**.
+
+Next create an API token, take note as it will be your `CLOUDFLARE_TOKEN` environment value.
+
+* Go to [api-tokens](https://dash.cloudflare.com/profile/api-tokens) and click on **Create Token**
+* Use template **Edit zone DNS**
+* Permissions: **Zone DNS Edit**
+* Resources: **Include Specific zone DOMAIN**
+
+You will require to take note on `CLOUDFLARE_ZONE_ID` and `CLOUDFLARE_ACCOUNT_ID` which you can get from the **domain overview**.
+
+## Create configuration (.env file)
+
+To create the configuration file run the following command and follow the on-screen instructions.
 
 ```sh
-cd docker
+make env
 ```
 
-While on `docker` folder you can work with our Docker base project.
+* `CHEVERETO_KEY`: Your Chevereto license key (required for the paid edition, leave empty for free edition).
+* `DOMAIN`: The domain you'll use for spawning Chevereto installations.
+* `EMAIL_HTTPS`: The email to receive HTTPS certificate notifications from Let’s Encrypt.
+* `CLOUDFLARE_*` options: Integration details for CloudFlare.
 
-## Installing Docker
+## Setting up system
 
-If you are using **Ubuntu** you can install Docker by running:
+By setting up the system you will enable background processing and ingress HTTP proxy.
+
+To set up the system run the following command:
 
 ```sh
-make install-docker
+make setup
 ```
 
-For other systems follow the instructions for [Docker Engine installation](https://docs.docker.com/engine/install/). Check at **Server** for your specific Linux distribution.
+## Building the Chevereto image
 
-::: details Docker Engine installation
-![Installation overview](../../src/manuals/docker/install-overview.png)
-:::
+If you're using free edition you can skip this step, as the image is freely available on [GitHub Container Registry](https://github.com/chevereto/chevereto/pkgs/container/chevereto).
 
-## Setup background jobs
-
-Chevereto needs to execute periodic systems tasks on the background like deleting expired images, unverified users or to check for updates.
-
-Run the following command to setup background processing for all your websites.
-
-```sh
-make cron
-```
-
-## Create HTTPS proxy
-
-We include an NGIX web server that will forward access to all your Chevereto websites and provide auto renewable HTTPS certificates.
-
-To setup our proxy server run the following command:
-
-```sh
-make proxy EMAIL_HTTPS=mail@yourdomain.tld
-```
-
-At `EMAIL_HTTPS` option pass your email. It is required for HTTPS certificate notifications
-
-## Build Chevereto image
-
-This process builds the Chevereto container image.
-
-💡 Omit this step when using free edition as the image is available at [GHCR](https://github.com/chevereto/chevereto/pkgs/container/chevereto).
+Build the Chevereto container image for the latest release by running the following command.
 
 ```sh
 make image
 ```
 
-The process will ask for your license key.
+## Deploying
 
-> If no license is provided or you enter an invalid license the system will build the free image.
-
-## Setup namespace
-
-A [namespace](https://github.com/chevereto/docker/blob/4.0/docs/NAMESPACE.md) is a file that defines the context of your project. It is where the system stores your project variables.
-
-To create the `example` namespace for `mywebsite.com` hostname:
+To deploy a new website use the following command format:
 
 ```sh
-make namespace NAMESPACE=example HOSTNAME=mywebsite.com
+make deploy NAMESPACE={namespace} ADMIN_EMAIL={email}
 ```
 
-> You can check the namespace files at `./namespace` folder.
+Replace {namespace} with the desired sub-domain and {email} with the admin email for the website.
 
-## Spawn Chevereto website
-
-To create a new website run `make spawn` command by passing the NAMESPACE option.
+For example:
 
 ```sh
-make spawn NAMESPACE=example
+make deploy NAMESPACE=demo ADMIN_EMAIL=email@mywebsite.com
 ```
 
-💡 When using free edition pass `EDITION=free`.
+The Chevereto website will be available within seconds as the new sub-domain propagates.
+
+## Updating your websites
+
+To update re-build the Chevereto container image and run the update command.
 
 ```sh
-make spawn NAMESPACE=example EDITION=free
+make image
+make update
 ```
-
-🎉 Congratulations! Chevereto is now up an running.
-
-To create **more websites** repeat the steps from [Setup namespace](#setup-namespace) for each additional website you want to spawn.
-
-## Updates
-
-Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md) for instructions on how to update Chevereto when using Docker.

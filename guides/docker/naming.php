@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'README.md' => '🐋 Docker',
+    'README.md' => 'Chevereto Factory',
+    'pure-docker.md' => 'Pure Docker',
 ];

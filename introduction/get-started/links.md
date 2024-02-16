@@ -1,4 +1,4 @@
-# 🔗 Links
+# Links
 
 ## Chevereto V4 Resources
 

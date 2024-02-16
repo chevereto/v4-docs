@@ -1,4 +1,4 @@
-# 🤗 Welcome Back
+# Welcome Back
 
 Have used Chevereto before? That's awesome!
 
@@ -6,7 +6,7 @@ We have prepared a short summary in what you can expect coming from older versio
 
 ## From Chevereto V3
 
-💡 [V3.X releases](https://releases.chevereto.com/3.X/)
+[V3.X releases](https://releases.chevereto.com/3.X/)
 
 The user interface has evolved to a mature status, with new icons, gestures, keyboard shortcuts and many more. The experience is snappier as it supports PHP 8 and is built on top of [Chevere](https://chevere.org/).
 
@@ -42,13 +42,13 @@ Your existing application settings must be migrated to enable Chevereto V4 to co
 
 As [Chevereto-Free](https://github.com/rodber/chevereto-free) is a fork of [Chevereto V3.16](https://releases.chevereto.com/3.X/3.16/3.16.0), it adds on top of that branch.
 
-💡 The code at V4 is notorious newer as V4 was released on 2022. Chevereto-Free contains code old as 2020.
+The code at V4 is notorious newer as V4 was released on 2022. Chevereto-Free contains code old as 2020.
 
 Coming from Chevereto-Free, users will experience a solid software system with active software support offering, a mature design, multi-languages and all-features included.
 
 ## From Chevereto V2
 
-💡 [V2.X releases](https://releases.chevereto.com/2.X/)
+[V2.X releases](https://releases.chevereto.com/2.X/)
 
 Adding on [From Chevereto V3](#from-chevereto-v3), the system now supports multi-user and the user interface has been dramatically improved. The software got albums, profiles, search, explore and an admin dashboard.
 
@@ -56,7 +56,7 @@ Coming from V2, users will experience that Chevereto is more than a simple one-c
 
 ## From Chevereto V1
 
-💡 [V1.X releases](https://releases.chevereto.com/1.X/)
+[V1.X releases](https://releases.chevereto.com/1.X/)
 
 Adding on [From Chevereto V2](#from-chevereto-v2), the software went from an mvp to a real project.
 

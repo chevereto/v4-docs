@@ -1,4 +1,4 @@
-# 🏝 VPS
+# VPS
 
 ::: tip
 The *best* deploy alternative for Chevereto is [Docker](../docker/README.md). But Chevereto can be deployed anywhere and this guide may suit your needs.
@@ -54,7 +54,7 @@ bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/new.sh
 
 The [get.sh](https://github.com/chevereto/vps#get) script download and extracts Chevereto in the current working folder.
 
-💡 This works in any Unix-based system.
+This works in any Unix-based system.
 
 ```sh
 bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh)

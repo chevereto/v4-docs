@@ -1,3 +1,3 @@
-# 🪐 API Version 4
+# API Version 4
 
-`🚧 Work in progress`
+`Work in progress`

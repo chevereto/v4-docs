@@ -1,8 +1,8 @@
-# ⚙️ Configuring
+# Configuring
 
 Chevereto V4 uses [environment variables](environment.md) for configuring system level settings.
 
-💡 Environment variables configured at `ENV` system level will **override** the configuration at `app/env.php`.
+Environment variables configured at `ENV` system level will **override** the configuration at `app/env.php`.
 
 ## Using `app/env.php`
 
@@ -28,7 +28,7 @@ For these you will be running [PHP-FPM](https://www.php.net/manual/en/install.fp
 
 For these you will be running PHP CLI so you should be able to pass those at `php.ini` for your CLI. You can also `export` those in your shell.
 
-👉 Refer to the documentation of each application server for the best way to pass environment variables to Chevereto.
+Refer to the documentation of each application server for the best way to pass environment variables to Chevereto.
 
 ### Container
 

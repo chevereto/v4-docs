@@ -1,4 +1,4 @@
-# 🆙 Updating
+# Updating
 
 This process is for instances already running **Chevereto V4**. To update Chevereto provide the updated software files and then proceed with database update.
 

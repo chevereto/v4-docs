@@ -1,10 +1,10 @@
-# 🗿 Environment
+# Environment
 
 ## Assets variables
 
 Environment variables for storing assets that can be uploaded to any of the supported external storage APIs. Assets refers to user provided assets such as avatars and backgrounds, also website graphics like logos and homepage covers.
 
-💡 Check [External storage](https://v4-admin.chevereto.com/features/external-storage.html) for adding external storage servers for user content uploads.
+Check [External storage](https://v4-admin.chevereto.com/features/external-storage.html) for adding external storage servers for user content uploads.
 
 | Variable                             | Example        |
 | ------------------------------------ | -------------- |
@@ -105,7 +105,7 @@ Environment variables for the context where Chevereto system is being provided. 
 
 Environment variables that limits the use for Chevereto
 
-💡 Zero `0` means no limit.
+Zero `0` means no limit.
 
 | Variable                       | Example |
 | ------------------------------ | ------- |
@@ -120,7 +120,7 @@ Environment variables that limits the use for Chevereto
 
 Environment variables for the file uploading limits. It applies only for our container provisioning.
 
-👉 For **non-container** based provisioning you need to change these settings at [php.ini configuration](../stack/php.md#php-configuration).
+For **non-container** based provisioning you need to change these settings at [php.ini configuration](../stack/php.md#configuration).
 
 | Variable                             | Example |
 | ------------------------------------ | ------- |

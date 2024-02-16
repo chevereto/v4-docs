@@ -1,4 +1,4 @@
-# 🐞 Debug
+# Debug
 
 Debug enables to dump information about errors that may be affecting the software functionality. If Chevereto isn't working properly it will require debugging to understand the situation.
 
@@ -14,7 +14,7 @@ cd app && vendor/bin/xr
 
 ## Debug with Docker
 
-👉 Replace `CONTAINER` with the container name.
+Replace `CONTAINER` with the container name.
 
 Chevereto error log:
 

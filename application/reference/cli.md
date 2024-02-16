@@ -1,4 +1,4 @@
-# 💻 CLI
+# CLI
 
 `app/bin/legacy`
 
@@ -103,7 +103,7 @@ The `decrypt-secrets` command decrypts the application secrets stored as cipher 
 app/bin/legacy -C decrypt-secrets
 ```
 
-💡 After running the above command set `CHEVERETO_ENCRYPTION_KEY` to **empty string** to disable encryption.
+After running the above command set `CHEVERETO_ENCRYPTION_KEY` to **empty string** to disable encryption.
 
 ## Htaccess
 

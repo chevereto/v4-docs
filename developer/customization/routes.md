@@ -1,4 +1,4 @@
-# 🛤 Routes
+# Routes
 
 `😪 Outdated docs - please check later.`
 

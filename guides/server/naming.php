@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'vps.md' => '🏝 VPS',
+    'vps.md' => 'VPS',
 ];

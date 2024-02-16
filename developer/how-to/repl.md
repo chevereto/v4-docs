@@ -1,4 +1,4 @@
-# 💫 REPL
+# REPL
 
 Chevereto supports [Tinkewell](https://tinkerwell.app/) and [PsySH](https://psysh.org/), enabling to execute any set of instructions under the environment of a [read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (REPL).
 
@@ -22,10 +22,6 @@ $enabledProviders = Login::getProviders('enabled');
 ```
 :::
 
-## Using Tinkerwell
-
-To use Tinkerwell with Chevereto configure the PHP binary and open/connect your Chevereto installation.
-
 ## Using PsySH
 
 PsySH comes included with Chevereto V4, run the following command to start the REPL environment.
@@ -33,3 +29,7 @@ PsySH comes included with Chevereto V4, run the following command to start the R
 ```sh
 app/bin/repl
 ```
+
+## Using Tinkerwell
+
+To use Tinkerwell with Chevereto configure the PHP binary and open/connect your Chevereto installation.

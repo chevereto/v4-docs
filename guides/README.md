@@ -1,4 +1,4 @@
-# ℹ️ Introduction
+# Introduction
 
 We have prepared several guides on how you can install Chevereto. If you are new to self-hosting this is a good starting point.
 

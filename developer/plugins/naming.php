@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'development.md' => '🏗 Development',
-    'publishing.md' => '🛰 Publishing',
+    'development.md' => 'Development',
+    'publishing.md' => 'Publishing',
 ];

@@ -1,4 +1,4 @@
-# 🐘 PHP
+# PHP
 
 | Version | PHP  |
 | ------- | ---- |
@@ -10,9 +10,9 @@ Chevereto V4 is [PHP](https://php.net/) software, it has been designed using:
 * [PHP packages](https://deb.sury.org/) from Ondřej Surý.
 * [PHP extensions](https://www.php.net/manual/en/extensions.membership.php) provided by [PECL](https://pecl.php.net/).
 
-👉 Packages and PECL provides the same convenience, but as packages are made for debian-based systems, you should prefer PECL if you don't have a debian-compatible system.
+Packages and PECL provides the same convenience, but as packages are made for debian-based systems, you should prefer PECL if you don't have a debian-compatible system.
 
-💡 Packages not only contain the software, it could trigger other effects in the system.
+Packages not only contain the software, it could trigger other effects in the system.
 
 ## Resources
 
@@ -81,13 +81,13 @@ Chevereto requires unrestricted access to **all PHP functions**. Note that the f
 
 The image library (GD, Imagick) should be provided with support for `PNG GIF JPG BMP WEBP`. By default, Chevereto prefers Imagick and fallback to GD.
 
-👉 If you need to explicit use GD you can pass this [ENV](../configuration/environment.md#image-handling-variables):
+If you need to explicit use GD you can pass this [ENV](../configuration/environment.md#image-handling-variables):
 
 ```php
 CHEVERETO_IMAGE_LIBRARY=gd
 ```
 
-👉 If the server doesn't provide support for all the image formats handled by Chevereto, the ENV must reflect only the system supported formats. In the following example Chevereto is configured with explicit support only for PNG, GIF, BMP and JPG (removes WEBP):
+If the server doesn't provide support for all the image formats handled by Chevereto, the ENV must reflect only the system supported formats. In the following example Chevereto is configured with explicit support only for PNG, GIF, BMP and JPG (removes WEBP):
 
 ```php
 CHEVERETO_IMAGE_FORMATS_AVAILABLE='["JPG","PNG","BMP","GIF"]'

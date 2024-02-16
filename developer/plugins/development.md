@@ -1,3 +1,3 @@
-# 🏗 Plugin Development
+# Plugin Development
 
-`🚧 Work in progress`
+`Work in progress`

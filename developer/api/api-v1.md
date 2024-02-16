@@ -1,4 +1,4 @@
-# 🖼 API Version 1.1
+# API Version 1.1
 
 Chevereto API V1 was introduced in Chevereto V2 and it allows to upload pictures as guest to a Chevereto website.
 
@@ -6,13 +6,13 @@ Chevereto V4 updates API V1 to 1.1 introducing support for **user API keys** and
 
 ## Key
 
-API V1.1 works with an user key which is available for each user at `/settings/api`. Admin user can set the public API key for guest uploads at the [Dashboard panel](https://v4-admin.chevereto.com/settings/api.html).
+API V1.1 works with an user key which is available for each user at `/settings/api`. Admin user can set the public API key for guest uploads at the [Dashboard panel](https://v4-admin.chevereto.com/settings/guest-api.html#public-api-key).
 
 ## Request method
 
 API V1 calls can be made using POST or GET request methods.
 
-👉 POST request method is **recommended**.
+POST request method is **recommended**.
 
 ## Request URL
 
@@ -32,9 +32,9 @@ X-API-Key: chv_asd_somekeyhere
 
 ### Required Parameters
 
-| Name   | Description                                                                                                          |
-| ------ | -------------------------------------------------------------------------------------------------------------------- |
-| source | A image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. Also supports FILES["source"]. |
+| Name   | Description                                                                                                            |
+| ------ | ---------------------------------------------------------------------------------------------------------------------- |
+| source | A image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. Also supports `FILES["source"]`. |
 
 ### Optional Parameters
 

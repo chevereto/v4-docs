@@ -1,10 +1,4 @@
-# 👋🏾 Welcome to Chevereto!
-
-::: tip <i>A note from the author</i>
-If you are new to Chevereto welcome aboard and enjoy the ride. If you know about Chevereto, [welcome back](../changelog/welcome-back.md)!
-
-— [Rodolfo Berrios](https://rodolfoberrios.com)
-:::
+# Welcome to Chevereto!
 
 ## Get started in 5 minutes
 

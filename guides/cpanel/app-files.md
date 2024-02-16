@@ -1,4 +1,4 @@
-# 📂 cPanel App files
+# cPanel App files
 
 ## Installing Chevereto
 
@@ -18,7 +18,7 @@ To install Chevereto on cPanel you need to use the release package and cPanel's 
 
 * A prompt appears, enter path `/public_html` and click on **Extract Files**
 
-💡 You can customize `/public_html` to reflect the path for your configured website.
+You can customize `/public_html` to reflect the path for your configured website.
 
 ![File Manager Extract Files](../../src/manuals/cpanel/file-manager-extract-files.png)
 
@@ -28,4 +28,4 @@ To install Chevereto on cPanel you need to use the release package and cPanel's 
 
 To update Chevereto on cPanel simply follow the steps described above. That process only alters the application files, it won't touch the website contents.
 
-💡 If you made modifications to the software you may want to review these changes before.
+If you made modifications to the software you may want to review these changes before.

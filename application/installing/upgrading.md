@@ -1,8 +1,8 @@
-# 🚀 Upgrading
+# Upgrading
 
-This process is for upgrading to Chevereto V4 from **Chevereto V3.20** (previous major release). Check [Upgrading Free](upgrading-free.md) if you need to upgrade from a free edition.
+This process is for upgrading to Chevereto V4 from **Chevereto V3.20** (previous major release). Check [Upgrading Free](./from-free.md) if you need to upgrade from a free edition.
 
-💡 Review [Chevereto V4 vs V3](../../introduction/changelog/welcome-back.md#chevereto-v4-vs-v3) comparison tables for a better understanding of changes in V4.
+Review [Chevereto V4 vs V3](../../introduction/changelog/welcome-back.md#chevereto-v4-vs-v3) comparison tables for a better understanding of changes in V4.
 
 ## Requirements
 
@@ -19,7 +19,7 @@ Follow these step:
 * Override Chevereto V3 files with Chevereto V4 files
 * Switch to PHP 8
 * Create [app/env.php](../configuration/env.php.md) (see remark below)
-* Proceed with [database update](updating.md##database-update)
+* Proceed with [database update](updating.md#database-update)
 
 ### Application settings
 

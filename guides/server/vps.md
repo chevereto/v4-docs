@@ -1,8 +1,4 @@
-# VPS
-
-::: tip
-The *best* deploy alternative for Chevereto is [Docker](../docker/README.md). But Chevereto can be deployed anywhere and this guide may suit your needs.
-:::
+# Chevereto VPS
 
 VPS stands for Virtual Private Server which for our purpose is described as the type of server where you get root access to install Linux on it.
 
@@ -20,7 +16,7 @@ For this guide you will require a server. the following:
 
 * VPS machine ([Linode](https://chv.to/linode), [Vultr](https://chv.to/vultr), etc.) with Ubuntu 22.04
 * Terminal software (iTerm, Windows Shell)
-* Chevereto V4 license
+* Chevereto license (for paid edition)
 
 ## Root login
 

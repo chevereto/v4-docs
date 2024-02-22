@@ -1,8 +1,4 @@
-# Plesk
-
-::: tip
-The *best* deploy alternative for Chevereto is [Docker](../docker/README.md). But Chevereto can be deployed anywhere and this guide may suit your needs.
-:::
+# Chevereto Plesk
 
 Plesk is a web panel software available in managed servers, which are machines where the system libraries are installed and provisioned by your provider. In managed servers there's no need to install packages or compile libraries as Plesk provides an user interface for configuring the server.
 
@@ -11,7 +7,7 @@ This deploy alternative doesn't require tech knowledge. But it comes at a cost a
 ## Requirements
 
 * Plesk based hosting service
-* Chevereto license
+* Chevereto license (for paid edition)
 
 ## Purchase hosting
 

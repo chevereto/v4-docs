@@ -2,18 +2,31 @@
 
 Installation refers to the process where the **software files** gets provided in the target machine.
 
-## Requirements
+## Stack
 
-To run Chevereto it will require [PHP](../stack/php.md), [Web Server](../stack/web-server.md), [MySQL database](../stack/mysql-server.md) and [CRON](../stack/cron.md).
+Chevereto requires [PHP](../stack/php.md), a [Web Server](../stack/web-server.md), [MySQL database](../stack/mysql-server.md) and [CRON](../stack/cron.md).
 
-## Installation guides
+## Official guides
 
-For fresh installations continue with one of the following guides:
+For fresh installations continue with one of the following guides.
 
-* [Docker](../../guides/docker/README.md) for installing our container-based provisioning.
-* [VPS](../../guides/server/vps.md) for private servers.
 * [cPanel](../../guides/cpanel/README.md) for cPanel servers.
 * [Plesk](../../guides/plesk/README.md) for Plesk servers.
+* [Docker](../../guides/docker/README.md) for installing our container-based provisioning.
+* [VPS](../../guides/server/vps.md) for private servers.
+
+## Community guides
+
+The following guides have been contributed by users of the software.
+
+* [Chevereto on Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/)
+
+## Using installer software
+
+Chevereto is available at the following installers, look for this software at your hosting control panel.
+
+* [Installatron](https://installatron.com/chevereto)
+* [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto_Free)
 
 ## Using release package
 
@@ -24,7 +37,7 @@ The release package is a `zip` file containing the software files.
 
 ### Manual (CLI)
 
-Run the following [command](https://github.com/chevereto/vps#get) to download and extract Chevereto package:
+Run the following [command](https://github.com/chevereto/vps#get) to download and extract package:
 
 ```sh
 bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh)
@@ -41,12 +54,12 @@ bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh
 
 Once the software files are provided the software is ready for [Setup](#setup). This is required only once per instance.
 
-Setup refers to the process when the Chevereto database tables and its admin user is created. You can carry this process in [HTTP](#http-setup) or [CLI](#cli-install) context.
+Setup refers to the process when the Chevereto database tables and its admin user is created. You can carry this process in [HTTP](#install-gui) or [CLI](#install-cli) context.
 
-### HTTP setup
+### Install (GUI)
 
 * Go to `/install`
 
-### CLI install
+### Install (CLI)
 
 * Refer to [CLI install](../reference/cli.md#install).

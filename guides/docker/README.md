@@ -1,10 +1,6 @@
-# Chevereto Factory
+# Chevereto Docker
 
 Roll your own multi-website Chevereto infrastructure with Chevereto Factory, a Docker-based system that allows you to deploy and maintain multiple Chevereto websites on demand.
-
-::: tip
-This is the **best way** to deploy Chevereto. Docker refers to container technology and is the way in which we ship the server infra needed to run Chevereto.
-:::
 
 By the end of this tutorial, you'll have your own Chevereto Factory up and running, capable of deploying and maintaining multiple Chevereto websites on demand, all with automatic sub-domain creation and renewable HTTPS certificates.
 

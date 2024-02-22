@@ -1,20 +1,30 @@
 # Updating
 
-This process is for instances already running **Chevereto V4**. To update Chevereto provide the updated software files and then proceed with database update.
+This process is for instances already running **Chevereto V4**. The process consist in update software files and then proceed with database migrations.
 
-## Update software files
+## Software filesystem update
 
-To update the software files depends on how you installed Chevereto:
-
-### Docker
-
-When using Docker it will required to re-create the Chevereto image and then re-up the container. Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md) for instructions.
+To update the software files depends on how you installed Chevereto. Follow the instructions for your installation method.
 
 ### Release package
 
-When using the release package it will required to override the previous version of the software files. Refer to [Installing](installation.md#using-release-package) (using release package) for instructions.
+This applies to any non-Docker installation.
 
-## Database Update
+* Go to `/dashboard`
+* Click on **Check upgrades** button
+* Follow the on-screen upgrade instructions
+
+If you need to force upgrade (re-download software files) you can do it by accesing to `/dashboard/?upgrade`.
+
+For manual upgrade refer to [Installing](installation.md#using-release-package) for instructions on how to install the software files.
+
+### Docker
+
+When using Docker it will required to re-build the Chevereto image ([make image](https://github.com/chevereto/docker/blob/4.0/docs/BUILDING.md) or [docker build](https://github.com/chevereto/docker/blob/4.0/docs/PURE-DOCKER.md)) and then re-start the containers.
+
+Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.0/docs/UPDATING.md) for instructions.
+
+## Database update
 
 Once the software files gets updated it will required to update the Chevereto database schema. This process can be carried on HTTP or command-line context.
 

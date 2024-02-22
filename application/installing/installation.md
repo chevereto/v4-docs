@@ -10,10 +10,10 @@ Chevereto requires [PHP](../stack/php.md), a [Web Server](../stack/web-server.md
 
 For fresh installations continue with one of the following guides.
 
-* [cPanel](../../guides/cpanel/README.md) for cPanel servers.
-* [Plesk](../../guides/plesk/README.md) for Plesk servers.
-* [Docker](../../guides/docker/README.md) for installing our container-based provisioning.
-* [VPS](../../guides/server/vps.md) for private servers.
+* [Chevereto cPanel](../../guides/cpanel/README.md)
+* [Chevereto Plesk](../../guides/plesk/README.md)
+* [Chevereto Docker](../../guides/docker/README.md)
+* [Chevereto VPS](../../guides/server/vps.md)
 
 ## Community guides
 
@@ -23,7 +23,7 @@ The following guides have been contributed by users of the software.
 
 ## Using installer software
 
-Chevereto is available at the following installers, look for this software at your hosting control panel.
+Chevereto is available at the following installers, look for the following software at your hosting control panel.
 
 * [Installatron](https://installatron.com/chevereto)
 * [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto_Free)

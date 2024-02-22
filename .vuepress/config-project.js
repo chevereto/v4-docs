@@ -26,11 +26,6 @@ module.exports = {
             rel: 'apple-touch-icon',
             href: '/logo.png'
         }],
-        ['link', {
-            rel: 'mask-icon',
-            href: '/logo.svg',
-            color: '#3eaf7c'
-        }],
         ['meta', {
             name: 'msapplication-TileImage',
             content: '/logo.png'

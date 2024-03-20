@@ -113,69 +113,87 @@ When using JSON the response output will contain the `status_txt` and `status_co
 
 ```json
 {
-    "status_code": 200,
-    "success": {
-        "message": "image uploaded",
-        "code": 200
+  "status_code": 200,
+  "success": {
+    "message": "image uploaded",
+    "code": 200
+  },
+  "image": {
+    "name": "cannon-zoom-lens",
+    "extension": "jpeg",
+    "size": 296362,
+    "width": 1920,
+    "height": 1280,
+    "date": "2024-03-20 15:49:31",
+    "date_gmt": "2024-03-20 18:49:31",
+    "title": "cannon zoom lens",
+    "description": null,
+    "nsfw": 0,
+    "storage_mode": "datefolder",
+    "md5": "fde3bfd2a50ce00f0be0c32ec7088240",
+    "source_md5": null,
+    "original_filename": "cannon-zoom-lens.jpg",
+    "original_exifdata": "{\"FileName\":\"chvtempQmM74X\",\"FileDateTime\":\"1710960571\",\"FileSize\":\"296362\",\"FileType\":\"2\",\"MimeType\":\"image\\/jpeg\",\"SectionsFound\":\"\",\"COMPUTED\":{\"html\":\"width=\\\"1920\\\" height=\\\"1280\\\"\",\"Height\":\"1280\",\"Width\":\"1920\",\"IsColor\":\"1\"},\"IPTC\":[],\"width\":\"1920\",\"height\":\"1280\"}",
+    "views": 0,
+    "category_id": null,
+    "chain": 7,
+    "thumb_size": 35327,
+    "medium_size": 48481,
+    "expiration_date_gmt": null,
+    "likes": 0,
+    "is_animated": 0,
+    "is_approved": 1,
+    "is_360": 0,
+    "file": {
+      "resource": {
+        "type": "path"
+      }
     },
+    "id_encoded": "vZxn",
+    "filename": "cannon-zoom-lens.jpeg",
+    "mime": "image/jpeg",
+    "url": "http://localhost/images/2024/03/20/cannon-zoom-lens.jpeg",
+    "url_viewer": "http://localhost/image/cannon-zoom-lens.vZxn",
+    "path_viewer": "/image/cannon-zoom-lens.vZxn",
+    "url_short": "http://localhost/image/vZxn",
     "image": {
-        "name": "example",
-        "extension": "png",
-        "size": 53237,
-        "width": 1151,
-        "height": 898,
-        "date": "2014-06-04 15:32:33",
-        "date_gmt": "2014-06-04 19:32:33",
-        "storage_id": null,
-        "description": null,
-        "nsfw": "0",
-        "md5": "c684350d722c956c362ab70299735830",
-        "storage": "datefolder",
-        "original_filename": "example.png",
-        "original_exifdata": null,
-        "views": "0",
-        "id_encoded": "L",
-        "filename": "example.png",
-        "ratio": 1.2817371937639,
-        "size_formatted": "52 KB",
-        "mime": "image/png",
-        "bits": 8,
-        "channels": null,
-        "url": "http://127.0.0.1/images/2014/06/04/example.png",
-        "url_viewer": "http://127.0.0.1/image/L",
-        "thumb": {
-            "filename": "example.th.png",
-            "name": "example.th",
-            "width": 160,
-            "height": 160,
-            "ratio": 1,
-            "size": 17848,
-            "size_formatted": "17.4 KB",
-            "mime": "image/png",
-            "extension": "png",
-            "bits": 8,
-            "channels": null,
-            "url": "http://127.0.0.1/images/2014/06/04/example.th.png"
-        },
-        "medium": {
-            "filename": "example.md.png",
-            "name": "example.md",
-            "width": 500,
-            "height": 390,
-            "ratio": 1.2820512820513,
-            "size": 104448,
-            "size_formatted": "102 KB",
-            "mime": "image/png",
-            "extension": "png",
-            "bits": 8,
-            "channels": null,
-            "url": "http://127.0.0.1/images/2014/06/04/example.md.png"
-        },
-        "views_label": "views",
-        "display_url": "http://127.0.0.1/images/2014/06/04/example.md.png",
-        "how_long_ago": "moments ago"
+      "filename": "cannon-zoom-lens.jpeg",
+      "name": "cannon-zoom-lens",
+      "mime": "image/jpeg",
+      "extension": "jpeg",
+      "url": "http://localhost/images/2024/03/20/cannon-zoom-lens.jpeg",
+      "size": 296362
     },
-    "status_txt": "OK"
+    "thumb": {
+      "filename": "cannon-zoom-lens.th.jpeg",
+      "name": "cannon-zoom-lens.th",
+      "mime": "image/jpeg",
+      "extension": "jpeg",
+      "url": "http://localhost/images/2024/03/20/cannon-zoom-lens.th.jpeg",
+      "size": 35327
+    },
+    "medium": {
+      "filename": "cannon-zoom-lens.md.jpeg",
+      "name": "cannon-zoom-lens.md",
+      "mime": "image/jpeg",
+      "extension": "jpeg",
+      "url": "http://localhost/images/2024/03/20/cannon-zoom-lens.md.jpeg",
+      "size": 48481
+    },
+    "size_formatted": "296.4 KB",
+    "display_url": "http://localhost/images/2024/03/20/cannon-zoom-lens.md.jpeg",
+    "display_width": "500",
+    "display_height": 333,
+    "views_label": "views",
+    "likes_label": "likes",
+    "how_long_ago": "moments ago",
+    "date_fixed_peer": "2024-03-20 18:49:31",
+    "title_truncated": "cannon zoom lens",
+    "title_truncated_html": "cannon zoom lens",
+    "is_use_loader": false,
+    "delete_url": "http://localhost/image/vZxn/delete/9ed729f18b596631068d19f3d22bd5fff3a2a1d4c57d13cd"
+  },
+  "status_txt": "OK"
 }
 ```
 

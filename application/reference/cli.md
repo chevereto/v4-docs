@@ -61,6 +61,14 @@ The `update` command updates the Chevereto database schema.
 app/bin/legacy -C update
 ```
 
+## Version
+
+The `version` command outputs the Chevereto filesystem version.
+
+```sh
+app/bin/legacy -C version
+```
+
 ## Cron
 
 The `cron` command runs the background jobs required by Chevereto.

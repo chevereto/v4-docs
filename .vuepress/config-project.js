@@ -6,10 +6,6 @@ module.exports = {
             rel: 'icon',
             href: '/logo.png'
         }],
-        ['link', {
-            rel: 'manifest',
-            href: '/manifest.json'
-        }],
         ['meta', {
             name: 'theme-color',
             content: '#23a8e0'
@@ -27,16 +23,12 @@ module.exports = {
             href: '/logo.png'
         }],
         ['meta', {
-            name: 'msapplication-TileImage',
-            content: '/logo.png'
-        }],
-        ['meta', {
             name: 'msapplication-TileColor',
             content: '#000000'
         }],
         ['script', {
-                async: true,
-                src: 'https://www.googletagmanager.com/gtag/js?id=G-66RGXZE185',
+            async: true,
+            src: 'https://www.googletagmanager.com/gtag/js?id=G-66RGXZE185',
         }],
         ['script', {},
             [
@@ -46,6 +38,7 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/logo.svg',
+        pwa: false,
         docsRepo: 'chevereto/v4-docs',
         docsBranch: 'main',
         smoothScroll: false,

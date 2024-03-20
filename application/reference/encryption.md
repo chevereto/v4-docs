@@ -15,6 +15,7 @@ The following settings are encrypted in the database:
 | Setting                                                                                                             | Key                        |
 | ------------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | [API V1 key (public)](../../developer/api/api-v1.md#key)                                                            | api_v1_key                 |
+| Album password                                                                                                      | album_password             |
 | [SMTP server](https://v4-admin.chevereto.com/settings/email.html#smtp-server-and-port)                              | email_smtp_server          |
 | SMTP port                                                                                                           | email_smtp_server_port     |
 | [SMTP username](https://v4-admin.chevereto.com/settings/email.html#smtp-username)                                   | email_smtp_server_username |
@@ -64,7 +65,7 @@ Handle the encryption key with the same discretion of a password.
 
 To enable encryption provide the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
 
-This key is automatic provided when using [HTTP setup](../installing/installation.md#http-setup), stored in the [env.php](../configuration/env.php.md) file.
+This key is automatic provided when using [HTTP setup](../installing/installation.md#setup), stored in the [env.php](../configuration/env.php.md) file.
 
 ### From previous versions
 

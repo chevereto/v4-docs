@@ -8,13 +8,21 @@ To update the software files depends on how you installed Chevereto. Follow the 
 
 ### Release package
 
-This applies to any non-Docker installation.
+This applies to any **non-Docker** installation.
+
+**Note:** For paid edition and if you haven't entered your license key make to visit `/dashboard/?license` first.
 
 * Go to `/dashboard`
 * Click on **Check upgrades** button
 * Follow the on-screen upgrade instructions
 
-If you need to force upgrade (re-download software files) you can do it by accesing to `/dashboard/?upgrade`.
+For CLI driven update run the following command:
+
+```sh
+php app/upgrading.php
+```
+
+If you need to force upgrade (re-download software files) you can do it by accessing to `/dashboard/?upgrade`.
 
 For manual upgrade refer to [Installing](installation.md#using-release-package) for instructions on how to install the software files.
 

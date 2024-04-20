@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.svg
 heroText: Chevereto V4 Docs
-tagline: Image hosting software
+tagline: Image and Video hosting software
 actionText: Get Started →
 actionLink: /introduction/get-started/welcome
 footer: Created by Rodolfo Berrios

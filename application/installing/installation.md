@@ -10,9 +10,10 @@ Chevereto requires [PHP](../stack/php.md), a [Web Server](../stack/web-server.md
 
 For fresh installations continue with one of the following guides.
 
+* [Chevereto Docker Factory](../../guides/docker/README.md)
+* [Chevereto Pure Docker](../../guides/docker/pure-docker.md)
 * [Chevereto cPanel](../../guides/cpanel/README.md)
 * [Chevereto Plesk](../../guides/plesk/README.md)
-* [Chevereto Docker](../../guides/docker/README.md)
 * [Chevereto VPS](../../guides/server/vps.md)
 
 ## Community guides

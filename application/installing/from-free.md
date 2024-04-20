@@ -13,7 +13,7 @@ Users of [chevereto/chevereto](https://github.com/chevereto/chevereto) can one-c
 
 To manual upgrade follow the [Updating](updating.md) documentation using the paid edition files.
 
-**Note:** [Docker](../../guides/docker/README.md) users don't need any of these steps, simply re-build the container image ([make image](https://github.com/chevereto/docker/blob/4.0/docs/BUILDING.md) or [docker build](https://github.com/chevereto/docker/blob/4.0/docs/PURE-DOCKER.md)) and re-start your containers.
+**Note:** [Docker](../../guides/docker/README.md) users don't need any of these steps, simply re-build the container image ([make image](https://github.com/chevereto/docker/blob/4.1/docs/BUILDING.md) or [docker build](https://github.com/chevereto/docker/blob/4.1/docs/PURE-DOCKER.md)) and re-start your containers.
 
 ## rodber/chevereto-free
 

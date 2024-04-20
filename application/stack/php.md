@@ -1,8 +1,9 @@
 # PHP
 
-| Version | PHP  |
-| ------- | ---- |
-| 4.0     | ~8.0 |
+| Version | PHP    |
+| ------- | ------ |
+| 4.1     | 8.0.30 |
+| 4.0     | ~8.0   |
 
 Chevereto V4 is [PHP](https://php.net/) software, it has been designed using:
 

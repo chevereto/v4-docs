@@ -1,4 +1,4 @@
-# Chevereto Docker
+# Chevereto Factory
 
 Roll your own multi-website Chevereto infrastructure with Chevereto Factory, a Docker-based system that allows you to deploy and maintain multiple Chevereto websites on demand.
 

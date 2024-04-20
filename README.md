@@ -8,11 +8,14 @@ actionLink: /introduction/get-started/welcome
 footer: Created by Rodolfo Berrios
 ---
 
-# Install
+# QuickStart
+
+## Install
 
 Install Chevereto following our guides for:
 
-* [Docker](./guides/docker/README.md)
+* [Pure Docker](./guides/docker/pure-docker.md)
+* [Docker Factory](./guides/docker/README.md)
 * [VPS](./guides/server/vps.md)
 * [cPanel](./guides/cpanel/README.md)
 * [Plesk](./guides/plesk/README.md)

@@ -2,6 +2,12 @@
 
 Debug enables to dump information about errors that may be affecting the software functionality. If Chevereto isn't working properly it will require debugging to understand the situation.
 
+Once you enable debug you need to trigger the issue again, this will generate a log that will help you to understand what is going on.
+
+## Debug Errors
+
+To debug errors go to [Settings > System > Debug errors](https://v4-admin.chevereto.com/settings/system.html#debug-errors) and enable "Debug errors". By enabling this Chevereto will debug errors to the screen (only to administrators).
+
 ## Debug with xrDebug
 
 * Run xrDebug built-in server:
@@ -27,12 +33,6 @@ Chevereto access log:
 ```sh
 docker logs CONTAINER -f 2>/dev/null
 ```
-
-## Debug (production)
-
-By enabling this Chevereto will debug errors to the screen (only to administrators).
-
-Enable at [Settings > System > Debug Errors](https://v4-admin.chevereto.com/settings/system.html#debug-errors).
 
 ## Debug (development)
 

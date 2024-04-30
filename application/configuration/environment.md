@@ -87,6 +87,15 @@ Environment variables for controlling image handling.
 | CHEVERETO_IMAGE_FORMATS_AVAILABLE | `'JPG','PNG','BMP','GIF','WEBP'` |
 | CHEVERETO_IMAGE_LIBRARY           | `imagick` `gd`                   |
 
+## Binary paths
+
+Environment variables for controlling binary tools used by Chevereto.
+
+| Variable                 | Example                        |
+| ------------------------ | ------------------------------ |
+| CHEVERETO_BINARY_FFMPEG  | `ffmpeg` `/some/path/ffmpeg`   |
+| CHEVERETO_BINARY_FFPROBE | `ffprobe` `/some/path/ffprobe` |
+
 ## Toggles
 
 Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable some Chevereto functionality.

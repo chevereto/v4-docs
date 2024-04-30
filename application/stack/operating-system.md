@@ -16,4 +16,4 @@ For non Unix-like systems as Windows we **recommend** using our [Docker](../../g
 
 ## Video processing
 
-Chevereto V4.1 (Pulento) requires [FFmpeg](https://ffmpeg.org) to process video uploads. The FFmpeg binary must be available in the system path, you can check this by running `ffmpeg -version` in the terminal.
+Chevereto V4.1 (Pulento) requires [FFmpeg](https://ffmpeg.org) and FFprobe to process video uploads. The FFmpeg binary should be available at the system path, alternatively you can configure the [binary location](../configuration/environment.md#binary-paths) manually.

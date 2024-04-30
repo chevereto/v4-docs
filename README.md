@@ -35,6 +35,10 @@ For Chevereto V4 users:
 
 * Follow the [Updating](application/installing/updating.md) guide to keep your system updated.
 
+## Troubleshooting
+
+Got a `Something went wrong` message? Don't panic and check our [Troubleshooting](application/reference/errors.md#something-went-wrong) guide.
+
 ## Support
 
 Go to [chevereto.com/support](https://chevereto.com/support).

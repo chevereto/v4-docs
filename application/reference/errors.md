@@ -24,13 +24,17 @@ The id is randomly generated and is unique per error event.
 
 ## Something went wrong
 
- This error spawns on production context, where you don't want any debug info visible to public users.
+This error spawns on **production** context, the actual cause of this error is **hidden from visitors by design** to don't expose any sensitive debug info to end-users.
 
+> Something went wrong
 > Please try again later. If the problem persist don't hesitate to contact the system administrator.
 
-**Note:** You are the system administrator.
+**Note:** *You are the system administrator*.
 
-This [silent message](https://chevere.github.io/throwable-handler/demo/output/html-silent.html) indicates an error caught by Chevereto, but without disclosing the actual cause of error. Go to [Debug](../../developer/how-to/debug.md) to learn how to retrieve these from the [configured log device](../configuration/environment.md#error-logging-variables).
+This [silent message](https://chevere.github.io/throwable-handler/demo/output/html-silent.html) indicates an error caught by Chevereto, but without disclosing the actual cause of error.
+
+* Go to **Dashboard > Settings > System** and enable [Debug errors](https://v4-admin.chevereto.com/settings/system.html#debug-errors) to print the error message to administrators.
+* Learn more at [Debug](../../developer/how-to/debug.md) to retrieve these errors from the [configured log device](../configuration/environment.md#error-logging-variables).
 
 ## Exception thrown
 

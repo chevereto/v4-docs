@@ -17,7 +17,7 @@ POST request method is **recommended**.
 ## Request URL
 
 ```plain
-http://mysite.com/api/1/upload/
+http://mysite.com/api/1/upload
 ```
 
 ## Authorization
@@ -87,14 +87,14 @@ Following values can be used for `expiration` parameter.
 
 ### Compatibility with ImgBB API
 
-ImgBB is a popular service based on Chevereto V3.
+ImgBB is a popular image hosting service 100% based on Chevereto (V3).
 
 Any existing [ImgBB API client](https://github.com/search?q=imgbb) is compatible with Chevereto V4's API V1.1, simple as change the domain name.
 
 ## Example call
 
 ```plain
-POST http://mysite.com/api/1/upload/
+POST http://mysite.com/api/1/upload
 ```
 
 ## API response

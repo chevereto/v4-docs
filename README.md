@@ -12,15 +12,18 @@ footer: Created by Rodolfo Berrios
 
 ## Install
 
+Chevereto runs anywhere, system requirements are minimal and it can run on any server.
+
 Install Chevereto following our guides for:
 
-* [Pure Docker](./guides/docker/pure-docker.md)
-* [Docker Factory](./guides/docker/README.md)
-* [VPS](./guides/server/vps.md)
-* [cPanel](./guides/cpanel/README.md)
-* [Plesk](./guides/plesk/README.md)
+* [Docker](https://github.com/chevereto/docker) (Multi-arch image compatible with `x86_64` and `arm64`)
+  * [Pure Docker](./guides/docker/pure-docker.md)
+  * [Chevereto Docker](./guides/docker/README.md)
+* [VPS](./guides/server/vps.md) (DigitalOcean, Linode, Vultr, etc)
+* [cPanel](./guides/cpanel/)
+* [Plesk](./guides/plesk/)
 
-Review our [Installation](application/installing/installation.md) for all alternatives.
+Chevereto is also available at [DigitalOcean Marketplace](https://chevereto.com/go/digitalocean), [Vultr Marketplace](https://chevereto.com/go/vultr), [Installatron](https://installatron.com/chevereto) and [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto). Review our [Installation docs](./application/installing/installation.md) for all alternatives.
 
 ## Updating
 

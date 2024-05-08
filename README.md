@@ -22,18 +22,18 @@ Install Chevereto following our guides for:
 
 Review our [Installation](application/installing/installation.md) for all alternatives.
 
-## Upgrading
-
-For Chevereto V3 users:
-
-* Follow the [Upgrading](application/installing/upgrading.md) guide.
-* Check the [Welcome Back](introduction/changelog/welcome-back.md#chevereto-v4-vs-v3) guide.
-
 ## Updating
 
 For Chevereto V4 users:
 
-* Follow the [Updating](application/installing/updating.md) guide to keep your system updated.
+* Follow the [Updating guide](application/installing/updating.md) to keep your Chevereto V4 system updated.
+
+## Upgrading
+
+For Chevereto V3 users:
+
+* Follow the [Upgrading guide](application/installing/upgrading.md) to upgrade to Chevereto V4.
+* Check the [Welcome Back](introduction/changelog/welcome-back.md#chevereto-v4-vs-v3) reference.
 
 ## Troubleshooting
 

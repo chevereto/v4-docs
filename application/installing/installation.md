@@ -10,24 +10,32 @@ Chevereto requires [PHP](../stack/php.md), a [Web Server](../stack/web-server.md
 
 For fresh installations continue with one of the following guides.
 
-* [Chevereto Docker Factory](../../guides/docker/README.md)
-* [Chevereto Pure Docker](../../guides/docker/pure-docker.md)
-* [Chevereto cPanel](../../guides/cpanel/README.md)
-* [Chevereto Plesk](../../guides/plesk/README.md)
-* [Chevereto VPS](../../guides/server/vps.md)
+* Docker
+  * [Chevereto Docker](../../guides/docker/README.md)
+  * [Pure Docker](../../guides/docker/pure-docker.md)
+* [VPS](../../guides/server/vps.md)
+* [cPanel](../../guides/cpanel/README.md)
+* [Plesk](../../guides/plesk/README.md)
 
 ## Community guides
 
 The following guides have been contributed by users of the software.
 
-* [Chevereto on Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/)
+* [Chevereto Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/)
+
+## Marketplace
+
+Chevereto is available at the following application marketplaces.
+
+* [DigitalOcean Marketplace](https://chevereto.com/go/digitalocean)
+* [Vultr Marketplace](https://chevereto.com/go/vultr)
 
 ## Using installer software
 
 Chevereto is available at the following installers, look for the following software at your hosting control panel.
 
 * [Installatron](https://installatron.com/chevereto)
-* [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto_Free)
+* [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto)
 
 ## Using release package
 

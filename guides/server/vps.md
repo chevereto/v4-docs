@@ -4,31 +4,24 @@
 We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto VPS for you, including all the requirements and configurations.
 :::
 
-VPS stands for Virtual Private Server which for our purpose is described as the type of server where you get root access to install Linux on it.
-
-This deploy alternative provides superb customization. But it comes at a cost as it requires complete system administration.
-
-For experienced legacy users this is a good alternative to run Chevereto.
+Collection of universal bash scripts to install Chevereto in any VPS (Virtual Private Server). We strongly recommend [DigitalOcean](https://chv.to/digitalocean), [Vultr](https://chv.to/vultr) and [Linode](https://chv.to/linode).
 
 ## Repository
 
 We have a GitHub repository with all the commands we will need. Check the repository at [chevereto/vps](https://github.com/chevereto/vps) for instructions.
 
-## Requirements
+## Instructions
 
-For this guide you will require a server. the following:
+* Root login to your VPS
+* Run the following script(s)
 
-* VPS machine ([Linode](https://chv.to/linode), [Vultr](https://chv.to/vultr), etc.) with Ubuntu 22.04
-* Terminal software (iTerm, Windows Shell)
-* Chevereto license (for paid edition)
+## Ubuntu
 
-## Root login
+> **Note**: Ubuntu LTS 24.04 is recommended. If you run other system you may need to alter the scripts. Feel free to contribute.
 
-Root login into the VPS. You may also use a non-root user long as it has permissions to modify `www-data` group.
+### Prepare
 
-## Prepare machine
-
-To prepare the machine means to install all system requirements. This will take care to install PHP, Apache HTTP Web server, MySQL Server, Composer and Certbot.
+The [prepare.sh](https://github.com/chevereto/vps/blob/4.1/ubuntu/24.04/prepare.sh) script install the system stack (PHP, Apache HTTP Web server, MySQL Server, Composer, FFmpeg and Certbot) on Ubuntu.
 
 Reboot the VPS to make sure to apply any pending kernel updates:
 
@@ -36,37 +29,91 @@ Reboot the VPS to make sure to apply any pending kernel updates:
 systemctl reboot
 ```
 
-Once done run [prepare.sh](https://github.com/chevereto/vps#prepare):
+Make sure to change `24.04` to match your Ubuntu LTS (available 20.04, 22.04 and 24.04).
 
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/ubuntu/22.04/prepare.sh)
+bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.1/ubuntu/24.04/prepare.sh)
 ```
 
-## New
+This message will be shown on success:
 
-The [new.sh](https://github.com/chevereto/vps#new) script downloads Chevereto and configures Apache HTTP Web server, MySQL, cron. It prepares Chevereto for [HTTP setup](../../application/installing/installation.md#http-setup).
+```plain
+[OK] Stack ready for Chevereto!
+```
+
+## Common
+
+* The scripts at `common/` will work under any unix-like system
+* Requires `curl` and `unzip`
+
+### New
+
+The [new.sh](https://github.com/chevereto/vps/blob/4.1/common/new.sh) script downloads Chevereto and configures Apache HTTP Web server, MySQL, CRON and FFmpeg. Its purpose is to prepare for [Chevereto Installation](https://v4-docs.chevereto.com/application/installing/installation.html).
+
+This is intended to brand new installations and it should run after [prepare](#prepare) as it assumes that the system stack is ready.
 
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/new.sh)
+bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.1/common/new.sh)
 ```
 
-## Get
+#### Notes
 
-The [get.sh](https://github.com/chevereto/vps#get) script download and extracts Chevereto in the current working folder.
+On the server:
 
-This works in any Unix-based system.
+* The web root is located at `/var/www/html`
+* The MySQL root password is saved at `/root/.mysql_password`
+* Logs are at `/var/log/apache2`
+
+IMPORTANT:
+
+* Secure your database by running `mysql_secure_installation`
+
+### Get
+
+The [get.sh](https://github.com/chevereto/vps/blob/4.1/common/get.sh) script download and extracts Chevereto in the **current working folder**.
+
+* `cd` into the website project folder (for example `/var/www/html`)
+* Run the following command
 
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh)
+bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.1/common/get.sh)
 ```
 
-## Cloudflare remote IP
+### Cloudflare remote IP
 
-When using CloudFlare must follow the [CloudFlare Real IP](https://github.com/chevereto/vps#cloudflare-remote-ip) instructions to detect the real connecting IP.
+The [cf-remoteip.sh](https://github.com/chevereto/vps/blob/4.1/common/cf-remoteip.sh) script syncs the known IPs for CloudFlare remote IP. This **must** be used if you are using CloudFlare.
 
-## Certbot HTTPS setup
+> **Warning**: If you use CloudFlare and not complete this setup your Chevereto installation won't be able to retrieve real visitors IP.
 
-Run the following command to get https with Certbot. Mind to change `example.com` with the target domain(s).
+```sh
+bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.1/common/cf-remoteip.sh)
+```
+
+* To save the above script in your VPS:
+
+```sh
+curl -f -SOJL \
+    --output-dir /etc/apache2 \
+    https://raw.githubusercontent.com/chevereto/vps/4.1/common/cf-remoteip.sh
+```
+
+* To add the above script to CRON (cron.d) to keep these IP ranges auto updated:
+
+```sh
+cat >/etc/cron.d/cf-remoteip <<EOM
+30 3 * * * /etc/apache2/cf-remoteip.sh >/dev/null 2>&1
+EOM
+```
+
+## HTTPS setup
+
+Run the following command to get automatic renewable HTTPS thanks to certbot. Mind to change `example.com` with the target domain(s).
+
+```sh
+certbot --apache -d example.com
+```
+
+If you are using `www.` subdomain you can add it like this:
 
 ```sh
 certbot --apache -d example.com -d www.example.com

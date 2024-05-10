@@ -17,9 +17,9 @@ Packages not only contain the software, it could trigger other effects in the sy
 
 ## Resources
 
-* [Website](https://php.net)
-* [Language reference](https://php.net/langref)
-* [Function reference](https://php.net/funcref)
+* [PHP Website](https://php.net)
+* [PHP Language reference](https://php.net/langref)
+* [PHP Function reference](https://php.net/funcref)
 
 ## What it does?
 
@@ -39,6 +39,8 @@ Having issues? Check the following common pitfalls:
 ## Configuration
 
 The following `ini` values are recommended for Chevereto installations.
+
+**Note:** Check which `ini` files are loaded at your Chevereto `/dashboard`.
 
 ```sh
 upload_max_filesize = 64M;
@@ -121,3 +123,9 @@ User generated content is stored at:
 * ./images
 * ./content/images/users
 * ./content/pages
+
+In **debian-based** systems use the following command to set the right permissions in your Chevereto installation (change `/var/www/html` to reflect your path).
+
+```sh
+chown -R www-data: /var/www/html
+```

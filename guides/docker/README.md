@@ -139,7 +139,7 @@ make deploy NAMESPACE=demo ADMIN_EMAIL=email@mywebsite.com
 
 The Chevereto website will be available within seconds as the new sub-domain propagates.
 
-## Upgrading your websites
+## Upgrading
 
 To upgrade you need to (1) Sync repository, (2) Re-build the container image, and (3) Update Chevereto instances.
 

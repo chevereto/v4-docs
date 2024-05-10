@@ -9,9 +9,10 @@
 ## General Resources
 
 * [Website](https://chevereto.com/) Everything goes at `chevereto.com`
-* [Newsletter](https://chv.to/newsletter) Updates on your inbox
+* [Newsletter](https://chevereto.com/go/newsletter) Updates on your inbox
 * [Blog](https://blog.chevereto.com/) Stay on loop
 * [Community](https://chevereto.com/community/) Join the discussion with other users
+* [Discord](https://chevereto.com/go/discord) Chat with us and other users
 * [GitHub](https://github.com/chevereto) Star our Open Source work
 * [Releases](https://releases.chevereto.com/) All Chevereto software release notes
 

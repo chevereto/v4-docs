@@ -1,6 +1,6 @@
 # From free
 
-You can upgrade from any free edition to paid Chevereto.
+You can upgrade from Chevereto free edition to any paid edition.
 
 ## chevereto/chevereto
 
@@ -13,7 +13,7 @@ Users of [chevereto/chevereto](https://github.com/chevereto/chevereto) can one-c
 
 To manual upgrade follow the [Updating](updating.md) documentation using the paid edition files.
 
-**Note:** [Docker](../../guides/docker/README.md) users don't need any of these steps, simply re-build the container image ([make image](https://github.com/chevereto/docker/blob/4.1/docs/BUILDING.md) or [docker build](https://github.com/chevereto/docker/blob/4.1/docs/PURE-DOCKER.md)) and re-start your containers.
+**Note:** [Docker](../../guides/docker/README.md) users don't need any of these steps, simply follow the [Docker upgrading](../../guides/docker/README.md#upgrading) guide.
 
 ## rodber/chevereto-free
 

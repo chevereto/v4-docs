@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'admin.md' => '👸 Admin',
-    'user.md' => '👩‍💻 User',
+    'admin.md' => 'Admin manual',
+    'user.md' => 'User manual',
 ];

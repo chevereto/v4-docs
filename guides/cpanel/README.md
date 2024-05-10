@@ -12,11 +12,3 @@ This deploy alternative doesn't require tech knowledge. But it comes at a cost a
 
 * cPanel based hosting service
 * Chevereto license (for paid edition)
-
-## Purchase hosting
-
-::: tip Looking for partners
-We recommend using `<partner,>` provider for cPanel + Chevereto. *Contact us for become a partner provider*.
-:::
-
-cPanel is present in the entire shared/managed hosting market. It should't be hard to find a provider that meets the Chevereto [application requirements](php.md) and fits your budget.

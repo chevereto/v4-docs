@@ -2,9 +2,7 @@
 sidebar: false
 ---
 
-# 👸 Admin Manual
-
-## Description
+# Admin manual
 
 The Chevereto's admin manual provides instructions on how to use the software for system administrators.
 

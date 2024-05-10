@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'pure-docker.md',
     'README.md',
+    'pure-docker.md',
 ];

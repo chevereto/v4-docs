@@ -4,6 +4,6 @@ return [
     'introduction/' => 'Intro',
     'application/' => 'App',
     'developer/' => 'Dev',
-    'guides/' => 'Guides',
-    'manual/' => 'Manual',
+    'guides/' => 'Install Guides',
+    'manual/' => 'Manuals',
 ];

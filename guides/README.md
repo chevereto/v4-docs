@@ -8,7 +8,7 @@ Please note that there are more ways to install Chevereto as the software can be
 
 Install Chevereto following our guides for:
 
-* [Docker](https://github.com/chevereto/docker) (Multi-arch image compatible with `x86_64` and `arm64`)
+* Docker (Multi-arch image compatible with `x86_64` and `arm64`)
   * [Chevereto Docker](./docker/README.md)
   * [Pure Docker](./docker/pure-docker.md)
 * [VPS](./server/vps.md) (DigitalOcean, Linode, Vultr, etc)

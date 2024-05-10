@@ -1,5 +1,9 @@
 # Chevereto VPS
 
+::: tip Installation service available
+We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto VPS for you, including all the requirements and configurations.
+:::
+
 VPS stands for Virtual Private Server which for our purpose is described as the type of server where you get root access to install Linux on it.
 
 This deploy alternative provides superb customization. But it comes at a cost as it requires complete system administration.

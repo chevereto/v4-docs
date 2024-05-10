@@ -1,5 +1,9 @@
 # Installation
 
+::: tip Installation service available
+We offer a [paid installation service](https://chevereto.com/support) for Chevereto. We will install Chevereto for you, including all the requirements and configurations.
+:::
+
 Installation refers to the process where the **software files** gets provided in the target machine.
 
 ## Stack

@@ -1,8 +1,12 @@
-# Chevereto Factory
+# Chevereto Docker
 
-Roll your own multi-website Chevereto infrastructure with Chevereto Factory, a Docker-based system that allows you to deploy and maintain multiple Chevereto websites on demand.
+::: tip Installation service available
+We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto Docker for you, including all the requirements and configurations.
+:::
 
-By the end of this tutorial, you'll have your own Chevereto Factory up and running, capable of deploying and maintaining multiple Chevereto websites on demand, all with automatic sub-domain creation and renewable HTTPS certificates.
+Roll your own multi-website Chevereto infrastructure with Chevereto Docker, a Docker-based system that allows you to deploy and maintain one or multiple Chevereto websites on demand.
+
+By the end of this tutorial, you'll have your own Chevereto Docker up and running, capable of deploying and maintaining multiple Chevereto websites on demand, all with automatic sub-domain creation and renewable HTTPS certificates.
 
 ## Advantages
 
@@ -22,15 +26,15 @@ Check the project repository at [chevereto/docker](https://github.com/chevereto/
 
 To follow this guide, make sure you have:
 
-* A Ubuntu server with shell access and public IP address.
-* A domain managed by CloudFlare (if using integration)
-* A Chevereto license (required for the paid edition)
+* Ubuntu server with shell access and public IP address.
+* Domain managed by CloudFlare (if using integration)
+* Chevereto license (required for the paid edition)
   * [Purchase](https://chevereto.com/pricing) new license
   * [Access](https://chevereto.com/panel/license) existing purchase
 
 ## Getting a server
 
-You'll need a server where you can install Chevereto Factory For this guide we recommend an Ubuntu server, but any Unix-like system will do.
+You'll need a server where you can install Chevereto Docker For this guide we recommend an Ubuntu 24.04 server, but any Unix-like system will do.
 
 ## Accessing server shell
 
@@ -55,16 +59,16 @@ Make sure to check your server provider's documentation for specific instruction
 Start by installing Chevereto Docker repository and its dependencies by running the following command.
 
 ```sh
-bash <(curl -s https://chevereto.com/sh/ubuntu/22.04/docker.sh)
+bash <(curl -s https://chevereto.com/sh/ubuntu/24.04/docker.sh)
 ```
 
 ## Setting up CloudFlare integration
 
 Skip this section if you don't need CloudFlare integration to manage domain DNS.
 
-Integrate Chevereto Factory with CloudFlare to automate sub-domain creation for your websites. If you aren't using CloudFlare go to [cloudflare.com](https://cloudflare.com) to get started, it is free. Add your domain to continue with this guide.
+Integrate Chevereto Docker with CloudFlare to automate sub-domain creation for your websites. If you aren't using CloudFlare go to [cloudflare.com](https://cloudflare.com) to get started, it is free. Add your domain to continue with this guide.
 
-To setup CloudFlare with Chevereto Factory:
+To setup CloudFlare with Chevereto Docker:
 
 * Navigate to the DNS configuration for your domain on CloudFlare.
 * Create a new A record, take note as it will be your `CLOUDFLARE_A_NAME` environment value. Use the following properties:
@@ -92,14 +96,14 @@ To create the configuration file run the following command and follow the on-scr
 make env
 ```
 
-* `CHEVERETO_KEY`: Your Chevereto license key (required for the paid edition, leave empty for free edition).
-* `DOMAIN`: The domain you'll use for spawning Chevereto installations.
+* `CHEVERETO_LICENSE_KEY`: Your Chevereto license key (required for the paid edition, leave empty for free edition).
+* `DOMAIN`: The domain/hostame you'll use for spawning Chevereto installations.
 * `EMAIL_HTTPS`: The email to receive HTTPS certificate notifications from Let’s Encrypt.
 * `CLOUDFLARE_*` options: Integration details for CloudFlare.
 
 ## Setting up system
 
-By setting up the system you will enable background processing and ingress HTTP proxy.
+By setting up the system you will enable background processing and NGINX ingress HTTP proxy.
 
 To set up the system run the following command:
 
@@ -135,11 +139,36 @@ make deploy NAMESPACE=demo ADMIN_EMAIL=email@mywebsite.com
 
 The Chevereto website will be available within seconds as the new sub-domain propagates.
 
-## Updating your websites
+## Upgrading your websites
 
-To update re-build the Chevereto container image and run the update command.
+To upgrade you need to (1) Sync repository, (2) Re-build the container image, and (3) Update Chevereto instances.
+
+### Step 1: Sync repository
+
+Sync this repository to get the latest changes.
+
+```sh
+make sync
+```
+
+**Note:** If there's a new branch (for example 4.2) switch to that branch running the following command:
+
+```sh
+git switch 4.2
+```
+
+### Step 2: Re-build the container image
+
+Build a new container image to reflect the newest release.
 
 ```sh
 make image
+```
+
+### Step 3: Update Chevereto instances
+
+This will down and re-up the containers and carry the required database update.
+
+```sh
 make update
 ```

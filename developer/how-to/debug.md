@@ -101,7 +101,7 @@ This vary depending the server provider and how PHP runs in the server. In doubt
   * Logs by default at `/var/log/apache2/error.log`
   * Virtual host directive defines custom error log location
   * Commonly configured for `/var/www/domain.com/logs`
-* NGINX
+* nginx
   * Logs by default at `/var/log/nginx/error.log`
   * Server block defines custom error log location
   * Commonly configured for `/var/www/domain.com/logs`

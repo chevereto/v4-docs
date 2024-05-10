@@ -103,7 +103,7 @@ make env
 
 ## Setting up system
 
-By setting up the system you will enable background processing and NGINX ingress HTTP proxy.
+By setting up the system you will enable background processing and nginx ingress HTTP proxy.
 
 To set up the system run the following command:
 

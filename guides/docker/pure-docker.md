@@ -2,7 +2,7 @@
 
 This is the most basic way to run Chevereto using Docker.
 
-Pure Docker refers to running Chevereto using Docker without the extra provisions of [Chevereto Docker](README.md) (NGINX ingress proxy, CloudFlare integration).
+Pure Docker refers to running Chevereto using Docker without the extra provisions of [Chevereto Docker](README.md) (nginx ingress proxy, CloudFlare integration).
 
 ## Build image (paid edition)
 

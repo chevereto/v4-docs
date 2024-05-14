@@ -73,10 +73,10 @@ Environment variables for the [encryption](../reference/encryption.md) functiona
 
 Environment variables for the session driver.
 
-| Variable                       | Example              |
-| ------------------------------ | -------------------- |
-| CHEVERETO_SESSION_SAVE_HANDLER | `redis` `files`      |
-| CHEVERETO_SESSION_SAVE_PATH    | `tcp://redis` `/tmp` |
+| Variable                       | Example |
+| ------------------------------ | ------- |
+| CHEVERETO_SESSION_SAVE_HANDLER | `files` |
+| CHEVERETO_SESSION_SAVE_PATH    | `/tmp`  |
 
 ## Image handling variables
 
@@ -85,16 +85,16 @@ Environment variables for controlling image handling.
 | Variable                          | Example                          |
 | --------------------------------- | -------------------------------- |
 | CHEVERETO_IMAGE_FORMATS_AVAILABLE | `'JPG','PNG','BMP','GIF','WEBP'` |
-| CHEVERETO_IMAGE_LIBRARY           | `imagick` `gd`                   |
+| CHEVERETO_IMAGE_LIBRARY           | `imagick`                        |
 
 ## Binary paths
 
 Environment variables for controlling binary tools used by Chevereto.
 
-| Variable                 | Example                        |
-| ------------------------ | ------------------------------ |
-| CHEVERETO_BINARY_FFMPEG  | `ffmpeg` `/some/path/ffmpeg`   |
-| CHEVERETO_BINARY_FFPROBE | `ffprobe` `/some/path/ffprobe` |
+| Variable                 | Example              |
+| ------------------------ | -------------------- |
+| CHEVERETO_BINARY_FFMPEG  | `/some/path/ffmpeg`  |
+| CHEVERETO_BINARY_FFPROBE | `/some/path/ffprobe` |
 
 ## Toggles
 

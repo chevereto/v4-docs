@@ -1,5 +1,5 @@
 ---
-home: true
+home: false
 heroImage: /logo.svg
 heroText: Chevereto V4 Docs
 tagline: Image and Video hosting software
@@ -8,7 +8,11 @@ actionLink: /introduction/get-started/welcome
 footer: Created by Rodolfo Berrios
 ---
 
-# QuickStart
+# Chevereto V4 Docs
+
+![Chevereto](/chevereto.svg)
+
+[Chevereto](https://chevereto.com) is a powerful image and video hosting script that allows you to create a beautiful media hosting website with all the features you need.
 
 ## Install
 

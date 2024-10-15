@@ -13,10 +13,17 @@ To debug errors go to [Settings > System > Debug errors](https://v4-admin.chever
 * Run xrDebug built-in server:
 
 ```sh
-cd app && vendor/bin/xr
+cd app && vendor/bin/xrdebug
 ```
 
-* Enable xrDebug from your [Chevereto settings](https://v4-admin.chevereto.com/settings/system.html#enable-xr).
+* Enable xrDebug by configuring the `CHEVERETO_ENABLE_XRDEBUG` key.
+
+```php
+'CHEVERETO_XRDEBUG_HOST' => 'localhost',
+'CHEVERETO_XRDEBUG_HTTPS' => '0',
+'CHEVERETO_XRDEBUG_KEY' => '',
+'CHEVERETO_XRDEBUG_PORT' => '27420',
+```
 
 ## Debug with Docker
 

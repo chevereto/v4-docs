@@ -18,7 +18,7 @@ Follow these step:
 * Remove `app/vendor` from your Chevereto V3 installation
 * Override Chevereto V3 files with Chevereto V4 files
 * Switch to PHP 8
-* Create [app/env.php](../configuration/env.php.md) (see remark below)
+* Create [app/env.php](../configuration/configuring.md) (see remark below)
 * Proceed with [database update](updating.md#database-update)
 
 ### Application settings

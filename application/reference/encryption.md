@@ -25,9 +25,6 @@ The following settings are encrypted in the database:
 | [Akismet API key](https://v4-admin.chevereto.com/settings/external-services.html#akismet-api-key)                   | akismet_api_key            |
 | [ModerateContent API Key](https://v4-admin.chevereto.com/settings/external-services.html#moderatecontent-api-key)   | moderatecontent_key        |
 | [Project Arachnid API Key](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_key               |
-| [xrDebug Host](https://v4-admin.chevereto.com/settings/system.html#xr-debug-host)                                   | xr_host                    |
-| [xrDebug Port](https://v4-admin.chevereto.com/settings/system.html#xr-debug-port)                                   | xr_port                    |
-| xrDebug Key                                                                                                         | xr_key                     |
 
 ### Storage credentials
 

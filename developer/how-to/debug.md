@@ -16,14 +16,7 @@ To debug errors go to [Settings > System > Debug errors](https://v4-admin.chever
 cd app && vendor/bin/xrdebug
 ```
 
-* Enable xrDebug by configuring the `CHEVERETO_ENABLE_XRDEBUG` key.
-
-```php
-'CHEVERETO_XRDEBUG_HOST' => 'localhost',
-'CHEVERETO_XRDEBUG_HTTPS' => '0',
-'CHEVERETO_XRDEBUG_KEY' => '',
-'CHEVERETO_XRDEBUG_PORT' => '27420',
-```
+* Enable xrDebug by configuring the `CHEVERETO_ENABLE_XRDEBUG` [key](../../application/configuration/environment.md#debug-variables).
 
 ## Debug with Docker
 
@@ -41,9 +34,9 @@ Chevereto access log:
 docker logs CONTAINER -f 2>/dev/null
 ```
 
-## Debug with configuration
+## Debug with logging
 
-Debug can be [configured](../../application/configuration/configuring.md) using [environment variables](../../application/configuration/environment.md#debug-variables).
+Debug can be [configured](../../application/configuration/configuring.md) using [environment variables](../../application/configuration/environment.md#debug-variables) to log to a file or device.
 
 ### Debug level
 

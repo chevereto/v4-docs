@@ -5,5 +5,6 @@ return [
     'php.md',
     'database.md',
     'app-files.md',
+    'ffmpeg.md',
     'cron.md',
 ];

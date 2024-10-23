@@ -27,7 +27,9 @@ Install Chevereto following our guides for:
 * [cPanel](./guides/cpanel/)
 * [Plesk](./guides/plesk/)
 
-Chevereto is also available at [DigitalOcean Marketplace](https://chevereto.com/go/digitalocean), [Vultr Marketplace](https://chevereto.com/go/vultr), [Installatron](https://installatron.com/chevereto) and [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto). Review our [Installation docs](./application/installing/installation.md) for all alternatives.
+Chevereto is also available at [DigitalOcean Marketplace](https://chevereto.com/go/digitalocean), [Vultr Marketplace](https://chevereto.com/go/vultr), [Installatron](https://installatron.com/chevereto), [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto) and [SwiftWave](https://swiftwave.org/docs/dashboard/swiftwave_app_store/).
+
+Review our [Installation docs](./application/installing/installation.md) for all alternatives.
 
 ## Updating
 

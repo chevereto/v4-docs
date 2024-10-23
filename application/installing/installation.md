@@ -40,6 +40,7 @@ Chevereto is available at the following installers, look for the following softw
 
 * [Installatron](https://installatron.com/chevereto)
 * [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto)
+* [SwiftWave](https://swiftwave.org/docs/dashboard/swiftwave_app_store/)
 
 ## Using release package
 

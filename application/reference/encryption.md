@@ -12,19 +12,20 @@ Encryption in Chevereto was added in `v4.0.0-beta.10`. If you installed Cheveret
 
 The following settings are encrypted in the database:
 
-| Setting                                                                                                             | Key                        |
-| ------------------------------------------------------------------------------------------------------------------- | -------------------------- |
-| [API V1 key (public)](../../developer/api/api-v1.md#key)                                                            | api_v1_key                 |
-| Album password                                                                                                      | album_password             |
-| [SMTP server](https://v4-admin.chevereto.com/settings/email.html#smtp-server-and-port)                              | email_smtp_server          |
-| SMTP port                                                                                                           | email_smtp_server_port     |
-| [SMTP username](https://v4-admin.chevereto.com/settings/email.html#smtp-username)                                   | email_smtp_server_username |
-| [SMTP password](https://v4-admin.chevereto.com/settings/email.html#smtp-password)                                   | email_smtp_server_password |
-| [reCAPTCHA secret key](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha-secret-key)         | recaptcha_private_key      |
-| [Disqus secret key](https://v4-admin.chevereto.com/settings/external-services.html#disqus-secret-key)               | disqus_secret_key          |
-| [Akismet API key](https://v4-admin.chevereto.com/settings/external-services.html#akismet-api-key)                   | akismet_api_key            |
-| [ModerateContent API Key](https://v4-admin.chevereto.com/settings/external-services.html#moderatecontent-api-key)   | moderatecontent_key        |
-| [Project Arachnid API Key](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_key               |
+| Setting                                                                                                                  | Key                        |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| [API V1 key (public)](../../developer/api/api-v1.md#key)                                                                 | api_v1_key                 |
+| Album password                                                                                                           | album_password             |
+| [SMTP server](https://v4-admin.chevereto.com/settings/email.html#smtp-server-and-port)                                   | email_smtp_server          |
+| SMTP port                                                                                                                | email_smtp_server_port     |
+| [SMTP username](https://v4-admin.chevereto.com/settings/email.html#smtp-username)                                        | email_smtp_server_username |
+| [SMTP password](https://v4-admin.chevereto.com/settings/email.html#smtp-password)                                        | email_smtp_server_password |
+| [reCAPTCHA secret key](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha-secret-key)              | recaptcha_private_key      |
+| [Disqus secret key](https://v4-admin.chevereto.com/settings/external-services.html#disqus-secret-key)                    | disqus_secret_key          |
+| [Akismet API key](https://v4-admin.chevereto.com/settings/external-services.html#akismet-api-key)                        | akismet_api_key            |
+| [ModerateContent API Key](https://v4-admin.chevereto.com/settings/external-services.html#moderatecontent-api-key)        | moderatecontent_key        |
+| [Project Arachnid API Username](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_api_username      |
+| [Project Arachnid API Password](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_api_password      |
 
 ### Storage credentials
 

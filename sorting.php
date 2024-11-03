@@ -7,5 +7,4 @@ return [
     'developer/',
     'api/',
     'guides/',
-    'manuals/',
 ];

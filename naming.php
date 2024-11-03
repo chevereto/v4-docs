@@ -5,5 +5,4 @@ return [
     'application/' => 'App',
     'developer/' => 'Dev',
     'guides/' => 'Install Guides',
-    'manual/' => 'Manuals',
 ];

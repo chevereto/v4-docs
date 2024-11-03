@@ -1,3 +1,7 @@
+---
+sidebarDepth: 3
+---
+
 # API Version 1.1
 
 Chevereto API enables programmatic file uploads, allowing you to seamlessly integrate our uploading functionality into your own applications.
@@ -73,6 +77,10 @@ Not safe for work flag `[0, 1]`.
 ### format (optional)
 
 Return format `[json, redirect, txt]`.
+
+### use_file_date (optional, admin only)
+
+Configure to use file date taken (Exif) instead of upload date `[0, 1]`.
 
 ## Example call
 

@@ -2,13 +2,17 @@
 
 Debug enables to dump information about errors that may be affecting the software functionality. If Chevereto isn't working properly it will require debugging to understand the situation.
 
-Once you enable debug you need to trigger the issue again, this will generate a log that will help you to understand what is going on.
+Debug refers to check the system logs, error messages, and any other information to identify the root cause of the problem.
 
 ## Debug with user interface
 
 To debug errors go to [Settings > System > Debug errors](https://v4-admin.chevereto.com/settings/system.html#debug-errors) and enable "Debug errors". By enabling this Chevereto will debug errors to the screen (only to administrators).
 
 ## Debug with xrDebug
+
+[xrDebug](https://xrdebug.com) enables to spawn a user-friendly debugger that will automatically catch and display errors in real-time.
+
+You can [install](https://docs.xrdebug.com/install/) xrDebug anywhere and connect it to your Chevereto, xrDebug also comes built-in with Chevereto.
 
 * Run xrDebug built-in server:
 
@@ -71,20 +75,20 @@ CHEVERETO_ENVIRONMENT=dev
 
 ### Editing source
 
-You can force error display by editing the source code. This will allow to debug early in the application bootstrapping process.
+In cases where the error is preventing the application to boot you can force error display by editing the source code. This will allow to debug early in the application bootstrapping process.
 
 * Open `app/legacy/load/register-handlers.php`
 * Change this:
 
 ```php
-$isDebug = isDebug();
+$doDebug = in_array($debugLevel, [2, 3], true) || isDebug();
 ```
 
 * To this:
 
 ```php
-//$isDebug = isDebug();
-$isDebug = true;
+//$doDebug = in_array($debugLevel, [2, 3], true) || isDebug();
+$doDebug = true;
 ```
 
 ## Finding the logs
@@ -93,6 +97,10 @@ This vary depending the server provider and how PHP runs in the server. In doubt
 
 * Chevereto
   * Logs by default at `php://stderr`
+  * Configurable via
+    * `CHEVERETO_ERROR_LOG`
+    * `CHEVERETO_ERROR_LOG_CLI`
+    * `CHEVERETO_ERROR_LOG_CRON`
 * Docker
   * Logs to `/dev/stderr`
 * xrDebug

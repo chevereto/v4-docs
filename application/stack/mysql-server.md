@@ -2,7 +2,9 @@
 
 | Version | MySQL  | MariaDB |
 | ------- | ------ | ------- |
-| 4.0     | 5.7, 8 | 10      |
+| 4.2     | 8.0.1  | 10.2.2  |
+| 4.1     | 5.7; 8 | 10      |
+| 4.0     | 5.7; 8 | 10      |
 
 Chevereto support both MySQL/MariaDB database servers but we refer indistinctly as **MySQL**.
 

@@ -1,18 +1,19 @@
 ---
+sidebar: false
 home: false
 heroImage: /logo.svg
 heroText: Chevereto V4 Docs
 tagline: Image and Video hosting software
 actionText: Get Started →
 actionLink: /introduction/get-started/welcome
-footer: Created by Rodolfo Berrios
+footer: Chevereto media sharing platform
 ---
 
 # Chevereto V4 Docs
 
 ![Chevereto](/chevereto.svg)
 
-[Chevereto](https://chevereto.com) is a powerful image and video hosting script that allows you to create a beautiful media hosting website with all the features you need.
+[Chevereto](https://chevereto.com) is a robust, self-hosted media-sharing platform that prioritizes flexibility and control. It enables you to build and manage a media-sharing website on your own server, granting you complete autonomy over your hosting environment and policies. With Chevereto, you eliminate the risk of platform restrictions and shutdowns, ensuring your site operates entirely on your terms.
 
 ## Install
 

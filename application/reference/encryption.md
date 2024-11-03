@@ -63,7 +63,7 @@ Handle the encryption key with the same discretion of a password.
 
 To enable encryption provide the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
 
-This key is automatic provided when using [HTTP setup](../installing/installation.md#setup), stored in the [env.php](../configuration/env.php.md) file.
+This key is automatic provided when using [HTTP setup](../installing/installation.md#setup), stored in the [env.php](../configuration/configuring.md#using-appenvphp) file.
 
 ### From previous versions
 

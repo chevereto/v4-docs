@@ -2,10 +2,6 @@
 
 `app/bin/legacy`
 
-::: danger Don't run as root
-The Chevereto console **won't work** when using `root` user. It must be called from a normal user.
-:::
-
 Chevereto V4 includes a command line interface enabling to perform a variety of system tasks. This console command should be invoked in the following format:
 
 ```sh

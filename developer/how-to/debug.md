@@ -20,7 +20,7 @@ You can [install](https://docs.xrdebug.com/install/) xrDebug anywhere and connec
 cd app && vendor/bin/xrdebug
 ```
 
-* Enable xrDebug by configuring the `CHEVERETO_ENABLE_XRDEBUG` [key](../../application/configuration/environment.md#debug-variables).
+* Enable xrDebug by configuring the [xrDebug variables](../../application/configuration/environment.md#xrdebug-variables).
 
 ## Debug with Docker
 
@@ -97,7 +97,7 @@ This vary depending the server provider and how PHP runs in the server. In doubt
 
 * Chevereto
   * Logs by default at `php://stderr`
-  * Configurable via
+  * [Configurable](../../application/configuration/environment.md#error-logging-variables) via
     * `CHEVERETO_ERROR_LOG`
     * `CHEVERETO_ERROR_LOG_CLI`
     * `CHEVERETO_ERROR_LOG_CRON`

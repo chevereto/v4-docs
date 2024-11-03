@@ -14,14 +14,14 @@ Environment variables for the database details.
 
 | Variable                  | Example                  |
 | ------------------------- | ------------------------ |
-| CHEVERETO_DB_DRIVER       | mysql                    |
-| CHEVERETO_DB_HOST         | mariadb                  |
-| CHEVERETO_DB_NAME         | chevereto                |
-| CHEVERETO_DB_PASS         | user_database_password   |
+| CHEVERETO_DB_DRIVER       | `mysql`                  |
+| CHEVERETO_DB_HOST         | `mariadb`                |
+| CHEVERETO_DB_NAME         | `chevereto`              |
+| CHEVERETO_DB_PASS         | `user_database_password` |
 | CHEVERETO_DB_PDO_ATTRS    | `{"key":"value"}` (json) |
 | CHEVERETO_DB_PORT         | `3306`                   |
-| CHEVERETO_DB_TABLE_PREFIX | chv_                     |
-| CHEVERETO_DB_USER         | chevereto                |
+| CHEVERETO_DB_TABLE_PREFIX | `chv_`                   |
+| CHEVERETO_DB_USER         | `chevereto`              |
 
 ## Error logging variables
 
@@ -29,8 +29,8 @@ Environment variables for handling [error](../reference/errors.md) logging.
 
 | Variable                 | Default        |
 | ------------------------ | -------------- |
-| CHEVERETO_ERROR_LOG_CLI  | ``             |
-| CHEVERETO_ERROR_LOG_CRON | ``             |
+| CHEVERETO_ERROR_LOG_CLI  |                |
+| CHEVERETO_ERROR_LOG_CRON |                |
 | CHEVERETO_ERROR_LOG      | `php://stderr` |
 
 ## Debug variables
@@ -43,11 +43,13 @@ Environment variables for [debug](../../developer/how-to/debug.md).
 
 ## xrDebug variables
 
-| CHEVERETO_ENABLE_XRDEBUG | `0`     |
-| CHEVERETO_XRDEBUG_HOST  | `localhost` |
-| CHEVERETO_XRDEBUG_HTTPS | `0`         |
-| CHEVERETO_XRDEBUG_KEY   | ``          |
-| CHEVERETO_XRDEBUG_PORT  | 27420       |
+| Variable                 | Example     |
+| ------------------------ | ----------- |
+| CHEVERETO_ENABLE_XRDEBUG | `0`         |
+| CHEVERETO_XRDEBUG_HOST   | `localhost` |
+| CHEVERETO_XRDEBUG_HTTPS  | `0`         |
+| CHEVERETO_XRDEBUG_KEY    | `<key>`     |
+| CHEVERETO_XRDEBUG_PORT   | `27420`     |
 
 ## Hostname variables
 
@@ -57,7 +59,7 @@ Environment variables for the hostname configuration.
 | ----------------------- | -------------------- |
 | CHEVERETO_HOSTNAME      | `chevereto.internal` |
 | CHEVERETO_HOSTNAME_PATH | `/`                  |
-| CHEVERETO_HTTPS         | `true`               |
+| CHEVERETO_HTTPS         | `1`                  |
 
 ## Encryption key
 
@@ -183,15 +185,15 @@ For **non-container** based provisioning you need to change these settings at [p
 
 | Variable                             | Example |
 | ------------------------------------ | ------- |
-| CHEVERETO_MAX_UPLOAD_SIZE            | 64M     |
-| CHEVERETO_MAX_POST_SIZE              | 64M     |
-| CHEVERETO_MAX_EXECUTION_TIME_SECONDS | 30      |
-| CHEVERETO_MAX_MEMORY_SIZE            | 512M    |
+| CHEVERETO_MAX_UPLOAD_SIZE            | `64M`   |
+| CHEVERETO_MAX_POST_SIZE              | `64M`   |
+| CHEVERETO_MAX_EXECUTION_TIME_SECONDS | `30`    |
+| CHEVERETO_MAX_MEMORY_SIZE            | `512M`  |
 
 ## Proxy
 
 Environment variables for tweaking server handling when the server is under a proxy.
 
-| Variable                   | Example   |
-| -------------------------- | --------- |
-| CHEVERETO_HEADER_CLIENT_IP | X-Real-IP |
+| Variable                   | Example     |
+| -------------------------- | ----------- |
+| CHEVERETO_HEADER_CLIENT_IP | `X-Real-IP` |

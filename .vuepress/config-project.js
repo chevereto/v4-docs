@@ -44,5 +44,16 @@ module.exports = {
         smoothScroll: false,
         editLinks: true,
         lastUpdated: true,
+        sidebarDepth: 3,
+        nav_after: [
+            {
+              text: 'Manuals',
+              ariaLabel: 'Manuals Menu',
+              items: [
+                { text: 'Admin manual', link: 'https://v4-admin.chevereto.com/' },
+                { text: 'User manual', link: 'https://v4-user.chevereto.com/' },
+              ]
+            }
+          ]
     },
 };

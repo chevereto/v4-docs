@@ -9,7 +9,7 @@ Pure Docker refers to running Chevereto using Docker without the extra provision
 Image building is **recommended** for Chevereto **paid edition**. Skip to [Run (free edition)](#run-free-edition) if you are using Chevereto free edition or if you want to upgrade to paid edition within the application itself.
 
 ::: tip Workaround image building
-If you can't build the paid image you can use the free edition image and upgrade to paid within the application itself. To do this, pass the environment `CHEVERETO_SERVICING=server` to the container runtime and go to `/dashboard?license` to enter the license key and proceed with the upgrading process. You will also need to setup a volume for the application files.
+If you can't build the paid image you can use the free edition image and upgrade to paid within the application itself. To do this, pass the environment `CHEVERETO_SERVICING=server` to the container runtime and go to `/dashboard?license` to enter the license key and proceed with the upgrading process. You will also need to setup persistent storage for the application files.
 :::
 
 ### Clone repository
@@ -32,8 +32,8 @@ By running the above command you will generate the following tags:
 
 * `chevereto:latest`
 * `chevereto:4`
-* `chevereto:4.1`
-* `chevereto:4.1.0`
+* `chevereto:4.2`
+* `chevereto:4.2.1`
 
 ## Upgrading
 
@@ -50,7 +50,7 @@ make sync
 **Note:** If there's a new branch (for example 4.2) switch to that branch running the following command:
 
 ```sh
-git switch 4.2
+git switch 4.3
 ```
 
 ### Step 2: Re-build the container image
@@ -117,7 +117,7 @@ docker run -d \
 
 ## Run free edition with application upgrade
 
-If you want to run the free edition and manage the application upgrade within the application itself you need to pass `-e CHEVERETO_SERVICING=server` and setup a volume for the application files:
+If you want to run the free edition and manage the application upgrade within the application itself you need to pass `-e CHEVERETO_SERVICING=server` and setup persistent storage for the application files:
 
 > Note: For running this command you need to fill your own database credentials.
 

@@ -28,9 +28,9 @@ For manual upgrade refer to [Installing](installation.md#using-release-package) 
 
 ### Docker
 
-When using Docker it will required to re-build the Chevereto image ([make image](https://github.com/chevereto/docker/blob/4.1/docs/BUILDING.md) or [docker build](https://github.com/chevereto/docker/blob/4.1/docs/PURE-DOCKER.md)) and then re-start the containers.
+When using Docker it will required to re-build the Chevereto image ([make image](https://github.com/chevereto/docker/blob/4.2/docs/BUILDING.md) or [docker build](https://github.com/chevereto/docker/blob/4.2/docs/PURE-DOCKER.md)) and then re-start the containers.
 
-Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.1/docs/UPDATING.md) for instructions.
+Refer to [UPDATING](https://github.com/chevereto/docker/blob/4.2/docs/UPDATING.md) for instructions.
 
 ## Database update
 

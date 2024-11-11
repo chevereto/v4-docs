@@ -8,7 +8,17 @@ Consider to contribute to this documentation with alternative cron setup alterna
 
 ## What it does?
 
-A cron is system in which a command is executed in a regular basis, this way Chevereto can perform operations in the background.
+A cron is system in which a command is executed in a regular basis, this way Chevereto can perform operations in the background without user intervention.
+
+| Job                   | Purpose                                                      |
+| --------------------- | ------------------------------------------------------------ |
+| deleteExpiredImages   | Deletes files set to expire at a certain date                |
+| cleanUnconfirmedUsers | Clears records for users which never confirmed their account |
+| removeDeleteLog       | Removes the old delete log entries                           |
+| storageDelete         | Delete files queued to removal                               |
+| checkForUpdates       | Check for available Chevereto updates                        |
+| checkForNews          | Check for news about Chevereto                               |
+| checkHtaccess         | Check the integrity of the `.htaccess` files                 |
 
 ## Troubleshoot
 

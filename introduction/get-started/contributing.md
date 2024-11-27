@@ -2,7 +2,7 @@
 
 Contribute to Chevereto to show your support and care for the software. Anyone can contribute, don't hesitate to [contact us](https://chevereto.com/contact) if you have something in your mind not covered here.
 
-## Show and Tell
+## Show and tell
 
 The best way you can support us is by spreading the word about the software we do.
 

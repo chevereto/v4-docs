@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'get-started/' => 'Get Started',
+    'get-started/' => 'Get started',
+    'editions/' => 'Editions',
     'changelog/' => 'Changelog',
 ];

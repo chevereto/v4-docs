@@ -8,7 +8,6 @@ This Chevereto edition is Open Source software available at [chevereto/chevereto
 
 ## Key features
 
-* **Self-hosted** - Run Chevereto on your own infrastructure.
 * **Image and video hosting** - Upload, organize, and manage media effortlessly.
 * **No subscriptions** - A one-time setup for personal use.
 

@@ -44,7 +44,7 @@ For Chevereto V4 users:
 For Chevereto V3 users:
 
 * Follow the [Upgrading guide](application/installing/upgrading.md) to upgrade to Chevereto V4.
-* Check the [Welcome Back](introduction/changelog/welcome-back.md#chevereto-v4-vs-v3) reference.
+* Check the [Welcome back](introduction/changelog/welcome-back.md#chevereto-v4-vs-v3) reference.
 
 ## Troubleshooting
 

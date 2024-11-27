@@ -5,7 +5,7 @@ heroImage: /logo.svg
 title: Home
 heroText: Chevereto V4 Docs
 tagline: Image and Video hosting software
-actionText: Get Started →
+actionText: Get started →
 actionLink: /introduction/get-started/welcome
 footer: Chevereto media sharing platform
 ---

@@ -2,6 +2,7 @@
 sidebar: false
 home: false
 heroImage: /logo.svg
+title: Home
 heroText: Chevereto V4 Docs
 tagline: Image and Video hosting software
 actionText: Get Started →

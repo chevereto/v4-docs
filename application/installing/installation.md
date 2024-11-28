@@ -25,7 +25,7 @@ For fresh installations continue with one of the following guides.
 
 The following guides have been contributed by users of the software.
 
-* [Chevereto Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/)
+* [Chevereto Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/) (Portainer)
 
 ## Marketplace
 

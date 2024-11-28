@@ -19,4 +19,4 @@ Install Chevereto following our guides for:
 
 The following guides have been contributed by users of the software.
 
-* [Chevereto Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/)
+* [Chevereto Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/) (Portainer)

@@ -38,12 +38,12 @@ Upload and share the following media types from device file browser, drag and dr
 * Upload plugin (PUP.js, postMessage)
 * Bulk importer
 
-| Uploading features           | Free  | Lite  |         Pro          |
-| ---------------------------- | :---: | :---: | :------------------: |
-| Upload moderation            |   –   |   ✔   |          ✔           |
-| Watermark image uploads      |   –   |   –   |          ✔           |
-| Asset storage API            | Local | Local |         Any          |
-| External storage servers API | Local | Local | All (S3, SFTP, etc.) |
+| Uploading features           | Free  | Lite  |  Pro  |
+| ---------------------------- | :---: | :---: | :---: |
+| Upload moderation            |   –   |   ✔   |   ✔   |
+| Watermark image uploads      |   –   |   –   |   ✔   |
+| Asset storage API            | Local | Local |  All  |
+| External storage servers API | Local | Local |  All  |
 
 ## External storage APIs
 
@@ -127,8 +127,8 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Social features | Free  | Lite  |  Pro  |
 | --------------- | :---: | :---: | :---: |
-| Followers       |   –   |   –   |   ✔   |
-| Likes           |   –   |   –   |   ✔   |
+| Followers       |   –   |   ✔   |   ✔   |
+| Likes           |   –   |   ✔   |   ✔   |
 
 ## Security features
 
@@ -177,6 +177,7 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Admin features                                                                                | Free  | Lite  |  Pro  |
 | --------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
+| OAuth2 login providers (Amazon, Google, Discord, etc)                                         |   –   |   ✔   |   ✔   |
 | Homepage style                                                                                |   –   |   ✔   |   ✔   |
 | Homepage cover images                                                                         |   –   |   ✔   |   ✔   |
 | Homepage title & paragraph                                                                    |   –   |   ✔   |   ✔   |
@@ -200,7 +201,6 @@ Upload and share the following media types from device file browser, drag and dr
 | Configurable CAPTCHA threshold                                                                |   –   |   –   |   ✔   |
 | Shield by Project Arachnid                                                                    |   –   |   –   |   ✔   |
 | ModerateContent (auto approve, block, flag)                                                   |   –   |   –   |   ✔   |
-| OAuth2 login providers (Amazon, Google, Discord, etc)                                         |   –   |   –   |   ✔   |
 | Banners                                                                                       |   –   |   –   |   ✔   |
 | Watermark uploads (guest, user, admin)                                                        |   –   |   –   |   ✔   |
 | Watermark file toggles                                                                        |   –   |   –   |   ✔   |
@@ -249,12 +249,11 @@ Upload and share the following media types from device file browser, drag and dr
 | SEO URLs (media and album)                                                                  |   –   |   –   |   ✔   |
 | Cookie law compliance                                                                       |   –   |   –   |   ✔   |
 | Flood protection                                                                            |   –   |   –   |   ✔   |
-| Flood protection notify                                                                     |   –   |   –   |   ✔   |
 | Watermarks                                                                                  |   –   |   –   |   ✔   |
 
 ## System features
 
-* Image handling GD & ImageMagick
+* Image handling using GD or ImageMagick
 * Theme palettes (10)
 * One-click upgrade (web & CLI)
 * Maintenance mode

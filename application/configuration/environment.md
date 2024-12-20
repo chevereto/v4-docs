@@ -75,8 +75,9 @@ Environment variables for the session driver.
 
 | Variable                       | Example          |
 | ------------------------------ | ---------------- |
-| CHEVERETO_SESSION_SAVE_HANDLER | `files`, `redis` |
-| CHEVERETO_SESSION_SAVE_PATH    | `/tmp`           |
+| CHEVERETO_SESSION_SAVE_HANDLER | files, redis |
+| CHEVERETO_SESSION_SAVE_PATH    | /tmp, tcp://ip:port?auth=abc     |
+
 
 ## Image handling variables
 

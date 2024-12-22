@@ -57,9 +57,13 @@ Environment variables for the hostname configuration.
 
 | Variable                | Example              |
 | ----------------------- | -------------------- |
-| CHEVERETO_HOSTNAME      | `chevereto.internal` |
+| CHEVERETO_HOSTNAME      | (*) chevereto.com |
 | CHEVERETO_HOSTNAME_PATH | `/`                  |
 | CHEVERETO_HTTPS         | `1`                  |
+
+For `CHEVERETO_HOSTNAME` it refers to the network identifier and it supports hostname, ip address and domain name. It also supports suffixing the port (e.g., example.com:8080).
+
+“Network identifier” conveys the idea of any entity that can identify or locate a resource or device within a network.
 
 ## Encryption key
 

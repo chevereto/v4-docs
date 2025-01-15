@@ -69,9 +69,18 @@ This is the **recommended** `nginx.conf` for `server {}` block.
 
 ::: details nginx.conf
 ```nginx
-    # Disable access to sensitive application files
-    location ~* (app|content|lib)/.*\.(po|php|lock|sql)$ {
+    # Deny access to sensitive stuff
+    location ~* ^/(app|importing)/ {
+        deny all;
         return 404;
+    }
+    location ~* ^/(images|content)/ {
+        fastcgi_pass off;
+        default_type "";
+        location ~* \.(php[345]?|phtml|html?)$ {
+            deny all;
+            return 403;
+        }
     }
     location ~* composer\.json|composer\.lock|.gitignore$ {
         return 404;
@@ -105,4 +114,3 @@ This is the **recommended** `nginx.conf` for `server {}` block.
     }
 ```
 :::
-

@@ -110,3 +110,5 @@ This is the **recommended** `nginx.conf` for `server {}` block.
         fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
     }
 ```
+
+> **Note**: The location of the `fastcgi_pass` directive may vary on your PHP-FPM setup.

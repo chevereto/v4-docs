@@ -1,4 +1,4 @@
-# Chevereto VPS
+# Install Chevereto on Server
 
 ::: tip Installation service available
 We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto VPS for you, including all the requirements and configurations.

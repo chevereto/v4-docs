@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'pure-docker.md' => 'Pure Docker',
-    'README.md' => 'Chevereto Docker',
+    'pure-docker.md' => 'Install on Pure Docker',
+    'README.md' => 'Install on Docker',
 ];

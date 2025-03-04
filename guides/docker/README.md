@@ -1,4 +1,4 @@
-# Chevereto Docker
+# Install Chevereto on Docker
 
 ::: tip Installation service available
 We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto Docker for you, including all the requirements and configurations.

@@ -1,4 +1,4 @@
-# Chevereto Plesk
+# Install Chevereto on Plesk
 
 ::: tip Installation service available
 We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto Plesk for you, including all the requirements and configurations.

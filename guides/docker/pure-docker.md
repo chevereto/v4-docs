@@ -1,4 +1,4 @@
-# Pure Docker
+# Install Chevereto on Pure Docker
 
 This is the most basic way to run Chevereto using Docker.
 

@@ -15,7 +15,7 @@ Chevereto requires [PHP](../stack/php.md), a [Web Server](../stack/web-server.md
 For fresh installations continue with one of the following guides.
 
 * Docker
-  * [Chevereto Docker](../../guides/docker/README.md)
+  * [Docker](../../guides/docker/README.md)
   * [Pure Docker](../../guides/docker/pure-docker.md)
 * [VPS](../../guides/server/vps.md)
 * [cPanel](../../guides/cpanel/README.md)
@@ -25,7 +25,7 @@ For fresh installations continue with one of the following guides.
 
 The following guides have been contributed by users of the software.
 
-* [Chevereto Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/) (Portainer)
+* [Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/) (Portainer)
 
 ## Marketplace
 

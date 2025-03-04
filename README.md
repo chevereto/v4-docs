@@ -23,7 +23,7 @@ Chevereto runs anywhere, system requirements are minimal and it can run on any s
 Install Chevereto following our guides for:
 
 * Docker (Multi-arch image compatible with `x86_64` and `arm64`)
-  * [Chevereto Docker](./guides/docker/README.md)
+  * [Docker](./guides/docker/README.md)
   * [Pure Docker](./guides/docker/pure-docker.md)
 * [VPS](./guides/server/vps.md) (DigitalOcean, Linode, Vultr, etc)
 * [cPanel](./guides/cpanel/)

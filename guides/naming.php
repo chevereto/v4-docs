@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'cpanel/' => 'cPanel',
-    'plesk/' => 'Plesk',
+    'cpanel/' => 'Install on cPanel',
+    'plesk/' => 'Install on Plesk',
     'docker/' => 'Docker',
-    'server/' => 'Server',
+    'server/' => 'Install on Server',
     'README.md' => 'Introduction',
 ];

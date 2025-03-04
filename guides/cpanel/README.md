@@ -1,4 +1,4 @@
-# Chevereto cPanel
+# Install Chevereto on cPanel
 
 ::: tip Installation service available
 We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto cPanel for you, including all the requirements and configurations.

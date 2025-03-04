@@ -16,6 +16,8 @@ footer: Chevereto media sharing platform
 
 [Chevereto](https://chevereto.com) is a robust, self-hosted media-sharing platform that prioritizes flexibility and control. It enables you to build and manage a media-sharing website on your own server, granting you complete autonomy over your hosting environment and policies. With Chevereto, you eliminate the risk of platform restrictions and shutdowns, ensuring your site operates entirely on your terms.
 
+![Screen](./src/screens/user-listing-selected.webp)
+
 ## Install
 
 Chevereto runs anywhere, system requirements are minimal and it can run on any server.

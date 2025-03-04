@@ -38,6 +38,7 @@ Chevereto is available at the following application marketplaces.
 
 Chevereto is available at the following installers, look for the following software at your hosting control panel.
 
+* [EasyPanel](https://easypanel.io/docs/templates/chevereto)
 * [Installatron](https://installatron.com/chevereto)
 * [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto)
 * [SwiftWave](https://swiftwave.org/docs/dashboard/swiftwave_app_store/)

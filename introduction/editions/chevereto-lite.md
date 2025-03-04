@@ -3,7 +3,7 @@
 Chevereto Lite Edition is a lightweight, affordable media-sharing solution designed for communities of all types. It provides a simple and secure way to share and organize media within trusted groups.
 
 ::: tip Get Chevereto Lite
-This Chevereto edition will be available for purchase at [chevereto.com/pricing](https://chevereto.com/pricing).
+This Chevereto edition is available for purchase at [chevereto.com/pricing](https://chevereto.com/pricing).
 :::
 
 ## Key features

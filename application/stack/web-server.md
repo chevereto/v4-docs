@@ -53,7 +53,6 @@ Apache configuration `.htaccess` files are included in Chevereto files. The only
 
 Virtual host settings must allow URL rewriting.
 
-::: details vhost
 ```apacheconf
     <Directory /var/www/html>
         Options -Indexes +FollowSymLinks +MultiViews
@@ -61,13 +60,11 @@ Virtual host settings must allow URL rewriting.
         Require all granted
     </Directory>
 ```
-:::
 
 ## nginx
 
 This is the **recommended** `nginx.conf` for `server {}` block.
 
-::: details nginx.conf
 ```nginx
     # Deny access to sensitive stuff
     location ~* ^/(app|importing)/ {
@@ -113,4 +110,3 @@ This is the **recommended** `nginx.conf` for `server {}` block.
         fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
     }
 ```
-:::

@@ -102,7 +102,7 @@ Environment variables for configuring binary tools used by Chevereto.
 | CHEVERETO_BINARY_FFMPEG   | /some/path/ffmpeg  |
 | CHEVERETO_BINARY_FFPROBE  | /some/path/ffprobe |
 
-## Cache
+## Cache variables
 
 Environment variables for setting up application-level caching.
 
@@ -176,7 +176,7 @@ Zero `0` means no limit.
 | ------------------------------------ | ------- |
 | CHEVERETO_MAX_ADMINS                 | 0       |
 | CHEVERETO_MAX_ALBUMS                 | 0       |
-| CHEVERETO_MAX_CACHE_TTL              | 3600    |
+| CHEVERETO_MAX_CACHE_TTL              | 86400   |
 | CHEVERETO_MAX_CATEGORIES             | 0       |
 | CHEVERETO_MAX_CHUNK_UPLOAD_SIZE      | 16M     |
 | CHEVERETO_MAX_EXECUTION_TIME_SECONDS | 30      |

@@ -7,4 +7,5 @@ return [
     'utilities.md' => 'Utilities',
     'cron.md' => 'CRON',
     'operating-system.md' => 'Operating system',
+    'redis.md' => 'Redis',
 ];

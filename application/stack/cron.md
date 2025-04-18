@@ -12,13 +12,14 @@ A cron is system in which a command is executed in a regular basis, this way Che
 
 | Job                   | Purpose                                                      |
 | --------------------- | ------------------------------------------------------------ |
-| deleteExpiredImages   | Deletes files set to expire at a certain date                |
+| checkForNews          | Check for news about Chevereto                               |
+| checkForUpdates       | Check for available Chevereto updates                        |
+| checkHtaccess         | Check the integrity of the `.htaccess` files                 |
 | cleanUnconfirmedUsers | Clears records for users which never confirmed their account |
+| deleteExpiredImages   | Deletes files set to expire at a certain date                |
 | removeDeleteLog       | Removes the old delete log entries                           |
 | storageDelete         | Delete files queued to removal                               |
-| checkForUpdates       | Check for available Chevereto updates                        |
-| checkForNews          | Check for news about Chevereto                               |
-| checkHtaccess         | Check the integrity of the `.htaccess` files                 |
+| deleteExpiredUploads  | Deletes orphan/abandoned chunked uploads                     |
 
 ## Troubleshoot
 

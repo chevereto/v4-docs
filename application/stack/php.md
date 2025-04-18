@@ -1,20 +1,21 @@
 # PHP
 
-| Version | PHP    |
-| ------- | ------ |
-| 4.2     | 8.1.28 |
-| 4.1     | 8.0.30 |
-| 4.0     | ~8.0   |
+| Version | PHP           |
+| ------- | ------------- |
+| 4.3     | 8.1, 8.2      |
+| 4.2     | 8.1, 8.2      |
+| 4.1     | 8.0, 8.1, 8.2 |
+| 4.0     | 8.0, 8.1, 8.2 |
+
+> **Note:** PHP versions explicitly listed in the table above are officially supported. Using any other PHP version may result in unexpected behavior or compatibility issues.
 
 Chevereto V4 is [PHP](https://php.net/) software, it has been designed using:
 
-* [Chevere](https://chevere.org/)
+* [Chevere](https://chevere.org/) packages
 * [PHP packages](https://deb.sury.org/) from Ondřej Surý.
 * [PHP extensions](https://www.php.net/manual/en/extensions.membership.php) provided by [PECL](https://pecl.php.net/).
 
 Packages and PECL provides the same convenience, but as packages are made for debian-based systems, you should prefer PECL if you don't have a debian-compatible system.
-
-Packages not only contain the software, it could trigger other effects in the system.
 
 ## Resources
 

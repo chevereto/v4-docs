@@ -29,11 +29,11 @@ Having issues? Check the following common pitfalls:
 * Bad configured MySQL socket
 * Usage of MyISAM storage engine (`ALTER` table to InnoDB storage)
 
-## Database Permissions
+## Database permissions
 
 Database user must have `ALL PRIVILEGES` over the target database.
 
-## Database Storage engine
+## Database storage engine
 
 InnoDB table storage engine.
 

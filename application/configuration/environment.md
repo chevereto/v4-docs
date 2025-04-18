@@ -2,36 +2,36 @@
 
 ## System variables
 
-Environment variables for the system context.
+Environment variables for the system context. Available `server` and `docker`.
 
-| Variable            | Example            |
-| ------------------- | ------------------ |
-| CHEVERETO_SERVICING | `server`, `docker` |
+| Variable            | Example |
+| ------------------- | ------- |
+| CHEVERETO_SERVICING | server  |
 
 ## Database variables
 
 Environment variables for the database details.
 
-| Variable                  | Example                  |
-| ------------------------- | ------------------------ |
-| CHEVERETO_DB_DRIVER       | `mysql`                  |
-| CHEVERETO_DB_HOST         | `mariadb`                |
-| CHEVERETO_DB_NAME         | `chevereto`              |
-| CHEVERETO_DB_PASS         | `user_database_password` |
-| CHEVERETO_DB_PDO_ATTRS    | `{"key":"value"}` (json) |
-| CHEVERETO_DB_PORT         | `3306`                   |
-| CHEVERETO_DB_TABLE_PREFIX | `chv_`                   |
-| CHEVERETO_DB_USER         | `chevereto`              |
+| Variable                  | Example                |
+| ------------------------- | ---------------------- |
+| CHEVERETO_DB_DRIVER       | mysql                  |
+| CHEVERETO_DB_HOST         | mariadb                |
+| CHEVERETO_DB_NAME         | chevereto              |
+| CHEVERETO_DB_PASS         | user_database_password |
+| CHEVERETO_DB_PDO_ATTRS    | {"key":"value"} (json) |
+| CHEVERETO_DB_PORT         | 3306                   |
+| CHEVERETO_DB_TABLE_PREFIX | chv_                   |
+| CHEVERETO_DB_USER         | chevereto              |
 
 ## Error logging variables
 
 Environment variables for handling [error](../reference/errors.md) logging.
 
-| Variable                 | Default        |
-| ------------------------ | -------------- |
-| CHEVERETO_ERROR_LOG_CLI  |                |
-| CHEVERETO_ERROR_LOG_CRON |                |
-| CHEVERETO_ERROR_LOG      | `php://stderr` |
+| Variable                 | Default      |
+| ------------------------ | ------------ |
+| CHEVERETO_ERROR_LOG_CLI  |              |
+| CHEVERETO_ERROR_LOG_CRON |              |
+| CHEVERETO_ERROR_LOG      | php://stderr |
 
 ## Debug variables
 
@@ -39,27 +39,27 @@ Environment variables for [debug](../../developer/how-to/debug.md).
 
 | Variable              | Example |
 | --------------------- | ------- |
-| CHEVERETO_DEBUG_LEVEL | `1`     |
+| CHEVERETO_DEBUG_LEVEL | 1       |
 
 ## xrDebug variables
 
-| Variable                 | Example     |
-| ------------------------ | ----------- |
-| CHEVERETO_ENABLE_XRDEBUG | `0`         |
-| CHEVERETO_XRDEBUG_HOST   | `localhost` |
-| CHEVERETO_XRDEBUG_HTTPS  | `0`         |
-| CHEVERETO_XRDEBUG_KEY    | `<key>`     |
-| CHEVERETO_XRDEBUG_PORT   | `27420`     |
+| Variable                 | Example   |
+| ------------------------ | --------- |
+| CHEVERETO_ENABLE_XRDEBUG | 0         |
+| CHEVERETO_XRDEBUG_HOST   | localhost |
+| CHEVERETO_XRDEBUG_HTTPS  | 0         |
+| CHEVERETO_XRDEBUG_KEY    | my_key    |
+| CHEVERETO_XRDEBUG_PORT   | 27420     |
 
 ## Hostname variables
 
 Environment variables for the hostname configuration.
 
-| Variable                | Example           |
-| ----------------------- | ----------------- |
-| CHEVERETO_HOSTNAME      | (*) chevereto.com |
-| CHEVERETO_HOSTNAME_PATH | `/`               |
-| CHEVERETO_HTTPS         | `1`               |
+| Variable                | Example       |
+| ----------------------- | ------------- |
+| CHEVERETO_HOSTNAME      | chevereto.com |
+| CHEVERETO_HOSTNAME_PATH | /             |
+| CHEVERETO_HTTPS         | 1             |
 
 For `CHEVERETO_HOSTNAME` it refers to the network identifier and it supports hostname, ip address and domain name. It also supports suffixing the port (e.g., example.com:8080).
 
@@ -86,21 +86,21 @@ Environment variables for the session driver.
 
 Environment variables for controlling image handling.
 
-| Variable                          | Example                                  |
-| --------------------------------- | ---------------------------------------- |
-| CHEVERETO_IMAGE_FORMATS_AVAILABLE | `'AVIF','JPEG','PNG','BMP','GIF','WEBP'` |
-| CHEVERETO_IMAGE_LIBRARY           | `imagick`                                |
+| Variable                          | Example                                |
+| --------------------------------- | -------------------------------------- |
+| CHEVERETO_IMAGE_FORMATS_AVAILABLE | 'AVIF','JPEG','PNG','BMP','GIF','WEBP' |
+| CHEVERETO_IMAGE_LIBRARY           | imagick                                |
 
 ## Binary paths
 
 Environment variables for configuring binary tools used by Chevereto.
 
-| Variable                  | Example              |
-| ------------------------- | -------------------- |
-| CHEVERETO_BINARY_EXIFTOOL | 'exiftool'           |
-| CHEVERETO_BINARY_EXIFTRAN | 'exiftran'           |
-| CHEVERETO_BINARY_FFMPEG   | `/some/path/ffmpeg`  |
-| CHEVERETO_BINARY_FFPROBE  | `/some/path/ffprobe` |
+| Variable                  | Example            |
+| ------------------------- | ------------------ |
+| CHEVERETO_BINARY_EXIFTOOL | exiftool           |
+| CHEVERETO_BINARY_EXIFTRAN | exiftran'          |
+| CHEVERETO_BINARY_FFMPEG   | /some/path/ffmpeg  |
+| CHEVERETO_BINARY_FFPROBE  | /some/path/ffprobe |
 
 ## Cache
 

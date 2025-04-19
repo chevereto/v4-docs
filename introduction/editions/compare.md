@@ -22,6 +22,8 @@ Upload and share the following media types from device file browser, drag and dr
 
 * Image & Video uploads
 * AVIF JPEG PNG BMP GIF WEBP MOV MP4 WEBM
+* Chunked uploads
+* Lossless JPEG auto-orientation & EXIF removal
 * API uploading (ShareX, etc)
 * Equirectangular 360° images
 * EXIF data (read, strip)
@@ -147,7 +149,7 @@ Upload and share the following media types from device file browser, drag and dr
 * Dashboard (admin UI)
 * System stats & usage
 * Website name
-* Website doctitle
+* Website document title
 * Website description
 * Website privacy mode (public, private)
 * Default timezone
@@ -155,7 +157,7 @@ Upload and share the following media types from device file browser, drag and dr
 * Guest uploads auto delete
 * Upload threads
 * Upload maximum image size
-* Upload Exif removal
+* Upload EXIF removal
 * Upload max file size (users and guest)
 * Upload path
 * Upload file naming

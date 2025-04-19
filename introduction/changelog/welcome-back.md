@@ -20,9 +20,9 @@ Coming from V3, users will experience a better user interface design, improved d
 
 The following tables summarizes the significative differences between Chevereto V3 and Chevereto V4.
 
-| System | V4  | V3  |
-| ------ | --- | --- |
-| PHP    | 8   | 7.4 |
+| System                                | V4  | V3  |
+| ------------------------------------- | --- | --- |
+| [PHP](../../application/stack/php.md) | 8   | 7.4 |
 
 |                                           | V4 Path                            | V3 Path           |
 | ----------------------------------------- | ---------------------------------- | ----------------- |

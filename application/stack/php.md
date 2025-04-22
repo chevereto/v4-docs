@@ -1,11 +1,11 @@
 # PHP
 
-| Version | PHP           |
-| ------- | ------------- |
-| 4.3     | 8.1, 8.2      |
-| 4.2     | 8.1, 8.2      |
-| 4.1     | 8.0, 8.1, 8.2 |
-| 4.0     | 8.0, 8.1, 8.2 |
+| Version | PHP      |
+| ------- | -------- |
+| 4.3     | 8.1, 8.2 |
+| 4.2     | 8.1, 8.2 |
+| 4.1     | 8.0, 8.1 |
+| 4.0     | 8.0, 8.1 |
 
 > **Note:** PHP versions explicitly listed in the table above are officially supported. Using any other PHP version may result in unexpected behavior or compatibility issues.
 

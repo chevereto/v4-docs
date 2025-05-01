@@ -23,14 +23,15 @@ Upload and share the following media types from device file browser, drag and dr
 * Image & Video uploads
 * AVIF JPEG PNG BMP GIF WEBP MOV MP4 WEBM
 * Chunked uploads
-* Lossless JPEG auto-orientation & EXIF removal
+* Lossless media handling (JPEG auto-orientation & EXIF removal)
+* User uploads, guest uploads
 * API uploading (ShareX, etc)
 * Equirectangular 360° images
 * EXIF data (read, strip)
-* Clipboard upload
+* Clipboard upload (copy/paste)
 * Drag-and-drop upload (drop zone)
 * File delete link
-* Time-based expirable uploads
+* Time-based auto-remove uploads
 * Generate thumbs & medium sized images
 * Generate video frame image
 * Duplicate media detection
@@ -38,7 +39,7 @@ Upload and share the following media types from device file browser, drag and dr
 * Storage modes (date, direct)
 * Upload user interface (container, page)
 * Upload plugin (PUP.js, postMessage)
-* Bulk importer
+* Bulk importer (batch upload)
 
 | Uploading features           | Free  | Lite  |  Pro  |
 | ---------------------------- | :---: | :---: | :---: |
@@ -87,7 +88,7 @@ Upload and share the following media types from device file browser, drag and dr
 * Tag filtering (users, albums)
 * Tag autocomplete
 * Top tags
-* Exif camera model auto-tagging
+* EXIF camera model auto-tagging
 
 ## Album features
 
@@ -175,7 +176,6 @@ Upload and share the following media types from device file browser, drag and dr
 * Logo & branding
 * Logo type (vector, image, text)
 * Logo height
-* Logo favicon image
 
 | Admin features                                                                                | Free  | Lite  |  Pro  |
 | --------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
@@ -190,6 +190,7 @@ Upload and share the following media types from device file browser, drag and dr
 | User avatar max file size                                                                     |   –   |   ✔   |   ✔   |
 | User background max file size                                                                 |   –   |   ✔   |   ✔   |
 | Guest API key                                                                                 |   –   |   ✔   |   ✔   |
+| Logo favicon image                                                                            |   –   |   –   |   ✔   |
 | Hide "Powered by Chevereto" footer                                                            |   –   |   –   |   ✔   |
 | [Enabled languages](https://v4-admin.chevereto.com/settings/languages.html#enabled-languages) |   –   |   –   |   ✔   |
 | Routing (user, image, album)                                                                  |   –   |   –   |   ✔   |
@@ -202,7 +203,6 @@ Upload and share the following media types from device file browser, drag and dr
 | CAPTCHA (reCAPTCHA, hCaptcha)                                                                 |   –   |   –   |   ✔   |
 | Configurable CAPTCHA threshold                                                                |   –   |   –   |   ✔   |
 | Shield by Project Arachnid                                                                    |   –   |   –   |   ✔   |
-| ModerateContent (auto approve, block, flag)                                                   |   –   |   –   |   ✔   |
 | Banners                                                                                       |   –   |   –   |   ✔   |
 | Watermark uploads (guest, user, admin)                                                        |   –   |   –   |   ✔   |
 | Watermark file toggles                                                                        |   –   |   –   |   ✔   |
@@ -222,8 +222,8 @@ Upload and share the following media types from device file browser, drag and dr
 * Blur NSFW content
 * NSFW on random mode
 * Banners on NSFW
-* Uploads (users and guest)
-* Uploads (URL)
+* Upload toggle (users, guest)
+* Upload (URL)
 * Upload moderation
 * Upload embed codes
 * Upload redirection
@@ -257,20 +257,24 @@ Upload and share the following media types from device file browser, drag and dr
 
 * Image handling using GD or ImageMagick
 * Theme palettes (10)
-* One-click upgrade (web & CLI)
+* One-click upgrade (web, CLI)
 * Maintenance mode
-* Email SMTP + phpmail()
-* Cipher ID
-* Test-email
+* Email sending (SMTP, phpmail)
+* Cipher IDs
 * Export user
-* Regenerate external storage stats
-* Migrate external storage records
 * Docker support
 * CLI console
 * Built-in debugger ([xrDebug](https://xrdebug.com))
-* Built-in REPL (PsySH)
-* Supports Tinkerwel REPL
-* Queue handling
+* REPL (PsySH, Tinkerwel)
+* Background file queue handling
 * Configurable cache TTL
-* Hreflang
-* Session storage (files, redis)
+* Hreflang HTML tags
+* Upload storage tools (regen stats, migrate records)
+* Test-email tool
+
+## System tooling support
+
+* ExifTool
+* ExifTran
+* ffmpeg
+* ImageMagick

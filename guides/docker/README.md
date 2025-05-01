@@ -126,15 +126,19 @@ make image
 To deploy a new website use the following command format:
 
 ```sh
-make deploy NAMESPACE={namespace} ADMIN_EMAIL={email}
+make deploy NAMESPACE={namespace} ADMIN_EMAIL={email} DOMAIN={domain}
 ```
 
-Replace {namespace} with the desired sub-domain and {email} with the admin email for the website.
+Where:
+
+* `NAMESPACE`: The name of the sub-domain for your website (e.g. `demo`).
+* `ADMIN_EMAIL`: The email address for the website admin (e.g. `email@mywebsite.com`).
+* `DOMAIN`: The domain name for the website (e.g. `mydomain.com`).
 
 For example:
 
 ```sh
-make deploy NAMESPACE=demo ADMIN_EMAIL=email@mywebsite.com
+make deploy NAMESPACE=demo ADMIN_EMAIL=email@mywebsite.com DOMAIN=mydomain.com
 ```
 
 The Chevereto website will be available within seconds as the new sub-domain propagates.

@@ -97,7 +97,7 @@ make env
 ```
 
 * `CHEVERETO_LICENSE_KEY`: Your Chevereto license key (required for the paid edition, leave empty for free edition).
-* `DOMAIN`: The domain/hostame you'll use for spawning Chevereto installations.
+* `DOMAIN`: The FQDN you'll use for spawning Chevereto installations.
 * `EMAIL_HTTPS`: The email to receive HTTPS certificate notifications from Let’s Encrypt.
 * `CLOUDFLARE_*` options: Integration details for CloudFlare.
 
@@ -126,22 +126,32 @@ make image
 To deploy a new website use the following command format:
 
 ```sh
-make deploy NAMESPACE={namespace} ADMIN_EMAIL={email} DOMAIN={domain}
+make deploy NAMESPACE={namespace} ADMIN_EMAIL={email}
 ```
 
 Where:
 
 * `NAMESPACE`: The name of the sub-domain for your website (e.g. `demo`).
 * `ADMIN_EMAIL`: The email address for the website admin (e.g. `email@mywebsite.com`).
-* `DOMAIN`: The domain name for the website (e.g. `mydomain.com`).
+* (optional) `DOMAIN`: The domain name for the website (e.g. `my-domain.com`).
 
-For example:
+To spawn `demo.my-domain.com`:
+
+The system will use the NAMESPACE as the sub-domain for the website.
 
 ```sh
-make deploy NAMESPACE=demo ADMIN_EMAIL=email@mywebsite.com DOMAIN=mydomain.com
+make deploy NAMESPACE=demo ADMIN_EMAIL=email@mywebsite.com
 ```
 
-The Chevereto website will be available within seconds as the new sub-domain propagates.
+To spawn `my-top-level-domain.com`:
+
+The system will use the domain indicated in the `DOMAIN` variable.
+
+```sh
+make deploy NAMESPACE=demo ADMIN_EMAIL=email@mywebsite.com DOMAIN=my-top-level-domain.com
+```
+
+The Chevereto website will be available within seconds as the new domain propagates.
 
 ## Upgrading
 

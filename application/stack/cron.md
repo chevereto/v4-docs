@@ -62,3 +62,7 @@ EOM
 ```
 
 In the instruction above [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
+
+## cPanel/Plesk
+
+Refer to [cPanel CRON](../../guides/cpanel/cron.md) and [Plesk CRON](../../guides/plesk/cron.md) to learn how to setup cron jobs in those systems.

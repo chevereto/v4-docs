@@ -35,6 +35,7 @@ This [silent message](https://chevere.github.io/throwable-handler/demo/output/ht
 
 * Go to **Dashboard > Settings > System** and enable [Debug errors](https://v4-admin.chevereto.com/settings/system.html#debug-errors) to print the error message to administrators.
 * Learn more at [Debug](../../developer/how-to/debug.md) to retrieve these errors from the [configured log device](../configuration/environment.md#error-logging-variables).
+* If you need urgen help, check our [support](https://chevereto.com/support) offering.
 
 ## Exception thrown
 

@@ -106,13 +106,14 @@ Environment variables for configuring binary tools used by Chevereto.
 
 Environment variables for setting up application-level caching.
 
-| Variable                 | Example        |
-| ------------------------ | -------------- |
-| CHEVERETO_CACHE_DRIVER   | redis          |
-| CHEVERETO_CACHE_HOST     | localhost      |
-| CHEVERETO_CACHE_PASSWORD | redis_password |
-| CHEVERETO_CACHE_PORT     | 6379           |
-| CHEVERETO_CACHE_USER     | redis_user     |
+| Variable                   | Example        |
+| -------------------------- | -------------- |
+| CHEVERETO_CACHE_DRIVER     | redis          |
+| CHEVERETO_CACHE_HOST       | localhost      |
+| CHEVERETO_CACHE_PASSWORD   | redis_password |
+| CHEVERETO_CACHE_PORT       | 6379           |
+| CHEVERETO_CACHE_USER       | redis_user     |
+| CHEVERETO_CACHE_TIME_MICRO | 60             |
 
 ## Toggles
 
@@ -121,6 +122,7 @@ Environment variables for the context where Chevereto system is being provided. 
 | Variable                                    | Default |
 | ------------------------------------------- | ------- |
 | CHEVERETO_ENABLE_API_GUEST                  | 1       |
+| CHEVERETO_ENABLE_API_USER                   | 1       |
 | CHEVERETO_ENABLE_BANNERS                    | 1       |
 | CHEVERETO_ENABLE_BULK_IMPORTER              | 1       |
 | CHEVERETO_ENABLE_CAPTCHA                    | 1       |
@@ -206,7 +208,7 @@ For **non-container** based provisioning you need to change these settings at [p
 
 | Variable                             | Example |
 | ------------------------------------ | ------- |
-| CHEVERETO_MAX_UPLOAD_SIZE            | 64M     |
+| CHEVERETO_MAX_UPLOAD_FILE_SIZE       | 64M     |
 | CHEVERETO_MAX_POST_SIZE              | 64M     |
 | CHEVERETO_MAX_EXECUTION_TIME_SECONDS | 30      |
 | CHEVERETO_MAX_MEMORY_SIZE            | 512M    |

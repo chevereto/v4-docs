@@ -2,7 +2,7 @@
 
 | Version | Redis |
 | ------- | ----- |
-| 4.3     | 7     |
+| 4.3     | 8     |
 
 Chevereto supports Redis for application-level caching and session storage. While optional, using Redis is recommended to improve performance and reduce database load.
 

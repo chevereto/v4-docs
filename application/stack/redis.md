@@ -8,7 +8,7 @@ Chevereto supports Redis for application-level caching and session storage. Whil
 
 ## Resources
 
-* [Redis Community Edition](https://github.com/redis/redis)
+* [Redis Open Source](https://github.com/redis/redis)
 * [Redis Website](https://redis.io)
 
 ## What does Redis do?

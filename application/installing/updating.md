@@ -48,4 +48,4 @@ To update Chevereto database via web:
 To update Chevereto database from the command line:
 
 * SSH and `cd` to your Chevereto instance
-* Run [CLI update](../reference/cli.md#update) `app/bin/legacy -C update`
+* Run [CLI update](../reference/cli.md#update) `app/bin/cli -C update`

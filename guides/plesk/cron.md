@@ -11,7 +11,7 @@
 ![Scheduled Tasks](../../src/manuals/plesk/sheduled-tasks-add.png)
 
 * Select **Run a PHP script** under **Task type**
-* Use `httpdocs/app/bin/legacy` under **Script path**
+* Use `httpdocs/app/bin/cli` under **Script path**
 * Set `-C cron` under **With arguments**
 * Select PHP `8` under **Use PHP version**
 * Select **Cron style** under **Run** and enter `* * * * *`

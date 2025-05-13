@@ -28,7 +28,7 @@ The following tables summarizes the significative differences between Chevereto 
 | ----------------------------------------- | ---------------------------------- | ----------------- |
 | Settings                                  | /app/env.php                       | /app/settings.php |
 | Composer                                  | /app/composer.json                 | /composer.json    |
-| [CLI](../../application/reference/cli.md) | /app/bin/legacy                    | /cli.php          |
+| [CLI](../../application/reference/cli.md) | /app/bin/cli                       | /cli.php          |
 | Themes                                    | /content/legacy/themes             | /app/themes       |
 | Peafowl                                   | /content/legacy/themes/Peafowl/lib | /lib              |
 

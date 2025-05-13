@@ -24,13 +24,13 @@ php-binary cli-path -C cron >/dev/null 2>&1
 <code-group>
 <code-block title="General">
 ```sh
-/usr/local/bin/ea-php81 /home/chevereto/public_html/app/bin/legacy -C cron >/dev/null 2>&1
+/usr/local/bin/ea-php81 /home/chevereto/public_html/app/bin/cli -C cron >/dev/null 2>&1
 ```
 </code-block>
 
 <code-block title="CloudLinux">
 ```sh
-/opt/alt/php81/usr/bin/php /home/chevereto/public_html/app/bin/legacy -C cron >/dev/null 2>&1
+/opt/alt/php81/usr/bin/php /home/chevereto/public_html/app/bin/cli -C cron >/dev/null 2>&1
 ```
 </code-block>
 </code-group>

@@ -31,7 +31,7 @@ Having issues? Check the following common pitfalls:
 
 * Invalid format for cron schedule
 * The PHP binary **may not** be available in cron context, use the full PHP path binary
-* The location of the `app/bin/legacy` console may vary, use what reflects the file in your system
+* The location of the `app/bin/cli` console may vary, use what reflects the file in your system
 * Wrong user running the command (requires a **normal user** with access to the project directory)
 * User `www-data` applies only for **Debian-based** system. Refer to your sysadmin for the appropriate user when using other OS
 
@@ -48,7 +48,7 @@ Refer to [CLI Cron](../reference/cli.md#cron).
 ```sh
 docker exec -it \
     --user www-data \
-    chevereto-container app/bin/legacy -C cron
+    chevereto-container app/bin/cli -C cron
 ```
 
 ## Cron.d file
@@ -57,7 +57,7 @@ Recommended setup is to create a [cron.d file](https://manpages.debian.org/stret
 
 ```sh
 cat >/etc/cron.d/chevereto <<EOM
-* * * * * www-data php /var/www/html/app/bin/legacy -C cron
+* * * * * www-data php /var/www/html/app/bin/cli -C cron
 EOM
 ```
 

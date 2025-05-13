@@ -59,5 +59,5 @@ cli.php -C cron
 To Chevereto V4 cron:
 
 ```sh
-app/bin/legacy -C cron
+app/bin/cli -C cron
 ```

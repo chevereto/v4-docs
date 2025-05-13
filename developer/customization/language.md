@@ -81,7 +81,7 @@ In Chevereto the `.po` files contain the translations, but these files aren't us
 Run the [langs command](../../application/reference/cli.md#langs) to cache language strings, including any override you have made.
 
 ```sh
-app/bin/legacy -C langs
+app/bin/cli -C langs
 ```
 
 ::: warning Default cache

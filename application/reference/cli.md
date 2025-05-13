@@ -30,39 +30,28 @@ docker exec -it --user www-data \
 </code-block>
 </code-group>
 
-## Install
+## Bulk importer
 
-The `install` command installs Chevereto. It requires to pass the admin user details.
-
-To install Chevereto for user "rodolfo" with password "myPassword":
+The `bulk-importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
 
 ```sh
-app/bin/cli -C install \
-    -u rodolfo \
-    -e rodolfo@chevereto.loc \
-    -x myPassword
+app/bin/cli -C bulk-importer
 ```
 
-| Option | Description    |
-| ------ | -------------- |
-| u      | Admin username |
-| e      | Admin email    |
-| x      | Admin password |
+## Cache flush
 
-## Update
-
-The `update` command updates the Chevereto database schema.
+The `cache-flush` command clears the application cache and outputs the status of the operation for each key.
 
 ```sh
-app/bin/cli -C update
+app/bin/cli -C cache-flush
 ```
 
-## Version
+## Cache view
 
-The `version` command outputs the Chevereto filesystem version.
+The `cache-view` command displays information about the application cache, including the cache key, TTL (in seconds), and memory usage.
 
 ```sh
-app/bin/cli -C version
+app/bin/cli -C cache-view
 ```
 
 ## Cron
@@ -73,19 +62,7 @@ The `cron` command runs the background jobs required by Chevereto.
 app/bin/cli -C cron
 ```
 
-## Bulk importer
-
-The `bulk-importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
-
-```sh
-app/bin/cli -C bulk-importer
-```
-
-## Encryption
-
-To use encryption it requires to configure the [CHEVERETO_ENCRYPTION_KEY](../configuration/environment.md#encryption-key) environment variable.
-
-### Encrypt secrets
+## Encrypt secrets
 
 The `encrypt-secrets` command [encrypts](encryption.md) the application plain text secrets (not already encrypted) in the database.
 
@@ -99,7 +76,7 @@ If the application secrets are **already encrypted** (stored as cipher text) it 
 app/bin/cli -C encrypt-secrets -k key_for_stored_data
 ```
 
-### Decrypt secrets
+## Decrypt secrets
 
 The `decrypt-secrets` command decrypts the application secrets stored as cipher text in the database.
 
@@ -127,6 +104,25 @@ The `htaccess-enforce` command checks for any alteration on the `.htaccess` file
 app/bin/cli -C htaccess-enforce
 ```
 
+## Install
+
+The `install` command installs Chevereto. It requires to pass the admin user details.
+
+To install Chevereto for user "rodolfo" with password "myPassword":
+
+```sh
+app/bin/cli -C install \
+    -u rodolfo \
+    -e rodolfo@chevereto.loc \
+    -x myPassword
+```
+
+| Option | Description    |
+| ------ | -------------- |
+| u      | Admin username |
+| e      | Admin email    |
+| x      | Admin password |
+
 ## Langs
 
 The `langs` command generates the cache for language translations. The command outputs the list of languages processed.
@@ -145,9 +141,7 @@ To reset the password for user "rodolfo":
 app/bin/cli -C password-reset -u rodolfo
 ```
 
-## Settings
-
-### Setting get
+## Setting get
 
 The `setting-get` command retrieves the target database setting key value.
 
@@ -157,7 +151,7 @@ To get the value for "chevereto_version_installed":
 app/bin/cli -C setting-get -k chevereto_version_installed
 ```
 
-### Setting update
+## Setting update
 
 The `setting-update` command updates the target database setting key value. It outputs the value after update.
 
@@ -165,4 +159,20 @@ To update the value for "maintenance":
 
 ```sh
 app/bin/cli -C setting-update -k maintenance -v true
+```
+
+## Update
+
+The `update` command updates the Chevereto database schema.
+
+```sh
+app/bin/cli -C update
+```
+
+## Version
+
+The `version` command outputs the Chevereto application filesystem version.
+
+```sh
+app/bin/cli -C version
 ```

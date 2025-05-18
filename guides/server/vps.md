@@ -4,7 +4,7 @@
 We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto VPS for you, including all the requirements and configurations.
 :::
 
-Collection of universal bash scripts to install Chevereto in any VPS (Virtual Private Server). We strongly recommend [DigitalOcean](https://chevereto.com/go/digitalocean), [Vultr](https://chevereto.com/go/vultr) and [Linode](https://chevereto.com/go/linode).
+Collection of universal bash scripts to install Chevereto in any VPS (Virtual Private Server).
 
 ## Repository
 

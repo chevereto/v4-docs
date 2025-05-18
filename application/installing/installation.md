@@ -27,13 +27,6 @@ The following guides have been contributed by users of the software.
 
 * [Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/) (Portainer)
 
-## Marketplace
-
-Chevereto is available at the following application marketplaces.
-
-* [DigitalOcean Marketplace](https://chevereto.com/go/digitalocean)
-* [Vultr Marketplace](https://chevereto.com/go/vultr)
-
 ## Using installer software
 
 Chevereto is available at the following installers, look for the following software at your hosting control panel.

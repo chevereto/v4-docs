@@ -106,14 +106,15 @@ Environment variables for configuring binary tools used by Chevereto.
 
 Environment variables for setting up application-level caching.
 
-| Variable                   | Example        |
-| -------------------------- | -------------- |
-| CHEVERETO_CACHE_DRIVER     | redis          |
-| CHEVERETO_CACHE_HOST       | localhost      |
-| CHEVERETO_CACHE_PASSWORD   | redis_password |
-| CHEVERETO_CACHE_PORT       | 6379           |
-| CHEVERETO_CACHE_USER       | redis_user     |
-| CHEVERETO_CACHE_TIME_MICRO | 60             |
+| Variable                     | Example        |
+| ---------------------------- | -------------- |
+| CHEVERETO_CACHE_DRIVER       | redis          |
+| CHEVERETO_CACHE_HOST         | localhost      |
+| CHEVERETO_CACHE_PASSWORD     | redis_password |
+| CHEVERETO_CACHE_PORT         | 6379           |
+| CHEVERETO_CACHE_USER         | redis_user     |
+| CHEVERETO_CACHE_TIME_MICRO   | 60             |
+| CHEVERETO_CACHE_STAMPEDE_SLA | 1000           |
 
 ## Toggles
 

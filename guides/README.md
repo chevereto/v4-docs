@@ -1,11 +1,11 @@
-# Install Guides
+# Installation guides
 
 We have prepared several guides on how you can install and get the best of Chevereto. If you are new to self-hosting this is a good starting point.
 
-* Docker (Multi-arch image compatible with `x86_64` and `arm64`)
+* Docker (multi-arch x86_64/arm64)
   * [Docker](./docker/README.md)
   * [Pure Docker](./docker/pure-docker.md)
-* [VPS](./server/vps.md) (DigitalOcean, Linode, Vultr, etc)
+* [VPS](./server/vps.md)
 * [cPanel](./cpanel/)
 * [Plesk](./plesk/)
 

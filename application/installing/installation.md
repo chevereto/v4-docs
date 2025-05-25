@@ -1,73 +1,72 @@
 # Installation
 
-::: tip Installation service available
-We offer a [paid installation service](https://chevereto.com/support) for Chevereto. We will install Chevereto for you, including all the requirements and configurations.
+If you want to run Chevereto on your own server, you need to install the self-hosted software.
+
+::: tip Installation service
+Get our [Chevereto installation service](https://chevereto.com/support) and we'll handle the installation, requirements, and configuration for you.
 :::
 
-Installation refers to the process where the **software files** gets provided in the target machine.
+## Install using Docker
 
-## Stack
+Docker is the recommended way to install Chevereto as it simplifies the process and provides a consistent environment.
 
-Chevereto requires [PHP](../stack/php.md), a [Web Server](../stack/web-server.md), [MySQL database](../stack/mysql-server.md) and [CRON](../stack/cron.md).
+* [Chevereto Docker](../../guides/docker/README.md) (all-in-one, multi-website setup)
+* [Chevereto Pure Docker](../../guides/docker/pure-docker.md)
 
-## Official guides
+## Install using VPS
 
-For fresh installations continue with one of the following guides.
+If you prefer to install Chevereto on a VPS (Virtual Private Server), you can follow the guides below.
 
-* Docker
-  * [Docker](../../guides/docker/README.md)
-  * [Pure Docker](../../guides/docker/pure-docker.md)
-* [VPS](../../guides/server/vps.md)
-* [cPanel](../../guides/cpanel/README.md)
-* [Plesk](../../guides/plesk/README.md)
+* [Chevereto VPS](../../guides/server/vps.md)
+* [Chevereto cPanel](../../guides/cpanel/README.md)
+* [Chevereto Plesk](../../guides/plesk/README.md)
 
-## Community guides
+You can also install Chevereto using installer software available in many hosting control panels. Look for the following options:
 
-The following guides have been contributed by users of the software.
+* [Chevereto at EasyPanel](https://easypanel.io/docs/templates/chevereto)
+* [Chevereto at Installatron](https://installatron.com/chevereto)
+* [Chevereto at Softaculous](https://www.softaculous.com/apps/galleries/Chevereto)
+* [Chevereto at SwiftWave](https://swiftwave.org/docs/dashboard/swiftwave_app_store/)
 
-* [Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/) (Portainer)
+## Install using Synology NAS
 
-## Using installer software
+If you are using a Synology NAS, you can follow the guide below to install Chevereto:
 
-Chevereto is available at the following installers, look for the following software at your hosting control panel.
+* [Chevereto Synology NAS](https://mariushosting.com/how-to-install-chevereto-on-your-synology-nas/) (Portainer)
 
-* [EasyPanel](https://easypanel.io/docs/templates/chevereto)
-* [Installatron](https://installatron.com/chevereto)
-* [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto)
-* [SwiftWave](https://swiftwave.org/docs/dashboard/swiftwave_app_store/)
+## Install using release package
 
-## Using release package
+The release package is a ZIP file that contains the application source code and all required dependencies. To install using the release package implies to download the package and extract it in the target website directory.
 
-The release package is a `zip` file containing the software files.
+### Manual installation (CLI)
 
-* Paid edition package available at your [client panel](https://chevereto.com/panel/downloads).
-* Free edition package available at [chevereto/chevereto](https://github.com/chevereto/chevereto/releases).
-
-### Manual (CLI)
-
-Run the following [command](https://github.com/chevereto/vps#get) to download and extract package:
+Run the following command to download and extract the package in your current working directory. You will be prompted for a license key; if you don't provide one, the free edition will be downloaded.
 
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.0/common/get.sh)
+bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.3/common/get.sh)
 ```
 
-### Manual (GUI)
+### Manual installation (GUI)
 
-* Upload the latest release to a non-public path in your server
-* Unzip the package in the target website directory (`public_html` folder)
-* Remove the `.zip` file
-* Open your target website URL and follow the [Setup](#setup) instructions
+* Download chevereto release package:
+  * [Paid edition](https://chevereto.com/panel/downloads)
+  * [Free edition](https://github.com/chevereto/chevereto/releases)
+* Unzip the package in your local machine
+* Upload all the files from the unzipped release package to your target website directory, usually a folder named `public_html`
+* Open your target website URL and follow the [Setup instructions](#setup)
 
 ## Setup
 
-Once the software files are provided the software is ready for [Setup](#setup). This is required only once per instance.
+After provisioning the software files, Chevereto is ready for setup. This step is only required the first time and creates the database tables and admin user.
 
-Setup refers to the process when the Chevereto database tables and its admin user is created. You can carry this process in [HTTP](#install-gui) or [CLI](#install-cli) context.
+* Setup via HTTP
 
-### Install (GUI)
+  Open your website URL in a web browser and follow the setup instructions. The setup will guide you through the process of configuring your database and first admin user.
 
-* Go to `/install`
+* Setup via CLI
 
-### Install (CLI)
+  Run the [install command](../reference/cli.md#install) in your terminal to start the setup process:
 
-* Refer to [CLI install](../reference/cli.md#install).
+  ```sh
+  app/bin/cli -C install <options>
+  ```

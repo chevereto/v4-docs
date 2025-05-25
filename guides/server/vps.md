@@ -1,10 +1,10 @@
-# Install Chevereto on Server
+# Install Chevereto on VPS
+
+Collection of bash scripts to install Chevereto in any VPS (Virtual Private Server).
 
 ::: tip Installation service available
 We offer a [paid installation service](https://chevereto.com/support) for this guide. We will install Chevereto VPS for you, including all the requirements and configurations.
 :::
-
-Collection of bash scripts to install Chevereto in any VPS (Virtual Private Server).
 
 ## Repository
 

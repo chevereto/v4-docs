@@ -20,26 +20,11 @@ footer: Chevereto media sharing platform
 
 ## Install
 
-Chevereto runs anywhere, system requirements are minimal and it can run on any server.
-
-Install Chevereto following our guides for:
-
-* Docker (Multi-arch image compatible with `x86_64` and `arm64`)
-  * [Docker](./guides/docker/README.md)
-  * [Pure Docker](./guides/docker/pure-docker.md)
-* [VPS](./guides/server/vps.md) (DigitalOcean, Linode, Vultr, etc)
-* [cPanel](./guides/cpanel/)
-* [Plesk](./guides/plesk/)
-
-Chevereto is also available for installing via [Installatron](https://installatron.com/chevereto), [Softaculous](https://www.softaculous.com/apps/galleries/Chevereto) and [SwiftWave](https://swiftwave.org/docs/dashboard/swiftwave_app_store/).
-
-Review our [Installation docs](./application/installing/installation.md) for all alternatives.
+Review our [Installation docs](./application/installing/installation.md) for all alternatives. Chevereto runs anywhere, system requirements are minimal and it can run on any server.
 
 ## Updating
 
-For Chevereto V4 users:
-
-* Follow the [Updating guide](application/installing/updating.md) to keep your Chevereto V4 system updated.
+Follow the [Updating guide](application/installing/updating.md) to keep your Chevereto V4 system updated.
 
 ## Upgrading
 

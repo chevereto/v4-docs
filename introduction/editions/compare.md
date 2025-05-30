@@ -44,7 +44,7 @@ Upload and share the following media types from device file browser, drag and dr
 | Uploading features           | Free  | Lite  |  Pro  |
 | ---------------------------- | :---: | :---: | :---: |
 | Upload moderation            |   –   |   ✔   |   ✔   |
-| Watermark image uploads      |   –   |   –   |   ✔   |
+| Watermark image uploads      |   –   |   ✔   |   ✔   |
 | Asset storage API            | Local | Local |  All  |
 | External storage servers API | Local | Local |  All  |
 
@@ -190,7 +190,7 @@ Upload and share the following media types from device file browser, drag and dr
 | User avatar max file size                                                                     |   –   |   ✔   |   ✔   |
 | User background max file size                                                                 |   –   |   ✔   |   ✔   |
 | Guest API key                                                                                 |   –   |   ✔   |   ✔   |
-| Logo favicon image                                                                            |   –   |   –   |   ✔   |
+| Logo favicon image                                                                            |   –   |   ✔   |   ✔   |
 | Hide "Powered by Chevereto" footer                                                            |   –   |   –   |   ✔   |
 | [Enabled languages](https://v4-admin.chevereto.com/settings/languages.html#enabled-languages) |   –   |   –   |   ✔   |
 | Routing (user, image, album)                                                                  |   –   |   –   |   ✔   |
@@ -204,14 +204,6 @@ Upload and share the following media types from device file browser, drag and dr
 | Configurable CAPTCHA threshold                                                                |   –   |   –   |   ✔   |
 | Shield by Project Arachnid                                                                    |   –   |   –   |   ✔   |
 | Banners                                                                                       |   –   |   –   |   ✔   |
-| Watermark uploads (guest, user, admin)                                                        |   –   |   –   |   ✔   |
-| Watermark file toggles                                                                        |   –   |   –   |   ✔   |
-| Watermark size requirement                                                                    |   –   |   –   |   ✔   |
-| Watermark custom image                                                                        |   –   |   –   |   ✔   |
-| Watermark position                                                                            |   –   |   –   |   ✔   |
-| Watermark percentage                                                                          |   –   |   –   |   ✔   |
-| Watermark margin                                                                              |   –   |   –   |   ✔   |
-| Watermark opacity                                                                             |   –   |   –   |   ✔   |
 
 ## Admin toggles
 
@@ -246,12 +238,12 @@ Upload and share the following media types from device file browser, drag and dr
 | User notify sign up                                                                         |   –   |   ✔   |   ✔   |
 | User email confirmation                                                                     |   –   |   ✔   |   ✔   |
 | User email for social login                                                                 |   –   |   ✔   |   ✔   |
+| Watermarks                                                                                  |   –   |   ✔   |   ✔   |
 | [Auto language](https://v4-admin.chevereto.com/settings/languages.html#auto-language)       |   –   |   –   |   ✔   |
 | [Language chooser](https://v4-admin.chevereto.com/settings/languages.html#language-chooser) |   –   |   –   |   ✔   |
 | SEO URLs (media and album)                                                                  |   –   |   –   |   ✔   |
 | Cookie law compliance                                                                       |   –   |   –   |   ✔   |
 | Flood protection                                                                            |   –   |   –   |   ✔   |
-| Watermarks                                                                                  |   –   |   –   |   ✔   |
 
 ## System features
 

@@ -40,7 +40,7 @@ Larger encoded IDs will be always better for preserving the privacy of the uploa
 
 💡 This method will affect previous generated links. Use it only if is safe to edit the IDs.
 
-Go to the database, find the `chv_settings` table and edit the `setting_name` identified as `id_padding`. (zero by default).
+Go to the database, find the `chv_variables` table and edit the `setting_name` identified as `id_padding`. (zero by default).
 
 Entering an integer value like `5000` will instruct the system to generate IDs using this base padding.
 

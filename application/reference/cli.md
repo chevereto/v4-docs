@@ -131,6 +131,20 @@ The `langs` command generates the cache for language translations. The command o
 app/bin/cli -C langs
 ```
 
+## Metrics
+
+The `metrics` command outputs Chevereto application metrics.
+
+```sh
+app/bin/cli -C metrics
+```
+
+Pass `-f json` to output the metrics as JSON.
+
+```sh
+app/bin/cli -C metrics -f json
+```
+
 ## Password reset
 
 The `password-reset` command generates and assign a new password for the target username. The command outputs the new password.

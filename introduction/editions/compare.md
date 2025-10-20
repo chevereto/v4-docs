@@ -43,8 +43,8 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Uploading features           | Free  | Lite  |  Pro  |
 | ---------------------------- | :---: | :---: | :---: |
-| Upload moderation            |   –   |   ✔   |   ✔   |
-| Watermark image uploads      |   –   |   ✔   |   ✔   |
+| Upload moderation            |   –   |   ✅   |   ✅   |
+| Watermark image uploads      |   –   |   ✅   |   ✅   |
 | Asset storage API            | Local | Local |  All  |
 | External storage servers API | Local | Local |  All  |
 
@@ -52,15 +52,15 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Storage API           | Free  | Lite  |  Pro  |
 | --------------------- | :---: | :---: | :---: |
-| Amazon S3             |   –   |   –   |   ✔   |
-| S3 compatible         |   –   |   –   |   ✔   |
-| Google Cloud Storage  |   –   |   –   |   ✔   |
-| Microsoft Azure       |   –   |   –   |   ✔   |
-| Alibaba Cloud OSS     |   –   |   –   |   ✔   |
-| SFTP                  |   –   |   –   |   ✔   |
-| FTP                   |   –   |   –   |   ✔   |
-| OpenStack Swift       |   –   |   –   |   ✔   |
-| Backblaze B2 (legacy) |   –   |   –   |   ✔   |
+| Amazon S3             |   –   |   –   |   ✅   |
+| S3 compatible         |   –   |   –   |   ✅   |
+| Google Cloud Storage  |   –   |   –   |   ✅   |
+| Microsoft Azure       |   –   |   –   |   ✅   |
+| Alibaba Cloud OSS     |   –   |   –   |   ✅   |
+| SFTP                  |   –   |   –   |   ✅   |
+| FTP                   |   –   |   –   |   ✅   |
+| OpenStack Swift       |   –   |   –   |   ✅   |
+| Backblaze B2 (legacy) |   –   |   –   |   ✅   |
 
 ## Content features
 
@@ -117,9 +117,9 @@ Upload and share the following media types from device file browser, drag and dr
 | User features   | Free  |         Lite          |          Pro          |
 | --------------- | :---: | :-------------------: | :-------------------: |
 | Roles available | admin | admin, manager & user | admin, manager & user |
-| Multiple users  |   –   |           ✔           |           ✔           |
-| User management |   –   |           ✔           |           ✔           |
-| Guest API       |   –   |           ✔           |           ✔           |
+| Multiple users  |   –   |           ✅           |           ✅           |
+| User management |   –   |           ✅           |           ✅           |
+| Guest API       |   –   |           ✅           |           ✅           |
 
 ## Social features
 
@@ -130,8 +130,8 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Social features | Free  | Lite  |  Pro  |
 | --------------- | :---: | :---: | :---: |
-| Followers       |   –   |   ✔   |   ✔   |
-| Likes           |   –   |   ✔   |   ✔   |
+| Followers       |   –   |   ✅   |   ✅   |
+| Likes           |   –   |   ✅   |   ✅   |
 
 ## Security features
 
@@ -141,8 +141,8 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Feature    | Free  | Lite  |  Pro  |
 | ---------- | :---: | :---: | :---: |
-| IP banning |   –   |   –   |   ✔   |
-| Stop words |   –   |   –   |   ✔   |
+| IP banning |   –   |   –   |   ✅   |
+| Stop words |   –   |   –   |   ✅   |
 
 ## Admin features
 
@@ -179,31 +179,31 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Admin features                                                                                | Free  | Lite  |  Pro  |
 | --------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
-| OAuth2 login providers (Amazon, Google, Discord, etc)                                         |   –   |   ✔   |   ✔   |
-| Homepage style                                                                                |   –   |   ✔   |   ✔   |
-| Homepage cover images                                                                         |   –   |   ✔   |   ✔   |
-| Homepage title & paragraph                                                                    |   –   |   ✔   |   ✔   |
-| Homepage call to action                                                                       |   –   |   ✔   |   ✔   |
-| Pages                                                                                         |   –   |   ✔   |   ✔   |
-| Lock NSFW editing                                                                             |   –   |   ✔   |   ✔   |
-| User min age required                                                                         |   –   |   ✔   |   ✔   |
-| User avatar max file size                                                                     |   –   |   ✔   |   ✔   |
-| User background max file size                                                                 |   –   |   ✔   |   ✔   |
-| Guest API key                                                                                 |   –   |   ✔   |   ✔   |
-| Logo favicon image                                                                            |   –   |   ✔   |   ✔   |
-| Hide "Powered by Chevereto" footer                                                            |   –   |   –   |   ✔   |
-| [Enabled languages](https://v4-admin.chevereto.com/settings/languages.html#enabled-languages) |   –   |   –   |   ✔   |
-| Routing (user, image, album)                                                                  |   –   |   –   |   ✔   |
-| Routing root                                                                                  |   –   |   –   |   ✔   |
-| External services                                                                             |   –   |   –   |   ✔   |
-| Comments API (Disqus, JS)                                                                     |   –   |   –   |   ✔   |
-| Analytics code                                                                                |   –   |   –   |   ✔   |
-| Akismet spam protection                                                                       |   –   |   –   |   ✔   |
-| StopForumSpam spam protection                                                                 |   –   |   –   |   ✔   |
-| CAPTCHA (reCAPTCHA, hCaptcha)                                                                 |   –   |   –   |   ✔   |
-| Configurable CAPTCHA threshold                                                                |   –   |   –   |   ✔   |
-| Shield by Project Arachnid                                                                    |   –   |   –   |   ✔   |
-| Banners                                                                                       |   –   |   –   |   ✔   |
+| OAuth2 login providers (Amazon, Google, Discord, etc)                                         |   –   |   ✅   |   ✅   |
+| Homepage style                                                                                |   –   |   ✅   |   ✅   |
+| Homepage cover images                                                                         |   –   |   ✅   |   ✅   |
+| Homepage title & paragraph                                                                    |   –   |   ✅   |   ✅   |
+| Homepage call to action                                                                       |   –   |   ✅   |   ✅   |
+| Pages                                                                                         |   –   |   ✅   |   ✅   |
+| Lock NSFW editing                                                                             |   –   |   ✅   |   ✅   |
+| User min age required                                                                         |   –   |   ✅   |   ✅   |
+| User avatar max file size                                                                     |   –   |   ✅   |   ✅   |
+| User background max file size                                                                 |   –   |   ✅   |   ✅   |
+| Guest API key                                                                                 |   –   |   ✅   |   ✅   |
+| Logo favicon image                                                                            |   –   |   ✅   |   ✅   |
+| Hide "Powered by Chevereto" footer                                                            |   –   |   –   |   ✅   |
+| [Enabled languages](https://v4-admin.chevereto.com/settings/languages.html#enabled-languages) |   –   |   –   |   ✅   |
+| Routing (user, image, album)                                                                  |   –   |   –   |   ✅   |
+| Routing root                                                                                  |   –   |   –   |   ✅   |
+| External services                                                                             |   –   |   –   |   ✅   |
+| Comments API (Disqus, JS)                                                                     |   –   |   –   |   ✅   |
+| Analytics code                                                                                |   –   |   –   |   ✅   |
+| Akismet spam protection                                                                       |   –   |   –   |   ✅   |
+| StopForumSpam spam protection                                                                 |   –   |   –   |   ✅   |
+| CAPTCHA (reCAPTCHA, hCaptcha)                                                                 |   –   |   –   |   ✅   |
+| Configurable CAPTCHA threshold                                                                |   –   |   –   |   ✅   |
+| Shield by Project Arachnid                                                                    |   –   |   –   |   ✅   |
+| Banners                                                                                       |   –   |   –   |   ✅   |
 
 ## Admin toggles
 
@@ -232,18 +232,18 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Admin toggles                                                                               | Free  | Lite  |  Pro  |
 | ------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
-| Consent screen (age gate)                                                                   |   –   |   ✔   |   ✔   |
-| User sign up                                                                                |   –   |   ✔   |   ✔   |
-| User content delete                                                                         |   –   |   ✔   |   ✔   |
-| User notify sign up                                                                         |   –   |   ✔   |   ✔   |
-| User email confirmation                                                                     |   –   |   ✔   |   ✔   |
-| User email for social login                                                                 |   –   |   ✔   |   ✔   |
-| Watermarks                                                                                  |   –   |   ✔   |   ✔   |
-| [Auto language](https://v4-admin.chevereto.com/settings/languages.html#auto-language)       |   –   |   –   |   ✔   |
-| [Language chooser](https://v4-admin.chevereto.com/settings/languages.html#language-chooser) |   –   |   –   |   ✔   |
-| SEO URLs (media and album)                                                                  |   –   |   –   |   ✔   |
-| Cookie law compliance                                                                       |   –   |   –   |   ✔   |
-| Flood protection                                                                            |   –   |   –   |   ✔   |
+| Consent screen (age gate)                                                                   |   –   |   ✅   |   ✅   |
+| User sign up                                                                                |   –   |   ✅   |   ✅   |
+| User content delete                                                                         |   –   |   ✅   |   ✅   |
+| User notify sign up                                                                         |   –   |   ✅   |   ✅   |
+| User email confirmation                                                                     |   –   |   ✅   |   ✅   |
+| User email for social login                                                                 |   –   |   ✅   |   ✅   |
+| Watermarks                                                                                  |   –   |   ✅   |   ✅   |
+| [Auto language](https://v4-admin.chevereto.com/settings/languages.html#auto-language)       |   –   |   –   |   ✅   |
+| [Language chooser](https://v4-admin.chevereto.com/settings/languages.html#language-chooser) |   –   |   –   |   ✅   |
+| SEO URLs (media and album)                                                                  |   –   |   –   |   ✅   |
+| Cookie law compliance                                                                       |   –   |   –   |   ✅   |
+| Flood protection                                                                            |   –   |   –   |   ✅   |
 
 ## System features
 

@@ -116,7 +116,7 @@ cat >/etc/cron.d/cf-remoteip <<EOM
 EOM
 ```
 
-## HTTPS setup
+### HTTPS setup
 
 Run the following command to get automatic renewable HTTPS thanks to certbot. Mind to change `example.com` with the target domain(s).
 
@@ -128,4 +128,12 @@ If you are using `www.` subdomain you can add it like this:
 
 ```sh
 certbot --apache -d example.com -d www.example.com
+```
+
+### Wipe leftovers
+
+The [wipe-v3-leftovers.sh](https://github.com/chevereto/vps/blob/4.3/common/wipe-v3-leftovers.sh) script removes any previous Chevereto V3 installation leftovers from the current working folder.
+
+```sh
+bash <(curl -s https://raw.githubusercontent.com/chevereto/vps/4.3/common/wipe-v3-leftovers.sh)
 ```

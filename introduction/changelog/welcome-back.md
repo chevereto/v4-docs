@@ -32,6 +32,42 @@ The following tables summarizes the significative differences between Chevereto 
 | Themes                                    | /content/legacy/themes             | /app/themes       |
 | Peafowl                                   | /content/legacy/themes/Peafowl/lib | /lib              |
 
+This is the list of filesystem removals in Chevereto V4:
+
+- lib/
+- composer.lock
+- composer.json
+- cli.php
+- .gitignore
+- app/themes/
+- app/routes/
+- app/lib/
+- app/install/
+- app/importer/
+- app/web.php
+- app/update.php
+- app/setting-update.php
+- app/pre-autoload.php
+- app/loader.php
+- app/langs.php
+- app/install.php
+- app/importing.php
+- app/htaccess-enforce.php
+- app/htaccess-checksum.php
+- app/cron.php
+- app/chevereto-hook.sample.php
+- app/app.php
+- app/apache/d984f0472c79dac505f550a24090b391
+- app/apache/b9ac088371e0dcad02c417900069bc9b
+- app/content/system/
+- app/content/languages/
+- importing/no-parse/.gitkeep
+- importing/parse-albums/.gitkeep
+- importing/parse-users/.gitkeep
+- sdk/pup.dev.js
+
+You can run the [Wipe leftovers](https://github.com/chevereto/vps?tab=readme-ov-file#wipe-leftovers) command to remove these files automatically.
+
 ### Settings setup
 
 Chevereto V4 deprecates `app/settings.php` in favor of [environment variables](../../application/configuration/environment.md) for [configuring](../../application/configuration/configuring.md) the application.

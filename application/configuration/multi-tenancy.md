@@ -10,7 +10,16 @@ In a multi-tenant Chevereto setup, the application is configured to recognize an
 
 The database is the source of truth for tenant information, including their limits and environment settings. The application caches this data on memory and it provides a [command line interface](../../application/reference/cli.md#tenants-cli) for interacting with it.
 
-By design, this system mandatory **requires encryption** as it needs to cipher the data stored under the `env` column in the `tenants` and `tenants_plans` tables. This ensures that sensitive data remains secure and protected.
+By design, this system mandatory **requires encryption** as it needs to cipher the data stored under the `env` column in the `tenants` and `tenants_plans` tables.
+
+Resource sharing is constrained by the following design decisions that you should consider when planning your multi-tenant setup:
+
+- Database uses table prefixing to isolate tenant data.
+- Caching uses key prefixing to isolate tenant cache entries.
+- No built-in local storage, tenants control their own "Site storage" and "Upload storage" from the application settings.
+- Session supports only Redis as backend.
+- Tenant ID must be unique and is limited to 16 characters.
+- Tenant hostname must be unique and is limited to 255 characters.
 
 ## Enabling multi-tenancy
 
@@ -102,4 +111,12 @@ Use the [cache](../../application/reference/cli.md#cache-tenants-data) command t
 
 ```sh
 app/bin/tenants -C cache
+```
+
+## Application CLI and multi-tenancy
+
+When running Chevereto in multi-tenant mode, you must pas the target tenant for CLI commands by setting the `CHEVERETO_ID` environment variable to the desired tenant ID.
+
+```sh
+CHEVERETO_ID=abc app/bin/cli -C <command> <options>
 ```

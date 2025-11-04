@@ -8,11 +8,15 @@ This command line interface enables to perform a variety of application tasks. I
 
 ```sh
 app/bin/cli -C <command> <options>
+CHEVERETO_ID=abc app/bin/cli -C <command> <options> # When using multi-tenant mode
 ```
+
+Where:
 
 * `app/bin/cli` path to the Chevereto console file
 * `<command>` task to run
 * `<options>` options for command
+* `CHEVERETO_ID` environment variable to specify the target tenant when using multi-tenant mode
 
 Command invocation vary depending on the system context, here samples for Debian and Docker:
 

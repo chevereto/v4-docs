@@ -1,44 +1,55 @@
 # Multi-Tenancy
 
-Multi-tenancy is supported from version 4.4.0 onwards.
+Multi-tenancy is supported as of version 4.4.0.
 
-This allows hosting multiple independent Chevereto instances (tenants) within a single Chevereto installation. Each tenant can have its own configuration, users, media, and settings, while sharing the same application codebase. It enables to run multiple Chevereto sites on a shared infrastructure, simplifying maintenance and reducing resource consumption.
+It allows hosting multiple isolated Chevereto instances (tenants) in a single installation. Each tenant has its own configuration, users, media, and settings, while sharing the same application codebase. This reduces maintenance and resource consumption.
 
 ## System overview
 
-In a multi-tenant Chevereto setup, the application is configured to recognize and serve multiple tenants. Each tenant is identified by a unique identifier (tenant ID) and bound to a hostname. Chevereto uses the `tenants` and `tenants_plans` database tables to manage tenant-specific data, on runtime the application determines the active tenant based on the incoming request's hostname and applies the corresponding configurations.
+In a multi-tenant setup, Chevereto recognizes and serves multiple tenants. Each tenant:
 
-The database is the source of truth for tenant information, including their limits and environment settings. The application caches this data on memory and it provides a [command line interface](../../application/reference/cli.md#tenants-cli) for interacting with it.
+- Is identified by a unique tenant ID.
+- Is bound to a hostname.
+- Is resolved at runtime from the incoming request’s hostname.
 
-By design, this system mandatory **requires encryption** as it needs to cipher the data stored under the `env` columns in the database tables.
+Tenant metadata is stored in the `tenants` and `tenants_plans` database tables. The database is the source of truth for tenant limits and environment settings. The application caches this data in memory and provides a [command line interface](../../application/reference/cli.md#tenants-cli) to manage it.
 
-Resource sharing is constrained by the following design decisions that you should consider when planning your multi-tenant setup:
+By design, this system requires encryption because data stored under `env` columns is encrypted at rest.
 
-- Database uses table prefixing to isolate tenant data.
-- Caching uses key prefixing to isolate tenant cache entries.
-- No built-in local storage, tenants control their own "Site storage" and "Upload storage" from the application settings.
-- Session supports only Redis as backend.
-- Tenant ID must be unique and is limited to 16 characters.
-- Tenant hostname must be unique and is limited to 255 characters.
+Resource sharing and isolation:
+
+- Database: table prefixing per tenant.
+- Cache: key prefixing per tenant.
+- Storage: no shared local storage. Tenants configure their own “Site storage” and “Upload storage” in application settings.
+- Sessions: only Redis is supported as backend.
+- Tenant ID: unique, up to 16 characters.
+- Tenant hostname: unique, up to 255 characters.
 
 ## Enabling multi-tenancy
 
-To enable multi-tenancy, set the following environment variables:
+Set the following environment variables:
 
 ```plain
 CHEVERETO_ENABLE_TENANTS=1
 CHEVERETO_ENCRYPTION_KEY=your_encryption_key
 ```
 
+Then, initialize the multi-tenant database system:
+
+```sh
+app/bin/tenants -C init
+```
+
 ## Managing tenant plans
 
-Tenant plans define the limits and environment available for tenants, similar to a template. When a tenant is bound to a plan it inherits its limits and environment settings. However, keep in mind that these can be overridden on a per-tenant basis.
+Tenant plans define default limits and environment variables, similar to a template. When a tenant is assigned to a plan, it inherits the plan’s limits and environment, which the tenant can still override.
 
-Use `limits` to define resource constraints. Use `env` to set environment variables (safe encrypted).
+- Use `limits` to define resource constraints.
+- Use `env` to set environment variables (values are stored encrypted).
 
 ### Adding a tenant plan
 
-Use the [plan:add](../../application/reference/cli.md#add-tenant-plan) command to create a new tenant plan. You must pass the plan ID and its name, limits and environment are optional. Use JSON format for `limits` and `env`.
+Use [plan:add](../../application/reference/cli.md#add-tenant-plan). Pass the plan ID and name; `limits` and `env` are optional (JSON format).
 
 ```sh
 app/bin/tenants -C plan:add \
@@ -48,11 +59,11 @@ app/bin/tenants -C plan:add \
     --env '{"CHEVERETO_CACHE_TIME_MICRO":"120"}'
 ```
 
-For the example above, the created plan will have ID `1`, name `Basic Plan`, a limit of maximum `10000` tags and a cache time of `120` seconds.
+This creates plan `1` named “Basic Plan” with a maximum of `10000` tags and a cache time of `120` seconds.
 
 ### Listing tenant plans
 
-Use the [plan:list](../../application/reference/cli.md#list-tenant-plans) command to list all tenant plans.
+Use [plan:list](../../application/reference/cli.md#list-tenant-plans):
 
 ```sh
 app/bin/tenants -C plan:list
@@ -60,7 +71,7 @@ app/bin/tenants -C plan:list
 
 ### Deleting a tenant plan
 
-Use the [plan:delete](../../application/reference/cli.md#delete-tenant-plan) command to delete a tenant plan by its ID. Affected tenants will no longer be associated with that plan, losing any limits and environment settings inherited from it. The system will re-cache the affected tenants automatically.
+Use [plan:delete](../../application/reference/cli.md#delete-tenant-plan) by plan ID. Affected tenants will lose the inherited plan settings; the system re-caches them automatically.
 
 ```sh
 app/bin/tenants -C plan:delete --id 1
@@ -68,13 +79,14 @@ app/bin/tenants -C plan:delete --id 1
 
 ## Managing tenants
 
-Tenants represent individual Chevereto instances within the multi-tenant setup. Each tenant is associated with a unique hostname and can have its own configuration, users, media, and settings.
+A tenant represents an individual Chevereto instance within the multi-tenant setup. Each tenant has a unique hostname and can override its plan’s limits and environment.
 
-Use `limits` to define resource constraints and `env` (encrypted) to set environment variables for tenants, it will override any plan settings.
+- Use `limits` for resource constraints.
+- Use `env` for environment variables (encrypted). Tenant `env` overrides plan `env`.
 
 ### Adding a tenant
 
-Use the [add](../../application/reference/cli.md#add-tenant) command to create a new tenant. You must pass the tenant ID, hostname, and enabled status. Plan ID, limits, and environment are optional. Use JSON format for `limits` and `env`.
+Use [add](../../application/reference/cli.md#add-tenant). Provide tenant ID, hostname, and enabled status. `plan_id`, `limits`, and `env` are optional (JSON format).
 
 ```sh
 app/bin/tenants -C add \
@@ -85,11 +97,11 @@ app/bin/tenants -C add \
     --env '{"CHEVERETO_CACHE_TIME_MICRO":"90"}'
 ```
 
-For the example above, the created tenant will have ID `1`, hostname `tenant1.example.com`, enabled status `1`, associated with plan ID `1`, a limit of maximum `5000` albums and a cache time of `90` seconds. Note how the tenant overrides the cache time defined in its plan.
+This creates tenant `1` at `tenant1.example.com`, enabled, associated with plan `1`, and overriding the plan’s cache time to `90` seconds.
 
 ### Editing a tenant
 
-Use the [edit](../../application/reference/cli.md#edit-tenant) command to modify an existing tenant. You can update its hostname, enabled status, plan ID, limits, and environment. Use JSON format for `limits` and `env`.
+Use [edit](../../application/reference/cli.md#edit-tenant) to change hostname, enabled status, plan, limits, or environment.
 
 ```sh
 app/bin/tenants -C edit \
@@ -99,15 +111,15 @@ app/bin/tenants -C edit \
 
 ### Deleting a tenant
 
-Use the [delete](../../application/reference/cli.md#delete-tenant) command to remove a tenant by its ID.
+Use [delete](../../application/reference/cli.md#delete-tenant) by tenant ID:
 
 ```sh
 app/bin/tenants -C delete --id 1
 ```
 
-### Caching tenants data
+### Caching tenant data
 
-Use the [cache](../../application/reference/cli.md#cache-tenants-data) command to generate the cache for tenants. This command should be used when needing to refresh the entire tenants data cache.
+Use [cache](../../application/reference/cli.md#cache-tenants-data) to regenerate the entire tenant data cache:
 
 ```sh
 app/bin/tenants -C cache
@@ -115,7 +127,7 @@ app/bin/tenants -C cache
 
 ## Application CLI and multi-tenancy
 
-When running Chevereto in multi-tenant mode, you must pas the target tenant for CLI commands by setting the `CHEVERETO_ID` environment variable to the desired tenant ID.
+When running Chevereto in multi-tenant mode, pass the target tenant via the `CHEVERETO_ID` environment variable.
 
 ```sh
 CHEVERETO_ID=abc app/bin/cli -C <command> <options>

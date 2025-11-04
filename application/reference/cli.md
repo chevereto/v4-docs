@@ -1,6 +1,8 @@
 # CLI
 
-## app/bin/cli
+## Application CLI
+
+`app/bin/cli`
 
 This command line interface enables to perform a variety of application tasks. It can be used like this:
 
@@ -199,7 +201,9 @@ The `js` command generates the cache for JavaScript files. The command outputs t
 app/bin/cli -C js
 ```
 
-## app/bin/repl
+## REPL CLI
+
+`app/bin/repl`
 
 This command line interface enables to interact with the Chevereto application using a Read-Eval-Print Loop (REPL). It can be used like this:
 
@@ -209,7 +213,9 @@ app/bin/repl
 
 Refer to [REPL documentation](../../developer/how-to/repl.md).
 
-## app/bin/tenants
+## Tenants CLI
+
+`app/bin/tenants`
 
 This command line interface enables to manage tenants in the Chevereto infrastructure. It can be used like this:
 
@@ -245,6 +251,24 @@ app/bin/tenants -C add \
 | ---------- | ---------------------------------- |
 | id         | Tenant ID                          |
 | hostname   | Tenant hostname                    |
+| is_enabled | Tenant enabled status              |
+| plan_id    | (optional) Tenant plan ID          |
+| limits     | (optional) Tenant limits JSON      |
+| env        | (optional) Tenant environment JSON |
+
+### Edit tenant
+
+The `edit` command modifies an existing tenant in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C edit \
+    --id 1 \
+    --is_enabled 0
+```
+
+| Option     | Description                        |
+| ---------- | ---------------------------------- |
+| id         | Tenant ID                          |
 | is_enabled | Tenant enabled status              |
 | plan_id    | (optional) Tenant plan ID          |
 | limits     | (optional) Tenant limits JSON      |

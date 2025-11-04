@@ -10,7 +10,7 @@ In a multi-tenant Chevereto setup, the application is configured to recognize an
 
 The database is the source of truth for tenant information, including their limits and environment settings. The application caches this data on memory and it provides a [command line interface](../../application/reference/cli.md#tenants-cli) for interacting with it.
 
-By design, this system mandatory **requires encryption** as it needs to cipher the data stored under the `env` column in the `tenants` and `tenants_plans` tables.
+By design, this system mandatory **requires encryption** as it needs to cipher the data stored under the `env` columns in the database tables.
 
 Resource sharing is constrained by the following design decisions that you should consider when planning your multi-tenant setup:
 

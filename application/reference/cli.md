@@ -1,8 +1,8 @@
 # CLI
 
-`app/bin/cli`
+## app/bin/cli
 
-Chevereto V4 includes a command line interface enabling to perform a variety of system tasks. This console command should be invoked in the following format:
+This command line interface enables to perform a variety of application tasks. It can be used like this:
 
 ```sh
 app/bin/cli -C <command> <options>
@@ -30,7 +30,7 @@ docker exec -it --user www-data \
 </code-block>
 </code-group>
 
-## Bulk importer
+### Bulk importer
 
 The `bulk-importer` command process files for [Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
 
@@ -38,7 +38,7 @@ The `bulk-importer` command process files for [Bulk importer](https://v4-admin.c
 app/bin/cli -C bulk-importer
 ```
 
-## Cache flush
+### Cache flush
 
 The `cache-flush` command clears the application cache and outputs the status of the operation for each key.
 
@@ -46,7 +46,7 @@ The `cache-flush` command clears the application cache and outputs the status of
 app/bin/cli -C cache-flush
 ```
 
-## Cache view
+### Cache view
 
 The `cache-view` command displays information about the application cache, including the cache key, TTL (in seconds), and memory usage.
 
@@ -54,7 +54,7 @@ The `cache-view` command displays information about the application cache, inclu
 app/bin/cli -C cache-view
 ```
 
-## Cron
+### Cron
 
 The `cron` command runs the background jobs required by Chevereto.
 
@@ -62,7 +62,7 @@ The `cron` command runs the background jobs required by Chevereto.
 app/bin/cli -C cron
 ```
 
-## Encrypt secrets
+### Encrypt secrets
 
 The `encrypt-secrets` command [encrypts](encryption.md) the application plain text secrets (not already encrypted) in the database.
 
@@ -76,7 +76,7 @@ If the application secrets are **already encrypted** (stored as cipher text) it 
 app/bin/cli -C encrypt-secrets -k key_for_stored_data
 ```
 
-## Decrypt secrets
+### Decrypt secrets
 
 The `decrypt-secrets` command decrypts the application secrets stored as cipher text in the database.
 
@@ -86,9 +86,9 @@ app/bin/cli -C decrypt-secrets
 
 After running the above command set `CHEVERETO_ENCRYPTION_KEY` to **empty string** to disable encryption.
 
-## Htaccess
+### Htaccess
 
-### Htaccess checksum
+#### Htaccess checksum
 
 The `htaccess-checksum` command generates safe `.htaccess` for Chevereto folders.
 
@@ -96,7 +96,7 @@ The `htaccess-checksum` command generates safe `.htaccess` for Chevereto folders
 app/bin/cli -C htaccess-checksum
 ```
 
-### Htaccess enforce
+#### Htaccess enforce
 
 The `htaccess-enforce` command checks for any alteration on the `.htaccess` files and reverts them to the defaults included by Chevereto.
 
@@ -104,7 +104,7 @@ The `htaccess-enforce` command checks for any alteration on the `.htaccess` file
 app/bin/cli -C htaccess-enforce
 ```
 
-## Install
+### Install
 
 The `install` command installs Chevereto. It requires to pass the admin user details.
 
@@ -123,7 +123,7 @@ app/bin/cli -C install \
 | e      | Admin email    |
 | x      | Admin password |
 
-## Langs
+### Langs
 
 The `langs` command generates the cache for language translations. The command outputs the list of languages processed.
 
@@ -131,7 +131,7 @@ The `langs` command generates the cache for language translations. The command o
 app/bin/cli -C langs
 ```
 
-## Metrics
+### Metrics
 
 The `metrics` command outputs Chevereto application metrics.
 
@@ -145,7 +145,7 @@ Pass `-f json` to output the metrics as JSON.
 app/bin/cli -C metrics -f json
 ```
 
-## Password reset
+### Password reset
 
 The `password-reset` command generates and assign a new password for the target username. The command outputs the new password.
 
@@ -155,7 +155,7 @@ To reset the password for user "rodolfo":
 app/bin/cli -C password-reset -u rodolfo
 ```
 
-## Setting get
+### Setting get
 
 The `setting-get` command retrieves the target database setting key value.
 
@@ -165,7 +165,7 @@ To get the value for "chevereto_version_installed":
 app/bin/cli -C setting-get -k chevereto_version_installed
 ```
 
-## Setting update
+### Setting update
 
 The `setting-update` command updates the target database setting key value. It outputs the value after update.
 
@@ -175,7 +175,7 @@ To update the value for "maintenance":
 app/bin/cli -C setting-update -k maintenance -v true
 ```
 
-## Update
+### Update
 
 The `update` command updates the Chevereto database schema.
 
@@ -183,10 +183,128 @@ The `update` command updates the Chevereto database schema.
 app/bin/cli -C update
 ```
 
-## Version
+### Version
 
 The `version` command outputs the Chevereto application filesystem version.
 
 ```sh
 app/bin/cli -C version
 ```
+
+### Js
+
+The `js` command generates the cache for JavaScript files. The command outputs the list of JavaScript files processed.
+
+```sh
+app/bin/cli -C js
+```
+
+## app/bin/repl
+
+This command line interface enables to interact with the Chevereto application using a Read-Eval-Print Loop (REPL). It can be used like this:
+
+```sh
+app/bin/repl
+```
+
+Refer to [REPL documentation](../../developer/how-to/repl.md).
+
+## app/bin/tenants
+
+This command line interface enables to manage tenants in the Chevereto infrastructure. It can be used like this:
+
+```sh
+app/bin/tenants -C <command> <options>
+```
+
+### Initialize tenants
+
+The `init` command initializes the tenants system in Chevereto. It sets up the necessary database tables and configurations to support multi-tenancy.
+
+```sh
+app/bin/tenants -C init
+```
+
+**Note:** This command creates the required database tables for managing tenants. You must set `CHEVERETO_ENABLE_TENANTS=1` [environment](../configuration/environment.md#toggles) key to run the application in multi-tenant mode.
+
+### Add tenant
+
+The `add` command creates a new tenant in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C add \
+    --id 1 \
+    --hostname tenant1.example.com \
+    --is_enabled 1 \
+    --plan_id 1 \
+    --limits '{}' \
+    --env '{}'
+```
+
+| Option     | Description                        |
+| ---------- | ---------------------------------- |
+| id         | Tenant ID                          |
+| hostname   | Tenant hostname                    |
+| is_enabled | Tenant enabled status              |
+| plan_id    | (optional) Tenant plan ID          |
+| limits     | (optional) Tenant limits JSON      |
+| env        | (optional) Tenant environment JSON |
+
+### Delete tenant
+
+The `delete` command removes a tenant from the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C delete --id 1
+```
+
+| Option | Description |
+| ------ | ----------- |
+| id     | Tenant ID   |
+
+### Cache tenants data
+
+The `cache` command generates the cache for tenants in the Chevereto infrastructure. This command should be used when needing to cache refresh the entire tenants data.
+
+```sh
+app/bin/tenants -C cache
+```
+
+### Add tenant plan
+
+The `plan:add` command creates a new tenant plan in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C plan:add \
+    --id 1 \
+    --name "Basic Plan" \
+    --limits '{}' \
+    --env '{}'
+```
+
+| Option | Description                             |
+| ------ | --------------------------------------- |
+| id     | Tenant plan ID                          |
+| name   | Tenant plan name                        |
+| limits | (optional) Tenant plan limits JSON      |
+| env    | (optional) Tenant plan environment JSON |
+
+### List tenant plans
+
+The `plan:list` command outputs the list of tenant plans in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C plan:list
+```
+
+### Delete tenant plan
+
+The `plan:delete` command removes a tenant plan from the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C plan:delete --id 1
+```
+
+| Option | Description    |
+| ------ | -------------- |
+| id     | Tenant plan ID |

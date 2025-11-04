@@ -154,6 +154,7 @@ Environment variables for the context where Chevereto system is being provided. 
 | CHEVERETO_ENABLE_ROUTING                    | 1       |
 | CHEVERETO_ENABLE_SEO_ALBUM_URL              | 1       |
 | CHEVERETO_ENABLE_SEO_IMAGE_URL              | 1       |
+| CHEVERETO_ENABLE_TENANTS                    | 0       |
 | CHEVERETO_ENABLE_SERVICE_AKISMET            | 1       |
 | CHEVERETO_ENABLE_SERVICE_MODERATECONTENT    | 0       |
 | CHEVERETO_ENABLE_SERVICE_PROJECTARACHNID    | 1       |

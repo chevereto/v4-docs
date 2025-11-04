@@ -229,13 +229,11 @@ app/bin/tenants -C <command> <options>
 
 ### Initialize tenants
 
-The `init` command initializes the tenants system in Chevereto. It sets up the necessary database tables and configurations to support multi-tenancy.
+The `init` command initializes the tenants system in Chevereto. It sets up the necessary database tables and configurations to support multitenancy.
 
 ```sh
 app/bin/tenants -C init
 ```
-
-**Note:** This command creates the required database tables for managing tenants. You must set `CHEVERETO_ENABLE_TENANTS=1` [environment](../configuration/environment.md#toggles) key to run the application in multi-tenant mode.
 
 ### Add tenant
 

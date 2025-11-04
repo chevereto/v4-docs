@@ -1,6 +1,6 @@
-# Multi-Tenancy
+# Multitenancy
 
-Multi-tenancy is supported as of version 4.4.0.
+[Multitenancy](https://en.wikipedia.org/wiki/Multitenancy) is supported as of version 4.4.0.
 
 It allows hosting multiple isolated Chevereto instances (tenants) in a single installation. Each tenant has its own configuration, users, media, and settings, while sharing the same application codebase. This reduces maintenance and resource consumption.
 
@@ -25,7 +25,7 @@ Resource sharing and isolation:
 - Tenant ID: unique, up to 16 characters.
 - Tenant hostname: unique, up to 255 characters.
 
-## Enabling multi-tenancy
+## Enabling multitenancy
 
 Set the following environment variables:
 
@@ -125,7 +125,7 @@ Use [cache](../../application/reference/cli.md#cache-tenants-data) to regenerate
 app/bin/tenants -C cache
 ```
 
-## Application CLI and multi-tenancy
+## Application CLI
 
 When running Chevereto in multi-tenant mode, pass the target tenant via the `CHEVERETO_ID` environment variable.
 

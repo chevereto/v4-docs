@@ -308,6 +308,18 @@ app/bin/tenants -C plan:add \
     --env '{}'
 ```
 
+### Edit tenant plan
+
+The `plan:edit` command modifies an existing tenant plan in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C plan:edit \
+    --id 1 \
+    --name "Updated Plan" \
+    --limits '{}' \
+    --env '{}'
+```
+
 | Option | Description                             |
 | ------ | --------------------------------------- |
 | id     | Tenant plan ID                          |

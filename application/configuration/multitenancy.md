@@ -61,6 +61,17 @@ app/bin/tenants -C plan:add \
 
 This creates plan `1` named “Basic Plan” with a maximum of `10000` tags and a cache time of `120` seconds.
 
+### Editing a tenant plan
+
+Use [plan:edit](../../application/reference/cli.md#edit-tenant-plan) to change the name, limits, or environment of an existing plan. Affected tenants will inherited the updated plan settings; the system re-caches them automatically.
+
+```sh
+app/bin/tenants -C plan:edit \
+    --id 1 \
+    --name "Updated Basic Plan" \
+    --limits '{"CHEVERETO_MAX_TAGS":"15000"}'
+```
+
 ### Listing tenant plans
 
 Use [plan:list](../../application/reference/cli.md#list-tenant-plans):

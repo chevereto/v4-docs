@@ -129,6 +129,7 @@ app/bin/tenants -C delete --id 1
 app/bin/tenants -C delete --id 1 --drop-tables
 ```
 
+When passing `--drop-tables`, the tenant’s database tables are also removed.
 
 ### Caching tenant data
 

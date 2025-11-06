@@ -126,7 +126,9 @@ Use [delete](../../application/reference/cli.md#delete-tenant) by tenant ID:
 
 ```sh
 app/bin/tenants -C delete --id 1
+app/bin/tenants -C delete --id 1 --drop-tables
 ```
+
 
 ### Caching tenant data
 

@@ -284,9 +284,10 @@ The `delete` command removes a tenant from the Chevereto infrastructure.
 app/bin/tenants -C delete --id 1
 ```
 
-| Option | Description |
-| ------ | ----------- |
-| id     | Tenant ID   |
+| Option      | Description                            |
+| ----------- | -------------------------------------- |
+| id          | Tenant ID                              |
+| drop-tables | (optional) Drop tenant database tables |
 
 ### Cache tenants data
 

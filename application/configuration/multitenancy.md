@@ -14,16 +14,18 @@ In a multi-tenant setup, Chevereto recognizes and serves multiple tenants. Each 
 
 Tenant metadata is stored in the `tenants` and `tenants_plans` database tables. The database is the source of truth for tenant limits and environment settings. The application caches this data in memory and provides a [command line interface](../../application/reference/cli.md#tenants-cli) to manage it.
 
-By design, this system requires encryption because data stored under `env` columns is encrypted at rest.
+Data stored under `env` columns is encrypted.
 
 Resource sharing and isolation:
 
 - Database: table prefixing per tenant.
 - Cache: key prefixing per tenant.
-- Storage: no shared local storage. Tenants configure their own “Site storage” and “Upload storage” in application settings.
+- Storage: tenants configure their own “Site storage” and “Upload storage” in application settings.
 - Sessions: only Redis is supported as backend.
 - Tenant ID: unique, up to 16 characters.
 - Tenant hostname: unique, up to 255 characters.
+
+Once a hostname is resolved to a tenant, the application behaves as if it were a standalone Chevereto instance with its own configuration.
 
 ## Enabling multitenancy
 

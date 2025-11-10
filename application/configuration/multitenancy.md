@@ -141,8 +141,8 @@ app/bin/tenants -C cache
 
 ## Application CLI
 
-When running Chevereto in multi-tenant mode, pass the target tenant via the `CHEVERETO_ID` environment variable.
+When running Chevereto in multi-tenant mode, pass the target tenant via the `CHEVERETO_TENANT` environment variable.
 
 ```sh
-CHEVERETO_ID=abc app/bin/cli -C <command> <options>
+CHEVERETO_TENANT=abc app/bin/cli -C <command> <options>
 ```

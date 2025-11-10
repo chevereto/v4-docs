@@ -34,6 +34,13 @@ Set the following environment variables:
 ```plain
 CHEVERETO_ENABLE_TENANTS=1
 CHEVERETO_ENCRYPTION_KEY=your_encryption_key
+CHEVERETO_VENDOR_NAME=your_vendor_name
+```
+
+Use `CHEVERETO_TENANT_ENFORCED` to define a JSON object with environment variables that will be late enforced (overridden) on runtime.
+
+```plain
+CHEVERETO_TENANT_ENFORCED='{"CHEVERETO_MAX_UPLOAD_SIZE":"20M"}'
 ```
 
 Then, initialize the multi-tenant database system:

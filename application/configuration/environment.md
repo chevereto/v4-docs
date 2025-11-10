@@ -116,6 +116,26 @@ Environment variables for setting up application-level caching.
 | CHEVERETO_CACHE_TIME_MICRO   | 60             |
 | CHEVERETO_CACHE_STAMPEDE_SLA | 1000           |
 
+## Provider
+
+Environment variables for configuring the service provider.
+
+| Variable                | Example                     |
+| ----------------------- | --------------------------- |
+| CHEVERETO_PROVIDER_NAME | Chevereto Cloud             |
+| CHEVERETO_PROVIDER_URL  | https://cloud.chevereto.com |
+
+## Tenants
+
+Environment variables for configuring multi-tenancy.
+
+| Variable                  | Example                       |
+| ------------------------- | ----------------------------- |
+| CHEVERETO_TENANT_ENFORCED | {"CHEVERETO_MAX_USERS":"100"} |
+| CHEVERETO_TENANT          | tenant1                       |
+
+Variable `CHEVERETO_TENANT_ENFORCED` is a JSON object that defines which variables will be enforced (overridden) for the multi-tenant context. Variable `CHEVERETO_TENANT` is intended to be used to pass the current tenant context for CLI.
+
 ## Toggles
 
 Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable some Chevereto functionality.

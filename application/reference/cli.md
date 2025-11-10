@@ -137,18 +137,26 @@ The `langs` command generates the cache for language translations. The command o
 app/bin/cli -C langs
 ```
 
-### Metrics
+### Stat
 
-The `metrics` command outputs Chevereto application metrics.
+The `stat` command outputs Chevereto application stats.
 
 ```sh
-app/bin/cli -C metrics
+app/bin/cli -C stat
 ```
 
-Pass `-f json` to output the metrics as JSON.
+Pass `--format json` to output the stats as JSON.
 
 ```sh
-app/bin/cli -C metrics -f json
+app/bin/cli -C stat --format json
+```
+
+### Stat rebuild
+
+The `stat-rebuild` command rebuilds the Chevereto application stats.
+
+```sh
+app/bin/cli -C stat-rebuild
 ```
 
 ### Password reset

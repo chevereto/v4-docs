@@ -160,13 +160,15 @@ A tenant represents an individual Chevereto instance within the multi-tenant set
 
 Use [add](../../application/reference/cli.md#add-tenant). Provide tenant ID, hostname, and enabled status. `plan_id`, `limits`, and `env` are optional (JSON format).
 
+**Note:** It is **recommended** to set a unique `CHEVERETO_ENCRYPTION_KEY` per tenant for enhanced security.
+
 ```sh
 app/bin/tenants -C add \
     --id 1 \
     --hostname tenant1.example.com \
     --is_enabled 1 \
     --plan_id 1 \
-    --env '{"CHEVERETO_CACHE_TIME_MICRO":"90"}'
+    --env '{"CHEVERETO_ENCRYPTION_KEY":"base64 encoded (size 32)"}'
 ```
 
 This creates tenant `1` at `tenant1.example.com`, enabled, associated with plan `1`, and overriding the plan’s cache time to `90` seconds.

@@ -21,7 +21,7 @@ Resource sharing and isolation:
 - Database: table prefixing per tenant.
 - Cache: key prefixing per tenant.
 - Storage: tenants configure their own “Site storage” and “Upload storage” in application settings.
-- Sessions: only Redis is supported as backend.
+- Sessions: only Redis is supported as the backend.
 - Tenant ID: unique, up to 16 characters.
 - Tenant hostname: unique, up to 255 characters.
 
@@ -35,8 +35,19 @@ To enable tenants, set the following environment variables. You must provide an 
 CHEVERETO_ENABLE_TENANTS=1
 CHEVERETO_ENCRYPTION_KEY=your_encryption_key
 CHEVERETO_PROVIDER_NAME=your_provider_name
+CHEVERETO_PROVIDER_URL=your_provider_url
+```
 
-If you want to run Chevereto in SaaS context, also set:
+### SaaS context
+
+The Chevereto SaaS context is a special mode for service providers offering Chevereto as a service to multiple customers. When running Chevereto in a SaaS context, the system alters functionality and display that otherwise would allow tenants to interfere with each other or the host system. In particular, it affects the following features:
+
+- Self-upgrade capabilities
+- HTTP cron trigger
+- License key management
+- System information display (database version, PHP info, FFmpeg, etc.)
+
+To run Chevereto in a SaaS context set:
 
 ```plain
 CHEVERETO_CONTEXT=saas
@@ -44,15 +55,47 @@ CHEVERETO_CONTEXT=saas
 
 ### Environment variables
 
-Use plans and tenant configurations to define resource limits and environment variables on a per-tenant basis. Use `CHEVERETO_TENANT_ENFORCED` to define a JSON object with environment variables that will be late enforced (overridden) on runtime to all tenants.
+Define resource limits and environment variables per tenant via plans and tenant configurations. To enforce overrides at runtime for all tenants, set `CHEVERETO_TENANT_ENFORCED` to a JSON object.
+
+Precedence (highest to lowest):
+
+- `CHEVERETO_TENANT_ENFORCED` (runtime enforced, not stored)
+- Tenant `env` (encrypted at rest), `limits`
+- Plan `env` (encrypted at rest), `limits`
+- Global defaults/environment
 
 ```plain
 CHEVERETO_TENANT_ENFORCED='{"CHEVERETO_MAX_UPLOAD_SIZE":"20M"}'
 ```
 
+**Tip:** When using yaml you can define `CHEVERETO_TENANT_ENFORCED` multi-line as:
+
+```yaml
+CHEVERETO_TENANT_ENFORCED: >
+  {
+      "CHEVERETO_CONTEXT":"saas",
+      "CHEVERETO_ENABLE_BULK_IMPORTER":"0",
+      "CHEVERETO_ENABLE_CDN":"0",
+      "CHEVERETO_ENABLE_DEBUG":"0",
+      "CHEVERETO_ENABLE_LOCAL_STORAGE":"0",
+      "CHEVERETO_ENABLE_NEWS_CHECK":"1",
+      "CHEVERETO_ENABLE_PHP_PAGES":"0",
+      "CHEVERETO_ENABLE_POWERED_BY_SETTING":"1",
+      "CHEVERETO_ENABLE_FORCE_POWERED_BY_FOOTER":"0",
+      "CHEVERETO_ENABLE_PUP_CUSTOM_URL":"0",
+      "CHEVERETO_ENABLE_UPDATE_CHECK":"0",
+      "CHEVERETO_ENABLE_UPDATE_HTTP":"0",
+      "CHEVERETO_ENABLE_UPLOAD_URL":"0",
+      "CHEVERETO_ENABLE_SERVICE_MODERATECONTENT":"0",
+      "CHEVERETO_MAX_LISTING_ITEMS_PER_PAGE":"48",
+      "CHEVERETO_MAX_CACHE_TTL":"3600",
+      "CHEVERETO_MIN_STORAGES_ACTIVE":"1"
+  }
+```
+
 ### Initializing the multi-tenant system
 
-Then, initialize the multi-tenant database system:
+Initialize the multi-tenant database (run once after enabling multitenancy):
 
 ```sh
 app/bin/tenants -C init
@@ -81,7 +124,7 @@ This creates plan `1` named “Basic Plan” with a maximum of `10000` tags and 
 
 ### Editing a tenant plan
 
-Use [plan:edit](../../application/reference/cli.md#edit-tenant-plan) to change the name, limits, or environment of an existing plan. Affected tenants will inherited the updated plan settings; the system re-caches them automatically.
+Use [plan:edit](../../application/reference/cli.md#edit-tenant-plan) to change the name, limits, or environment of an existing plan. Affected tenants will inherit the updated plan settings; the settings are re-cached automatically.
 
 ```sh
 app/bin/tenants -C plan:edit \
@@ -100,7 +143,7 @@ app/bin/tenants -C plan:list
 
 ### Deleting a tenant plan
 
-Use [plan:delete](../../application/reference/cli.md#delete-tenant-plan) by plan ID. Affected tenants will lose the inherited plan settings; the system re-caches them automatically.
+Use [plan:delete](../../application/reference/cli.md#delete-tenant-plan) by plan ID. Affected tenants will lose the inherited plan settings; the settings are re-cached automatically.
 
 ```sh
 app/bin/tenants -C plan:delete --id 1

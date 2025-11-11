@@ -29,19 +29,28 @@ Once a hostname is resolved to a tenant, the application behaves as if it were a
 
 ## Enabling multitenancy
 
-Set the following environment variables:
+To enable tenants, set the following environment variables. You must provide an [encryption key](../reference/encryption.md#key) for securing tenant environment data.
 
 ```plain
 CHEVERETO_ENABLE_TENANTS=1
 CHEVERETO_ENCRYPTION_KEY=your_encryption_key
-CHEVERETO_VENDOR_NAME=your_vendor_name
+CHEVERETO_PROVIDER_NAME=your_provider_name
+
+If you want to run Chevereto in SaaS context, also set:
+
+```plain
+CHEVERETO_CONTEXT=saas
 ```
 
-Use `CHEVERETO_TENANT_ENFORCED` to define a JSON object with environment variables that will be late enforced (overridden) on runtime.
+### Environment variables
+
+Use plans and tenant configurations to define resource limits and environment variables on a per-tenant basis. Use `CHEVERETO_TENANT_ENFORCED` to define a JSON object with environment variables that will be late enforced (overridden) on runtime to all tenants.
 
 ```plain
 CHEVERETO_TENANT_ENFORCED='{"CHEVERETO_MAX_UPLOAD_SIZE":"20M"}'
 ```
+
+### Initializing the multi-tenant system
 
 Then, initialize the multi-tenant database system:
 

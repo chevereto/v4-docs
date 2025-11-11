@@ -202,6 +202,28 @@ Use [cache](../../application/reference/cli.md#cache-tenants-data) to regenerate
 app/bin/tenants -C cache
 ```
 
+## Running jobs worker
+
+Use [jobs:worker](../../application/reference/cli.md#tenants-jobs-worker) to run the jobs worker in multi-tenant mode.
+
+To run the worker for all tenants:
+
+```sh
+app/bin/tenants -C jobs:worker
+```
+
+To run the worker for a specific tenant:
+
+```sh
+app/bin/tenants -C jobs:worker --id 1
+```
+
+You can also run each tenant job (one time) by passing the tenant ID:
+
+```sh
+CHEVERETO_TENANT=1 app/bin/cli -C cron
+```
+
 ## Application CLI
 
 When running Chevereto in multi-tenant mode, pass the target tenant via the `CHEVERETO_TENANT` environment variable.

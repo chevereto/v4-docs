@@ -355,3 +355,19 @@ app/bin/tenants -C plan:delete --id 1
 | Option | Description    |
 | ------ | -------------- |
 | id     | Tenant plan ID |
+
+### Tenants jobs worker
+
+The `jobs:worker` command starts the jobs worker to process background jobs for tenants in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C jobs:worker
+app/bin/tenants -C jobs:worker --id 1
+app/bin/tenants -C jobs:worker --id 1 --verbose
+
+```
+
+| Option  | Description            |
+| ------- | ---------------------- |
+| id      | Tenant id              |
+| verbose | Enable verbose logging |

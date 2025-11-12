@@ -110,16 +110,13 @@ Upload and share the following media types from device file browser, drag and dr
 
 ## User features
 
+* Multi-user support
 * User profiles
 * Private user profiles
 * User-based API
-
-| User features   | Free  |         Lite          |          Pro          |
-| --------------- | :---: | :-------------------: | :-------------------: |
-| Roles available | admin | admin, manager & user | admin, manager & user |
-| Multiple users  |   –   |           ✅           |           ✅           |
-| User management |   –   |           ✅           |           ✅           |
-| Guest API       |   –   |           ✅           |           ✅           |
+* Roles available: admin, manager & user
+* User management
+* Guest API
 
 ## Social features
 
@@ -179,8 +176,8 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Admin features                                                                                | Free  | Lite  |  Pro  |
 | --------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
-| OAuth2 login providers (Amazon, Google, Discord, etc)                                         |   –   |   ✅   |   ✅   |
-| Homepage style                                                                                |   –   |   ✅   |   ✅   |
+| Guest API key                                                                                 |   ✅   |   ✅   |   ✅   |
+| Homepage style                                                                                |   ✅   |   ✅   |   ✅   |
 | Homepage cover images                                                                         |   –   |   ✅   |   ✅   |
 | Homepage title & paragraph                                                                    |   –   |   ✅   |   ✅   |
 | Homepage call to action                                                                       |   –   |   ✅   |   ✅   |
@@ -189,8 +186,8 @@ Upload and share the following media types from device file browser, drag and dr
 | User min age required                                                                         |   –   |   ✅   |   ✅   |
 | User avatar max file size                                                                     |   –   |   ✅   |   ✅   |
 | User background max file size                                                                 |   –   |   ✅   |   ✅   |
-| Guest API key                                                                                 |   –   |   ✅   |   ✅   |
 | Logo favicon image                                                                            |   –   |   ✅   |   ✅   |
+| OAuth2 login providers (Amazon, Google, Discord, etc)                                         |   –   |   ✅   |   ✅   |
 | Hide "Powered by Chevereto" footer                                                            |   –   |   –   |   ✅   |
 | [Enabled languages](https://v4-admin.chevereto.com/settings/languages.html#enabled-languages) |   –   |   –   |   ✅   |
 | Routing (user, image, album)                                                                  |   –   |   –   |   ✅   |

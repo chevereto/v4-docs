@@ -247,6 +247,7 @@ Upload and share the following media types from device file browser, drag and dr
 
 ## System features
 
+* Multitenancy support
 * Image handling using GD or ImageMagick
 * Theme palettes (10)
 * One-click upgrade (web, CLI)

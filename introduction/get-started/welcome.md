@@ -17,6 +17,7 @@ Chevereto on its core provides an image and video hosting service that you can c
 * Media-driven portfolios for [content-creators](https://chevereto.com/content-creators)
 * Photography showcase for [photographers](https://chevereto.com/photographers)
 * Image and video media asset storage
+* SaaS media sharing platform
 
 Chevereto could be used to build your [store's gallery](https://chevereto.com/stores), a client portfolio, manage thousand of media assets and more. From a simple media gallery up to end-users interacting with each-other, Chevereto can leverage all the load of the media sharing layer for your project.
 

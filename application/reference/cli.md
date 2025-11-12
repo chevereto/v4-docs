@@ -367,7 +367,21 @@ app/bin/tenants -C jobs:worker --id 1 --verbose
 
 ```
 
-| Option  | Description            |
-| ------- | ---------------------- |
-| id      | Tenant id              |
-| verbose | Enable verbose logging |
+| Option  | Description                       |
+| ------- | --------------------------------- |
+| id      | (optional) Tenant id              |
+| verbose | (optional) Enable verbose logging |
+
+### Tenants update
+
+The `update` command applies database migrations to all tenants in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C update
+app/bin/tenants -C update --id 1 --verbose
+```
+
+| Option  | Description                       |
+| ------- | --------------------------------- |
+| id      | (optional) Tenant id              |
+| verbose | (optional) Enable verbose logging |

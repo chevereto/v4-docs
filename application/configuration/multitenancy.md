@@ -218,15 +218,37 @@ To run the worker for a specific tenant:
 app/bin/tenants -C jobs:worker --id 1
 ```
 
-You can also run each tenant job (one time) by passing the tenant ID:
+You can also run each tenant job by passing the tenant ID to the [CRON command](../../application/reference/cli.md#cron):
 
 ```sh
 CHEVERETO_TENANT=1 app/bin/cli -C cron
 ```
 
+## Updating tenants
+
+When updating Chevereto, run the [update](../../application/reference/cli.md#tenants-update) command to apply database migrations.
+
+To apply updates to all tenants:
+
+```sh
+app/bin/tenants -C update
+```
+
+To update a specific tenant:
+
+```sh
+app/bin/tenants -C update --id 1
+```
+
+You can also update each tenant by passing the tenant ID to the [update command](../../application/reference/cli.md#update):
+
+```sh
+CHEVERETO_TENANT=1 app/bin/cli -C update
+```
+
 ## Application CLI
 
-When running Chevereto in multi-tenant mode, pass the target tenant via the `CHEVERETO_TENANT` environment variable.
+Access the application CLI of each tenant by passing the target tenant via the `CHEVERETO_TENANT` environment variable.
 
 ```sh
 CHEVERETO_TENANT=abc app/bin/cli -C <command> <options>

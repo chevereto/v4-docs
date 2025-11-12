@@ -8,6 +8,14 @@ Environment variables for the system context. Available `server` and `docker`.
 | ------------------- | ------- |
 | CHEVERETO_SERVICING | server  |
 
+## Context variables
+
+Environment variables for the application context. Available `self-hosted`, `saas`.
+
+| Variable          | Example     |
+| ----------------- | ----------- |
+| CHEVERETO_CONTEXT | self-hosted |
+
 ## Database variables
 
 Environment variables for the database details.

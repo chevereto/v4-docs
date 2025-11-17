@@ -243,6 +243,37 @@ The `init` command initializes the tenants system in Chevereto. It sets up the n
 app/bin/tenants -C init
 ```
 
+### Managing Tenants API keys
+
+#### Create Tenants API key
+
+The `api:key:create` command creates a new Tenants API key in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C api:key:create \
+    --id my_key \
+    --description "Production Key" \
+    --expires "2025-12-31 23:59:59"
+```
+
+| Option      | Description                        |
+| ----------- | ---------------------------------- |
+| id          | API key identifier                 |
+| description | (optional) API key description     |
+| expires     | (optional) UTC Expiration datetime |
+
+#### Delete Tenants API key
+
+The `api:key:delete` command deletes an existing Tenants API key by its ID.
+
+```sh
+app/bin/tenants -C api:key:delete --id my_key
+```
+
+| Option | Description |
+| ------ | ----------- |
+| id     | API key ID  |
+
 ### Add tenant
 
 The `add` command creates a new tenant in the Chevereto infrastructure.
@@ -279,7 +310,7 @@ app/bin/tenants -C edit \
 | Option     | Description                        |
 | ---------- | ---------------------------------- |
 | id         | Tenant ID                          |
-| is_enabled | Tenant enabled status              |
+| is_enabled | (optional) Tenant enabled status   |
 | plan_id    | (optional) Tenant plan ID          |
 | limits     | (optional) Tenant limits JSON      |
 | env        | (optional) Tenant environment JSON |
@@ -316,6 +347,13 @@ app/bin/tenants -C plan:add \
     --limits '{}' \
     --env '{}'
 ```
+
+| Option | Description                             |
+| ------ | --------------------------------------- |
+| id     | Tenant plan ID                          |
+| name   | Tenant plan name                        |
+| limits | (optional) Tenant plan limits JSON      |
+| env    | (optional) Tenant plan environment JSON |
 
 ### Edit tenant plan
 

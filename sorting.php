@@ -6,5 +6,5 @@ return [
     'application/',
     'developer/',
     'api/',
-    'guides/',
+    // 'guides/',
 ];

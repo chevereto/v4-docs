@@ -2,15 +2,9 @@
 sidebarDepth: 3
 ---
 
-# API Version 1.1
+# File upload API
 
 Chevereto API enables programmatic file uploads, allowing you to seamlessly integrate our uploading functionality into your own applications.
-
-## Key
-
-API V1.1 works with an user key which is available for each user at `/settings/api`.
-
-Admin user can set the public API key for guest uploads at the [Dashboard panel](https://v4-admin.chevereto.com/settings/guest-api.html#public-api-key).
 
 ## Request method
 
@@ -22,14 +16,6 @@ POST request method is **recommended**.
 
 ```plain
 http://mysite.com/api/1/upload
-```
-
-## Authorization
-
-API V1.1 supports header authorization by passing the `X-API-Key` header with an API key.
-
-```plain
-X-API-Key: chv_key_here
 ```
 
 ## Parameters

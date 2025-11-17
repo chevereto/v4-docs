@@ -38,6 +38,20 @@ CHEVERETO_PROVIDER_NAME=your_provider_name
 CHEVERETO_PROVIDER_URL=your_provider_url
 ```
 
+### Tenants key pair
+
+If you need to use the [Tenants API](../../api/4/tenants.md), you will require a key pair. You must set a Tenants public key for verifying signed requests.
+
+```plain
+CHEVERETO_TENANTS_PUBLIC_KEY=your_tenants_public_key
+```
+
+To generate a key pair, you can use `ssh-keygen`:
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com" -f tenants_key
+```
+
 ### SaaS context
 
 The Chevereto SaaS context is a special mode for service providers offering Chevereto as a service to multiple customers. When running Chevereto in a SaaS context, the system alters functionality and display that otherwise would allow tenants to interfere with each other or the host system. In particular, it affects the following features:
@@ -99,6 +113,23 @@ Initialize the multi-tenant database (run once after enabling multitenancy):
 
 ```sh
 app/bin/tenants -C init
+```
+
+## Tenants API keys
+
+Use [api:key:create](../../application/reference/cli.md#create-tenants-api-key) to create API keys for accessing the Tenants API.
+
+```sh
+app/bin/tenants -C api:key:create \
+    --id 1 \
+    --description "My Key" \
+    --expires "2025-12-31 23:59:59"
+```
+
+Use [api:key:delete](../../application/reference/cli.md#delete-tenants-api-key) to delete an existing API key by its ID.
+
+```sh
+app/bin/tenants -C api:key:delete --id 1
 ```
 
 ## Managing tenant plans

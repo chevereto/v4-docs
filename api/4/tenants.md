@@ -8,7 +8,9 @@ The Tenants API allows you to manage tenants in a multi-tenant Chevereto install
 
 ## Request signing
 
-Requests to the Tenants API **must** be signed by passing the `X-Signature` header. Signatures are generated using the raw request body string and the [Tenants Private Key](../../application/configuration/multitenancy.md#tenants-key-pair).
+Requests to the Tenants API **must** be signed by passing the `X-Signature` header containing a base64-encoded signature of the request body.
+
+Signatures are generated using the raw request body string and the [Tenants Private Key](../../application/configuration/multitenancy.md#tenants-key-pair).
 
 ```php
 $signed = $privateKey->sign($body);
@@ -34,7 +36,7 @@ $signature = base64_encode($signed);
 curl -X POST "/api/4/_/tenants" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
   -d '{
         "tenant_id": "tenant123",
         "hostname": "tenant123.example.com",
@@ -56,7 +58,7 @@ curl -X POST "/api/4/_/tenants" \
 curl -X GET "/api/4/_/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
 ```
 
 ### PATCH `/api/4/_/tenants/{tenantId}`
@@ -75,7 +77,7 @@ curl -X GET "/api/4/_/tenants/tenant123" \
 curl -X PATCH "/api/4/_/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
   -d '{
         "hostname": "new-tenant123.example.com",
         "plan_id": "premium_plan",
@@ -92,7 +94,7 @@ curl -X PATCH "/api/4/_/tenants/tenant123" \
 curl -X DELETE "/api/4/_/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
 ```
 
 ## `/api/4/_/tenants-plans`
@@ -105,7 +107,7 @@ curl -X DELETE "/api/4/_/tenants/tenant123" \
 curl -X GET "/api/4/_/tenants-plans" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
 ```
 
 ### POST: `/api/4/_/tenants-plans`
@@ -123,7 +125,7 @@ curl -X GET "/api/4/_/tenants-plans" \
 curl -X POST "/api/4/_/tenants-plans" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
   -d '{
         "plan_id": "basic_plan",
         "name": "Basic Plan",
@@ -139,7 +141,7 @@ curl -X POST "/api/4/_/tenants-plans" \
 curl -X GET "/api/4/_/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
 ```
 
 ### PATCH: `/api/4/_/tenants-plans/{planId}`
@@ -156,7 +158,7 @@ curl -X GET "/api/4/_/tenants-plans/basic_plan" \
 curl -X PATCH "/api/4/_/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
   -d '{
         "name": "Basic Plan (Updated)",
         "description": "An updated basic tenant plan",
@@ -172,5 +174,5 @@ curl -X PATCH "/api/4/_/tenants-plans/basic_plan" \
 curl -X DELETE "/api/4/_/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: your_signature" \
+  -H "X-Signature: request_signature" \
 ```

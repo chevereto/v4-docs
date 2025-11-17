@@ -25,7 +25,7 @@ $signature = base64_encode($signed);
 
 - Request body (JSON):
 
-  - `tenant_id` (required): Unique identifier for the tenant.
+  - `id` (required): Unique identifier for the tenant.
   - `hostname` (required): Hostname associated with the tenant.
   - `is_enabled` (required): Tenant enabled status (1 or 0).
   - `plan_id` (optional): ID of the tenant plan to assign.
@@ -38,7 +38,7 @@ curl -X POST "/api/4/_/tenants" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
   -d '{
-        "tenant_id": "tenant123",
+        "id": "tenant123",
         "hostname": "tenant123.example.com",
         "is_enabled": 1,
         "plan_id": "basic_plan",
@@ -69,7 +69,7 @@ curl -X GET "/api/4/_/tenants/tenant123" \
 
   - `is_enabled` (optional): New enabled status (1 or 0).
   - `hostname` (optional): New hostname for the tenant.
-  - `plan_id` (optional): New tenant plan ID.
+  - `plan_id` (optional): New tenant plan ID. Use empty string to remove plan.
   - `limits` (optional): New resource limits.
   - `env` (optional): New environment variables.
 
@@ -116,7 +116,7 @@ curl -X GET "/api/4/_/tenants-plans" \
 
 - Request body (JSON):
 
-  - `plan_id` (required): Unique identifier for the tenant plan.
+  - `id` (required): Unique identifier for the tenant plan.
   - `name` (required): Name of the tenant plan.
   - `limits` (optional): Resource limits specific to the tenant plan.
   - `env` (optional): Environment variables specific to the tenant plan.
@@ -127,7 +127,7 @@ curl -X POST "/api/4/_/tenants-plans" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
   -d '{
-        "plan_id": "basic_plan",
+        "id": "basic_plan",
         "name": "Basic Plan",
         "limits": {"CHEVERETO_MAX_USERS":"2"}
       }'

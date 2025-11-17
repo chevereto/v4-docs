@@ -272,12 +272,12 @@ app/bin/tenants -C api:key:delete --id my_key
 | ------ | ----------- |
 | id     | API key ID  |
 
-### Add tenant
+### Create tenant
 
-The `add` command creates a new tenant in the Chevereto infrastructure.
+The `create` command creates a new tenant in the Chevereto infrastructure.
 
 ```sh
-app/bin/tenants -C add \
+app/bin/tenants -C create \
     --id 1 \
     --hostname tenant1.example.com \
     --is_enabled 1 \
@@ -334,12 +334,12 @@ The `cache` command generates the cache for tenants in the Chevereto infrastruct
 app/bin/tenants -C cache
 ```
 
-### Add tenant plan
+### Create tenant plan
 
-The `plan:add` command creates a new tenant plan in the Chevereto infrastructure.
+The `plan:create` command creates a new tenant plan in the Chevereto infrastructure.
 
 ```sh
-app/bin/tenants -C plan:add \
+app/bin/tenants -C plan:create \
     --id 1 \
     --name "Basic Plan" \
     --limits '{}' \

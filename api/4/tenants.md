@@ -63,7 +63,7 @@ curl -X GET "/api/4/_/tenants/tenant123" \
 
 ### PATCH `/api/4/_/tenants/{tenantId}`
 
-`204` Update tenant information.
+`204` Edit tenant information.
 
 - Request body (JSON):
 
@@ -146,7 +146,7 @@ curl -X GET "/api/4/_/tenants-plans/basic_plan" \
 
 ### PATCH: `/api/4/_/tenants-plans/{planId}`
 
-`204` Update tenant plan information.
+`204` Edit tenant plan information.
 
 - Request body (JSON):
 

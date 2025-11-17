@@ -243,9 +243,7 @@ The `init` command initializes the tenants system in Chevereto. It sets up the n
 app/bin/tenants -C init
 ```
 
-### Managing Tenants API keys
-
-#### Create Tenants API key
+### Create Tenants API key
 
 The `api:key:create` command creates a new Tenants API key in the Chevereto infrastructure.
 
@@ -262,7 +260,7 @@ app/bin/tenants -C api:key:create \
 | description | (optional) API key description     |
 | expires     | (optional) UTC Expiration datetime |
 
-#### Delete Tenants API key
+### Delete Tenants API key
 
 The `api:key:delete` command deletes an existing Tenants API key by its ID.
 

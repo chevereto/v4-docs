@@ -137,10 +137,11 @@ Environment variables for configuring the service provider.
 
 Environment variables for configuring multi-tenancy.
 
-| Variable                  | Example                       |
-| ------------------------- | ----------------------------- |
-| CHEVERETO_TENANT_ENFORCED | {"CHEVERETO_MAX_USERS":"100"} |
-| CHEVERETO_TENANT          | tenant1                       |
+| Variable                     | Example                       |
+| ---------------------------- | ----------------------------- |
+| CHEVERETO_TENANTS_PUBLIC_KEY | your_tenants_public_key       |
+| CHEVERETO_TENANT_ENFORCED    | {"CHEVERETO_MAX_USERS":"100"} |
+| CHEVERETO_TENANT             | tenant1                       |
 
 Variable `CHEVERETO_TENANT_ENFORCED` is a JSON object that defines which variables will be enforced (overridden) for the multi-tenant context. Variable `CHEVERETO_TENANT` is intended to be used to pass the current tenant context for CLI.
 

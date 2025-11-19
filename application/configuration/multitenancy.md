@@ -141,7 +141,7 @@ Tenant plans define default limits and environment variables, similar to a templ
 
 ### Adding a tenant plan
 
-Use [plan:add](../../application/reference/cli.md#add-tenant-plan). Pass the plan ID and name; `limits` and `env` are optional (JSON format).
+Use [plan:add](../../application/reference/cli.md#create-tenant-plan). Pass the plan ID and name; `limits` and `env` are optional (JSON format).
 
 ```sh
 app/bin/tenants -C plan:add \
@@ -189,7 +189,7 @@ A tenant represents an individual Chevereto instance within the multi-tenant set
 
 ### Adding a tenant
 
-Use [add](../../application/reference/cli.md#add-tenant). Provide tenant ID, hostname, and enabled status. `plan_id`, `limits`, and `env` are optional (JSON format).
+Use [add](../../application/reference/cli.md#create-tenant). Provide tenant ID, hostname, and enabled status. `plan_id`, `limits`, and `env` are optional (JSON format).
 
 **Note:** It is **recommended** to set a unique `CHEVERETO_ENCRYPTION_KEY` per tenant for enhanced security.
 

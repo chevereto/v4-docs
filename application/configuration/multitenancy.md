@@ -158,7 +158,7 @@ Tenant plans define default limits and environment variables, similar to a templ
 Use [plan:create](../../application/reference/cli.md#create-tenant-plan). Pass the plan `id`, `limits` and `env` are optional (JSON format).
 
 ```sh
-app/bin/tenants -C plan:add \
+app/bin/tenants -C plan:create \
     --id my-plan \
     --limits '{"CHEVERETO_MAX_TAGS":"10000"}' \
     --env '{"CHEVERETO_CACHE_TIME_MICRO":"120"}'

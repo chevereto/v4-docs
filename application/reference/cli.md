@@ -260,6 +260,14 @@ app/bin/tenants -C api:key:create \
 | description | (optional) API key description     |
 | expires     | (optional) UTC Expiration datetime |
 
+### Verify Tenants API key
+
+The `api:key:verify` command verifies an existing Tenants API key by its key value.
+
+```sh
+app/bin/tenants -C api:key:verify --key chv_1_1234567890
+```
+
 ### Delete Tenants API key
 
 The `api:key:delete` command deletes an existing Tenants API key by its ID.

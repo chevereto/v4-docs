@@ -8,9 +8,9 @@ It allows hosting multiple isolated Chevereto instances (tenants) in a single in
 
 In a multi-tenant setup, Chevereto recognizes and serves multiple tenants. Each tenant:
 
-- Is identified by a unique tenant ID.
-- Is bound to a hostname.
-- Is resolved at runtime from the incoming request’s hostname.
+* Is identified by a unique tenant ID.
+* Is bound to a hostname.
+* Is resolved at runtime from the incoming request’s hostname.
 
 Tenant metadata is stored in the `tenants` and `tenants_plans` database tables. The database is the source of truth for tenant limits and environment settings. The application caches this data in memory and provides a [command line interface](../../application/reference/cli.md#tenants-cli) to manage it.
 
@@ -18,12 +18,12 @@ Data stored under `env` columns is encrypted.
 
 Resource sharing and isolation:
 
-- Database: table prefixing per tenant.
-- Cache: key prefixing per tenant.
-- Storage: tenants configure their own “Site storage” and “Upload storage” in application settings.
-- Sessions: only Redis is supported as the backend.
-- Tenant ID: unique, up to 16 characters.
-- Tenant hostname: unique, up to 255 characters.
+* Database: table prefixing per tenant.
+* Cache: key prefixing per tenant.
+* Storage: tenants configure their own “Site storage” and “Upload storage” in application settings.
+* Sessions: only Redis is supported as the backend.
+* Tenant ID: unique, up to 16 characters.
+* Tenant hostname: unique, up to 255 characters.
 
 Once a hostname is resolved to a tenant, the application behaves as if it were a standalone Chevereto instance with its own configuration.
 
@@ -56,10 +56,10 @@ ssh-keygen -t ed25519 -C "your_email@example.com" -f tenants_key
 
 The Chevereto SaaS context is a special mode for service providers offering Chevereto as a service to multiple customers. When running Chevereto in a SaaS context, the system alters functionality and display that otherwise would allow tenants to interfere with each other or the host system. In particular, it affects the following features:
 
-- Self-upgrade capabilities
-- HTTP cron trigger
-- License key management
-- System information display (database version, PHP info, FFmpeg, etc.)
+* Self-upgrade capabilities
+* HTTP cron trigger
+* License key management
+* System information display (database version, PHP info, FFmpeg, etc.)
 
 To run Chevereto in a SaaS context set:
 
@@ -73,10 +73,10 @@ Define resource limits and environment variables per tenant via plans and tenant
 
 Precedence (highest to lowest):
 
-- `CHEVERETO_TENANT_ENFORCED` (runtime enforced, not stored)
-- Tenant `env` (encrypted at rest), `limits`
-- Plan `env` (encrypted at rest), `limits`
-- Global defaults/environment
+* `CHEVERETO_TENANT_ENFORCED` (runtime enforced, not stored)
+* Tenant `env` (encrypted at rest), `limits`
+* Plan `env` (encrypted at rest), `limits`
+* Global defaults/environment
 
 ```plain
 CHEVERETO_TENANT_ENFORCED='{"CHEVERETO_MAX_UPLOAD_SIZE":"20M"}'
@@ -117,41 +117,54 @@ app/bin/tenants -C init
 
 ## Tenants API keys
 
+### Creating Tenants API keys
+
 Use [api:key:create](../../application/reference/cli.md#create-tenants-api-key) to create API keys for accessing the Tenants API.
+
+API keys for Tenants API have the format `chv_1_*`, where `1` is the integer, sequential generated, API key id.
 
 ```sh
 app/bin/tenants -C api:key:create \
-    --id 1 \
-    --description "My Key" \
+    --name "My Key" \
     --expires "2025-12-31 23:59:59"
 ```
 
-Use [api:key:delete](../../application/reference/cli.md#delete-tenants-api-key) to delete an existing API key by its ID.
+### Verifying Tenants API keys
+
+Use [api:key:verify](../../application/reference/cli.md#verify-tenants-api-key) to verify an API key by its key value.
+
+```sh
+app/bin/tenants -C api:key:verify --key chv_1_1234567890
+```
+
+### Deleting Tenants API keys
+
+Use [api:key:delete](../../application/reference/cli.md#delete-tenants-api-key) to delete an API key by id and/or name.
 
 ```sh
 app/bin/tenants -C api:key:delete --id 1
+app/bin/tenants -C api:key:delete --name "My Key"
 ```
 
 ## Managing tenant plans
 
 Tenant plans define default limits and environment variables, similar to a template. When a tenant is assigned to a plan, it inherits the plan’s limits and environment, which the tenant can still override.
 
-- Use `limits` to define resource constraints.
-- Use `env` to set environment variables (values are stored encrypted).
+* Use `limits` to define resource constraints.
+* Use `env` to set environment variables (values are stored encrypted).
 
-### Adding a tenant plan
+### Creating a tenant plan
 
-Use [plan:add](../../application/reference/cli.md#create-tenant-plan). Pass the plan ID and name; `limits` and `env` are optional (JSON format).
+Use [plan:create](../../application/reference/cli.md#create-tenant-plan). Pass the plan `id`, `limits` and `env` are optional (JSON format).
 
 ```sh
 app/bin/tenants -C plan:add \
-    --id 1 \
-    --name "Basic Plan" \
+    --id my-plan \
     --limits '{"CHEVERETO_MAX_TAGS":"10000"}' \
     --env '{"CHEVERETO_CACHE_TIME_MICRO":"120"}'
 ```
 
-This creates plan `1` named “Basic Plan” with a maximum of `10000` tags and a cache time of `120` seconds.
+This creates plan `my-plan` with a maximum of `10000` tags and a cache time of `120` seconds.
 
 ### Editing a tenant plan
 
@@ -159,8 +172,7 @@ Use [plan:edit](../../application/reference/cli.md#edit-tenant-plan) to change t
 
 ```sh
 app/bin/tenants -C plan:edit \
-    --id 1 \
-    --name "Updated Basic Plan" \
+    --id my-plan \
     --limits '{"CHEVERETO_MAX_TAGS":"15000"}'
 ```
 
@@ -177,32 +189,45 @@ app/bin/tenants -C plan:list
 Use [plan:delete](../../application/reference/cli.md#delete-tenant-plan) by plan ID. Affected tenants will lose the inherited plan settings; the settings are re-cached automatically.
 
 ```sh
-app/bin/tenants -C plan:delete --id 1
+app/bin/tenants -C plan:delete --id my-plan
 ```
 
 ## Managing tenants
 
 A tenant represents an individual Chevereto instance within the multi-tenant setup. Each tenant has a unique hostname and can override its plan’s limits and environment.
 
-- Use `limits` for resource constraints.
-- Use `env` for environment variables (encrypted). Tenant `env` overrides plan `env`.
+* Use `limits` for resource constraints.
+* Use `env` for environment variables (encrypted). Tenant `env` overrides plan `env`.
 
-### Adding a tenant
+### Creating a tenant
 
-Use [add](../../application/reference/cli.md#create-tenant). Provide tenant ID, hostname, and enabled status. `plan_id`, `limits`, and `env` are optional (JSON format).
+Use [create](../../application/reference/cli.md#create-tenant). Provide tenant ID, hostname, and enabled status. `plan_id`, `limits`, and `env` are optional (JSON format).
 
 **Note:** It is **recommended** to set a unique `CHEVERETO_ENCRYPTION_KEY` per tenant for enhanced security.
 
 ```sh
-app/bin/tenants -C add \
-    --id 1 \
-    --hostname tenant1.example.com \
+app/bin/tenants -C create \
+    --id tenant1 \
+    --hostname example.com \
     --is_enabled 1 \
-    --plan_id 1 \
+    --plan_id my-plan \
     --env '{"CHEVERETO_ENCRYPTION_KEY":"base64 encoded (size 32)"}'
 ```
 
-This creates tenant `1` at `tenant1.example.com`, enabled, associated with plan `1`, and overriding the plan’s cache time to `90` seconds.
+Command above creates tenant `tenant1` associated with the hostname `example.com`, enabled, with plan `my-plan`.
+
+### Installing Chevereto
+
+After creating a tenant, the application requires to [setup](../../application/installing/installation.md#setup), which can be made via CLI or HTTP.
+
+* For [CLI Install](../../application/reference/cli.md#install) pass the `CHEVERETO_TENANT` environment variable:
+
+```sh
+CHEVERETO_TENANT=tenant1 app/bin/cli -C install \
+    <options>
+```
+
+* For Web install, access the tenant hostname in a web browser and follow the setup instructions.
 
 ### Editing a tenant
 

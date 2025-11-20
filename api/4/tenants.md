@@ -117,7 +117,6 @@ curl -X GET "/api/4/_/tenants-plans" \
 - Request body (JSON):
 
   - `id` (required): Unique identifier for the tenant plan.
-  - `name` (required): Name of the tenant plan.
   - `limits` (optional): Resource limits specific to the tenant plan.
   - `env` (optional): Environment variables specific to the tenant plan.
 
@@ -128,7 +127,6 @@ curl -X POST "/api/4/_/tenants-plans" \
   -H "X-Signature: request_signature" \
   -d '{
         "id": "basic_plan",
-        "name": "Basic Plan",
         "limits": {"CHEVERETO_MAX_USERS":"2"}
       }'
 ```
@@ -150,7 +148,6 @@ curl -X GET "/api/4/_/tenants-plans/basic_plan" \
 
 - Request body (JSON):
 
-  - `name` (optional): New name for the tenant plan.
   - `limits` (optional): New resource limits.
   - `env` (optional): New environment variables.
 
@@ -160,7 +157,6 @@ curl -X PATCH "/api/4/_/tenants-plans/basic_plan" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
   -d '{
-        "name": "Basic Plan (Updated)",
         "description": "An updated basic tenant plan",
         "limits": {"CHEVERETO_MAX_USERS":"3"}
       }'

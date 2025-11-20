@@ -65,8 +65,4 @@ After provisioning the software files, Chevereto is ready for setup. This step i
 
 * Setup via CLI
 
-  Run the [install command](../reference/cli.md#install) in your terminal to start the setup process:
-
-  ```sh
-  app/bin/cli -C install <options>
-  ```
+  Run the [install command](../reference/cli.md#install) in your terminal to setup Chevereto.

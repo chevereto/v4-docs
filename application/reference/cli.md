@@ -249,16 +249,14 @@ The `api:key:create` command creates a new Tenants API key in the Chevereto infr
 
 ```sh
 app/bin/tenants -C api:key:create \
-    --id my_key \
-    --description "Production Key" \
+    --name my_key \
     --expires "2025-12-31 23:59:59"
 ```
 
-| Option      | Description                        |
-| ----------- | ---------------------------------- |
-| id          | API key identifier                 |
-| description | (optional) API key description     |
-| expires     | (optional) UTC Expiration datetime |
+| Option  | Description                        |
+| ------- | ---------------------------------- |
+| name    | (optional) API key name            |
+| expires | (optional) UTC Expiration datetime |
 
 ### Verify Tenants API key
 
@@ -270,15 +268,17 @@ app/bin/tenants -C api:key:verify --key chv_1_1234567890
 
 ### Delete Tenants API key
 
-The `api:key:delete` command deletes an existing Tenants API key by its ID.
+The `api:key:delete` command deletes an existing Tenants API key by its ID and/or name.
 
 ```sh
-app/bin/tenants -C api:key:delete --id my_key
+app/bin/tenants -C api:key:delete --id 1
+app/bin/tenants -C api:key:delete --name my_key
 ```
 
-| Option | Description |
-| ------ | ----------- |
-| id     | API key ID  |
+| Option | Description  |
+| ------ | ------------ |
+| id     | API key ID   |
+| name   | API key name |
 
 ### Create tenant
 

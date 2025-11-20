@@ -6,11 +6,19 @@ sidebarDepth: 3
 
 The Tenants API allows you to manage tenants in a multi-tenant Chevereto installation.
 
+## Authorization
+
+The Tenants API **requires** a key which can be generated using the [Tenants CLI tool](../../application/reference/cli.md#create-tenants-api-key).
+
 ## Request signing
 
 Requests to the Tenants API **must** be signed by passing the `X-Signature` header containing a base64-encoded signature of the request body.
 
-Signatures are generated using the raw request body string and the [Tenants Private Key](../../application/configuration/multitenancy.md#tenants-key-pair).
+```plain
+X-Signature: request_signature_here
+```
+
+Signatures must be generated using the raw request body string and the [Tenants Private Key](../../application/configuration/multitenancy.md#tenants-key-pair).
 
 ```php
 $signed = $privateKey->sign($body);

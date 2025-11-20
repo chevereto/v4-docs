@@ -25,9 +25,9 @@ $signed = $privateKey->sign($body);
 $signature = base64_encode($signed);
 ```
 
-## `/api/4/_/tenants`
+## `/_/api/4/tenants`
 
-### POST `/api/4/_/tenants`
+### POST `/_/api/4/tenants`
 
 `201` Create a new tenant.
 
@@ -41,7 +41,7 @@ $signature = base64_encode($signed);
   - `env` (optional): Environment variables specific to the tenant.
 
 ```sh
-curl -X POST "/api/4/_/tenants" \
+curl -X POST "/_/api/4/tenants" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
@@ -56,20 +56,20 @@ curl -X POST "/api/4/_/tenants" \
 
 ```
 
-## `/api/4/_/tenants/{tenantId}`
+## `/_/api/4/tenants/{tenantId}`
 
-### GET `/api/4/_/tenants/{tenantId}`
+### GET `/_/api/4/tenants/{tenantId}`
 
 `200` Retrieve tenant details.
 
 ```sh
-curl -X GET "/api/4/_/tenants/tenant123" \
+curl -X GET "/_/api/4/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
 ```
 
-### PATCH `/api/4/_/tenants/{tenantId}`
+### PATCH `/_/api/4/tenants/{tenantId}`
 
 `204` Edit tenant information.
 
@@ -82,7 +82,7 @@ curl -X GET "/api/4/_/tenants/tenant123" \
   - `env` (optional): New environment variables.
 
 ```sh
-curl -X PATCH "/api/4/_/tenants/tenant123" \
+curl -X PATCH "/_/api/4/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
@@ -94,31 +94,31 @@ curl -X PATCH "/api/4/_/tenants/tenant123" \
       }'
 ```
 
-### DELETE `/api/4/_/tenants/{tenantId}`
+### DELETE `/_/api/4/tenants/{tenantId}`
 
 `204` Delete a tenant.
 
 ```sh
-curl -X DELETE "/api/4/_/tenants/tenant123" \
+curl -X DELETE "/_/api/4/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
 ```
 
-## `/api/4/_/tenants-plans`
+## `/_/api/4/tenants-plans`
 
-### GET `/api/4/_/tenants-plans`
+### GET `/_/api/4/tenants-plans`
 
 `200` List all tenant plans.
 
 ```sh
-curl -X GET "/api/4/_/tenants-plans" \
+curl -X GET "/_/api/4/tenants-plans" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
 ```
 
-### POST: `/api/4/_/tenants-plans`
+### POST: `/_/api/4/tenants-plans`
 
 `201` Create a new tenant plan.
 
@@ -129,7 +129,7 @@ curl -X GET "/api/4/_/tenants-plans" \
   - `env` (optional): Environment variables specific to the tenant plan.
 
 ```sh
-curl -X POST "/api/4/_/tenants-plans" \
+curl -X POST "/_/api/4/tenants-plans" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
@@ -139,18 +139,18 @@ curl -X POST "/api/4/_/tenants-plans" \
       }'
 ```
 
-### GET: `/api/4/_/tenants-plans/{planId}`
+### GET: `/_/api/4/tenants-plans/{planId}`
 
 `200` Retrieve tenant plan details.
 
 ```sh
-curl -X GET "/api/4/_/tenants-plans/basic_plan" \
+curl -X GET "/_/api/4/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
 ```
 
-### PATCH: `/api/4/_/tenants-plans/{planId}`
+### PATCH: `/_/api/4/tenants-plans/{planId}`
 
 `204` Edit tenant plan information.
 
@@ -160,7 +160,7 @@ curl -X GET "/api/4/_/tenants-plans/basic_plan" \
   - `env` (optional): New environment variables.
 
 ```sh
-curl -X PATCH "/api/4/_/tenants-plans/basic_plan" \
+curl -X PATCH "/_/api/4/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
@@ -170,12 +170,12 @@ curl -X PATCH "/api/4/_/tenants-plans/basic_plan" \
       }'
 ```
 
-### DELETE `/api/4/_/tenants-plans/{planId}`
+### DELETE `/_/api/4/tenants-plans/{planId}`
 
 `204` Delete a tenant plan.
 
 ```sh
-curl -X DELETE "/api/4/_/tenants-plans/basic_plan" \
+curl -X DELETE "/_/api/4/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \

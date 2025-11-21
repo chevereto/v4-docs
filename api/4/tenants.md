@@ -12,13 +12,13 @@ The Tenants API **requires** a key which can be generated using the [Tenants CLI
 
 ## Request signing
 
-Requests to the Tenants API **must** be signed by passing the `X-Signature` header containing a base64-encoded signature of the request body.
+Requests to the Tenants API **must** be signed by passing the `X-Signature` header containing the request signature.
 
 ```plain
 X-Signature: request_signature_here
 ```
 
-Signatures must be generated using the raw request body string and the [Tenants Private Key](../../application/configuration/multitenancy.md#tenants-key-pair).
+Signatures must be generated using the raw request body string and the [Tenants Private Key](../../application/configuration/multitenancy.md#tenants-key-pair), with base64 encoding.
 
 ```php
 $signed = $privateKey->sign($body);
@@ -26,6 +26,17 @@ $signature = base64_encode($signed);
 ```
 
 ## `/_/api/4/tenants`
+
+### GET `/_/api/4/tenants`
+
+`200` List all tenants.
+
+```sh
+curl -X GET "/_/api/4/tenants" \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: your_api_key" \
+  -H "X-Signature: request_signature" \
+```
 
 ### POST `/_/api/4/tenants`
 
@@ -56,9 +67,9 @@ curl -X POST "/_/api/4/tenants" \
 
 ```
 
-## `/_/api/4/tenants/{tenantId}`
+## `/_/api/4/tenants/{id}`
 
-### GET `/_/api/4/tenants/{tenantId}`
+### GET `/_/api/4/tenants/{id}`
 
 `200` Retrieve tenant details.
 
@@ -69,7 +80,7 @@ curl -X GET "/_/api/4/tenants/tenant123" \
   -H "X-Signature: request_signature" \
 ```
 
-### PATCH `/_/api/4/tenants/{tenantId}`
+### PATCH `/_/api/4/tenants/{id}`
 
 `204` Edit tenant information.
 
@@ -94,7 +105,7 @@ curl -X PATCH "/_/api/4/tenants/tenant123" \
       }'
 ```
 
-### DELETE `/_/api/4/tenants/{tenantId}`
+### DELETE `/_/api/4/tenants/{id}`
 
 `204` Delete a tenant.
 
@@ -139,7 +150,9 @@ curl -X POST "/_/api/4/tenants-plans" \
       }'
 ```
 
-### GET: `/_/api/4/tenants-plans/{planId}`
+## `/_/api/4/tenants-plans/{id}`
+
+### GET: `/_/api/4/tenants-plans/{id}`
 
 `200` Retrieve tenant plan details.
 
@@ -150,7 +163,7 @@ curl -X GET "/_/api/4/tenants-plans/basic_plan" \
   -H "X-Signature: request_signature" \
 ```
 
-### PATCH: `/_/api/4/tenants-plans/{planId}`
+### PATCH: `/_/api/4/tenants-plans/{id}`
 
 `204` Edit tenant plan information.
 
@@ -170,7 +183,7 @@ curl -X PATCH "/_/api/4/tenants-plans/basic_plan" \
       }'
 ```
 
-### DELETE `/_/api/4/tenants-plans/{planId}`
+### DELETE `/_/api/4/tenants-plans/{id}`
 
 `204` Delete a tenant plan.
 

@@ -303,6 +303,26 @@ app/bin/tenants -C create \
 | limits     | (optional) Tenant limits JSON      |
 | env        | (optional) Tenant environment JSON |
 
+### Get tenant
+
+The `get` command retrieves an existing tenant in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C get --id 1
+```
+
+| Option | Description |
+| ------ | ----------- |
+| id     | Tenant ID   |
+
+### List tenants
+
+The `list` command outputs the list of tenants in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C list
+```
+
 ### Edit tenant
 
 The `edit` command modifies an existing tenant in the Chevereto infrastructure.

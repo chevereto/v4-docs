@@ -216,6 +216,14 @@ app/bin/tenants -C create \
 
 Command above creates tenant `tenant1` associated with the hostname `example.com`, enabled, with plan `my-plan`.
 
+### Listing tenants
+
+Use [list](../../application/reference/cli.md#list-tenants):
+
+```sh
+app/bin/tenants -C list
+```
+
 ### Installing Chevereto
 
 After creating a tenant, the application requires to [setup](../../application/installing/installation.md#setup), which can be made via CLI or HTTP.

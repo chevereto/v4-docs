@@ -116,6 +116,26 @@ curl -X DELETE "/_/api/4/tenants/tenant123" \
   -H "X-Signature: request_signature" \
 ```
 
+## `/_/api/4/tenants/{id}/install`
+
+### POST `/_/api/4/tenants/{id}/install`
+
+`201` Install Chevereto for a tenant.
+`404` Tenant not found.
+`409` Tenant already installed.
+
+```sh
+curl -X POST "/_/api/4/tenants/tenant123/install" \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: your_api_key" \
+  -H "X-Signature: request_signature" \
+  -d '{
+        "username": "admin",
+        "email": "admin@example.com",
+        "password": "mypassword"
+      }'
+```
+
 ## `/_/api/4/tenants-plans`
 
 ### GET `/_/api/4/tenants-plans`

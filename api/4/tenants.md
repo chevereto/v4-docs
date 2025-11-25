@@ -46,7 +46,7 @@ curl -X GET "/_/api/4/tenants" \
 
   - `id` (required): Unique identifier for the tenant.
   - `hostname` (required): Hostname associated with the tenant.
-  - `is_enabled` (required): Tenant enabled status (1 or 0).
+  - `is_enabled` (required): Tenant enabled status (boolean).
   - `plan_id` (optional): ID of the tenant plan to assign.
   - `limits` (optional): Resource limits specific to the tenant.
   - `env` (optional): Environment variables specific to the tenant.
@@ -59,7 +59,7 @@ curl -X POST "/_/api/4/tenants" \
   -d '{
         "id": "tenant123",
         "hostname": "tenant123.example.com",
-        "is_enabled": 1,
+        "is_enabled": true,
         "plan_id": "basic_plan",
         "limits": {"CHEVERETO_MAX_USERS":"2"},
         "env": {"CUSTOM_VAR": "value"}
@@ -86,7 +86,7 @@ curl -X GET "/_/api/4/tenants/tenant123" \
 
 - Request body (JSON):
 
-  - `is_enabled` (optional): New enabled status (1 or 0).
+  - `is_enabled` (optional): New enabled status (boolean).
   - `hostname` (optional): New hostname for the tenant.
   - `plan_id` (optional): New tenant plan ID. Use empty string to remove plan.
   - `limits` (optional): New resource limits.

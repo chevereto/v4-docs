@@ -137,16 +137,16 @@ Environment variables for configuring the service provider.
 
 Environment variables for configuring multi-tenancy.
 
-| Variable                             | Example                         |
-| ------------------------------------ | ------------------------------- |
-| CHEVERETO_TENANTS_PUBLIC_KEY         | your_tenants_public_key         |
-| CHEVERETO_TENANTS_API_SIGNING_SECRET | your_tenants_api_signing_secret |
-| CHEVERETO_TENANTS_API_ALLOW_LIST     | 200.200.200.200,10.0.0.0/24     |
-| CHEVERETO_TENANT_ENFORCED            | {"CHEVERETO_MAX_USERS":"100"}   |
-| CHEVERETO_TENANT                     | tenant1                         |
+| Variable                                 | Example                         |
+| ---------------------------------------- | ------------------------------- |
+| CHEVERETO_TENANTS_PUBLIC_KEY             | your_tenants_public_key         |
+| CHEVERETO_TENANTS_API_KEY_SIGNING_SECRET | your_tenants_api_signing_secret |
+| CHEVERETO_TENANTS_API_ALLOW_LIST         | 200.200.200.200,10.0.0.0/24     |
+| CHEVERETO_TENANT_ENFORCED                | {"CHEVERETO_MAX_USERS":"100"}   |
+| CHEVERETO_TENANT                         | tenant1                         |
 
 * `CHEVERETO_TENANTS_PUBLIC_KEY` is used to sign requests to the [Tenants API](../../api/4/tenants.md).
-* `CHEVERETO_TENANTS_API_SIGNING_SECRET` is used to verify requests coming from a known [Tenants API](../../api/4/tenants.md) key.
+* `CHEVERETO_TENANTS_API_KEY_SIGNING_SECRET` is used to verify requests coming from a known [Tenants API](../../api/4/tenants.md) key.
 * `CHEVERETO_TENANTS_API_ALLOW_LIST` is used to restrict access to the [Tenants API](../../api/4/tenants.md) by IP address or network.
 * `CHEVERETO_TENANT_ENFORCED` is a JSON object that defines which variables will be enforced (overridden) for the multi-tenant context.
 * `CHEVERETO_TENANT` is intended to be used to pass the current tenant context for CLI.

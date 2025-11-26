@@ -150,11 +150,11 @@ app/bin/tenants -C api:key:delete --name "My Key"
 
 Access to the [Tenants API](../../api/4/tenants.md) can be restricted by IP address or network range using `CHEVERETO_TENANTS_API_ALLOW_LIST`.
 
-All API keys are cryptographically signed with `CHEVERETO_TENANTS_API_SIGNING_SECRET`. Only keys generated through the [Tenants CLI](../../application/reference/cli.md#create-tenants-api-key) contain valid signatures and will be accepted by the API.
+All API keys are cryptographically signed with `CHEVERETO_TENANTS_API_KEY_SIGNING_SECRET`. Only keys generated through the [Tenants CLI](../../application/reference/cli.md#create-tenants-api-key) contain valid signatures and will be accepted by the API.
 
 ```plain
 CHEVERETO_TENANTS_API_ALLOW_LIST="200.200.200.200,10.0.0.0/24,203.0.113.0/28"
-CHEVERETO_TENANTS_API_SIGNING_SECRET=your_tenants_api_signing_secret
+CHEVERETO_TENANTS_API_KEY_SIGNING_SECRET=your_tenants_api_signing_secret
 ```
 
 ## Managing tenant plans

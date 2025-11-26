@@ -12,18 +12,27 @@ The Tenants API **requires** a key which can be generated using the [Tenants CLI
 
 ## Request signing
 
-Requests to the Tenants API **must** be signed by passing the `X-Signature` header containing the request signature.
+All requests to the Tenants API **must** include an `X-Signature` header containing an HMAC SHA256 signature of the request body.
 
 ```plain
-X-Signature: request_signature_here
+X-Signature: your_hmac_sha256_signature
 ```
 
-Signatures must be generated using the raw request body string and the [Tenants Private Key](../../application/configuration/multitenancy.md#tenants-key-pair), with base64 encoding.
+Generate the signature by hashing the raw request body (as a string) with `CHEVERETO_TENANTS_API_SIGNING_SECRET` using HMAC SHA256. The output must be in hexadecimal format.
 
+<code-group>
+<code-block title="PHP">
 ```php
-$signed = $privateKey->sign($body);
-$signature = base64_encode($signed);
+$signature = hash_hmac('sha256', $body, 'your_request_secret');
 ```
+</code-block>
+
+<code-block title="Shell">
+```sh
+echo -n 'body string' | openssl dgst -sha256 -hmac 'your_request_secret' -r | awk '{print $1}'
+```
+</code-block>
+</code-group>
 
 ## `/_/api/4/tenants`
 

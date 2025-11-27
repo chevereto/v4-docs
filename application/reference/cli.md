@@ -184,12 +184,12 @@ To update the value for "maintenance":
 app/bin/cli -C setting-update -k maintenance -v true
 ```
 
-### Update
+### Database migrate
 
-The `update` command updates the Chevereto database schema.
+The `database-migrate` command migrates the Chevereto database schema to the latest version.
 
 ```sh
-app/bin/cli -C update
+app/bin/cli -C database-migrate
 ```
 
 ### Version
@@ -420,7 +420,7 @@ app/bin/tenants -C plan:delete --id 1
 The `jobs:worker` command starts the jobs worker to process background jobs for tenants in the Chevereto infrastructure.
 
 ```sh
-app/bin/tenants -C jobs:worker
+app/bin/tenants -C jobs:worker # all tenants
 app/bin/tenants -C jobs:worker --id 1
 app/bin/tenants -C jobs:worker --id 1 --verbose
 
@@ -431,13 +431,13 @@ app/bin/tenants -C jobs:worker --id 1 --verbose
 | id      | (optional) Tenant id              |
 | verbose | (optional) Enable verbose logging |
 
-### Tenants update
+### Tenants database migrate
 
-The `update` command applies database migrations to all tenants in the Chevereto infrastructure.
+The `database:migrate` command applies database migrations to tenants in the Chevereto infrastructure.
 
 ```sh
-app/bin/tenants -C update
-app/bin/tenants -C update --id 1 --verbose
+app/bin/tenants -C database:migrate # all tenants
+app/bin/tenants -C database:migrate --id 1 --verbose
 ```
 
 | Option  | Description                       |

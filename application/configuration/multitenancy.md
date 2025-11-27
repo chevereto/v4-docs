@@ -290,24 +290,24 @@ CHEVERETO_TENANT=1 app/bin/cli -C cron
 
 ## Updating tenants
 
-When updating Chevereto, run the [update](../../application/reference/cli.md#tenants-update) command to apply database migrations.
+When updating Chevereto, run the [database:migrate](../../application/reference/cli.md#tenants-database-migrate) command to apply database migrations.
 
 To apply updates to all tenants:
 
 ```sh
-app/bin/tenants -C update
+app/bin/tenants -C database:migrate
 ```
 
 To update a specific tenant:
 
 ```sh
-app/bin/tenants -C update --id 1
+app/bin/tenants -C database:migrate --id 1
 ```
 
-You can also update each tenant by passing the tenant ID to the [update command](../../application/reference/cli.md#update):
+You can also update each tenant by passing the tenant ID to the [database-migrate command](../../application/reference/cli.md#database-migrate):
 
 ```sh
-CHEVERETO_TENANT=1 app/bin/cli -C update
+CHEVERETO_TENANT=1 app/bin/cli -C database-migrate
 ```
 
 ## Application CLI

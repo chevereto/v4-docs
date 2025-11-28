@@ -417,7 +417,7 @@ app/bin/tenants -C plan:delete --id 1
 
 ### Tenants jobs worker
 
-The `jobs:worker` command starts the jobs worker to process background jobs for tenants in the Chevereto infrastructure.
+The `jobs:worker` command starts the jobs worker process for tenants in the Chevereto infrastructure. This process is required for carrying out background tasks for tenants websites and to refresh the tenants stats table.
 
 ```sh
 app/bin/tenants -C jobs:worker # all tenants

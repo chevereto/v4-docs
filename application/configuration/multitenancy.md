@@ -268,7 +268,7 @@ app/bin/tenants -C cache
 
 ## Running jobs worker
 
-Use [jobs:worker](../../application/reference/cli.md#tenants-jobs-worker) to run the jobs worker in multi-tenant mode.
+Use [jobs:worker](../../application/reference/cli.md#tenants-jobs-worker) to run the jobs worker in multi-tenant mode. This long-running process handles background tasks for tenants websites, it also refreshes the tenants stats table.
 
 To run the worker for all tenants:
 

@@ -284,7 +284,9 @@ app/bin/tenants -C stats:refresh --id 1
 
 ## Running jobs worker
 
-Use [jobs:worker](../../application/reference/cli.md#tenants-jobs-worker) to run the jobs worker in multi-tenant mode. This long-running process handles background tasks for tenants websites, it also refreshes the tenants stats table.
+Use [jobs:worker](../../application/reference/cli.md#tenants-jobs-worker) to run the jobs worker in multi-tenant mode. This long-running process handles background tasks for all tenant websites and periodically refreshes the tenants stats table.
+
+Adjust the job polling interval per tenant by setting `CHEVERETO_JOBS_WORKER_INTERVAL` (in seconds) globally, in a plan, or for individual tenants.
 
 To run the worker for all tenants:
 

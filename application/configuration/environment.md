@@ -150,6 +150,7 @@ Environment variables for configuring multi-tenancy.
 * `CHEVERETO_TENANTS_API_ALLOW_LIST` is used to restrict access to the [Tenants API](../../api/4/tenants.md) by IP address or network.
 * `CHEVERETO_TENANT_ENFORCED` is a JSON object that defines which variables will be enforced (overridden) for the multi-tenant context.
 * `CHEVERETO_TENANT` is intended to be used to pass the current tenant context for CLI.
+* `CHEVERETO_JOBS_WORKER_INTERVAL` is used to define how often (in seconds) the jobs worker will check for new jobs to process.
 
 ## Toggles
 
@@ -218,7 +219,7 @@ Zero `0` means no limit.
 | CHEVERETO_MAX_CACHE_TTL              | 86400   |
 | CHEVERETO_MAX_CATEGORIES             | 0       |
 | CHEVERETO_MAX_CHUNK_UPLOAD_SIZE      | 16M     |
-| CHEVERETO_MAX_EXECUTION_TIME_SECONDS | 30      |
+| CHEVERETO_MAX_EXECUTION_TIME         | 30      |
 | CHEVERETO_MAX_FILES                  | 0       |
 | CHEVERETO_MAX_LISTING_ITEMS_PER_PAGE | 0       |
 | CHEVERETO_MAX_LOGIN_PROVIDERS        | 0       |
@@ -243,12 +244,12 @@ Environment variables for the file uploading limits. It applies only for our con
 
 For **non-container** based provisioning you need to change these settings at [php.ini configuration](../stack/php.md#configuration).
 
-| Variable                             | Example |
-| ------------------------------------ | ------- |
-| CHEVERETO_MAX_UPLOAD_FILE_SIZE       | 64M     |
-| CHEVERETO_MAX_POST_SIZE              | 64M     |
-| CHEVERETO_MAX_EXECUTION_TIME_SECONDS | 30      |
-| CHEVERETO_MAX_MEMORY_SIZE            | 512M    |
+| Variable                       | Example |
+| ------------------------------ | ------- |
+| CHEVERETO_MAX_UPLOAD_FILE_SIZE | 64M     |
+| CHEVERETO_MAX_POST_SIZE        | 64M     |
+| CHEVERETO_MAX_EXECUTION_TIME   | 30      |
+| CHEVERETO_MAX_MEMORY_SIZE      | 512M    |
 
 ## Proxy
 
@@ -257,3 +258,13 @@ Environment variables for tweaking server handling when the server is under a pr
 | Variable                   | Example   |
 | -------------------------- | --------- |
 | CHEVERETO_HEADER_CLIENT_IP | X-Real-IP |
+
+## Jobs
+
+Environment variables for configuring the jobs worker.
+
+| Variable                       | Example |
+| ------------------------------ | ------- |
+| CHEVERETO_JOBS_WORKER_INTERVAL | 300     |
+
+* `CHEVERETO_JOBS_WORKER_INTERVAL` is used to define how often (in seconds) the jobs worker will check for new jobs to process.

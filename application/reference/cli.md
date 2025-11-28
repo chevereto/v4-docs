@@ -148,7 +148,7 @@ app/bin/cli -C stats --format json
 
 ### Stats rebuild
 
-The `stats-rebuild` command rebuilds the Chevereto application stats.
+The `stats-rebuild` command rebuilds the Chevereto application stats. It truncates the stats table and repopulates it from scratch.
 
 ```sh
 app/bin/cli -C stats-rebuild
@@ -414,6 +414,19 @@ app/bin/tenants -C plan:delete --id 1
 | Option | Description    |
 | ------ | -------------- |
 | id     | Tenant plan ID |
+
+### Tenants stats refresh
+
+The `stats:refresh` command refreshes the tenants stats table in the Chevereto infrastructure.
+
+```sh
+app/bin/tenants -C stats:refresh # all tenants
+app/bin/tenants -C stats:refresh --id 1
+```
+
+| Option | Description          |
+| ------ | -------------------- |
+| id     | (optional) Tenant id |
 
 ### Tenants jobs worker
 

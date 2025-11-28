@@ -266,6 +266,22 @@ Use [cache](../../application/reference/cli.md#cache-tenants-data) to regenerate
 app/bin/tenants -C cache
 ```
 
+## Tenants stats refresh
+
+Use [stats:refresh](../../application/reference/cli.md#tenants-stats-refresh) to recalculate and update the tenants stats table.
+
+To refresh stats for all tenants:
+
+```sh
+app/bin/tenants -C stats:refresh
+```
+
+To refresh stats for a specific tenant:
+
+```sh
+app/bin/tenants -C stats:refresh --id 1
+```
+
 ## Running jobs worker
 
 Use [jobs:worker](../../application/reference/cli.md#tenants-jobs-worker) to run the jobs worker in multi-tenant mode. This long-running process handles background tasks for tenants websites, it also refreshes the tenants stats table.

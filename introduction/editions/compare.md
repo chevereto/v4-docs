@@ -41,19 +41,20 @@ Upload and share the following media types from device file browser, drag and dr
 * Upload plugin (PUP.js, postMessage)
 * Bulk importer (batch upload)
 
-| Uploading features           | Free  | Lite  |  Pro  |
-| ---------------------------- | :---: | :---: | :---: |
-| Upload moderation            |   –   |   ✅   |   ✅   |
-| Watermark image uploads      |   –   |   ✅   |   ✅   |
-| Asset storage API            | Local | Local |  All  |
-| External storage servers API | Local | Local |  All  |
+| Uploading features           |   Free    |   Lite    |  Pro  |
+| ---------------------------- | :-------: | :-------: | :---: |
+| Upload moderation            |     –     |     ✅     |   ✅   |
+| Watermark image uploads      |     –     |     ✅     |   ✅   |
+| Asset storage API            | Local, S3 | Local, S3 |  All  |
+| External storage servers API | Local, S3 | Local, S3 |  All  |
 
-## External storage APIs
+## Storage APIs
 
 | Storage API           | Free  | Lite  |  Pro  |
 | --------------------- | :---: | :---: | :---: |
-| Amazon S3             |   –   |   –   |   ✅   |
-| S3 compatible         |   –   |   –   |   ✅   |
+| Local                 |   ✅   |   ✅   |   ✅   |
+| Amazon S3             |   ✅   |   ✅   |   ✅   |
+| S3 compatible         |   ✅   |   ✅   |   ✅   |
 | Google Cloud Storage  |   –   |   –   |   ✅   |
 | Microsoft Azure       |   –   |   –   |   ✅   |
 | Alibaba Cloud OSS     |   –   |   –   |   ✅   |

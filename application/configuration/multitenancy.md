@@ -39,7 +39,7 @@ CHEVERETO_PROVIDER_URL=your_provider_url
 CHEVERETO_TENANTS_API_REQUEST_SECRET=your_request_secret
 ```
 
-* `CHEVERETO_TENANTS_API_REQUEST_SECRET` is required to verify signed requests to the [Tenants API](../../api/4/tenants.md).
+* `CHEVERETO_TENANTS_API_REQUEST_SECRET` is used to sign and verify requests to the [Tenants API](../../api/4/tenants.md). When configured, all API requests must include a valid signature.
 
 ### SaaS context
 

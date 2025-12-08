@@ -9,11 +9,12 @@ This Chevereto edition is Open Source software available at [chevereto/chevereto
 ## Key features
 
 * **Image and video hosting** - Upload, organize, and manage media effortlessly.
+* **Multi-user support** - Allow users to create accounts and share content.
 * **No subscriptions** - A one-time setup for personal use.
 
 ## Limitations
 
-Chevereto Free edition is focused on personal use and excludes features like multi-user support, advanced storage integrations (e.g., S3), and other enhancements available in [Chevereto Lite](./chevereto-lite.md) and [Chevereto Pro](./chevereto-pro.md).
+Chevereto Free edition is focused on personal/community use. It excludes moderations and other enhancements available in [Chevereto Lite](./chevereto-lite.md) and [Chevereto Pro](./chevereto-pro.md).
 
 ## Use cases
 
@@ -23,4 +24,4 @@ Chevereto Free edition is focused on personal use and excludes features like mul
 
 ## Why choose Chevereto Free edition?
 
-Chevereto Free edition is an ideal choice for individuals seeking a simple yet powerful media-sharing solution. It's a stepping stone to Chevereto paid editions for those needing more advanced features in the future.
+Chevereto Free edition is an ideal choice for individuals and communities seeking a simple yet powerful media-sharing solution. It's a stepping stone to Chevereto paid editions for those needing more advanced features in the future.

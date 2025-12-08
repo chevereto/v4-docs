@@ -230,9 +230,9 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Admin toggles                                                                               | Free  | Lite  |  Pro  |
 | ------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
+| User sign up                                                                                |   ✅   |   ✅   |   ✅   |
+| User content delete                                                                         |   ✅   |   ✅   |   ✅   |
 | Consent screen (age gate)                                                                   |   –   |   ✅   |   ✅   |
-| User sign up                                                                                |   –   |   ✅   |   ✅   |
-| User content delete                                                                         |   –   |   ✅   |   ✅   |
 | User notify sign up                                                                         |   –   |   ✅   |   ✅   |
 | User email confirmation                                                                     |   –   |   ✅   |   ✅   |
 | User email for social login                                                                 |   –   |   ✅   |   ✅   |

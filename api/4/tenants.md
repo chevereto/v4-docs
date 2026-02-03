@@ -118,11 +118,18 @@ curl -X PATCH "/_/api/4/tenants/tenant123" \
 
 `204` Delete a tenant.
 
+- Request body (JSON):
+
+  - `drop_tables` (optional): Whether to drop tenant database tables `[default: false]` (boolean).
+
 ```sh
 curl -X DELETE "/_/api/4/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
+  -d '{
+      "drop_tables": true
+    }'
 ```
 
 ## `/_/api/4/tenants/{id}/install`

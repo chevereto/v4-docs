@@ -214,7 +214,6 @@ curl -X PATCH "/_/api/4/tenants-plans/basic_plan" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \
   -d '{
-        "description": "An updated basic tenant plan",
         "limits": {"CHEVERETO_MAX_USERS":"3"}
       }'
 ```

@@ -34,6 +34,19 @@ echo -n 'body string' | openssl dgst -sha256 -hmac 'your_request_secret' -r | aw
 </code-block>
 </code-group>
 
+## `/_/api/4/auth/verify`
+
+### POST `/_/api/4/auth/verify`
+
+`200` Verify API key and signature.
+
+```sh
+curl -X POST "/_/api/4/auth/verify" \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: your_api_key" \
+  -H "X-Signature: request_signature"
+```
+
 ## `/_/api/4/tenants`
 
 ### GET `/_/api/4/tenants`
@@ -44,7 +57,7 @@ echo -n 'body string' | openssl dgst -sha256 -hmac 'your_request_secret' -r | aw
 curl -X GET "/_/api/4/tenants" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: request_signature" \
+  -H "X-Signature: request_signature"
 ```
 
 ### POST `/_/api/4/tenants`
@@ -86,7 +99,7 @@ curl -X POST "/_/api/4/tenants" \
 curl -X GET "/_/api/4/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: request_signature" \
+  -H "X-Signature: request_signature"
 ```
 
 ### PATCH `/_/api/4/tenants/{id}`
@@ -162,7 +175,7 @@ curl -X POST "/_/api/4/tenants/tenant123/install" \
 curl -X GET "/_/api/4/tenants-plans" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: request_signature" \
+  -H "X-Signature: request_signature"
 ```
 
 ### POST: `/_/api/4/tenants-plans`
@@ -196,7 +209,7 @@ curl -X POST "/_/api/4/tenants-plans" \
 curl -X GET "/_/api/4/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: request_signature" \
+  -H "X-Signature: request_signature"
 ```
 
 ### PATCH: `/_/api/4/tenants-plans/{id}`
@@ -226,5 +239,5 @@ curl -X PATCH "/_/api/4/tenants-plans/basic_plan" \
 curl -X DELETE "/_/api/4/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
-  -H "X-Signature: request_signature" \
+  -H "X-Signature: request_signature"
 ```

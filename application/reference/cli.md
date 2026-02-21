@@ -200,6 +200,14 @@ The `version` command outputs the Chevereto application filesystem version.
 app/bin/cli -C version
 ```
 
+### Version installed
+
+The `version-installed` command outputs the Chevereto application installed version (database).
+
+```sh
+app/bin/cli -C version-installed
+```
+
 ### Js
 
 The `js` command generates the cache for JavaScript files. The command outputs the list of JavaScript files processed.

@@ -167,7 +167,7 @@ curl -X POST "/_/api/4/tenants/tenant123/install" \
 
 ## `/_/api/4/tenants/{id}/user-password-reset`
 
-### POST `/_/api/4/tenants/{id}/user-password-reset`
+### PATCH `/_/api/4/tenants/{id}/user-password-reset`
 
 `200` Reset a user's password for a tenant. Returns the new password.
 `404` Tenant or user not found.
@@ -178,7 +178,7 @@ curl -X POST "/_/api/4/tenants/tenant123/install" \
   - `password` (optional): New password. If not provided, a random password will be generated.
 
 ```sh
-curl -X POST "/_/api/4/tenants/tenant123/user-password-reset" \
+curl -X PATCH "/_/api/4/tenants/tenant123/user-password-reset" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature" \

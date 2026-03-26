@@ -156,12 +156,18 @@ app/bin/cli -C stats-rebuild
 
 ### Password reset
 
-The `password-reset` command generates and assign a new password for the target username. The command outputs the new password.
+The `password-reset` command generates and assigns a new password for the target username. The command outputs the new password. Use `-x` to provide a custom password, otherwise a random password will be generated.
 
 To reset the password for user "rodolfo":
 
 ```sh
 app/bin/cli -C password-reset -u rodolfo
+```
+
+To reset the password for user "rodolfo" with a custom password:
+
+```sh
+app/bin/cli -C password-reset -u rodolfo -x mypassword
 ```
 
 ### Setting get

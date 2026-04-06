@@ -4,17 +4,19 @@
 
 Environment variables for the system context. Available `server` and `docker`.
 
-| Variable            | Example |
-| ------------------- | ------- |
-| CHEVERETO_SERVICING | server  |
+| Variable               | Example |
+| ---------------------- | ------- |
+| CHEVERETO_SERVICING    | server  |
+| CHEVERETO_SERVICE_NAME | app     |
 
 ## Context variables
 
-Environment variables for the application context. Available `self-hosted`, `saas`.
+Environment variables for the application context. Available `self-hosted`, `saas`. `CHEVERETO_TRIAL` controls if the system is in trial mode or not, in which case it uses `CHEVERETO_TRIAL_ENABLE_*` and `CHEVERETO_TRIAL_MAX_*` to control which features and limits are applied during trial.
 
 | Variable          | Example     |
 | ----------------- | ----------- |
 | CHEVERETO_CONTEXT | self-hosted |
+| CHEVERETO_TRIAL   | 0           |
 
 ## Database variables
 
@@ -263,8 +265,8 @@ Environment variables for tweaking server handling when the server is under a pr
 
 Environment variables for configuring the jobs worker.
 
-| Variable                       | Example |
-| ------------------------------ | ------- |
-| CHEVERETO_JOBS_WORKER_INTERVAL | 300     |
+| Variable                     | Example |
+| ---------------------------- | ------- |
+| CHEVERETO_SCHEDULER_INTERVAL | 300     |
 
-* `CHEVERETO_JOBS_WORKER_INTERVAL` is used to define how often (in seconds) the jobs worker will check for new jobs to process.
+* `CHEVERETO_SCHEDULER_INTERVAL` is used to define how often (in seconds) the jobs scheduler will check for new jobs to process.

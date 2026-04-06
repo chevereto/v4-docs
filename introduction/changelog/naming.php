@@ -2,6 +2,7 @@
 
 return [
     'welcome-back.md' => 'Welcome back',
+    '4.5.md' => "Elevado (4.5)",
     '4.4.md' => "Vivaracho (4.4)",
     '4.3.md' => "Entrador (4.3)",
     '4.2.md' => "Regio (4.2)",

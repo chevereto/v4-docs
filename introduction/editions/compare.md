@@ -250,7 +250,7 @@ Upload and share the following media types from device file browser, drag and dr
 * Theme palettes (10)
 * One-click upgrade (web, CLI)
 * Maintenance mode
-* Email sending (SMTP, phpmail)
+* Email sending (SMTP, Postfix, AWS SES, Mailtrap, etc.)
 * Cipher IDs
 * Export user
 * Docker support

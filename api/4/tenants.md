@@ -18,7 +18,7 @@ All requests to the Tenants API **must** include an `X-Signature` header contain
 X-Signature: your_hmac_sha256_signature
 ```
 
-Generate the signature by hashing the raw request body (as a string) with `CHEVERETO_TENANTS_API_SIGNING_SECRET` using HMAC SHA256. The output must be in hexadecimal format.
+Generate the signature by hashing the raw request body (as a string) with `CHEVERETO_TENANTS_API_REQUEST_SECRET` using HMAC SHA256. The output must be in hexadecimal format.
 
 <code-group>
 <code-block title="PHP">
@@ -45,6 +45,20 @@ curl -X POST "/_/api/4/auth/verify" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature"
+```
+
+## `/_/api/4/config/traefik`
+
+### GET `/_/api/4/config/traefik`
+
+`200` Retrieve dynamic Traefik HTTP provider configuration.
+
+Provides dynamic configuration for Traefik's [HTTP provider](https://doc.traefik.io/traefik/providers/http/), enabling tenant-aware routing without custom glue code. This endpoint is internal and only accessible from localhost.
+
+Note: This endpoint works with `cf-only` middleware (CloudFlare). If you need to use it without other middleware, please open an issue to discuss the best approach.
+
+```sh
+curl -X GET "/_/api/4/config/traefik"
 ```
 
 ## `/_/api/4/tenants`

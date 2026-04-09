@@ -152,7 +152,6 @@ Environment variables for configuring multi-tenancy.
 * `CHEVERETO_TENANTS_API_ALLOW_LIST` is used to restrict access to the [Tenants API](../../api/4/tenants.md) by IP address or network.
 * `CHEVERETO_TENANT_ENFORCED` is a JSON object that defines which variables will be enforced (overridden) for the multi-tenant context.
 * `CHEVERETO_TENANT` is intended to be used to pass the current tenant context for CLI.
-* `CHEVERETO_JOBS_WORKER_INTERVAL` is used to define how often (in seconds) the jobs worker will check for new jobs to process.
 
 ## Toggles
 
@@ -162,6 +161,7 @@ Environment variables for the context where Chevereto system is being provided. 
 | ------------------------------------------- | ------- |
 | CHEVERETO_ENABLE_API_GUEST                  | 1       |
 | CHEVERETO_ENABLE_API_USER                   | 1       |
+| CHEVERETO_ENABLE_GUESTS                     | 1       |
 | CHEVERETO_ENABLE_BANNERS                    | 1       |
 | CHEVERETO_ENABLE_BULK_IMPORTER              | 1       |
 | CHEVERETO_ENABLE_CAPTCHA                    | 1       |

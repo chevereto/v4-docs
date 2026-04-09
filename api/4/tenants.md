@@ -55,7 +55,7 @@ curl -X POST "/_/api/4/auth/verify" \
 
 Provides dynamic configuration for Traefik's [HTTP provider](https://doc.traefik.io/traefik/providers/http/), enabling tenant-aware routing without custom glue code. This endpoint is internal and only accessible from localhost.
 
-Note: This endpoint works with `cf-only` middleware (CloudFlare). If you need to use it without other middleware, please open an issue to discuss the best approach.
+Note: This implementation is currently limited to Cloudflare network, meaning DNS for the server must be managed through Cloudflare. If you need support for a different network setup, open an issue to request it.
 
 ```sh
 curl -X GET "/_/api/4/config/traefik"
@@ -215,7 +215,7 @@ curl -X GET "/_/api/4/tenants-plans" \
   -H "X-Signature: request_signature"
 ```
 
-### POST: `/_/api/4/tenants-plans`
+### POST `/_/api/4/tenants-plans`
 
 `201` Create a new tenant plan.
 
@@ -238,7 +238,7 @@ curl -X POST "/_/api/4/tenants-plans" \
 
 ## `/_/api/4/tenants-plans/{id}`
 
-### GET: `/_/api/4/tenants-plans/{id}`
+### GET `/_/api/4/tenants-plans/{id}`
 
 `200` Retrieve tenant plan details.
 
@@ -249,7 +249,7 @@ curl -X GET "/_/api/4/tenants-plans/basic_plan" \
   -H "X-Signature: request_signature"
 ```
 
-### PATCH: `/_/api/4/tenants-plans/{id}`
+### PATCH `/_/api/4/tenants-plans/{id}`
 
 `204` Edit tenant plan information.
 

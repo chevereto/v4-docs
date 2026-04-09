@@ -8,7 +8,7 @@ Go to **MultiPHP INI Editor** under **Software**.
 
 Select your website under **Configure PHP INI basic settings**.
 
-![MultiPHP INI editor](../../src/manuals/cpanel/mutliphp-ini-editor.png)
+![MultiPHP INI editor](../../src/manuals/cpanel/multiphp-ini-editor.png)
 
 Take note on the following configurable keys:
 

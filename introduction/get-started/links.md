@@ -7,7 +7,7 @@ Explore essential resources, updates, and related projects to get the most out o
 Dive into detailed documentation and resources specifically tailored for Chevereto V4 users. From setup to advanced features, these links will guide you through every aspect of the platform.
 
 * [Chevereto V4 User manual](https://v4-user.chevereto.com/) - User guides for Chevereto V4.
-* [Chevereto V4 Admin manual](https://v4-user.chevereto.com/) - Admin-specific documentation.
+* [Chevereto V4 Admin manual](https://v4-admin.chevereto.com/) - Admin-specific documentation.
 * [Chevereto V4 Releases](https://releases.chevereto.com/4.X/) - Latest updates and changelogs.
 
 ## General resources

@@ -13,10 +13,12 @@ Environment variables for the system context. Available `server` and `docker`.
 
 Environment variables for the application context. Available `self-hosted`, `saas`. `CHEVERETO_TRIAL` controls if the system is in trial mode or not, in which case it uses `CHEVERETO_TRIAL_ENABLE_*` and `CHEVERETO_TRIAL_MAX_*` to control which features and limits are applied during trial.
 
-| Variable          | Example     |
-| ----------------- | ----------- |
-| CHEVERETO_CONTEXT | self-hosted |
-| CHEVERETO_TRIAL   | 0           |
+| Variable                  | Example     |
+| ------------------------- | ----------- |
+| CHEVERETO_CONTEXT         | self-hosted |
+| CHEVERETO_TRIAL           | 0           |
+| CHEVERETO_TRIAL_ENABLE_*  | 1           |
+| CHEVERETO_TRIAL_MAX_*     | 0           |
 
 ## Database variables
 
@@ -108,7 +110,7 @@ Environment variables for configuring binary tools used by Chevereto.
 | Variable                  | Example            |
 | ------------------------- | ------------------ |
 | CHEVERETO_BINARY_EXIFTOOL | exiftool           |
-| CHEVERETO_BINARY_EXIFTRAN | exiftran'          |
+| CHEVERETO_BINARY_EXIFTRAN | exiftran           |
 | CHEVERETO_BINARY_FFMPEG   | /some/path/ffmpeg  |
 | CHEVERETO_BINARY_FFPROBE  | /some/path/ffprobe |
 

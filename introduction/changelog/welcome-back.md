@@ -96,4 +96,4 @@ Coming from V2, users will experience that Chevereto is more than a simple one-c
 
 Adding on [From Chevereto V2](#from-chevereto-v2), the software went from an mvp to a real project.
 
-Coming from V1, users will experience that the software is not longer is a robust media hosting solution.
+Coming from V1, users will experience that the software is no longer a simple MVP but a robust, full-featured media hosting solution.

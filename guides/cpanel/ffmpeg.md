@@ -14,7 +14,7 @@ The FFmpeg distribution comes in a compressed file, you need to extract it and u
 
 ![FFmpeg folder](../../src/third-party/ffmpeg/ffmpeg-folder.png)
 
-You can upload these to any directory long as it is visible for your cPanel user. For example, you can use `/home/user/bin/` and ending up with:
+You can upload these to any directory as long as it is visible for your cPanel user. For example, you can use `/home/user/bin/` and ending up with:
 
 ```sh
 /home/user/bin/ffmpeg-7.0.2-amd64-static

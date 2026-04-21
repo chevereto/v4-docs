@@ -4,36 +4,37 @@
 
 Environment variables for the system context. Available `server` and `docker`.
 
-| Variable               | Example |
+| Variable               | Default |
 | ---------------------- | ------- |
 | CHEVERETO_SERVICING    | server  |
-| CHEVERETO_SERVICE_NAME | app     |
+| CHEVERETO_SERVICE_NAME | php     |
+| CHEVERETO_SERVICE_PORT | 8080    |
 
 ## Context variables
 
 Environment variables for the application context. Available `self-hosted`, `saas`. `CHEVERETO_TRIAL` controls if the system is in trial mode or not, in which case it uses `CHEVERETO_TRIAL_ENABLE_*` and `CHEVERETO_TRIAL_MAX_*` to control which features and limits are applied during trial.
 
-| Variable                  | Example     |
-| ------------------------- | ----------- |
-| CHEVERETO_CONTEXT         | self-hosted |
-| CHEVERETO_TRIAL           | 0           |
-| CHEVERETO_TRIAL_ENABLE_*  | 1           |
-| CHEVERETO_TRIAL_MAX_*     | 0           |
+| Variable                 | Default     |
+| ------------------------ | ----------- |
+| CHEVERETO_CONTEXT        | self-hosted |
+| CHEVERETO_TRIAL          | 0           |
+| CHEVERETO_TRIAL_ENABLE_* |             |
+| CHEVERETO_TRIAL_MAX_*    |             |
 
 ## Database variables
 
 Environment variables for the database details.
 
-| Variable                  | Example                |
-| ------------------------- | ---------------------- |
-| CHEVERETO_DB_DRIVER       | mysql                  |
-| CHEVERETO_DB_HOST         | mariadb                |
-| CHEVERETO_DB_NAME         | chevereto              |
-| CHEVERETO_DB_PASS         | user_database_password |
-| CHEVERETO_DB_PDO_ATTRS    | {"key":"value"} (json) |
-| CHEVERETO_DB_PORT         | 3306                   |
-| CHEVERETO_DB_TABLE_PREFIX | chv_                   |
-| CHEVERETO_DB_USER         | chevereto              |
+| Variable                  | Default   |
+| ------------------------- | --------- |
+| CHEVERETO_DB_DRIVER       | mysql     |
+| CHEVERETO_DB_HOST         | localhost |
+| CHEVERETO_DB_NAME         |           |
+| CHEVERETO_DB_PASS         |           |
+| CHEVERETO_DB_PDO_ATTRS    | []        |
+| CHEVERETO_DB_PORT         | 3306      |
+| CHEVERETO_DB_TABLE_PREFIX | chv_      |
+| CHEVERETO_DB_USER         |           |
 
 ## Error logging variables
 
@@ -49,33 +50,41 @@ Environment variables for handling [error](../reference/errors.md) logging.
 
 Environment variables for [debug](../../developer/how-to/debug.md).
 
-| Variable              | Example |
+| Variable              | Default |
 | --------------------- | ------- |
 | CHEVERETO_DEBUG_LEVEL | 1       |
 
+## Edition variable
+
+Environment variable for the Chevereto edition.
+
+| Variable          | Default |
+| ----------------- | ------- |
+| CHEVERETO_EDITION | pro     |
+
 ## xrDebug variables
 
-| Variable                 | Example   |
+| Variable                 | Default   |
 | ------------------------ | --------- |
 | CHEVERETO_ENABLE_XRDEBUG | 0         |
 | CHEVERETO_XRDEBUG_HOST   | localhost |
 | CHEVERETO_XRDEBUG_HTTPS  | 0         |
-| CHEVERETO_XRDEBUG_KEY    | my_key    |
+| CHEVERETO_XRDEBUG_KEY    |           |
 | CHEVERETO_XRDEBUG_PORT   | 27420     |
 
 ## Hostname variables
 
 Environment variables for the hostname configuration.
 
-| Variable                | Example       |
-| ----------------------- | ------------- |
-| CHEVERETO_HOSTNAME      | chevereto.com |
-| CHEVERETO_HOSTNAME_PATH | /             |
-| CHEVERETO_HTTPS         | 1             |
+| Variable                | Default   |
+| ----------------------- | --------- |
+| CHEVERETO_HOSTNAME      | localhost |
+| CHEVERETO_HOSTNAME_PATH | /         |
+| CHEVERETO_HTTPS         | 1         |
 
 For `CHEVERETO_HOSTNAME` it refers to the network identifier and it supports hostname, ip address and domain name. It also supports suffixing the port (e.g., example.com:8080).
 
-“Network identifier” conveys the idea of any entity that can identify or locate a resource or device within a network.
+"Network identifier" conveys the idea of any entity that can identify or locate a resource or device within a network.
 
 ## Encryption key
 
@@ -89,69 +98,70 @@ Environment variables for the [encryption](../reference/encryption.md) functiona
 
 Environment variables for the session driver.
 
-| Variable                       | Example                        |
-| ------------------------------ | ------------------------------ |
-| CHEVERETO_SESSION_SAVE_HANDLER | files, redis                   |
-| CHEVERETO_SESSION_SAVE_PATH    | /tmp, tcp://ip:port?auth[]=abc |
+| Variable                       | Default |
+| ------------------------------ | ------- |
+| CHEVERETO_SESSION_SAVE_HANDLER | files   |
+| CHEVERETO_SESSION_SAVE_PATH    | /tmp    |
 
 ## Image handling variables
 
 Environment variables for controlling image handling.
 
-| Variable                          | Example                                |
-| --------------------------------- | -------------------------------------- |
-| CHEVERETO_IMAGE_FORMATS_AVAILABLE | 'AVIF','JPEG','PNG','BMP','GIF','WEBP' |
-| CHEVERETO_IMAGE_LIBRARY           | imagick                                |
+| Variable                          | Default                                  |
+| --------------------------------- | ---------------------------------------- |
+| CHEVERETO_IMAGE_FORMATS_AVAILABLE | ["AVIF","JPEG","PNG","BMP","GIF","WEBP"] |
+| CHEVERETO_IMAGE_LIBRARY           | imagick                                  |
 
 ## Binary paths
 
 Environment variables for configuring binary tools used by Chevereto.
 
-| Variable                  | Example            |
-| ------------------------- | ------------------ |
-| CHEVERETO_BINARY_EXIFTOOL | exiftool           |
-| CHEVERETO_BINARY_EXIFTRAN | exiftran           |
-| CHEVERETO_BINARY_FFMPEG   | /some/path/ffmpeg  |
-| CHEVERETO_BINARY_FFPROBE  | /some/path/ffprobe |
+| Variable                  | Default  |
+| ------------------------- | -------- |
+| CHEVERETO_BINARY_EXIFTOOL | exiftool |
+| CHEVERETO_BINARY_EXIFTRAN | exiftran |
+| CHEVERETO_BINARY_FFMPEG   | ffmpeg   |
+| CHEVERETO_BINARY_FFPROBE  | ffprobe  |
 
 ## Cache variables
 
 Environment variables for setting up application-level caching.
 
-| Variable                     | Example        |
-| ---------------------------- | -------------- |
-| CHEVERETO_CACHE_DRIVER       | redis          |
-| CHEVERETO_CACHE_HOST         | localhost      |
-| CHEVERETO_CACHE_PASSWORD     | redis_password |
-| CHEVERETO_CACHE_PORT         | 6379           |
-| CHEVERETO_CACHE_USER         | redis_user     |
-| CHEVERETO_CACHE_TIME_MICRO   | 60             |
-| CHEVERETO_CACHE_STAMPEDE_SLA | 1000           |
+| Variable                     | Default |
+| ---------------------------- | ------- |
+| CHEVERETO_CACHE_DRIVER       | redis   |
+| CHEVERETO_CACHE_HOST         |         |
+| CHEVERETO_CACHE_KEY_PREFIX   | chv:    |
+| CHEVERETO_CACHE_PASSWORD     |         |
+| CHEVERETO_CACHE_PORT         |         |
+| CHEVERETO_CACHE_USER         |         |
+| CHEVERETO_CACHE_TIME_MICRO   | 60      |
+| CHEVERETO_CACHE_STAMPEDE_SLA | 0       |
 
 ## Provider
 
 Environment variables for configuring the service provider.
 
-| Variable                | Example                     |
-| ----------------------- | --------------------------- |
-| CHEVERETO_PROVIDER_NAME | Chevereto Cloud             |
-| CHEVERETO_PROVIDER_URL  | https://cloud.chevereto.com |
+| Variable                | Default               |
+| ----------------------- | --------------------- |
+| CHEVERETO_PROVIDER_NAME | Self-hosted Chevereto |
+| CHEVERETO_PROVIDER_URL  |                       |
 
 ## Tenants
 
 Environment variables for configuring multi-tenancy.
 
-| Variable                             | Example                       |
-| ------------------------------------ | ----------------------------- |
-| CHEVERETO_TENANTS_API_REQUEST_SECRET | your_request_secret           |
-| CHEVERETO_TENANTS_API_KEY_SECRET     | your_key_secret               |
-| CHEVERETO_TENANTS_API_ALLOW_LIST     | 200.200.200.200,10.0.0.0/24   |
-| CHEVERETO_TENANT_ENFORCED            | {"CHEVERETO_MAX_USERS":"100"} |
-| CHEVERETO_TENANT                     | tenant1                       |
+| Variable                             | Default |
+| ------------------------------------ | ------- |
+| CHEVERETO_TENANTS_API_REQUEST_SECRET |         |
+| CHEVERETO_TENANTS_API_KEY_SECRET     |         |
+| CHEVERETO_TENANTS_API_IP_ALLOW_LIST  |         |
+| CHEVERETO_TENANT_ENFORCED            | {}      |
+| CHEVERETO_TENANT                     |         |
 
 * `CHEVERETO_TENANTS_API_REQUEST_SECRET` is used to sign requests to the [Tenants API](../../api/4/tenants.md).
 * `CHEVERETO_TENANTS_API_KEY_SECRET` is used to verify requests coming from a known [Tenants API](../../api/4/tenants.md) key.
-* `CHEVERETO_TENANTS_API_ALLOW_LIST` is used to restrict access to the [Tenants API](../../api/4/tenants.md) by IP address or network.
+* `CHEVERETO_TENANTS_API_IP_ALLOW_LIST` is used to restrict access to the [Tenants API](../../api/4/tenants.md) by IP address or network.
 * `CHEVERETO_TENANT_ENFORCED` is a JSON object that defines which variables will be enforced (overridden) for the multi-tenant context.
 * `CHEVERETO_TENANT` is intended to be used to pass the current tenant context for CLI.
 
@@ -163,7 +173,6 @@ Environment variables for the context where Chevereto system is being provided. 
 | ------------------------------------------- | ------- |
 | CHEVERETO_ENABLE_API_GUEST                  | 1       |
 | CHEVERETO_ENABLE_API_USER                   | 1       |
-| CHEVERETO_ENABLE_GUESTS                     | 1       |
 | CHEVERETO_ENABLE_BANNERS                    | 1       |
 | CHEVERETO_ENABLE_BULK_IMPORTER              | 1       |
 | CHEVERETO_ENABLE_CAPTCHA                    | 1       |
@@ -194,12 +203,12 @@ Environment variables for the context where Chevereto system is being provided. 
 | CHEVERETO_ENABLE_ROUTING                    | 1       |
 | CHEVERETO_ENABLE_SEO_ALBUM_URL              | 1       |
 | CHEVERETO_ENABLE_SEO_IMAGE_URL              | 1       |
-| CHEVERETO_ENABLE_TENANTS                    | 0       |
 | CHEVERETO_ENABLE_SERVICE_AKISMET            | 1       |
 | CHEVERETO_ENABLE_SERVICE_MODERATECONTENT    | 0       |
 | CHEVERETO_ENABLE_SERVICE_PROJECTARACHNID    | 1       |
 | CHEVERETO_ENABLE_SERVICE_STOPFORUMSPAM      | 1       |
 | CHEVERETO_ENABLE_STOPWORDS                  | 1       |
+| CHEVERETO_ENABLE_TENANTS                    | 0       |
 | CHEVERETO_ENABLE_UPDATE_CHECK               | 1       |
 | CHEVERETO_ENABLE_UPDATE_CLI                 | 1       |
 | CHEVERETO_ENABLE_UPDATE_HTTP                | 1       |
@@ -212,11 +221,11 @@ Environment variables for the context where Chevereto system is being provided. 
 
 ## Limits
 
-Environment variables that limits the use for Chevereto
+Environment variables that limits the use for Chevereto.
 
 Zero `0` means no limit.
 
-| Variable                             | Example |
+| Variable                             | Default |
 | ------------------------------------ | ------- |
 | CHEVERETO_MAX_ADMINS                 | 0       |
 | CHEVERETO_MAX_ALBUMS                 | 0       |
@@ -230,11 +239,12 @@ Zero `0` means no limit.
 | CHEVERETO_MAX_MANAGERS               | 0       |
 | CHEVERETO_MAX_MEMORY_SIZE            | 512M    |
 | CHEVERETO_MAX_PAGES                  | 0       |
-| CHEVERETO_MAX_POST_SIZE              | 100M    |
+| CHEVERETO_MAX_POST_SIZE              | 64M     |
 | CHEVERETO_MAX_STORAGES               | 0       |
 | CHEVERETO_MAX_TAGS                   | 0       |
 | CHEVERETO_MAX_TAGS_PER_FILE          | 0       |
 | CHEVERETO_MAX_TAGS_PER_LISTING       | 0       |
+| CHEVERETO_MAX_UPLOAD_FILE_SIZE       | 64M     |
 | CHEVERETO_MAX_UPLOAD_SIZE            | 100M    |
 | CHEVERETO_MAX_USER_ALBUMS_LIST       | 500     |
 | CHEVERETO_MAX_USERS                  | 0       |
@@ -248,7 +258,7 @@ Environment variables for the file uploading limits. It applies only for our con
 
 For **non-container** based provisioning you need to change these settings at [php.ini configuration](../stack/php.md#configuration).
 
-| Variable                       | Example |
+| Variable                       | Default |
 | ------------------------------ | ------- |
 | CHEVERETO_MAX_UPLOAD_FILE_SIZE | 64M     |
 | CHEVERETO_MAX_POST_SIZE        | 64M     |
@@ -259,15 +269,20 @@ For **non-container** based provisioning you need to change these settings at [p
 
 Environment variables for tweaking server handling when the server is under a proxy.
 
-| Variable                   | Example   |
-| -------------------------- | --------- |
-| CHEVERETO_HEADER_CLIENT_IP | X-Real-IP |
+| Variable                        | Default               |
+| ------------------------------- | --------------------- |
+| CHEVERETO_HEADER_CLIENT_IP      |                       |
+| CHEVERETO_HEADER_FORWARDED_HOST | HTTP_X_FORWARDED_HOST |
+| CHEVERETO_HEADER_ROUTER_SECRET  | HTTP_X_ROUTER_SECRET  |
+| CHEVERETO_PROXY_ENTRYPOINT      |                       |
+| CHEVERETO_PROXY_IP_ALLOW_LIST   |                       |
+| CHEVERETO_ROUTER_SECRET         |                       |
 
 ## Jobs
 
 Environment variables for configuring the jobs worker.
 
-| Variable                     | Example |
+| Variable                     | Default |
 | ---------------------------- | ------- |
 | CHEVERETO_SCHEDULER_INTERVAL | 300     |
 

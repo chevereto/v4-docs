@@ -55,10 +55,12 @@ curl -X POST "/_/api/4/auth/verify" \
 
 Provides dynamic configuration for Traefik's [HTTP provider](https://doc.traefik.io/traefik/providers/http/), enabling tenant-aware routing without custom glue code. This endpoint is internal and only accessible from localhost.
 
-Note: This implementation is currently limited to Cloudflare network, meaning DNS for the server must be managed through Cloudflare. If you need support for a different network setup, open an issue to request it.
+Note: This endpoint doesn't require `X-Signature` header.
 
 ```sh
-curl -X GET "/_/api/4/config/traefik"
+curl -X GET "/_/api/4/config/traefik" \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: your_api_key"
 ```
 
 ## `/_/api/4/tenants`

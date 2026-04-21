@@ -278,6 +278,8 @@ Environment variables for tweaking server handling when the server is under a pr
 | CHEVERETO_PROXY_IP_ALLOW_LIST   |                       |
 | CHEVERETO_ROUTER_SECRET         |                       |
 
+Note: `CHEVERETO_HEADER_FORWARDED_HOST` is followed only if passed `CHEVERETO_HEADER_ROUTER_SECRET` and `CHEVERETO_ROUTER_SECRET` match.
+
 ## Jobs
 
 Environment variables for configuring the jobs worker.

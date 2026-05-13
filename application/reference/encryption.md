@@ -15,7 +15,6 @@ The following settings are encrypted in the database:
 | Setting                                                                                                                  | Key                                |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
 | [API V1 key (public)](../../api/1/authorization.md)                                                                      | api_v1_key                         |
-| Album password                                                                                                           | album_password                     |
 | [Email SMTP server](https://v4-admin.chevereto.com/settings/email.html#smtp-server-and-port)                             | email_smtp_server                  |
 | Email SMTP port                                                                                                          | email_smtp_server_port             |
 | [Email SMTP username](https://v4-admin.chevereto.com/settings/email.html#smtp-username)                                  | email_smtp_server_username         |
@@ -48,12 +47,18 @@ The following settings are encrypted in the database:
 | Scaleway API key                                                                                                         | email_scaleway_api_key             |
 | SendGrid API key                                                                                                         | email_sendgrid_api_key             |
 | Sweego API key                                                                                                           | email_sweego_api_key               |
-| [reCAPTCHA secret key](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha-secret-key)              | recaptcha_private_key              |
+| [reCAPTCHA secret key](https://v4-admin.chevereto.com/settings/external-services.html#recaptcha-secret-key)              | captcha_secret                     |
 | [Disqus secret key](https://v4-admin.chevereto.com/settings/external-services.html#disqus-secret-key)                    | disqus_secret_key                  |
 | [Akismet API key](https://v4-admin.chevereto.com/settings/external-services.html#akismet-api-key)                        | akismet_api_key                    |
 | [ModerateContent API Key](https://v4-admin.chevereto.com/settings/external-services.html#moderatecontent-api-key)        | moderatecontent_key                |
 | [Project Arachnid API Username](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_api_username              |
 | [Project Arachnid API Password](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_api_password              |
+
+### Album credentials
+
+The following album column for `chv_albums` is encrypted in the database:
+
+* password
 
 ### Storage credentials
 
@@ -70,6 +75,14 @@ The following storage columns for `chv_storages` are encrypted in the database:
 ### Two-factor secrets
 
 Two-factor secret codes used to generate TOTP are encrypted in the database. Table `chv_two_factors`.
+
+### Variables secrets
+
+The following values for `chv_variables` are encrypted in the database:
+
+* hmac_secret_token
+* hmac_secret_upload
+* hmac_secret_api_key
 
 ## Key
 

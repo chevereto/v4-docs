@@ -18,7 +18,7 @@ Data stored under `env` columns is encrypted.
 
 Resource sharing and isolation:
 
-* Database: table prefixing per tenant.
+* Database: depends on `CHEVERETO_TENANTS_DB_ISOLATION_MODE` (`database` or `table`).
 * Cache: key prefixing per tenant.
 * Storage: tenants configure their own “Site storage” and “Upload storage” in application settings.
 * Sessions: only Redis is supported as the backend.

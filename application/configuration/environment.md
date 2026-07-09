@@ -142,10 +142,12 @@ Environment variables for setting up application-level caching.
 
 Environment variables for configuring the service provider.
 
-| Variable                | Default               |
-| ----------------------- | --------------------- |
-| CHEVERETO_PROVIDER_NAME | Self-hosted Chevereto |
-| CHEVERETO_PROVIDER_URL  |                       |
+| Variable                       | Default               |
+| ------------------------------ | --------------------- |
+| CHEVERETO_PROVIDER_NAME        | Self-hosted Chevereto |
+| CHEVERETO_PROVIDER_URL         | #                     |
+| CHEVERETO_PROVIDER_SUPPORT_URL | #                     |
+| CHEVERETO_PROVIDER_DOCS_URL    | #                     |
 
 ## Tenants
 

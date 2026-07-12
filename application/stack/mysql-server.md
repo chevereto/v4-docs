@@ -8,7 +8,7 @@
 
 Chevereto support both MySQL/MariaDB database servers but we refer indistinctly as **MySQL**.
 
-Chevereto V4 rely in a [RDBMS](https://en.wikipedia.org/wiki/Relational_database) provided by a MySQL server.
+Chevereto V4 rely in a [RDBMS](https://en.wikipedia.org/wiki/Relational_database) provided by a MySQL server. Chevereto uses PHP PDO for database access and requires the **MySQL Native Driver** (`mysqlnd`).
 
 ## Resources
 

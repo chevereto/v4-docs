@@ -26,6 +26,16 @@ Go to **MultiPHP Manager** and select `PHP 8.1` for your website.
 
 * From here you can also enable the [PHP extensions required](../../application/stack/php.md#extensions) by Chevereto.
 
+## MySQL Native Driver
+
+In some cPanel setups, `mysqlnd` is exposed under `nd_pdo_mysql`. If your provider uses this setup, first disable `pdo_mysql`, then enable `nd_pdo_mysql`.
+
+::: details nd_pdo_mysql
+![nd_pdo_mysql](../../src/manuals/cpanel/nd_pdo_mysql.webp)
+:::
+
+Note: This only affects some cPanel providers.
+
 ::: danger PHP Extensions
 Refer to the cPanel [PHP Extensions and Applications Package](https://docs.cpanel.net/whm/software/php-extensions-and-applications-package/) and WHM [How to install a PHP extension in WHM](https://support.cpanel.net/hc/en-us/articles/360050971633) documentation if your cPanel provisioning lacks the extensions required by Chevereto.
 :::

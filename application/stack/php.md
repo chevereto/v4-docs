@@ -74,9 +74,11 @@ The following PHP extensions are required for Chevereto.
 * imagick
 * json
 * pdo
-* pdo-mysql
+* pdo-mysql (nd_pdo_mysql)
 * session
 * xml
+
+Chevereto uses [PDO](https://www.php.net/manual/en/book.pdo.php) for database access and it requires the [MySQL Native Driver](https://www.php.net/manual/en/book.mysqlnd.php) (`mysqlnd`).
 
 ## Features
 

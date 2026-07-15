@@ -163,7 +163,7 @@ Environment variables for configuring multi-tenancy.
 | CHEVERETO_TENANT                     |          |
 
 * `CHEVERETO_TENANTS_API_REQUEST_SECRET` is used to sign requests to the [Tenants API](../../api/4/tenants.md).
-* `CHEVERETO_TENANTS_API_KEY_SECRET` is used to verify requests coming from a known [Tenants API](../../api/4/tenants.md) key.
+* `CHEVERETO_TENANTS_API_KEY_SECRET` is used to sign generated keys for the [Tenants API](../../api/4/tenants.md).
 * `CHEVERETO_TENANTS_API_IP_ALLOW_LIST` is used to restrict access to the [Tenants API](../../api/4/tenants.md) by IP address or network.
 * `CHEVERETO_TENANTS_DB_ISOLATION_MODE` defines the database isolation mode for tenants, which can be either `database` (each tenant has its own database) or `prefix` (tenants share a database with table name prefixes).
 * `CHEVERETO_TENANT_ENFORCED` is a JSON object that defines which variables will be enforced (overridden) for the multi-tenant context.

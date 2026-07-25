@@ -52,7 +52,7 @@ If you have PHP versioning issues make sure that the root `.htaccess` file conta
 <code-block title="Apache">
 ```apacheconf
 <IfModule mime_module>
-  AddHandler application/x-httpd-ea-php81 .php
+  AddHandler application/x-httpd-ea-php82 .php
 </IfModule>
 ```
 </code-block>
@@ -60,7 +60,7 @@ If you have PHP versioning issues make sure that the root `.htaccess` file conta
 <code-block title="LiteSpeed">
 ```apacheconf
 <IfModule mime_module>
-  AddHandler application/x-httpd-ea-php81___lsphp .php
+  AddHandler application/x-httpd-ea-php82___lsphp .php
 </IfModule>
 ```
 </code-block>

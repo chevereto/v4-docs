@@ -32,6 +32,8 @@ The following tables summarizes the significative differences between Chevereto 
 | Themes                                    | /content/legacy/themes             | /app/themes       |
 | Peafowl                                   | /content/legacy/themes/Peafowl/lib | /lib              |
 
+Chevereto V4 uses `dashboard/settings/site-storage` for asset storage configuration. You must manually migrate your storage settings from `app/settings.php` to the new configuration.
+
 This is the list of filesystem removals in Chevereto V4:
 
 - lib/

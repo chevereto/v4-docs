@@ -93,9 +93,12 @@ docker run -d \
 
 ## Run (free edition)
 
-To run [chevereto/chevereto](https://github.com/chevereto/chevereto) (Chevereto free edition) you need to pass the environment targeting public image `ghcr.io/chevereto/chevereto:latest`.
+To run [chevereto/chevereto](https://github.com/chevereto/chevereto) (Chevereto free edition) you need to pass the environment targeting one of its container image mirrors:
 
-Alternatively, you can pass `chevereto/chevereto:latest` which is the [Chevereto mirror on DockerHub](https://hub.docker.com/r/chevereto/chevereto).
+* `chevereto/chevereto:latest` ([DockerHub](https://hub.docker.com/r/chevereto/chevereto))
+* `ghcr.io/chevereto/chevereto:latest` ([GitHub Container Registry](https://github.com/chevereto/chevereto/pkgs/container/chevereto))
+
+When using `CHEVERETO_SERVICING=docker` (default) it behaves as a pure docker container, meaning that the application filesystem persists. When using `CHEVERETO_SERVICING=server` you need to mount the application directory to persist the filesystem upgrades.
 
 > Note: For running this command you need to fill your own database credentials.
 
@@ -110,14 +113,13 @@ docker run -d \
   -e CHEVERETO_DB_NAME=chevereto \
   -e CHEVERETO_MAX_POST_SIZE=2G \
   -e CHEVERETO_MAX_UPLOAD_SIZE=2G \
-  -e CHEVERETO_SERVICING=server \
   -v /var/www/html/images/ \
-  ghcr.io/chevereto/chevereto:latest
+  chevereto/chevereto:latest
 ```
 
 ## Run free edition with application upgrade
 
-If you want to run the free edition and manage the application upgrade within the application itself you need to pass `-e CHEVERETO_SERVICING=server` and setup persistent storage for the application files:
+If you want to run the free edition and manage the application upgrade within the application itself you need to pass `-e CHEVERETO_SERVICING=server` and setup persistent storage for the application files with `-v /var/www/html/`:
 
 > Note: For running this command you need to fill your own database credentials.
 
@@ -135,7 +137,7 @@ docker run -d \
   -e CHEVERETO_SERVICING=server \
   -v /var/www/html/images/ \
   -v /var/www/html/ \
-  ghcr.io/chevereto/chevereto:latest
+  chevereto/chevereto:latest
 ```
 
 ## Using compose
@@ -145,14 +147,14 @@ Create your own `docker-compose.yml` at your project folder. See more examples a
 ```yml
 services:
   database:
-    image: mariadb:jammy
+    image: mysql:8 #evergreen
     networks:
       - chevereto
     volumes:
       - database:/var/lib/mysql
     restart: always
     healthcheck:
-      test: ["CMD", "healthcheck.sh", "--su-mysql", "--connect"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"] # MySQL
       interval: 10s
       timeout: 5s
       retries: 3
@@ -187,10 +189,30 @@ services:
       CHEVERETO_MAX_POST_SIZE: 2G
       CHEVERETO_MAX_UPLOAD_SIZE: 2G
       # CHEVERETO_SERVICING: server # uncomment to enable application filesystem upgrades
+      CHEVERETO_CACHE_DRIVER: redis
+      CHEVERETO_CACHE_HOST: redis
+      CHEVERETO_CACHE_PORT: 6379
+      CHEVERETO_CACHE_USER:
+      CHEVERETO_CACHE_PASSWORD: redis_password
+
+  redis:
+    image: redis:8
+    networks:
+      - chevereto
+    volumes:
+      - redis:/data
+    restart: always
+    command: redis-server --appendonly yes --requirepass redis_password
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "redis_password", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
 volumes:
   database:
   storage:
+  redis:
   # app: # uncomment when using CHEVERETO_SERVICING=server
 
 networks:

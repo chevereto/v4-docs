@@ -25,7 +25,6 @@ You can also install Chevereto using installer software available in many hostin
 
 * [Chevereto at EasyPanel](https://easypanel.io/docs/templates/chevereto)
 * [Chevereto at Installatron](https://installatron.com/chevereto)
-* [Chevereto at Softaculous](https://www.softaculous.com/apps/galleries/Chevereto)
 * [Chevereto at SwiftWave](https://swiftwave.org/docs/dashboard/swiftwave_app_store/)
 
 ## Install using Synology NAS

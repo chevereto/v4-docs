@@ -34,7 +34,7 @@ To follow this guide, make sure you have:
 
 ## Getting a server
 
-You'll need a server where you can install Chevereto Docker For this guide we recommend an Ubuntu 24.04 server, but any Unix-like system will do.
+You'll need a server where you can install Chevereto Docker For this guide we recommend an Ubuntu 26.04 server, but any Unix-like system will do.
 
 ## Accessing server shell
 
@@ -59,7 +59,7 @@ Make sure to check your server provider's documentation for specific instruction
 Start by installing Chevereto Docker repository and its dependencies by running the following command.
 
 ```sh
-bash <(curl -s https://chevereto.com/sh/ubuntu/24.04/docker.sh)
+bash <(curl -s https://chevereto.com/sh/ubuntu/26.04/docker.sh)
 ```
 
 ## Setting up CloudFlare integration

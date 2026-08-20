@@ -198,6 +198,12 @@ The `database-migrate` command migrates the Chevereto database schema to the lat
 app/bin/cli -C database-migrate
 ```
 
+Pass `-d` to dump the update query instead of executing it directly:
+
+```sh
+app/bin/cli -C database-migrate -d
+```
+
 ### Version
 
 The `version` command outputs the Chevereto application filesystem version.

@@ -63,6 +63,79 @@ curl -X GET "/_/api/4/config/traefik" \
   -H "X-API-Key: your_api_key"
 ```
 
+```json
+{
+    "http": {
+        "routers": {
+            "*": {
+                "rule": "Host(`localhost`)",
+                "service": "php",
+                "entryPoints": [
+                    "websecure"
+                ],
+                "middlewares": [
+                    "allow-range"
+                ]
+            },
+            "1": {
+                "rule": "Host(`test.chevereto.app`)",
+                "service": "php",
+                "entryPoints": [
+                    "websecure"
+                ],
+                "middlewares": [
+                    "allow-range"
+                ]
+            }
+        },
+        "services": {
+            "php": {
+                "loadBalancer": {
+                    "servers": [
+                        {
+                            "url": "http://php:8080"
+                        }
+                    ],
+                    "passHostHeader": true
+                }
+            }
+        },
+        "middlewares": {
+            "allow-range": {
+                "ipAllowList": {
+                    "sourceRange": [
+                        "192.168.65.0/24",
+                        "172.16.0.0/12",
+                        "173.245.48.0/20",
+                        "103.21.244.0/22",
+                        "103.22.200.0/22",
+                        "103.31.4.0/22",
+                        "141.101.64.0/18",
+                        "108.162.192.0/18",
+                        "190.93.240.0/20",
+                        "188.114.96.0/20",
+                        "197.234.240.0/22",
+                        "198.41.128.0/17",
+                        "162.158.0.0/15",
+                        "104.16.0.0/13",
+                        "104.24.0.0/14",
+                        "172.64.0.0/13",
+                        "131.0.72.0/22",
+                        "2400:cb00::/32",
+                        "2606:4700::/32",
+                        "2803:f800::/32",
+                        "2405:b500::/32",
+                        "2405:8100::/32",
+                        "2a06:98c0::/29",
+                        "2c0f:f248::/32"
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
 ## `/_/api/4/tenants`
 
 ### GET `/_/api/4/tenants`
@@ -74,6 +147,40 @@ curl -X GET "/_/api/4/tenants" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature"
+```
+
+```json
+[
+  {
+    "id": "1",
+    "hostname": "test.chevereto.app",
+    "is_enabled": true,
+    "created_at": "2026-08-17 23:15:57",
+    "updated_at": "2026-08-20 13:18:42",
+    "plan_id": "plan_id",
+    "limits": {},
+    "env": {},
+    "stats": {
+      "tags": 1,
+      "files": 4,
+      "pages": 3,
+      "users": 2,
+      "admins": 1,
+      "albums": 0,
+      "managers": 0,
+      "storages": 1,
+      "cron_time": 0,
+      "categories": 0,
+      "file_likes": 0,
+      "file_views": 14,
+      "album_likes": 0,
+      "album_views": 0,
+      "storage_used": 348897934,
+      "login_providers": 0
+    },
+    "last_job_at": "2026-08-20 13:18:42"
+  }
+]
 ```
 
 ### POST `/_/api/4/tenants`
@@ -116,6 +223,38 @@ curl -X GET "/_/api/4/tenants/tenant123" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature"
+```
+
+```json
+{
+  "id": "{id}",
+  "hostname": "test.chevereto.app",
+  "is_enabled": true,
+  "created_at": "2026-08-17 23:15:57",
+  "updated_at": "2026-08-20 13:18:42",
+  "plan_id": "plan_id",
+  "limits": {},
+  "env": {},
+  "stats": {
+    "tags": 1,
+    "files": 4,
+    "pages": 3,
+    "users": 2,
+    "admins": 1,
+    "albums": 0,
+    "managers": 0,
+    "storages": 1,
+    "cron_time": 0,
+    "categories": 0,
+    "file_likes": 0,
+    "file_views": 14,
+    "album_likes": 0,
+    "album_views": 0,
+    "storage_used": 348897934,
+    "login_providers": 0
+  },
+  "last_job_at": "2026-08-20 13:18:42"
+}
 ```
 
 ### PATCH `/_/api/4/tenants/{id}`
@@ -217,6 +356,22 @@ curl -X GET "/_/api/4/tenants-plans" \
   -H "X-Signature: request_signature"
 ```
 
+```json
+[
+  {
+    "id": "1",
+    "limits": {
+      "CHEVERETO_MAX_TAGS": "500",
+      "CHEVERETO_MAX_FILES": "10000",
+      "CHEVERETO_MAX_PAGES": "3",
+    },
+    "env": null,
+    "created_at": "2026-08-17 01:02:31",
+    "updated_at": "2026-08-17 01:02:31"
+  }
+]
+```
+
 ### POST `/_/api/4/tenants-plans`
 
 `201` Create a new tenant plan.
@@ -249,6 +404,20 @@ curl -X GET "/_/api/4/tenants-plans/basic_plan" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your_api_key" \
   -H "X-Signature: request_signature"
+```
+
+```json
+{
+    "id": "{id}",
+    "limits": {
+      "CHEVERETO_MAX_TAGS": "500",
+      "CHEVERETO_MAX_FILES": "10000",
+      "CHEVERETO_MAX_PAGES": "3",
+    },
+    "env": null,
+    "created_at": "2026-08-17 01:02:31",
+    "updated_at": "2026-08-17 01:02:31"
+  }
 ```
 
 ### PATCH `/_/api/4/tenants-plans/{id}`

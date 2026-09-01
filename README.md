@@ -16,6 +16,12 @@ footer: Chevereto media sharing platform
 
 ![Screen](./src/screens/user-listing-selected.webp)
 
+## Chevereto Cloud
+
+Don't want to manage servers? [Chevereto Cloud](https://cloud.chevereto.com) handles the infrastructure for you, so you can enjoy Chevereto without any technical overhead.
+
+<a href="https://cloud.chevereto.com"><img src="./src/products/cloud/social-preview.png" style="max-width: 419px; width: 100%;"></a>
+
 ## Install
 
 Review our [Installation docs](./application/installing/installation.md) for all alternatives. Chevereto runs anywhere, system requirements are minimal and it can run on any server.

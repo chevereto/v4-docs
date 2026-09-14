@@ -45,6 +45,11 @@ module.exports = {
         editLinks: true,
         lastUpdated: true,
         sidebarDepth: 3,
+        algolia: {
+            apiKey: '49544d26dbc3a0d69593dac1d83f8ab1',
+            indexName: 'chevereto-v4',
+            appId: 'DA09ED37YY',
+        },
         nav_after: [
             {
               text: 'Manuals',

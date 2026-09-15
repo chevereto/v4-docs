@@ -22,6 +22,12 @@ There are several advantages of our Docker system:
 
 Check the project repository at [chevereto/docker](https://github.com/chevereto/docker) for all instructions and source code.
 
+## Easypanel
+
+If you'd rather not manage the multi-website Docker orchestration yourself, Chevereto (free edition) also has an official one-click template on [Easypanel](https://easypanel.io), a self-hosted Docker deployment platform: https://easypanel.io/templates/chevereto
+
+![Chevereto running in the Easypanel dashboard after a one-click deploy](./easypanel-deploy.png)
+
 ## Requirements
 
 To follow this guide, make sure you have:

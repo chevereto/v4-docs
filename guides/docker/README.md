@@ -24,7 +24,12 @@ Check the project repository at [chevereto/docker](https://github.com/chevereto/
 
 ## Easypanel
 
-If you'd rather not manage the multi-website Docker orchestration yourself, Chevereto (free edition) also has an official one-click template on [Easypanel](https://easypanel.io), a self-hosted Docker deployment platform: https://easypanel.io/templates/chevereto
+If you'd rather not manage the multi-website Docker orchestration yourself, Chevereto (free edition) has a one-click deployment template on [Easypanel](https://easypanel.io), a self-hosted Docker deployment platform:
+
+[![Deploy on Easypanel][easypanel-btn]][easypanel-deploy]
+
+[easypanel-btn]: https://easypanel.io/img/deploy-on-easypanel-40.svg
+[easypanel-deploy]: https://easypanel.io/templates/chevereto
 
 ![Chevereto running in the Easypanel dashboard after a one-click deploy](./easypanel-deploy.png)
 

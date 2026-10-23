@@ -273,14 +273,15 @@ For **non-container** based provisioning you need to change these settings at [p
 
 Environment variables for tweaking server handling when the server is under a proxy.
 
-| Variable                        | Default               |
-| ------------------------------- | --------------------- |
-| CHEVERETO_HEADER_CLIENT_IP      |                       |
-| CHEVERETO_HEADER_FORWARDED_HOST | HTTP_X_FORWARDED_HOST |
-| CHEVERETO_HEADER_ROUTER_SECRET  | HTTP_X_ROUTER_SECRET  |
-| CHEVERETO_PROXY_ENTRYPOINT      |                       |
-| CHEVERETO_PROXY_IP_ALLOW_LIST   |                       |
-| CHEVERETO_ROUTER_SECRET         |                       |
+| Variable                                   | Default               |
+| ------------------------------------------ | --------------------- |
+| CHEVERETO_HEADER_CLIENT_IP                 |                       |
+| CHEVERETO_HEADER_CLIENT_IP_TRUSTED_PROXIES |                       |
+| CHEVERETO_HEADER_FORWARDED_HOST            | HTTP_X_FORWARDED_HOST |
+| CHEVERETO_HEADER_ROUTER_SECRET             | HTTP_X_ROUTER_SECRET  |
+| CHEVERETO_PROXY_ENTRYPOINT                 |                       |
+| CHEVERETO_PROXY_IP_ALLOW_LIST              |                       |
+| CHEVERETO_ROUTER_SECRET                    |                       |
 
 Note: `CHEVERETO_HEADER_FORWARDED_HOST` is followed only if passed `CHEVERETO_HEADER_ROUTER_SECRET` and `CHEVERETO_ROUTER_SECRET` match.
 

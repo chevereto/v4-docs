@@ -39,13 +39,27 @@ Built-in [Apache HTTP server](#apache-http-server) config (`.htaccess`) and prov
 If real connecting IP is not configured Chevereto won't be able to detect the real visitors IPs, failing to deliver IP based restrictions and flood control.
 :::
 
-For setups under a proxy is required that the web server sets the appropriate value for the client connecting IP.
+For setups under a [proxy](proxy.md) is required to configure the service for application client IP detection. You can achieve this either by using environment variables or by configuring the web server to pass the real client IP.
+
+### Client IP via environment variables
+
+Use the environment variable `CHEVERETO_HEADER_CLIENT_IP` to specify the header that contains the real client IP. For example, if your proxy sets the real client IP in the `X-Forwarded-For` header, you can set `CHEVERETO_HEADER_CLIENT_IP=X-Forwarded-For`.
+
+In some setups, you may need to configure the `CHEVERETO_HEADER_CLIENT_IP_TRUSTED_PROXIES` environment variable to specify which proxies are allowed to set the client IP header.
+
+For example, if your proxy is Cloudflare, you can set:
+
+```bash
+CHEVERETO_HEADER_CLIENT_IP=CF-Connecting-IP
+CHEVERETO_HEADER_CLIENT_IP_TRUSTED_PROXIES=cloudflare
+```
+
+### Client IP via server configuration
 
 Refer to the following resources when requiring to configure real connecting IP:
 
 * Apache HTTP Server: `mod_remoteip`
 * nginx: `ngx_http_realip_module`
-* [Guides for CloudFlare](https://developers.cloudflare.com/support/troubleshooting/restoring-visitor-ips/restoring-original-visitor-ips/) (make sure to setup the appropriate [IP ranges](https://www.cloudflare.com/ips/))
 
 ## Apache HTTP server
 

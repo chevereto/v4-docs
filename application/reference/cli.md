@@ -60,6 +60,14 @@ The `cache-view` command displays information about the application cache, inclu
 app/bin/cli -C cache-view
 ```
 
+### Cloudflare proxies
+
+The `cloudflare-proxies` command rebuilds the Cloudflare trusted proxies.
+
+```sh
+app/bin/cli -C cloudflare-proxies
+```
+
 ### Cron
 
 The `cron` command runs the background jobs required by Chevereto.

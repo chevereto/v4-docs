@@ -360,6 +360,7 @@ app/bin/tenants -C edit \
 | ---------- | ---------------------------------- |
 | id         | Tenant ID                          |
 | is_enabled | (optional) Tenant enabled status   |
+| hostname   | (optional) Tenant hostname         |
 | plan_id    | (optional) Tenant plan ID          |
 | limits     | (optional) Tenant limits JSON      |
 | env        | (optional) Tenant environment JSON |

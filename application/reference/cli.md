@@ -228,6 +228,14 @@ The `version-installed` command outputs the Chevereto application installed vers
 app/bin/cli -C version-installed
 ```
 
+### Updates check
+
+The `updates-check` command checks for available updates for the Chevereto application by issuing a request to the `chevereto.com` server.
+
+```sh
+app/bin/cli -C updates-check
+```
+
 ### Js
 
 The `js` command generates the cache for JavaScript files. The command outputs the list of JavaScript files processed.

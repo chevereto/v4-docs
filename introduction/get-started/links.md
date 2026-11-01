@@ -15,7 +15,7 @@ Dive into detailed documentation and resources specifically tailored for Chevere
 Access a variety of platforms to stay informed, learn, and connect with the Chevereto community. These links are your gateway to official updates, tutorials, and discussions.
 
 * [Website](https://chevereto.com/) - The main hub for all things Chevereto.
-* [YouTube](https://www.youtube.com/@cheveretocms) - Tutorials and video guides.
+* [YouTube](https://www.youtube.com/@cheveretoofficial) - Tutorials and video guides.
 * [Newsletter](https://chevereto.com/go/newsletter) - Get updates via email.
 * [Blog](https://blog.chevereto.com/) - News and announcements.
 * [Community](https://chevereto.com/community/) - Forums to connect with others.

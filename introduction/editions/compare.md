@@ -43,7 +43,7 @@ Upload and share the following media types from device file browser, drag and dr
 
 | Uploading features           |   Free    |   Lite    |  Pro  |
 | ---------------------------- | :-------: | :-------: | :---: |
-| Upload moderation            |     –     |     ✅     |   ✅   |
+| Upload moderation            |     –     |     –     |   ✅   |
 | Watermark image uploads      |     –     |     ✅     |   ✅   |
 | Asset storage API            | Local, S3 | Local, S3 |  All  |
 | External storage servers API | Local, S3 | Local, S3 |  All  |

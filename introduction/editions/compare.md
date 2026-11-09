@@ -26,7 +26,7 @@ Upload and share the following media types from device file browser, drag and dr
 * Lossless media handling (JPEG auto-orientation & EXIF removal)
 * User uploads, guest uploads
 * API uploading (ShareX, etc)
-* Equirectangular 360° images
+* Equirectangular 360° images (including GoPro 360 photos)
 * EXIF data (read, strip)
 * Clipboard upload (copy/paste)
 * Drag-and-drop upload (drop zone)
@@ -45,8 +45,8 @@ Upload and share the following media types from device file browser, drag and dr
 | ---------------------------- | :-------: | :-------: | :---: |
 | Upload moderation            |     –     |     –     |   ✅   |
 | Watermark image uploads      |     –     |     ✅     |   ✅   |
-| Asset storage API            | Local, S3 | Local, S3 |  All  |
-| External storage servers API | Local, S3 | Local, S3 |  All  |
+| Site storage API             | Local, S3 | Local, S3 |  All  |
+| Upload storage API           | Local, S3 | Local, S3 |  All  |
 
 ## Storage APIs
 
@@ -55,6 +55,7 @@ Upload and share the following media types from device file browser, drag and dr
 | Local                 |   ✅   |   ✅   |   ✅   |
 | Amazon S3             |   ✅   |   ✅   |   ✅   |
 | S3 compatible         |   ✅   |   ✅   |   ✅   |
+| Cloudflare R2         |   ✅   |   ✅   |   ✅   |
 | Google Cloud Storage  |   –   |   –   |   ✅   |
 | Microsoft Azure       |   –   |   –   |   ✅   |
 | Alibaba Cloud OSS     |   –   |   –   |   ✅   |
@@ -98,6 +99,7 @@ Upload and share the following media types from device file browser, drag and dr
 * Album privacy
 * Album password
 * Album description
+* Liked albums listing
 
 ## Sharing features
 
@@ -108,6 +110,8 @@ Upload and share the following media types from device file browser, drag and dr
 * Embed codes on upload complete
 * Embed codes on selected media
 * Embed codes media page
+* Download links for files
+* Native device sharing (Web Share API)
 
 ## User features
 
@@ -118,6 +122,8 @@ Upload and share the following media types from device file browser, drag and dr
 * Roles available: admin, manager & user
 * User management
 * Guest API
+* User avatars (circle style)
+* Login last seen tracking
 
 ## Social features
 
@@ -135,7 +141,14 @@ Upload and share the following media types from device file browser, drag and dr
 
 * Two-Factor Authentication (2FA)
 * Encrypt secrets
+* Encrypted system variables (cipher)
 * Crypt-salted IDs
+* Argon2id password hashing
+* HMAC signed tokens, uploads and API keys
+* CSRF protection
+* Restricted password reset and 2FA after repeated failures
+* TLS verification on outgoing requests
+* Trusted proxies support (including Cloudflare)
 
 | Feature    | Free  | Lite  |  Pro  |
 | ---------- | :---: | :---: | :---: |
@@ -174,6 +187,8 @@ Upload and share the following media types from device file browser, drag and dr
 * Logo & branding
 * Logo type (vector, image, text)
 * Logo height
+* API settings (availability)
+* User profile view
 
 | Admin features                                                                                | Free  | Lite  |  Pro  |
 | --------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
@@ -191,14 +206,14 @@ Upload and share the following media types from device file browser, drag and dr
 | OAuth2 login providers (Amazon, Google, Discord, etc)                                         |   –   |   ✅   |   ✅   |
 | Hide "Powered by Chevereto" footer                                                            |   –   |   –   |   ✅   |
 | [Enabled languages](https://v4-admin.chevereto.com/settings/languages.html#enabled-languages) |   –   |   –   |   ✅   |
-| Routing (user, image, album)                                                                  |   –   |   –   |   ✅   |
+| Routing (user, image, video, album)                                                           |   –   |   –   |   ✅   |
 | Routing root                                                                                  |   –   |   –   |   ✅   |
 | External services                                                                             |   –   |   –   |   ✅   |
 | Comments API (Disqus, JS)                                                                     |   –   |   –   |   ✅   |
 | Analytics code                                                                                |   –   |   –   |   ✅   |
 | Akismet spam protection                                                                       |   –   |   –   |   ✅   |
 | StopForumSpam spam protection                                                                 |   –   |   –   |   ✅   |
-| CAPTCHA (reCAPTCHA, hCaptcha)                                                                 |   –   |   –   |   ✅   |
+| CAPTCHA (reCAPTCHA v2/v3, hCaptcha, Cloudflare Turnstile)                                     |   –   |   –   |   ✅   |
 | Configurable CAPTCHA threshold                                                                |   –   |   –   |   ✅   |
 | Shield by Project Arachnid                                                                    |   –   |   –   |   ✅   |
 | Banners                                                                                       |   –   |   –   |   ✅   |
@@ -212,7 +227,7 @@ Upload and share the following media types from device file browser, drag and dr
 * Blur NSFW content
 * NSFW on random mode
 * Banners on NSFW
-* Upload toggle (users, guest)
+* Upload toggle (users, guest; guest disabled by default)
 * Upload (URL)
 * Upload moderation
 * Upload embed codes
@@ -224,13 +239,16 @@ Upload and share the following media types from device file browser, drag and dr
 * Right click
 * Show Exif data
 * Social share buttons
+* Guest album creation
+* User color palette selection
+* System notices display
 * Automatic updates check
 * Dump update query
 * Debug errors
 
 | Admin toggles                                                                               | Free  | Lite  |  Pro  |
 | ------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
-| User sign up                                                                                |   ✅   |   ✅   |   ✅   |
+| User sign up (disabled by default)                                                          |   ✅   |   ✅   |   ✅   |
 | User content delete                                                                         |   ✅   |   ✅   |   ✅   |
 | Consent screen (age gate)                                                                   |   –   |   ✅   |   ✅   |
 | User notify sign up                                                                         |   –   |   ✅   |   ✅   |
@@ -245,20 +263,23 @@ Upload and share the following media types from device file browser, drag and dr
 
 ## System features
 
-* Multitenancy support
+* Multitenancy support (Tenants API, Tenants CLI)
 * Image handling using GD or ImageMagick
 * Theme palettes (10)
-* One-click upgrade (web, CLI)
+* One-click upgrade (web, CLI; not available on Docker)
 * Maintenance mode
-* Email sending (SMTP, Postfix, AWS SES, Mailtrap, etc.)
+* Email sending (SMTP, Amazon SES, Azure, Brevo, Mailgun, Mailjet, Mailtrap, Microsoft Graph, Postmark, Resend, SendGrid, and more)
 * Cipher IDs
 * Export user
 * Docker support
-* CLI console
+* Traefik integration (including Cloudflare middleware)
+* CLI console (update-check, stats-rebuild, cache tools, etc.)
 * Built-in debugger ([xrDebug](https://xrdebug.com))
-* REPL (PsySH, Tinkerwel)
+* REPL (PsySH, Tinkerwell)
 * Background file queue handling
+* Application-level caching
 * Configurable cache TTL
+* Cache stampede protection
 * Hreflang HTML tags
 * Upload storage tools (regen stats, migrate records)
 * Test-email tool

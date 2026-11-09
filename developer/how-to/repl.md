@@ -1,6 +1,6 @@
 # REPL
 
-Chevereto supports [Tinkewell](https://tinkerwell.app/) and [PsySH](https://psysh.org/), enabling to execute any set of instructions under the environment of a [read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (REPL).
+Chevereto supports [Tinkerwell](https://tinkerwell.app/) and [PsySH](https://psysh.org/), enabling to execute any set of instructions under the environment of a [read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (REPL).
 
 You can interact directly with the Chevereto application as it enables to query the database, call any function within the public API, debug and to facilitate [exploratory programming](https://en.wikipedia.org/wiki/Exploratory_programming).
 

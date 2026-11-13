@@ -53,6 +53,9 @@ The following settings are encrypted in the database:
 | [ModerateContent API Key](https://v4-admin.chevereto.com/settings/external-services.html#moderatecontent-api-key)        | moderatecontent_key                |
 | [Project Arachnid API Username](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_api_username              |
 | [Project Arachnid API Password](https://v4-admin.chevereto.com/settings/external-services.html#project-arachnid-api-key) | arachnid_api_password              |
+| Asset storage key                                                                                                        | asset_storage_key                  |
+| Asset storage secret                                                                                                     | asset_storage_secret               |
+| Asset storage bucket                                                                                                     | asset_storage_bucket               |
 
 ### Album credentials
 
